@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE catmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<catmetadata>
+  <longdescription lang="en">
+    The app-odo category contains extension packages for Odoo.
+  </longdescription>
+  <longdescription lang="es">
+    La categoría app-odoo contiene paquetes con extensiones para Odoo.
+  </longdescription>
+</catmetadata>
+
