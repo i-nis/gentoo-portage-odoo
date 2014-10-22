@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>app-odoo</herd>
+    <maintainer>
+        <email>mggimenez@ingeniovirtual.com.ar</email>
+    </maintainer>
+    <use>
+        <flag name="community">Remove OpenERP support sales announcement, online help and My OpenERP.com account access.</flag>
+        <flag name="no-manage-db">For security, eliminates the option to manage the databases via the web.</flag>
+	</use>
+</pkgmetadata>
+
