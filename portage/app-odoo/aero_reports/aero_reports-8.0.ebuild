@@ -15,7 +15,8 @@ IUSE=""
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="amd64 x86"
-DEPEND="app-office/odoo"
+DEPEND="app-office/odoo
+	app-office/aeroolib"
 RDEPEND="${DEPEND}"
 
 OPENERP_USER="odoo"
@@ -34,12 +35,5 @@ src_install() {
 	done
 
 	dodoc README.md
-}
-
-pkg_postinst() {
-	# Inexistent function geocoders.Google() error.
-	MODIFY_PATH=${ADDONS_PATH}/l10n_ar_bank/wizard/cache.py
-	sed "s|geocoders.Google(|geocoders.GoogleV3(|" ${MODIFY_PATH} > ${MODIFY_PATH}.new
-	mv --force ${MODIFY_PATH}.new ${MODIFY_PATH}
 }
 
