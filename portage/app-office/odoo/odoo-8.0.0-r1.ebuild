@@ -136,7 +136,7 @@ pkg_postinst() {
             POWERED="Powered by "
 			sed "s|.*Powered by.*|${SPACE}${POWERED}${AHREF}|" ${MODIFY_PATH} > ${MODIFY_PATH}.new
             mv --force ${MODIFY_PATH}.new ${MODIFY_PATH}
-            
+
         	# Eliminates the option to manage the databases via database selector.
         	MODIFY_PATH="/var/lib/${PN}/addons/web/views/database_selector.html"
 			SPACE="                "
@@ -151,7 +151,7 @@ pkg_postinst() {
             AHREF="<a href=\"${URL}\" target=\"_blank\">${VENDOR}</a>"
             POWERED="Powered by "
 			sed "s|.*Powered by.*|${SPACE}${POWERED}${AHREF}|" ${MODIFY_PATH} > ${MODIFY_PATH}.new
-            mv --force ${MODIFY_PATH}.new ${MODIFY_PATH}  
+            mv --force ${MODIFY_PATH}.new ${MODIFY_PATH}
 		fi
 
 		if use community ; then

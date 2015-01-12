@@ -9,8 +9,8 @@ DISTUTILS_SINGLE_IMPL=1
 
 inherit eutils git-2 distutils-r1 user
 
-DESCRIPTION="Open Source ERP & CRM"
-HOMEPAGE="http://www.odoo.com/"
+DESCRIPTION="Aeroo Reports library (Aeroo RL)."
+HOMEPAGE="https://github.com/jamotion/aeroolib"
 SRC_URI=""
 EGIT_REPO_URI="https://github.com/jamotion/aeroolib.git"
 EGIT_COMMIT="d8f9438ccb"
