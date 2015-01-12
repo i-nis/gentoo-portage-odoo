@@ -135,4 +135,3 @@ pkg_config() {
         eend $? || die "Failed to create database user"
     fi
 }
-
