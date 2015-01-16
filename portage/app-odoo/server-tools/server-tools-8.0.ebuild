@@ -6,13 +6,13 @@ EAPI=5
 
 inherit eutils git-2 user
 
-DESCRIPTION="Web addons for Odoo."
-HOMEPAGE="https://github.com/oca/web"
+DESCRIPTION="Server environment and tools for Odoo."
+HOMEPAGE="https://github.com/oca/server-tools"
 SRC_URI=""
-EGIT_REPO_URI="https://github.com/oca/web.git"
+EGIT_REPO_URI="https://github.com/oca/server-tools.git"
 EGIT_MASTER="${PV}"
 IUSE=""
-LICENSE="GPL-3"
+LICENSE="AGPL-3"
 SLOT="0"
 KEYWORDS="amd64 x86"
 DEPEND="app-office/odoo"
@@ -34,5 +34,5 @@ src_install() {
 		cp -R "${module}" "${D}/${ADDONS_PATH}" || die "Install failed!"
 	done
 
-	dodoc README.md
+	dodoc README.md LICENSE
 }
