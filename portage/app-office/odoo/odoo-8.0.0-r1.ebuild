@@ -104,14 +104,6 @@ pkg_preinst() {
     enewuser ${ODOO_USER} -1 -1 /var/lib/${PN} ${ODOO_GROUP}
 
     use postgres || sed -i '6,8d' "${D}/etc/init.d/${PN}" || die "sed failed"
-
-    if [ -e /usr/bin/openerp-server ]; then
-    	dosym /usr/bin/openerp-server /usr/bin/${PN}-server
-	fi
-
-    if [ -e /usr/bin/openerp-gevent ]; then
-    	dosym /usr/bin/openerp-server /usr/bin/${PN}-gevent
-	fi
 }
 
 pkg_postinst() {
