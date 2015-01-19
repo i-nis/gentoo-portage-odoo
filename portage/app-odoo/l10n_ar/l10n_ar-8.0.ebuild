@@ -18,8 +18,8 @@ KEYWORDS="amd64 x86"
 DEPEND="app-office/odoo"
 RDEPEND="${DEPEND}"
 
-OPENERP_USER="odoo"
-OPENERP_GROUP="odoo"
+ODOO_USER="odoo"
+ODOO_GROUP="odoo"
 
 src_unpack() {
     git-2_src_unpack
