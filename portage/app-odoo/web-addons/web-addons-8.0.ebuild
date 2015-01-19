@@ -36,3 +36,8 @@ src_install() {
 
 	dodoc README.md
 }
+
+pkg_postinst() {
+    chown -R "${ODOO_USER}:${ODOO_GROUP}" "/var/lib/odoo/.local"
+}
+

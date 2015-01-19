@@ -43,3 +43,7 @@ pkg_postinst() {
 	mv --force ${MODIFY_PATH}.new ${MODIFY_PATH}
 }
 
+pkg_postinst() {
+    chown -R "${ODOO_USER}:${ODOO_GROUP}" "/var/lib/odoo/.local"
+}
+
