@@ -34,6 +34,7 @@ CDEPEND="!app-office/openerp
         dev-python/gdata[${PYTHON_USEDEP}]
         dev-python/gevent[${PYTHON_USEDEP}]
         dev-python/greenlet[${PYTHON_USEDEP}]
+	dev-python/jcconv[${PYTHON_USEDEP}]
         dev-python/lxml[${PYTHON_USEDEP}]
         dev-python/mock[${PYTHON_USEDEP}]
         dev-python/passlib[${PYTHON_USEDEP}]
@@ -57,7 +58,7 @@ CDEPEND="!app-office/openerp
         dev-python/unittest2[${PYTHON_USEDEP}]
         dev-python/vatnumber[${PYTHON_USEDEP}]
         dev-python/vobject[${PYTHON_USEDEP}]
-	dev-python/wsgiref[${PYTHON_USEDEP}]
+	dev-python/wsgiref
         dev-python/xlwt[${PYTHON_USEDEP}]
 	dev-python/beautifulsoup:python-2[${PYTHON_USEDEP}]
 	dev-python/geopy[${PYTHON_USEDEP}]
