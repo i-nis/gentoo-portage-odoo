@@ -7,7 +7,7 @@ EAPI="5"
 PYTHON_COMPAT=( python2_7 )
 DISTUTILS_SINGLE_IMPL=1
 
-inherit distutils-r1
+inherit distutils
 
 DESCRIPTION="This is a standalone release of the wsgiref library, that provides
 validation support for WSGI 1.0.1 (PEP 3333) for Python versions < 3.2, and
