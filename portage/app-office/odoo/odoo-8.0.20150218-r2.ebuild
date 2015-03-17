@@ -70,7 +70,7 @@ CDEPEND="!app-office/openerp
 	dev-python/matplotlib[${PYTHON_USEDEP}]
 	dev-python/m2crypto[${PYTHON_USEDEP}]
 	dev-python/suds[${PYTHON_USEDEP}]
-	media-gfx/wkhtmltopdf"
+	media-gfx/wkhtmltox"
 
 RDEPEND="${CDEPEND}"
 DEPEND="${CDEPEND}"
