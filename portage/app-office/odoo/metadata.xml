@@ -5,9 +5,6 @@
     <maintainer>
         <email>mggimenez@ingeniovirtual.com.ar</email>
     </maintainer>
-    <use>
-        <flag name="community">Remove OpenERP support sales announcement, online help and My OpenERP.com account access.</flag>
-        <flag name="no-manage-db">For security, eliminates the option to manage the databases via the web.</flag>
-	</use>
+    <use></use>
 </pkgmetadata>
 
