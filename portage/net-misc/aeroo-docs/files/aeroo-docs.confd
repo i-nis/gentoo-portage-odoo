@@ -1,0 +1,3 @@
+USER="odoo"
+CONFIGFILE="/etc/aeroo-docs/aeroo-docs.conf"
+PIDFILE="/run/aeroo-docs/aeroo-docs.pid"

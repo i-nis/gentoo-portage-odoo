@@ -1,0 +1,21 @@
+#!/sbin/runscript
+
+# Additional options that are passed to the daemon.
+DAEMON_OPTS="start -c ${CONFIGFILE}"
+
+depend() {
+  need libreoffice
+}
+
+start() {
+	checkpath -q -d -m 0755 -o odoo:odoo /run/aeroo-docs
+	ebegin "Starting Aeroo DOCS service"
+	/usr/sbin/aeroo-docs ${DAEMON_OPTS}
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping Aeroo DOCS service"
+	/usr/sbin/aeroo-docs stop
+	eend $?
+}

@@ -1,0 +1,24 @@
+--- aeroo-docs
++++ aeroo-docs
+@@ -54,10 +54,10 @@
+ port = 8989
+ oo-server = localhost
+ oo-port = 8100
+-spool-directory = /tmp/aeroo-docs
++spool-directory = /var/spool/aeroo-docs
+ spool-expire = 1800
+ log-file = /var/log/aeroo-docs/aeroo_docs.log
+-pid-file = /tmp/aeroo-docs.pid
++pid-file = /run/aeroo-docs/aeroo-docs.pid
+ [simple-auth]
+ username = anonymous
+ password = anonymous
+@@ -257,7 +257,7 @@
+                     unlink(testfile)
+             sleep(self.delay)
+ 
+-pid_file = '/tmp/aeroo-docs.pid'
++pid_file = '/run/aeroo-docs/aeroo-docs.pid'
+ def start_daemon(args):
+     logger.info('Starting Aeroo DOCS process...')
+     #### Prepare spool directory
