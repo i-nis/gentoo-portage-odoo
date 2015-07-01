@@ -22,7 +22,7 @@ ODOO_USER="odoo"
 ODOO_GROUP="odoo"
 
 src_unpack() {
-    git-2_src_unpack
+	git-2_src_unpack
 	cd "${S}"
 	epatch "${FILESDIR}/${PN}-geocoders.patch"
 	epatch "${FILESDIR}/${PN}-invoice_round.patch"
