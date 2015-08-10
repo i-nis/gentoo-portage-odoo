@@ -6,11 +6,11 @@ EAPI=5
 
 inherit eutils git-2 user
 
-DESCRIPTION="Web addons for Odoo."
-HOMEPAGE="https://github.com/OCA/web.git"
+DESCRIPTION="Odoo addons from Ingenieria AdHoc."
+HOMEPAGE="https://github.com/ingadhoc/odoo-addons"
 SRC_URI=""
-EGIT_REPO_URI="https://github.com/OCA/web.git"
-EGIT_COMMIT="edaa6fb5b76177213eef7be9eeaf82f801a05852"
+EGIT_REPO_URI="https://github.com/ingadhoc/odoo-addons.git"
+EGIT_COMMIT="99818881213414cac1374d846c5a72f26055259a"
 EGIT_MASTER="8.0"
 IUSE=""
 LICENSE="GPL-3"
@@ -19,8 +19,8 @@ KEYWORDS="amd64 x86"
 DEPEND="app-office/odoo"
 RDEPEND="${DEPEND}"
 
-OPENERP_USER="odoo"
-OPENERP_GROUP="odoo"
+ODOO_USER="odoo"
+ODOO_GROUP="odoo"
 
 src_unpack() {
     git-2_src_unpack
@@ -29,13 +29,12 @@ src_unpack() {
 src_install() {
     ADDONS_PATH="/var/lib/odoo/.local/share/Odoo/addons/8.0"
 	dodir ${ADDONS_PATH}
-	rm -rf ${S}/__unported__
 
 	for module in $(find ${S}/* -maxdepth 0 -type d); do
 		cp -R "${module}" "${D}/${ADDONS_PATH}" || die "Install failed!"
 	done
 
-	dodoc README.md
+	dodoc README.md LICENSE
 }
 
 pkg_postinst() {
