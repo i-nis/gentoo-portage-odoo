@@ -11,7 +11,7 @@ DESCRIPTION="Installable package for patching psycopg2 to use gevent."
 HOMEPAGE=" http://github.com/zacharyvoase/gevent-psycopg2"
 SRC_URI="mirror://pypi/g/${PN}/${P}.tar.gz"
 
-LICENSE="AS-IS"
+LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="amd64 x86"
 

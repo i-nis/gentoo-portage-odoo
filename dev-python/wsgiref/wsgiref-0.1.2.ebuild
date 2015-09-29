@@ -9,13 +9,11 @@ DISTUTILS_SINGLE_IMPL=1
 
 inherit distutils
 
-DESCRIPTION="This is a standalone release of the wsgiref library, that provides
-validation support for WSGI 1.0.1 (PEP 3333) for Python versions < 3.2, and
-includes the new wsgiref.util.test() utility function."
+DESCRIPTION="Standalone release of the wsgiref library, that provides validation support for WSGI 1.0.1"
 HOMEPAGE="http://pypi.python.org/pypi/wsgiref/0.1.2"
 SRC_URI="http://pypi.python.org/packages/source/${PN:0:1}/${PN}/${P}.zip"
 
-LICENSE="PSF ZPL"
+LICENSE="PSF-2"
 SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE=""
