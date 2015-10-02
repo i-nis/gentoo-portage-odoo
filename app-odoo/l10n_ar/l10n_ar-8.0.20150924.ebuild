@@ -17,6 +17,8 @@ LICENSE="AGPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 DEPEND="app-office/odoo
+	app-odoo/aeroo_reports
+	app-odoo/account-financial-tools
 	dev-python/geopy
 	dev-python/beautifulsoup:python-2
 	dev-python/cryptography
