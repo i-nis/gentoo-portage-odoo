@@ -1,4 +1,4 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -10,13 +10,15 @@ DESCRIPTION="Odoo generic connector framework (jobs queue, asynchronous tasks, c
 HOMEPAGE="https://github.com/OCA/connector"
 SRC_URI=""
 EGIT_REPO_URI="https://github.com/OCA/connector.git"
-EGIT_COMMIT="61f19766c965edf497112ecb2fa835984cddf4be"
+EGIT_COMMIT="c890e04c96f1b03c516e8bf450757b239908bbb8"
 EGIT_MASTER="8.0"
 IUSE=""
-LICENSE="GPL-3"
+LICENSE="AGPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
-DEPEND="app-office/odoo"
+KEYWORDS="amd64 x86"
+DEPEND="app-office/odoo
+	dev-tcltk/expect
+	dev-python/lxml"
 RDEPEND="${DEPEND}"
 
 OPENERP_USER="odoo"
