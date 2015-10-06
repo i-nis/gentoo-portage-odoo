@@ -1,4 +1,4 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -13,7 +13,7 @@ EGIT_REPO_URI="https://github.com/OCA/account-financial-reporting.git"
 EGIT_COMMIT="ff652c76f02f095e30134a884fbb1947ae9a82fe"
 EGIT_MASTER="8.0"
 IUSE=""
-LICENSE="GPL-3"
+LICENSE="AGPL-3"
 SLOT="0"
 KEYWORDS="amd64 x86"
 DEPEND="app-office/odoo
