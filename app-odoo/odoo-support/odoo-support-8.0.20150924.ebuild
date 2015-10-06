@@ -1,4 +1,4 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -10,13 +10,16 @@ DESCRIPTION="Odoo addons from Ingenieria AdHoc."
 HOMEPAGE="https://github.com/ingadhoc/odoo-support"
 SRC_URI=""
 EGIT_REPO_URI="https://github.com/ingadhoc/odoo-support.git"
-EGIT_COMMIT="5333c9b96dddcdcce3f15036252e5d333bcf1438"
+EGIT_COMMIT="31ed5af7a0feaebb71d662426b78c8d8a4f605dd"
+EGIT_MASTER="8.0"
 IUSE=""
-LICENSE="GPL-3"
+LICENSE="AGPL-3"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 DEPEND="!app-odoo/odoo-addons
-	app-office/odoo"
+	app-office/odoo
+    dev-python/ERPpeek
+    dev-python/fabric"
 RDEPEND="${DEPEND}"
 
 ODOO_USER="odoo"
