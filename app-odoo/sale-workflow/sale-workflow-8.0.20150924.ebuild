@@ -1,4 +1,4 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -10,15 +10,17 @@ DESCRIPTION="Odoo Sales, Workflow and Organization."
 HOMEPAGE="https://github.com/OCA/sale-workflow"
 SRC_URI=""
 EGIT_REPO_URI="https://github.com/OCA/sale-workflow.git"
-EGIT_COMMIT="e12fe07f4f1653942b70e24a4bb564d2aa814e61"
+EGIT_COMMIT="62e5082d4deded3b1b5934e87d196b18955fe814"
 EGIT_MASTER="8.0"
 IUSE=""
-LICENSE="GPL-3"
+LICENSE="AGPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 DEPEND="app-office/odoo
+	app-odoo/account-closing
 	app-odoo/stock-logistics-transport
-	app-odoo/stock-logistics-workflow"
+	app-odoo/stock-logistics-workflow
+	app-odoo/server-tools"
 RDEPEND="${DEPEND}"
 
 OPENERP_USER="odoo"
