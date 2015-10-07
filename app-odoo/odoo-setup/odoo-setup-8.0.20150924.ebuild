@@ -18,7 +18,7 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 DEPEND="app-office/odoo
 	app-odoo/l10n_ar
-	>=app-odoo/odoo-addons-20150924"
+	>=app-odoo/odoo-addons-8.0.20150924"
 RDEPEND="${DEPEND}"
 
 ODOO_USER="odoo"
