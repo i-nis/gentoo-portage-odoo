@@ -34,6 +34,8 @@ src_install() {
 	rm -rf ${S}/__unported__
 
 	for module in $(find ${S}/* -maxdepth 0 -type d); do
+		sed '/installable/d' ${module}/__openerp__.py > ${module}/__openerp__.py.new
+		mv ${module}/__openerp__.py.new ${module}/__openerp__.py
 		cp -R "${module}" "${D}/${ADDONS_PATH}" || die "Install failed!"
 	done
 
