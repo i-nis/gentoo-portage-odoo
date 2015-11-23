@@ -1,4 +1,4 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -6,11 +6,11 @@ EAPI=5
 
 inherit eutils git-2 user
 
-DESCRIPTION="OpenERP Argentinian localization from Ingenieria AdHoc."
+DESCRIPTION="Odoo Argentinian localization from Ingenieria AdHoc."
 HOMEPAGE="https://github.com/ingadhoc/odoo-argentina"
 SRC_URI=""
 EGIT_REPO_URI="https://github.com/ingadhoc/odoo-argentina.git"
-EGIT_COMMIT="df99f8403313af7edf627be395d3ddd1e3b692ca"
+EGIT_COMMIT="6a6759be2ad1a5acb22d0634dddcaf1084104a43"
 EGIT_MASTER="8.0"
 IUSE=""
 LICENSE="AGPL-3"
