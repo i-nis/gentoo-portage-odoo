@@ -1,4 +1,4 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -10,7 +10,7 @@ DESCRIPTION="Odoo addons from Ingenieria AdHoc."
 HOMEPAGE="https://github.com/ingadhoc/odoo-addons"
 SRC_URI=""
 EGIT_REPO_URI="https://github.com/ingadhoc/odoo-addons.git"
-EGIT_COMMIT="aab81af838fafe62c213e5eb866248b75a23ea38"
+EGIT_COMMIT="e67992dbe679ca5c69f02295a4be690f6d6393fb"
 EGIT_MASTER="8.0"
 IUSE=""
 LICENSE="GPL-3"
