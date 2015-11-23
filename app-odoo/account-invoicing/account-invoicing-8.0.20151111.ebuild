@@ -10,12 +10,12 @@ DESCRIPTION="Account invoicing modules for Odoo."
 HOMEPAGE="https://github.com/OCA/account-invoicing"
 SRC_URI=""
 EGIT_REPO_URI="https://github.com/OCA/account-invoicing.git"
-EGIT_COMMIT="fdbd843e6249d77e11f0c8d03757ae7bca0e4477"
+EGIT_COMMIT="2f0b3e0d02e074f557f8e722c42c28016ef91110"
 EGIT_MASTER="8.0"
 IUSE=""
 LICENSE="AGPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 DEPEND="app-office/odoo
 	app-odoo/account-financial-tools
 	app-odoo/stock-logistics-workflow
