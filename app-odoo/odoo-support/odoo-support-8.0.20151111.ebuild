@@ -10,13 +10,13 @@ DESCRIPTION="Odoo addons from Ingenieria AdHoc."
 HOMEPAGE="https://github.com/ingadhoc/odoo-support"
 SRC_URI=""
 EGIT_REPO_URI="https://github.com/ingadhoc/odoo-support.git"
-EGIT_COMMIT="31ed5af7a0feaebb71d662426b78c8d8a4f605dd"
+EGIT_COMMIT="62930d737e540aeedf3d2f0ed1bfe5598638da28"
 EGIT_MASTER="8.0"
 IUSE=""
 LICENSE="AGPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
-DEPEND="!app-odoo/odoo-addons
+KEYWORDS="amd64 x86"
+DEPEND=">=app-odoo/odoo-addons-8.0.20151111
 	app-office/odoo
     dev-python/ERPpeek
     dev-python/fabric"
