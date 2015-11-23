@@ -10,7 +10,7 @@ DESCRIPTION="Odoo Financial Controlling (margin, costs, ...) ."
 HOMEPAGE="https://github.com/OCA/margin-analysis"
 SRC_URI=""
 EGIT_REPO_URI="https://github.com/OCA/margin-analysis.git"
-EGIT_COMMIT="8215f4e09df80ae5fd340c85100d302b881f54c7"
+EGIT_COMMIT="02352690e0be595c7a2f092f13f3eca0c0b7de8b"
 EGIT_MASTER="8.0"
 IUSE=""
 LICENSE="AGPL-3"
@@ -31,7 +31,6 @@ src_unpack() {
 src_install() {
     ADDONS_PATH="/var/lib/odoo/.local/share/Odoo/addons/8.0"
 	dodir ${ADDONS_PATH}
-	rm -rf ${S}/__unported__
 
 	for module in $(find ${S}/* -maxdepth 0 -type d); do
 		cp -R "${module}" "${D}/${ADDONS_PATH}" || die "Install failed!"
