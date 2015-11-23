@@ -6,15 +6,15 @@ EAPI=5
 
 inherit eutils git-2 user
 
-DESCRIPTION="Odoo addons from Ingenieria AdHoc."
+DESCRIPTION="Odoo Infrastructure Management from Ingenieria AdHoc."
 HOMEPAGE="https://github.com/ingadhoc/odoo-infrastructure"
 SRC_URI=""
 EGIT_REPO_URI="https://github.com/ingadhoc/odoo-infrastructure.git"
-EGIT_COMMIT="bc9c386a42497c19e18718d590fad0a2a2416fb0"
+EGIT_COMMIT="76b83a6c0bba7b43bb8ea2235ddb1865523bf1c4"
 IUSE=""
 LICENSE="AGPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 DEPEND="app-office/odoo
 	dev-python/ERPpeek
 	dev-python/fabric
