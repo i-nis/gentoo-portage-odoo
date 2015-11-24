@@ -6,19 +6,19 @@ EAPI=5
 
 inherit eutils git-2 user
 
-DESCRIPTION="Odoo Stock, Workflow and Organization."
-HOMEPAGE="https://github.com/OCA/stock-logistics-workflow"
+DESCRIPTION="Odoo webkit tools."
+HOMEPAGE="https://github.com/OCA/webkit-tools"
 SRC_URI=""
-EGIT_REPO_URI="https://github.com/OCA/stock-logistics-workflow.git"
-EGIT_COMMIT="f08be7fd82a627e1fae9bd8e3cb50f1d70a54935"
+EGIT_REPO_URI="https://github.com/OCA/webkit-tools.git"
+EGIT_COMMIT="f79b739e3ffb3d5300dc4d23a873eae2fd00c347"
 EGIT_MASTER="8.0"
 IUSE=""
 LICENSE="AGPL-3"
 SLOT="0"
 KEYWORDS="amd64 x86"
 DEPEND="app-office/odoo
-	dev-tcltk/expect
-	dev-python/lxml"
+	dev-python/lxml
+	dev-tcltk/expect"
 RDEPEND="${DEPEND}"
 
 OPENERP_USER="odoo"
@@ -31,13 +31,12 @@ src_unpack() {
 src_install() {
     ADDONS_PATH="/var/lib/odoo/.local/share/Odoo/addons/8.0"
 	dodir ${ADDONS_PATH}
-	rm -rf ${S}/__unported__
 
 	for module in $(find ${S}/* -maxdepth 0 -type d); do
 		cp -R "${module}" "${D}/${ADDONS_PATH}" || die "Install failed!"
 	done
 
-	dodoc LICENSE README.md
+	dodoc README.md
 }
 
 pkg_postinst() {
