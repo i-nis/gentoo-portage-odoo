@@ -10,7 +10,7 @@ DESCRIPTION="Odoo Sales, Workflow and Organization."
 HOMEPAGE="https://github.com/OCA/sale-workflow"
 SRC_URI=""
 EGIT_REPO_URI="https://github.com/OCA/sale-workflow.git"
-EGIT_COMMIT="62e5082d4deded3b1b5934e87d196b18955fe814"
+EGIT_COMMIT="2bc6dee7bccee4a0ccd3b51c74c49fbf90f0069b"
 EGIT_MASTER="8.0"
 IUSE=""
 LICENSE="AGPL-3"
@@ -33,7 +33,7 @@ src_unpack() {
 src_install() {
     ADDONS_PATH="/var/lib/odoo/.local/share/Odoo/addons/8.0"
 	dodir ${ADDONS_PATH}
-	rm -rf ${S}/__unported__
+	rm -rf ${S}/sale_pricelist_discount
 
 	for module in $(find ${S}/* -maxdepth 0 -type d); do
 		cp -R "${module}" "${D}/${ADDONS_PATH}" || die "Install failed!"
