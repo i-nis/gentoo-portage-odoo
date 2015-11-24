@@ -10,7 +10,7 @@ DESCRIPTION="Transport management in Odoo ."
 HOMEPAGE="https://github.com/OCA/stock-logistics-transport"
 SRC_URI=""
 EGIT_REPO_URI="https://github.com/OCA/stock-logistics-transport.git"
-EGIT_COMMIT="e82d6ff648a66a7a41f6ada328d96820555993eb"
+EGIT_COMMIT="1235fda53f93565d2a2143a5bd003c70e8da6bbc"
 EGIT_MASTER="8.0"
 IUSE=""
 LICENSE="AGPL-3"
@@ -31,7 +31,6 @@ src_unpack() {
 src_install() {
     ADDONS_PATH="/var/lib/odoo/.local/share/Odoo/addons/8.0"
 	dodir ${ADDONS_PATH}
-	rm -rf ${S}/__unported__
 
 	for module in $(find ${S}/* -maxdepth 0 -type d); do
 		cp -R "${module}" "${D}/${ADDONS_PATH}" || die "Install failed!"
