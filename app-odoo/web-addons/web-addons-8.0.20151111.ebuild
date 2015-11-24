@@ -10,7 +10,7 @@ DESCRIPTION="Web addons for Odoo."
 HOMEPAGE="https://github.com/OCA/web.git"
 SRC_URI=""
 EGIT_REPO_URI="https://github.com/OCA/web.git"
-EGIT_COMMIT="2c53d071c7ca8c0238f8915c1ddfd1173bb26669"
+EGIT_COMMIT="7ba903bda2136205d03fd6a81b8cf1a5434f99d2"
 EGIT_MASTER="8.0"
 IUSE=""
 LICENSE="AGPL-3"
@@ -31,7 +31,6 @@ src_unpack() {
 src_install() {
     ADDONS_PATH="/var/lib/odoo/.local/share/Odoo/addons/8.0"
 	dodir ${ADDONS_PATH}
-	rm -rf ${S}/__unported__
 
 	for module in $(find ${S}/* -maxdepth 0 -type d); do
 		cp -R "${module}" "${D}/${ADDONS_PATH}" || die "Install failed!"
