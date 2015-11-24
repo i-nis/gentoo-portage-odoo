@@ -1,4 +1,4 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -10,7 +10,7 @@ DESCRIPTION="Odoo Partner and Contact related addons."
 HOMEPAGE="https://github.com/OCA/partner-contact"
 SRC_URI=""
 EGIT_REPO_URI="https://github.com/OCA/partner-contact.git"
-EGIT_COMMIT="e68a23831cf2b8a92eeb2a0b8a8db4a145039d1d"
+EGIT_COMMIT="66aae2227cdecee6688c94d8fb30d5e387312eea"
 EGIT_MASTER="8.0"
 IUSE=""
 LICENSE="AGPL-3"
@@ -29,7 +29,6 @@ src_unpack() {
 src_install() {
     ADDONS_PATH="/var/lib/odoo/.local/share/Odoo/addons/8.0"
 	dodir ${ADDONS_PATH}
-	rm -rf ${S}/__unported__
 
 	for module in $(find ${S}/* -maxdepth 0 -type d); do
 		cp -R "${module}" "${D}/${ADDONS_PATH}" || die "Install failed!"
