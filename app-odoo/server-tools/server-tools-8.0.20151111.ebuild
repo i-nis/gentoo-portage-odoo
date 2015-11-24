@@ -10,12 +10,12 @@ DESCRIPTION="Server environment and tools for Odoo."
 HOMEPAGE="https://github.com/oca/server-tools"
 SRC_URI=""
 EGIT_REPO_URI="https://github.com/oca/server-tools.git"
-EGIT_COMMIT="6d834572a15c93c56cdef493cfe17ecbede13981"
+EGIT_COMMIT="b1a13f6a43b778f6e2bb70910ff0dc68eae5d54c"
 EGIT_MASTER="8.0"
 IUSE=""
 LICENSE="AGPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 DEPEND="app-office/odoo
 	dev-tcltk/expect
 	dev-python/lxml"
@@ -31,7 +31,6 @@ src_unpack() {
 src_install() {
     ADDONS_PATH="/var/lib/odoo/.local/share/Odoo/addons/8.0"
 	dodir ${ADDONS_PATH}
-	rm -rf ${S}/__unported__
 
 	for module in $(find ${S}/* -maxdepth 0 -type d); do
 		cp -R "${module}" "${D}/${ADDONS_PATH}" || die "Install failed!"
