@@ -10,12 +10,12 @@ DESCRIPTION="OpenERP Argentinian localization from Ingenieria AdHoc."
 HOMEPAGE="https://github.com/ingadhoc/odoo-argentina"
 SRC_URI=""
 EGIT_REPO_URI="https://github.com/ingadhoc/odoo-argentina.git"
-EGIT_COMMIT="66a6a3a319889d30eacce237d84f700ae240b0a2"
+EGIT_COMMIT="778dbbdb69649386f593f178ccb6deff9b2a0999"
 EGIT_MASTER="8.0"
 IUSE=""
 LICENSE="AGPL-3"
 SLOT="0"
-KEYWORDS="-amd64 -x86"
+KEYWORDS="amd64 x86"
 DEPEND="app-office/odoo
 	app-odoo/aeroo_reports
 	app-odoo/account-financial-tools
