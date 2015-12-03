@@ -10,12 +10,12 @@ DESCRIPTION="Odoo addons from Ingenieria AdHoc."
 HOMEPAGE="https://github.com/ingadhoc/odoo-addons"
 SRC_URI=""
 EGIT_REPO_URI="https://github.com/ingadhoc/odoo-addons.git"
-EGIT_COMMIT="b005d323ca81087e0dad0bcce733369f54d95902"
+EGIT_COMMIT="7599f46bcf2103e36c3dde52c98c81dd3e10b35a"
 EGIT_MASTER="8.0"
 IUSE=""
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="-amd64 -x86"
+KEYWORDS="amd64 x86"
 DEPEND="app-office/odoo
 	app-odoo/l10n_ar
 	app-odoo/sale-workflow
