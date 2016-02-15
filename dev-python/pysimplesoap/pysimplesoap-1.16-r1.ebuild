@@ -17,4 +17,4 @@ KEYWORDS="amd64 x86"
 
 DEPEND=""
 RDEPEND="dev-python/httplib2
-	dev-python/socksipy"
+	dev-python/PySocks"
