@@ -24,12 +24,7 @@ DEPEND="app-office/odoo
 	dev-python/cryptography
 	dev-python/pyopenssl
 	dev-python/suds
-	dev-python/httplib2
-	dev-python/pysimplesoap
-	dev-python/m2crypto
-	dev-python/fpdf
-	dev-python/dbf
-	dev-python/pillow"
+	dev-python/PyAfipWs"
 RDEPEND="${DEPEND}"
 
 ODOO_USER="odoo"
@@ -45,6 +40,9 @@ src_install() {
     ADDONS_PATH="/var/lib/odoo/.local/share/Odoo/addons/8.0"
 	dodir ${ADDONS_PATH}
 
+	PYAFIPWS_CACHE_PATH="/var/lib/odoo/.cache/pyafipws"
+	dodir ${PYAFIPWS_CACHE_PATH}
+
 	for module in $(find ${S}/* -maxdepth 0 -type d); do
 		cp -R "${module}" "${D}/${ADDONS_PATH}" || die "Install failed!"
 	done
@@ -54,4 +52,6 @@ src_install() {
 
 pkg_postinst() {
     chown -R "${ODOO_USER}:${ODOO_GROUP}" "/var/lib/odoo/.local"
+	chown -R "${ODOO_USER}:${ODOO_GROUP}" ${PYAFIPWS_CACHE_PATH}
+	dosym ${PYAFIPWS_CACHE_PATH} /usr/lib/python2.7/site-packages/pyafipws/cache
 }
