@@ -21,3 +21,8 @@ IUSE=""
 
 DEPEND=""
 
+src_unpack() {
+	git-2_src_unpack
+	cd "${S}"
+	epatch "${FILESDIR}/${PN}-gentoo_ssl_negotiation.patch"
+}
