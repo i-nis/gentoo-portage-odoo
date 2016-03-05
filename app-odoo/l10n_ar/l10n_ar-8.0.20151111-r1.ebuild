@@ -23,6 +23,7 @@ DEPEND="app-office/odoo
 	dev-python/beautifulsoup:python-2
 	dev-python/cryptography
 	dev-python/pyopenssl
+	>=dev-python/pysimplesoap-1.17_beta
 	dev-python/suds
 	dev-python/PyAfipWs"
 RDEPEND="${DEPEND}"
