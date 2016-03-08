@@ -1,15 +1,27 @@
 --- pyafipws/utils.py
 +++ pyafipws/utils.py
-@@ -52,10 +52,9 @@
+@@ -50,12 +50,12 @@
+ 
+ try:
      import httplib2
-     # corregir temas de negociacion de SSL en algunas versiones de ubuntu:
+-    # corregir temas de negociacion de SSL en algunas versiones de ubuntu:
++    # corregir temas de negociacion de SSL en Gentoo:
      import platform
 -    dist, ver, nick = platform.linux_distribution() if sys.version > (2, 6) else ("", "", "")
 +    dist, ver, nick = platform.linux_distribution()
      from pysimplesoap.client import SoapClient
--    monkey_patch = httplib2._ssl_wrap_socket.__module__ != "httplib2"
+     monkey_patch = httplib2._ssl_wrap_socket.__module__ != "httplib2"
 -    if dist == 'Ubuntu' and ver == '14.04' and not monkey_patch:
-+    if dist == 'Gentoo Base System':
++    if dist == 'Gentoo Base System' and not monkey_patch:
          import ssl
          def _ssl_wrap_socket(sock, key_file, cert_file,
                               disable_validation, ca_certs):
+@@ -65,7 +65,7 @@
+                 cert_reqs = ssl.CERT_REQUIRED
+             return ssl.wrap_socket(sock, keyfile=key_file, certfile=cert_file,
+                            cert_reqs=cert_reqs, ca_certs=ca_certs,
+-                           ssl_version=ssl.PROTOCOL_SSLv3)
++                           ssl_version=ssl.PROTOCOL_SSLv23)
+         httplib2._ssl_wrap_socket = _ssl_wrap_socket
+ 
+ except:
