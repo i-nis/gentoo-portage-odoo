@@ -17,19 +17,16 @@ LICENSE="AGPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 DEPEND="app-office/odoo
-	app-odoo/aeroo_reports
-	app-odoo/account-financial-tools
-	dev-python/geopy
-	dev-python/beautifulsoup:python-2
-	dev-python/cryptography
-	dev-python/pyopenssl
-	dev-python/suds
-	dev-python/httplib2
-	dev-python/pysimplesoap
-	dev-python/m2crypto
-	dev-python/fpdf
-	dev-python/dbf
-	dev-python/pillow"
+    app-odoo/aeroo_reports
+    app-odoo/account-financial-tools
+    dev-python/geopy
+    dev-python/beautifulsoup:python-2
+    dev-python/cryptography
+    dev-python/pyopenssl
+    >=dev-python/pysimplesoap-1.17_beta
+    dev-python/suds
+    dev-python/PyAfipWs"
+
 RDEPEND="${DEPEND}"
 
 ODOO_USER="odoo"
