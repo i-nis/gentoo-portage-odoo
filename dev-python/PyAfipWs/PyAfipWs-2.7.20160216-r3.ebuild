@@ -19,7 +19,7 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE=""
 
-DEPEND=">=dev-python/pysimplesoap-1.17_beta"
+DEPEND=">=dev-python/PySimpleSOAP-1.08.8"
 
 src_unpack() {
 	git-2_src_unpack
