@@ -25,7 +25,7 @@ DEPEND="app-office/odoo
 	dev-python/pyopenssl
 	dev-python/suds
 	dev-python/httplib2
-	dev-python/pysimplesoap
+	>=dev-python/PySimpleSOAP-1.08.8
 	dev-python/m2crypto
 	dev-python/fpdf
 	dev-python/dbf
