@@ -11,7 +11,7 @@ DESCRIPTION="Interfases, tools and apps for Argentina's gov't. webservices"
 HOMEPAGE="http://www.pyafipws.com.ar/pyafipws"
 SRC_URI=""
 EGIT_REPO_URI="https://github.com/reingart/pyafipws.git"
-EGIT_COMMIT="9a812b6f60098066dda6accfff90b67a3db105e5"
+EGIT_COMMIT="93afbfbcd1f966134aa6c896bca19e2f95d54b85"
 EGIT_MASTER="master"
 
 LICENSE="GPL-3"
