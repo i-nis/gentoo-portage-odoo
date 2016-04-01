@@ -3,7 +3,7 @@ Overlay del portage de Gentoo Linux para ebuilds relacionados con Odoo.
 
 Este proyecto es un esfuerzo para crear una rama para el portage de Gentoo Linux que contemple el desarrollo de la plataforma ERP & CRM basada en Odoo.
 
-El conjunto de ebuilds que conforman este proyecto es software libre publicado bajo la Licencia Pública General de GNU, según se publica en: http://www.gnu.org/licenses/gpl.txt
+El conjunto de ebuilds que conforman este proyecto es software libre publicado bajo la Licencia Pública General de GNU, según se publica en: http://www.gnu.org/licenses/gpl-2.0.txt
 
 ## Acerca de Odoo
 
@@ -11,7 +11,7 @@ Odoo es un sistema de ERP integrado de código abierto actualmente producido por
 
 ## Portage
 
-Portage es el gestor de paquetes oficial de la distribución de Linux "Gentoo":https://es.wikipedia.org/wiki/Gentoo_Linux y también el de "Funtoo Linux":https://en.wikipedia.org/wiki/Funtoo_Linux, "Sabayon":https://en.wikipedia.org/wiki/Sabayon_Linux y "Google Chrome OS":https://es.wikipedia.org/wiki/Chrome_OS entre otras.
+Portage es el gestor de paquetes oficial de la distribución de Linux [Gentoo](https://es.wikipedia.org/wiki/Gentoo_Linux) y también el de [Funtoo Linux](https://en.wikipedia.org/wiki/Funtoo_Linux), [Sabayon](https://en.wikipedia.org/wiki/Sabayon_Linux) y [Google Chrome OS](https://es.wikipedia.org/wiki/Chrome_OS) entre otras.
 
 Implementa gestión de dependencias, afinamiento preciso de los paquetes a gusto del administrador, instalaciones falsas (al estilo OpenBSD), entornos de prueba durante la compilación, desinstalación segura, perfiles de sistema, paquetes virtuales, gestión de los ficheros de configuración y múltiples ranuras para distintas versiones de un mismo paquete.
 
