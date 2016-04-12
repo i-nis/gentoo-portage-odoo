@@ -19,7 +19,9 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE=""
 
-DEPEND="dev-python/pysimplesoap"
+DEPEND="
+	dev-python/fpdf
+	dev-python/pysimplesoap"
 
 src_unpack() {
 	git-2_src_unpack
