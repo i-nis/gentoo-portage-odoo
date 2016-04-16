@@ -20,7 +20,11 @@ KEYWORDS="amd64 x86"
 IUSE=""
 
 DEPEND="
+	dev-python/dbf
+	dev-python/httplib2
 	dev-python/fpdf
+	dev-python/m2crypto
+	dev-python/pillow
 	dev-python/pysimplesoap"
 
 src_unpack() {
@@ -34,4 +38,3 @@ pkg_prerm() {
     [[ -d "${ROOT}/usr/conf" ]] && rm -rf "${ROOT}/usr/conf"
 	[[ -f "${ROOT}/usr/licencia.txt" ]] && rm -f "${ROOT}/usr/licencia.txt"
 }
-
