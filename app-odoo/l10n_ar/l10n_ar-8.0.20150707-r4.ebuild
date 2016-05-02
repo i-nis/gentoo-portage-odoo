@@ -56,4 +56,5 @@ src_install() {
 
 pkg_postinst() {
 	chown -R "${ODOO_USER}:${ODOO_GROUP}" "/var/lib/odoo/.local"
+	chown -R "${ODOO_USER}:${ODOO_GROUP}" "${PYAFIPWS_CACHE_PATH}"
 }
