@@ -16,7 +16,7 @@ EGIT_MASTER="master"
 
 LICENSE="LGPL-3"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 
 DEPEND=""
 RDEPEND="dev-python/httplib2
