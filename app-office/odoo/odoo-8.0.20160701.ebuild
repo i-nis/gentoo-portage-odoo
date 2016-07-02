@@ -1,4 +1,4 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://www.odoo.com/"
 SRC_URI="http://nightly.odoo.com/8.0/nightly/src/${PN}_${PV}.tar.gz"
 LICENSE="AGPL-3"
 SLOT="0"
-KEYWORDS="x86 amd64"
+KEYWORDS="~x86 ~amd64"
 IUSE="+postgres ldap ssl"
 
 CDEPEND="!app-office/openerp
