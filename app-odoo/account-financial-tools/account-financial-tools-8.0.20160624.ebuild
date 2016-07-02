@@ -1,4 +1,4 @@
-# Copyright 1999-2015 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -10,7 +10,7 @@ DESCRIPTION="Odoo Accountant Financial Tools and Utils ."
 HOMEPAGE="https://github.com/OCA/account-financial-tools"
 SRC_URI=""
 EGIT_REPO_URI="https://github.com/OCA/account-financial-tools.git"
-EGIT_COMMIT="4869cf63805eb931236c5e4cff18c56e89f61a4c"
+EGIT_COMMIT="71d517f07d6733f400058c26a96079c156aabc41"
 EGIT_MASTER="8.0"
 IUSE=""
 LICENSE="AGPL-3"
