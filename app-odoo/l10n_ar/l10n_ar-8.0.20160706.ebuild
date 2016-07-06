@@ -6,26 +6,25 @@ EAPI=5
 
 inherit eutils git-2 user
 
-DESCRIPTION="OpenERP Argentinian localization from Ingenieria AdHoc."
+DESCRIPTION="Odoo Argentinian localization from Ingenieria AdHoc."
 HOMEPAGE="https://github.com/ingadhoc/odoo-argentina"
 SRC_URI=""
 EGIT_REPO_URI="https://github.com/ingadhoc/odoo-argentina.git"
-EGIT_COMMIT="eb221fcc89d68bc6482638026b5d6f48cf512f97"
+EGIT_COMMIT="bf5d2f257ce57c0485cf1d24eb3ef59f85140315"
 EGIT_MASTER="8.0"
 IUSE=""
 LICENSE="AGPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 DEPEND="app-office/odoo
-    app-odoo/aeroo_reports
-    app-odoo/account-financial-tools
-    dev-python/geopy
-    dev-python/beautifulsoup:python-2
-    dev-python/cryptography
-    dev-python/pyopenssl
-    dev-python/suds
-    dev-python/pyafipws"
-
+	app-odoo/aeroo_reports
+	app-odoo/account-financial-tools
+	dev-python/geopy
+	dev-python/beautifulsoup:python-2
+	dev-python/cryptography
+	dev-python/pyopenssl
+	dev-python/suds
+	dev-python/pyafipws"
 RDEPEND="${DEPEND}"
 
 ODOO_USER="odoo"
@@ -55,6 +54,6 @@ src_install() {
 }
 
 pkg_postinst() {
-	chown -R "${ODOO_USER}:${ODOO_GROUP}" "/var/lib/odoo/.local"
+    chown -R "${ODOO_USER}:${ODOO_GROUP}" "/var/lib/odoo/.local"
 	chown -R "${ODOO_USER}:${ODOO_GROUP}" "${PYAFIPWS_CACHE_PATH}"
 }
