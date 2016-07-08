@@ -6,7 +6,7 @@ EAPI=5
 
 inherit eutils git-2 user
 
-DESCRIPTION="Odoo HR Modules."
+DESCRIPTION="Odoo CRM Modules."
 HOMEPAGE="https://github.com/ingadhoc/crm"
 SRC_URI=""
 EGIT_REPO_URI="https://github.com/ingadhoc/crm.git"
