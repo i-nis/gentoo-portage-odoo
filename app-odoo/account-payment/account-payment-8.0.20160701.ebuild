@@ -17,7 +17,8 @@ LICENSE="AGPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 DEPEND="
-	app-odoo/reporting-engine
+	app-office/odoo
+	app-odoo/alternative-reporting-engine
 	dev-tcltk/expect
 	dev-python/lxml
 	dev-python/simplejson

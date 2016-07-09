@@ -6,11 +6,11 @@ EAPI=5
 
 inherit eutils git-2 user
 
-DESCRIPTION="Odoo purchase addons."
-HOMEPAGE="https://github.com/OCA/reporting-engine"
+DESCRIPTION="Odoo Alternative Reporting Engine."
+HOMEPAGE="https://github.com/ingadhoc/reporting-engine"
 SRC_URI=""
-EGIT_REPO_URI="https://github.com/OCA/reporting-engine.git"
-EGIT_COMMIT="da1e961a2787c3672131d881e8792bfb9a6a2ec4"
+EGIT_REPO_URI="https://github.com/ingadhoc/reporting-engine.git"
+EGIT_COMMIT="828b77213dd8c751d615bb9d48cbfd361a50ff4c"
 EGIT_MASTER="8.0"
 IUSE=""
 LICENSE="AGPL-3"
@@ -18,13 +18,20 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 DEPEND="
 	app-office/odoo
+	app-odoo/aeroo_reports
+	app-odoo/l10n_ar
+	app-odoo/stock
 	dev-tcltk/expect
 	dev-python/lxml
 	dev-python/simplejson
 	dev-python/pyserial
 	dev-python/pyyaml
-	dev-python/xlwt
-	dev-python/xlsxwriter"
+	media-gfx/wkhtmltox
+	dev-lang/swig
+	dev-libs/libffi
+	dev-python/pyopenssl
+	dev-python/m2crypto
+	dev-python/httplib2"
 RDEPEND="${DEPEND}"
 
 ODOO_USER="odoo"
