@@ -6,7 +6,7 @@ EAPI=5
 
 inherit eutils git-2 user
 
-DESCRIPTION="Odoo Stoc & Warehouse Management Addons."
+DESCRIPTION="Odoo Stock & Warehouse Management Addons."
 HOMEPAGE="https://github.com/ingadhoc/stock"
 SRC_URI=""
 EGIT_REPO_URI="hhttps://github.com/ingadhoc/stock.git"
