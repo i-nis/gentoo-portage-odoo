@@ -6,7 +6,7 @@ EAPI=5
 
 inherit eutils git-2 user
 
-DESCRIPTION="Odoo multi-company related addons."
+DESCRIPTION="Odoo Partner and Contact related addons."
 HOMEPAGE="https://github.com/ingadhoc/partner"
 SRC_URI=""
 EGIT_REPO_URI="https://github.com/ingadhoc/partner.git"
@@ -18,7 +18,6 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 DEPEND="
 	app-office/odoo
-	app-odoo/l10n_ar
 	dev-tcltk/expect
 	dev-python/lxml
 	dev-python/simplejson
