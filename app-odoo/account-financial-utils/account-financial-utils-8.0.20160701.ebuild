@@ -19,7 +19,7 @@ KEYWORDS="~amd64 ~x86"
 DEPEND="
 	app-office/odoo
 	app-odoo/aeroo_reports
-	app-odoo/account_payment
+	app-odoo/account-payment
 	app-odoo/partner
 	dev-tcltk/expect
 	dev-python/lxml
