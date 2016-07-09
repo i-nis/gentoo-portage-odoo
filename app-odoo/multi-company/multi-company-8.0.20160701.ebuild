@@ -23,7 +23,12 @@ DEPEND="
 	dev-python/lxml
 	dev-python/simplejson
 	dev-python/pyserial
-	dev-python/pyyaml"
+	dev-python/pyyaml
+	dev-lang/swig
+	dev-libs/libffi
+	dev-python/pyopenssl
+	dev-python/m2crypto
+	dev-python/httplib2"
 RDEPEND="${DEPEND}"
 
 ODOO_USER="odoo"
