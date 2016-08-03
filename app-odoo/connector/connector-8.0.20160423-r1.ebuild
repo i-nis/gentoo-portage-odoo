@@ -1,6 +1,6 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: $
+# $Id$
 
 EAPI=5
 
@@ -31,7 +31,7 @@ src_unpack() {
 src_install() {
     ADDONS_PATH="/var/lib/odoo/.local/share/Odoo/addons/8.0"
 	dodir ${ADDONS_PATH}
-	rm -rf ${S}/__unported__
+	rm -rf ${S}/setup
 
 	for module in $(find ${S}/* -maxdepth 0 -type d); do
 		cp -R "${module}" "${D}/${ADDONS_PATH}" || die "Install failed!"
