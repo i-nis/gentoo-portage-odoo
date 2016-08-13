@@ -17,7 +17,7 @@ LICENSE="AGPL-3"
 SLOT="0"
 KEYWORDS="amd64 x86"
 DEPEND="app-office/odoo
-	=dev-python/python-stdnum-1.1
+	~dev-python/python-stdnum-1.1
 	dev-python/suds
 	dev-python/requests
 	dev-python/unicodecsv"
