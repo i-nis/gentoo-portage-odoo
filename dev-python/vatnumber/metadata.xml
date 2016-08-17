@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
-<pkgmetadata>
-	<herd>python</herd>
-	<longdescription lang="en">
-		Python module to validate VAT numbers
-	</longdescription>
-	<use>
-		<flag name="vies">Enable VIES</flag>
-	</use>
-</pkgmetadata>
 
+<pkgmetadata>
+<maintainer type="person">
+	<email>mggimenez@ingeniovirtual.com.ar</email>
+	<description>Primary maintainer</description>
+</maintainer>
+<longdescription>Python module to validate VAT numbers.</longdescription>
+<use>
+	<flag name="vies">Enable VIES</flag>
+</use>
+</pkgmetadata>

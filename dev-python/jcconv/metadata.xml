@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
-<pkgmetadata>
-<herd>python</herd>
-  <maintainer>
-    <email>mggimenez@ingeniovirtual.com.ar</email>
-  </maintainer>
-</pkgmetadata>
 
+<pkgmetadata>
+<maintainer type="person">
+	<email>mggimenez@ingeniovirtual.com.ar</email>
+	<description>Primary maintainer</description>
+</maintainer>
+<longdescription>jcconv, Japanese Characters CONVerter, interconvert hiragana, katakana, half-width kana.</longdescription>
+</pkgmetadata>

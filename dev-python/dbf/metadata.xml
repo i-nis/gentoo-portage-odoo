@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
-<pkgmetadata>
-	<herd>python</herd>
-	<longdescription lang="en">
-		Pure python package for reading/writing dBase, FoxPro, and Visual FoxPro .dbf files.
-	</longdescription>
-</pkgmetadata>
 
+<pkgmetadata>
+<maintainer type="person">
+	<email>mggimenez@ingeniovirtual.com.ar</email>
+	<description>Primary maintainer</description>
+</maintainer>
+<longdescription>Pure python package for reading/writing dBase, FoxPro, and Visual FoxPro .dbf files.</longdescription>
+</pkgmetadata>
