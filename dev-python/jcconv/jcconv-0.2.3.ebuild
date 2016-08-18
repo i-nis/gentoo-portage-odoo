@@ -7,7 +7,7 @@ PYTHON_COMPAT=( python2_7 )
 
 inherit distutils-r1
 
-DESCRIPTION="jcconv, Japanese Characters CONVerter, interconvert hiragana, katakana, half-width kana."
+DESCRIPTION="Japanese Characters CONVerter, interconvert hiragana, katakana, half-width kana."
 HOMEPAGE="http://github.com/taichino/jcconv"
 SRC_URI="mirror://pypi/j/${PN}/${P}.tar.gz"
 
