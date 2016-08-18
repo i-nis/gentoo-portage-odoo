@@ -32,27 +32,25 @@ DEPEND="
 	dev-python/pyopenssl
 	dev-python/m2crypto
 	dev-python/httplib2"
-RDEPEND="${DEPEND}"
 
 ODOO_USER="odoo"
 ODOO_GROUP="odoo"
 
 src_unpack() {
-    git-2_src_unpack
+	git-2_src_unpack
 }
 
 src_install() {
-    ADDONS_PATH="/var/lib/odoo/.local/share/Odoo/addons/8.0"
-	dodir ${ADDONS_PATH}
+	ADDONS_PATH="/var/lib/odoo/.local/share/Odoo/addons/8.0"
+	dodir "${ADDONS_PATH}"
 
-	for module in $(find ${S}/* -maxdepth 0 -type d); do
+	for module in $(find "${S}"/* -maxdepth 0 -type d); do
 		cp -R "${module}" "${D}/${ADDONS_PATH}" || die "Install failed!"
 	done
 
-	dodoc README.md LICENSE
+	dodoc README.md
 }
 
 pkg_postinst() {
-    chown -R "${ODOO_USER}:${ODOO_GROUP}" "/var/lib/odoo/.local"
+	chown -R "${ODOO_USER}:${ODOO_GROUP}" "/var/lib/odoo/.local"
 }
-
