@@ -24,7 +24,7 @@ DEPEND="app-office/odoo
 	dev-python/lxml
 	media-gfx/wkhtmltox
 	dev-python/pycups
-	dev-lang/swig
+	dev-lang/swig:0
 	dev-libs/libffi
 	dev-libs/openssl
 	dev-python/m2crypto
