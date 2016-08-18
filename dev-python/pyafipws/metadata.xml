@@ -7,8 +7,5 @@
 	<description>Primary maintainer</description>
 </maintainer>
 <longdescription>Interfases, tools and apps for Argentina's gov't. webservices.</longdescription>
-<use>
-	<flag name="vies">Enable VIES</flag>
-</use>
 </pkgmetadata>
 
