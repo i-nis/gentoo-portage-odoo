@@ -7,7 +7,7 @@ PYTHON_COMPAT=( python{2_7,3_3,3_4} )
 
 inherit distutils-r1
 
-DESCRIPTION="Pure python package for reading/writing dBase, FoxPro, and Visual FoxPro .dbf files"
+DESCRIPTION="Pure python package for reading/writing dBase, FoxPro, and Visual FoxPro files"
 HOMEPAGE="https://pypi.python.org/pypi/dbf"
 SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
