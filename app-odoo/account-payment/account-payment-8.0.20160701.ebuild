@@ -25,7 +25,7 @@ DEPEND="
 	dev-python/pyserial
 	dev-python/pyyaml
 	dev-python/pycups
-	dev-lang/swig
+	dev-lang/swig:0
 	dev-libs/libffi
 	dev-python/pyopenssl
 	dev-python/m2crypto
