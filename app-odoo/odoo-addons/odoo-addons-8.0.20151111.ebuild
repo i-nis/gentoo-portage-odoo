@@ -26,7 +26,7 @@ DEPEND="app-office/odoo
 	dev-python/pycups
 	dev-lang/swig:0
 	dev-libs/libffi
-	dev-libs/openssl
+	dev-libs/openssl:0
 	dev-python/m2crypto
 	dev-python/httplib2"
 RDEPEND="${DEPEND}"
