@@ -27,7 +27,7 @@ DEPEND="
 	dev-python/pyserial
 	dev-python/pyyaml
 	media-gfx/wkhtmltox
-	dev-lang/swig
+	dev-lang/swig:0
 	dev-libs/libffi
 	dev-python/pyopenssl
 	dev-python/m2crypto
