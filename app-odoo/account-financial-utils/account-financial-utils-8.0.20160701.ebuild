@@ -1,6 +1,6 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: $
+# $Id$
 
 EAPI=5
 
@@ -27,7 +27,7 @@ DEPEND="
 	dev-python/pyserial
 	dev-python/pyyaml
 	media-gfx/wkhtmltox
-	dev-lang/swig
+	dev-lang/swig:0
 	dev-libs/libffi
 	dev-python/pyopenssl
 	dev-python/m2crypto
