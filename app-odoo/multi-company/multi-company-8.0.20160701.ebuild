@@ -24,7 +24,7 @@ DEPEND="
 	dev-python/simplejson
 	dev-python/pyserial
 	dev-python/pyyaml
-	dev-lang/swig
+	dev-lang/swig:0
 	dev-libs/libffi
 	dev-python/pyopenssl
 	dev-python/m2crypto
