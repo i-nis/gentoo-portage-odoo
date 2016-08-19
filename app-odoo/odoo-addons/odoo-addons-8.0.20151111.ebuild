@@ -29,7 +29,6 @@ DEPEND="app-office/odoo
 	dev-libs/openssl:0
 	dev-python/m2crypto
 	dev-python/httplib2"
-RDEPEND="${DEPEND}"
 
 ODOO_USER="odoo"
 ODOO_GROUP="odoo"
