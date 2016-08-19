@@ -32,7 +32,6 @@ DEPEND="
 	dev-python/pyopenssl
 	dev-python/m2crypto
 	dev-python/httplib2"
-RDEPEND="${DEPEND}"
 
 ODOO_USER="odoo"
 ODOO_GROUP="odoo"
