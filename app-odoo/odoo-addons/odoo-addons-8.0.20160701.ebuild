@@ -1,6 +1,6 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: $
+# $Id$
 
 EAPI=5
 
@@ -30,4 +30,3 @@ RDEPEND="app-office/odoo
 	>=app-odoo/stock-${PV}
 	>=app-odoo/survey-${PV}
 	>=app-odoo/surveyor-${PV}"
-
