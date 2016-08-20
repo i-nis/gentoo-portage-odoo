@@ -38,7 +38,7 @@ src_unpack() {
 
 src_install() {
     ADDONS_PATH="/var/lib/odoo/.local/share/Odoo/addons/8.0"
-	dodir "${ADDONS_PATH"}
+	dodir "${ADDONS_PATH}"
 
 	PYAFIPWS_CACHE_PATH="/var/lib/odoo/.cache/pyafipws"
 	PYAFIPWS_PATH="/usr/lib/python2.7/site-packages/pyafipws"
