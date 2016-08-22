@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: $
+# $Id$
 
 EAPI=5
 
@@ -30,29 +30,31 @@ ODOO_GROUP="odoo"
 
 src_unpack() {
 	git-2_src_unpack
-	cd "${S}"
+}
+
+src_prepare() {
 	epatch "${FILESDIR}/${PN}_gentoo.patch"
 }
 
 src_install() {
 	insinto /usr/sbin
-	dosbin ${S}/aeroo-docs || die
-	dosbin ${S}/DocumentConverter.py || die
-	dosbin ${S}/aeroo_docs_fncs.py || die
+	dosbin "${S}"/aeroo-docs || die
+	dosbin "${S}"/DocumentConverter.py || die
+	dosbin "${S}"/aeroo_docs_fncs.py || die
 	newinitd "${FILESDIR}/${PN}" "${PN}"
 	newconfd "${FILESDIR}/${PN}.confd" "${PN}"
-	dodir /etc/${PN}
-	insinto /etc/${PN}
+	dodir /etc/"${PN}"
+	insinto /etc/"${PN}"
 	newins "${FILESDIR}/${PN}.conf" "${PN}.conf" || die
-	keepdir /var/log/${PN}
-	keepdir /var/spool/${PN}
+	keepdir /var/log/"${PN}"
+	keepdir /var/spool/"${PN}"
 	insinto /etc/logrotate.d
 	newins "${FILESDIR}/${PN}.logrotate" "${PN}" || die
-	dodoc AUTHORS LICENSE README.md
+	dodoc AUTHORS README.md
 }
 
 pkg_postinst() {
-    chown "${ODOO_USER}:${ODOO_GROUP}" "/var/log/${PN}"
+	chown "${ODOO_USER}:${ODOO_GROUP}" "/var/log/${PN}"
 	chown "${ODOO_USER}:${ODOO_GROUP}" "/var/spool/${PN}"
 
 	if [ ! -e $(python_get_sitedir)/uno.py ]; then

@@ -25,21 +25,21 @@ OPENERP_USER="odoo"
 OPENERP_GROUP="odoo"
 
 src_unpack() {
-    git-2_src_unpack
+	git-2_src_unpack
 }
 
 src_install() {
-    ADDONS_PATH="/var/lib/odoo/.local/share/Odoo/addons/8.0"
-	dodir ${ADDONS_PATH}
-	rm -rf ${S}/setup
+	ADDONS_PATH="/var/lib/odoo/.local/share/Odoo/addons/8.0"
+	dodir "${ADDONS_PATH}"
+	rm -rf "${S}"/setup
 
-	for module in $(find ${S}/* -maxdepth 0 -type d); do
+	for module in $(find "${S}"/* -maxdepth 0 -type d); do
 		cp -R "${module}" "${D}/${ADDONS_PATH}" || die "Install failed!"
 	done
 
-	dodoc LICENSE README.md
+	dodoc README.md
 }
 
 pkg_postinst() {
-    chown -R "${ODOO_USER}:${ODOO_GROUP}" "/var/lib/odoo/.local"
+	chown -R "${ODOO_USER}:${ODOO_GROUP}" "/var/lib/odoo/.local"
 }

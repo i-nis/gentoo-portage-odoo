@@ -23,13 +23,13 @@ DEPEND="
 	app-odoo/odoo-web
 	app-odoo/server-tools
 	app-odoo/web-addons
-    dev-python/ERPpeek
-    dev-python/fabric
-    dev-tcltk/expect
-    dev-python/lxml
-    dev-python/simplejson
-    dev-python/pyserial
-    dev-python/pyyaml"
+	dev-python/ERPpeek
+	dev-python/fabric
+	dev-tcltk/expect
+	dev-python/lxml
+	dev-python/simplejson
+	dev-python/pyserial
+	dev-python/pyyaml"
 RDEPEND="${DEPEND}"
 
 ODOO_USER="odoo"

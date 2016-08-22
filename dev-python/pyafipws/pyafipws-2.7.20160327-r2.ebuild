@@ -29,12 +29,14 @@ DEPEND="
 
 src_unpack() {
 	git-2_src_unpack
-	cd "${S}"
+}
+
+src_prepare() {
 	epatch "${FILESDIR}/${PN}-gentoo_ssl_negotiation.patch"
 }
 
 pkg_prerm() {
-    # clean up configuration files and licencia.txt
-    [[ -d "${ROOT}/usr/conf" ]] && rm -rf "${ROOT}/usr/conf"
+	# clean up configuration files and licencia.txt
+	[[ -d "${ROOT}/usr/conf" ]] && rm -rf "${ROOT}/usr/conf"
 	[[ -f "${ROOT}/usr/licencia.txt" ]] && rm -f "${ROOT}/usr/licencia.txt"
 }

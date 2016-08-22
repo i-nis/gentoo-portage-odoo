@@ -18,8 +18,8 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 DEPEND=">=app-odoo/odoo-addons-8.0.20151111
 	app-office/odoo
-    dev-python/ERPpeek
-    dev-python/fabric"
+	dev-python/ERPpeek
+	dev-python/fabric"
 RDEPEND="${DEPEND}"
 
 ODOO_USER="odoo"

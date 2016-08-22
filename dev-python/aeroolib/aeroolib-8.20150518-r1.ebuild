@@ -33,5 +33,5 @@ src_unpack() {
 python_install_all() {
 	distutils-r1_python_install_all
 
-	dodoc AUTHORS CHANGES LICENSE README
+	dodoc AUTHORS CHANGES README
 }

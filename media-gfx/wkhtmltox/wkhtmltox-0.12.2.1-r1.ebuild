@@ -1,6 +1,6 @@
-# Copyright 1999-2015 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: Exp $
+# $Id$
 
 EAPI=5
 
@@ -28,7 +28,7 @@ S="${WORKDIR}/wkhtmltopdf-${PV}"
 
 src_unpack() {
 	unpack ${A}
-	mv ${WORKDIR}/qt-wk_4.8.6/* ${S}/qt || die
+	mv "${WORKDIR}/qt-wk_4.8.6/*" "${S}/qt" || die
 }
 
 src_compile() {
@@ -47,12 +47,12 @@ src_install() {
 	fi
 
 	insinto /usr
-	dobin ${STATIC_PATH}/bin/wkhtmltopdf
-	dobin ${STATIC_PATH}/bin/wkhtmltoimage
+	dobin "${STATIC_PATH}"/bin/wkhtmltopdf
+	dobin "${STATIC_PATH}"/bin/wkhtmltoimage
 	insinto /usr/include
-	doins -r ${STATIC_PATH}/include
+	doins -r "${STATIC_PATH}"/include
 	insinto /usr/lib
-	doins -r ${STATIC_PATH}/lib
+	doins -r "${STATIC_PATH}"/lib
 	dodoc AUTHORS CHANGELOG* README.md
 	use examples && dodoc -r examples
 }

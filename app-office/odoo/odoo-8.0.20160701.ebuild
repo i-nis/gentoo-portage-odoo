@@ -54,7 +54,7 @@ CDEPEND="!app-office/openerp
 	dev-python/reportlab[${PYTHON_USEDEP}]
 	dev-python/requests[${PYTHON_USEDEP}]
 	dev-python/six[${PYTHON_USEDEP}]
-    dev-python/unittest2[${PYTHON_USEDEP}]
+	dev-python/unittest2[${PYTHON_USEDEP}]
 	>=dev-python/vatnumber-1.2[${PYTHON_USEDEP}]
 	dev-python/vobject[${PYTHON_USEDEP}]
 	dev-python/wsgiref
@@ -80,32 +80,32 @@ ODOO_GROUP="odoo"
 src_unpack() {
 	unpack ${A}
 	MY_PV=$(replace_version_separator 2 '-')
-	mv ${WORKDIR}/${PN}-${MY_PV} ${WORKDIR}/${P} || die "Install failed!"
+	mv "${WORKDIR}/${PN}-${MY_PV}" "${WORKDIR}/${P}" || die "Install failed!"
 }
 
 python_install_all() {
 	distutils-r1_python_install_all
 
-	dodir /var/lib/${PN}
+	dodir "/var/lib/${PN}"
 	cp -R "${S}/openerp" "${S}/${PN}" || die "Install failed!"
 	cp -R "${S}/${PN}" "${D}/var/lib" || die "Install failed!"
 
 	newinitd "${FILESDIR}/${PN}" "${PN}"
 	newconfd "${FILESDIR}/${PN}.confd" "${PN}"
-	keepdir /var/log/${PN}
+	keepdir "/var/log/${PN}"
 
 	insinto /etc/logrotate.d
 	newins "${FILESDIR}/${PN}.logrotate" "${PN}" || die
-	dodir /etc/${PN}
-	insinto /etc/${PN}
+	dodir "/etc/${PN}"
+	insinto "/etc/${PN}"
 	newins "${FILESDIR}/${PN}.cfg" "${PN}.cfg" || die
 
-	dodoc LICENSE PKG-INFO README.md
+	dodoc PKG-INFO README.md
 }
 
 pkg_preinst() {
-	enewgroup ${ODOO_GROUP}
-	enewuser ${ODOO_USER} -1 -1 /var/lib/${PN} ${ODOO_GROUP}
+	enewgroup "${ODOO_GROUP}"
+	enewuser "${ODOO_USER}" -1 -1 /var/lib/"${PN}" "${ODOO_GROUP}"
 
 	use postgres || sed -i '6,8d' "${D}/etc/init.d/${PN}" || die "sed failed"
 }
@@ -126,9 +126,9 @@ psqlquery() {
 
 pkg_config() {
 	einfo "In the following, the 'postgres' user will be used."
-	if ! psqlquery "SELECT usename FROM pg_user WHERE usename = '${ODOO_USER}'" | grep -q ${ODOO_USER}; then
+	if ! psqlquery "SELECT usename FROM pg_user WHERE usename = '${ODOO_USER}'" | grep -q "${ODOO_USER}"; then
 		ebegin "Creating database user ${ODOO_USER}"
-		createuser --username=postgres --createdb --no-adduser ${ODOO_USER}
+		createuser --username=postgres --createdb --no-adduser "${ODOO_USER}"
 		eend $? || die "Failed to create database user"
 	fi
 }

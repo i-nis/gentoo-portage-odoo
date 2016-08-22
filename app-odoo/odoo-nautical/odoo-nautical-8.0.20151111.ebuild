@@ -31,7 +31,9 @@ OPENERP_GROUP="odoo"
 
 src_unpack() {
 	git-2_src_unpack
-	cd "${S}"
+}
+
+src_prepare() {
 	epatch "${FILESDIR}/${PN}-Makefile.patch"
 }
 

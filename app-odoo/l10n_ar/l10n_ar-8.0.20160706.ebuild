@@ -32,12 +32,14 @@ ODOO_GROUP="odoo"
 
 src_unpack() {
 	git-2_src_unpack
-	cd "${S}"
+}
+
+src_prepare() {
 	epatch "${FILESDIR}/${PN}-geocoders.patch"
 }
 
 src_install() {
-    ADDONS_PATH="/var/lib/odoo/.local/share/Odoo/addons/8.0"
+	ADDONS_PATH="/var/lib/odoo/.local/share/Odoo/addons/8.0"
 	dodir "${ADDONS_PATH}"
 
 	PYAFIPWS_CACHE_PATH="/var/lib/odoo/.cache/pyafipws"

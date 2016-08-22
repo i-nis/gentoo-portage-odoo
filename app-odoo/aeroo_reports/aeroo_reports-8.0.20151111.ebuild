@@ -31,9 +31,9 @@ src_unpack() {
 
 src_install() {
 	ADDONS_PATH="/var/lib/odoo/.local/share/Odoo/addons/8.0"
-	dodir ${ADDONS_PATH}
+	dodir "${ADDONS_PATH}"
 
-	for module in $(find ${S}/* -maxdepth 0 -type d); do
+	for module in $(find "${S}"/* -maxdepth 0 -type d); do
 		cp -R "${module}" "${D}/${ADDONS_PATH}" || die "Install failed!"
 	done
 

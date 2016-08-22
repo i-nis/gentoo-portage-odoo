@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: $
+# $Id$
 
 EAPI="5"
 
@@ -21,4 +21,3 @@ IUSE=""
 DEPEND="dev-python/setuptools
 	app-arch/unzip"
 RDEPEND="${DEPEND}"
-
