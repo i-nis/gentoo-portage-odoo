@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: $
+# $Id$
 
 EAPI="5"
 
@@ -27,11 +27,11 @@ RDEPEND="${CDEPEND}"
 DEPEND="${CDEPEND}"
 
 src_unpack() {
-    git-2_src_unpack
+	git-2_src_unpack
 }
 
 python_install_all() {
-    distutils-r1_python_install_all
+	distutils-r1_python_install_all
 
 	dodoc AUTHORS CHANGES LICENSE README
 }
