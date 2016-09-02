@@ -13,6 +13,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 RDEPEND="app-office/odoo
 	!!<=app-odoo/odoo-addons-8.0.20151111
+	>app-odoo/web-addons-8.0.20151111
 	>=app-odoo/account-analytic-${PV}
 	>=app-odoo/account-financial-utils-${PV}
 	>=app-odoo/account-invoice-${PV}
