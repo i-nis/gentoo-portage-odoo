@@ -9,7 +9,7 @@ inherit eutils git-2 user
 DESCRIPTION="Odoo Stock & Warehouse Management Addons."
 HOMEPAGE="https://github.com/ingadhoc/stock"
 SRC_URI=""
-EGIT_REPO_URI="hhttps://github.com/ingadhoc/stock.git"
+EGIT_REPO_URI="https://github.com/ingadhoc/stock.git"
 EGIT_COMMIT="149a1898692a504a93a11abad1d552fe82974d45"
 EGIT_MASTER="8.0"
 IUSE=""
