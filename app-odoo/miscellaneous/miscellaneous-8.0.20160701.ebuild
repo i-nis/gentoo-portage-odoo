@@ -18,7 +18,6 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 DEPEND="
 	app-office/odoo
-	!<app-odoo/odoo-addons-8.0.20160701
 	dev-tcltk/expect
 	dev-python/lxml
 	dev-python/simplejson
