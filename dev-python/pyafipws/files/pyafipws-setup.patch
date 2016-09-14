@@ -1,0 +1,46 @@
+--- setup.py
++++ setup.py
+@@ -34,8 +34,8 @@
+ 
+     # modulos a compilar y empaquetar (comentar si no se desea incluir):
+ 
+-    #import pyafipws
+-    #import pyrece
++    import pyafipws
++    import pyrece
+     import wsaa
+     import wsfev1, rece1, rg3685
+     import wsfexv1, recex1
+@@ -44,19 +44,19 @@
+     import pyfepdf
+     import pyemail
+     import pyi25
+-    #import wsctgv3
+-    #import wslpg
+-    #import wsltv
+-    #import wscoc
+-    #import wscdc
+-    #import cot
+-    #import iibb
+-    #import trazamed
+-    #import trazarenpre
+-    #import trazafito
+-    #import trazavet
+-    #import padron
+-    #import sired
++    import wsctgv3
++    import wslpg
++    import wsltv
++    import wscoc
++    import wscdc
++    import cot
++    import iibb
++    import trazamed
++    import trazarenpre
++    import trazafito
++    import trazavet
++    import padron
++    import sired
+ 
+     data_files = [
+         (".", ["licencia.txt",]),
