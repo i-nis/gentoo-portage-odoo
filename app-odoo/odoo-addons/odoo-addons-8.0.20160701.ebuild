@@ -10,7 +10,7 @@ SRC_URI=""
 IUSE=""
 LICENSE="metapackage"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 RDEPEND="app-office/odoo
 	!!<=app-odoo/odoo-addons-8.0.20151111
 	>app-odoo/web-addons-8.0.20151111
