@@ -1,0 +1,72 @@
+--- l10n_ar_afipws_fe/models/invoice.py
++++ l10n_ar_afipws_fe/models/invoice.py
+@@ -77,8 +77,13 @@
+ 
+     @api.one
+     def get_validation_type(self):
++        # for compatibility with account_invoice_operation, if module installed
++        # and there are operations we return no_validation so no validate
++        # button is displayed
++        if self._fields.get('operation_ids') and self.operation_ids:
++            self.validation_type = 'no_validation'
+         # if invoice has cae then me dont validate it against afip
+-        if self.journal_id.point_of_sale_id.afip_ws and not self.afip_cae:
++        elif self.journal_id.point_of_sale_id.afip_ws and not self.afip_cae:
+             self.validation_type = self.env[
+                 'res.company']._get_environment_type()
+ 
+@@ -223,8 +228,8 @@
+ 
+             partner_doc_code = commercial_partner.document_type_id.afip_code
+             tipo_doc = partner_doc_code or '99'
+-            nro_doc = partner_doc_code and int(
+-                commercial_partner.document_number) or "0"
++            nro_doc = (
++                partner_doc_code and commercial_partner.document_number or "0")
+             cbt_desde = cbt_hasta = cbte_nro = next_invoice_number
+             concepto = tipo_expo = int(inv.afip_concept)
+ 
+@@ -246,12 +251,22 @@
+ 
+             # # invoice amount totals:
+             imp_total = str("%.2f" % abs(inv.amount_total))
+-            # ImpTotConc es el iva no gravado
+-            imp_tot_conc = str("%.2f" % abs(inv.vat_untaxed))
+-            # en la v9 lo hicimos diferente, aca restamos al vat amount
+-            # lo que seria exento y no gravado
+-            imp_neto = str("%.2f" % abs(
+-                inv.vat_base_amount - inv.vat_untaxed - inv.vat_exempt_amount))
++
++            # ImpTotConc es el iva no gravado, si es Comprobante C debe ser 0.00
++            if doc_afip_code != 11: 
++                imp_tot_conc = str("%.2f" % abs(inv.vat_untaxed))
++            else:
++                imp_tot_conc = "0.00"
++
++            if doc_afip_code != 11: 
++                # en la v9 lo hicimos diferente, aca restamos al vat amount
++                # lo que seria exento y no gravado
++                imp_neto = str("%.2f" % abs(
++                    inv.vat_base_amount - inv.vat_untaxed - inv.vat_exempt_amount))
++            else:
++                # tomado de la v9
++                imp_neto = str("%.2f" % abs(inv.amount_untaxed))
++
+             imp_iva = str("%.2f" % abs(inv.vat_amount))
+             imp_subtotal = str("%.2f" % abs(inv.amount_untaxed))
+             imp_trib = str("%.2f" % abs(inv.other_taxes_amount))
+@@ -352,9 +367,12 @@
+                 for tax in self.not_vat_tax_ids:
+                     _logger.info('Adding TAX %s' % tax.tax_code_id.name)
+                     ws.AgregarTributo(
+-                        tax.tax_code_id.afip_code,
++                        tax.tax_code_id.application_code,
+                         tax.tax_code_id.name,
+                         "%.2f" % abs(tax.base_amount),
++                        # como no tenemos la alicuota pasamos cero, en v9
++                        # podremos pasar la alicuota
++                        0,
+                         "%.2f" % abs(tax.tax_amount),
+                     )
+ 
+
