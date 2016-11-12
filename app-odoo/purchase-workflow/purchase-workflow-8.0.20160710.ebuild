@@ -15,7 +15,7 @@ EGIT_MASTER="8.0"
 IUSE=""
 LICENSE="AGPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 DEPEND="app-office/odoo
 	app-odoo/sale-workflow
 	app-odoo/server-tools
@@ -32,6 +32,7 @@ src_unpack() {
 src_install() {
 	ADDONS_PATH="/var/lib/odoo/.local/share/Odoo/addons/8.0"
 	dodir "${ADDONS_PATH}"
+	rm -rf "${S}"/setup
 
 	for module in $(find "${S}"/* -maxdepth 0 -type d); do
 		cp -R "${module}" "${D}/${ADDONS_PATH}" || die "Install failed!"
