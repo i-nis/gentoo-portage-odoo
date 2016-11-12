@@ -16,7 +16,7 @@ HOMEPAGE="http://www.odoo.com/"
 SRC_URI="http://nightly.odoo.com/${ODOO_PV}/nightly/src/${PN}_${PV}.tar.gz"
 LICENSE="AGPL-3"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="x86 amd64"
 IUSE="+postgres ldap ssl"
 
 CDEPEND="!app-office/openerp
