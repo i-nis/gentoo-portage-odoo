@@ -15,7 +15,7 @@ EGIT_MASTER="8.0"
 IUSE=""
 LICENSE="AGPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 DEPEND="app-office/odoo
 	app-odoo/stock-logistics-barcode
 	app-odoo/stock-logistics-tracking"
