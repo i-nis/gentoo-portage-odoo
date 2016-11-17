@@ -28,7 +28,7 @@ S="${WORKDIR}/wkhtmltopdf-${PV}"
 
 src_unpack() {
 	unpack ${A}
-	mv "${WORKDIR}/qt-wk_4.8.6/*" "${S}/qt" || die
+	mv "${WORKDIR}/"qt-wk_4.8.6/* "${S}"/qt || die
 }
 
 src_compile() {
