@@ -4,18 +4,20 @@
 
 EAPI=5
 
-inherit eutils git-2 user
+inherit eutils git-2 user versionator
+
+ODOO_PV="$(get_version_component_range 1-2)"
 
 DESCRIPTION="Odoo Argentinian localization from Ingenieria AdHoc."
 HOMEPAGE="https://github.com/ingadhoc/odoo-argentina"
 SRC_URI=""
 EGIT_REPO_URI="https://github.com/ingadhoc/odoo-argentina.git"
-EGIT_COMMIT="bf5d2f257ce57c0485cf1d24eb3ef59f85140315"
-EGIT_MASTER="8.0"
+EGIT_COMMIT="4f31d874016a80b6d384dee95289013bfdf4d10d"
+EGIT_MASTER="${ODOO_PV}"
 IUSE=""
 LICENSE="AGPL-3"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 DEPEND="app-office/odoo
 	app-odoo/aeroo_reports
 	app-odoo/account-financial-tools
@@ -41,7 +43,7 @@ src_prepare() {
 }
 
 src_install() {
-	ADDONS_PATH="/var/lib/odoo/.local/share/Odoo/addons/8.0"
+	ADDONS_PATH="/var/lib/odoo/.local/share/Odoo/addons/${ODOO_PV}"
 	dodir "${ADDONS_PATH}"
 
 	PYAFIPWS_CACHE_PATH="/var/lib/odoo/.cache/pyafipws"
@@ -61,4 +63,3 @@ pkg_postinst() {
 	chown -R "${ODOO_USER}:${ODOO_GROUP}" "/var/lib/odoo/.local"
 	chown -R "${ODOO_USER}:${ODOO_GROUP}" "${PYAFIPWS_CACHE_PATH}"
 }
-
