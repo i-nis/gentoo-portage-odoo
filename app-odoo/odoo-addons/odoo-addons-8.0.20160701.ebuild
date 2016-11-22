@@ -11,7 +11,7 @@ IUSE=""
 LICENSE="metapackage"
 SLOT="0"
 KEYWORDS="amd64 x86"
-RDEPEND="app-office/odoo
+RDEPEND="app-office/odoo:${SLOT}
 	!!<=app-odoo/odoo-addons-8.0.20151111
 	>app-odoo/web-addons-8.0.20151111
 	>=app-odoo/account-analytic-${PV}

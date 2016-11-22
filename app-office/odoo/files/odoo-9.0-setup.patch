@@ -1,0 +1,26 @@
+--- setup.py
++++ setup.py
+@@ -8,8 +8,8 @@
+ from os.path import join, dirname
+ 
+ 
+-execfile(join(dirname(__file__), 'openerp', 'release.py'))  # Load release variables
+-lib_name = 'openerp'
++execfile(join(dirname(__file__), 'odoo-9.0', 'release.py'))  # Load release variables
++lib_name = 'odoo-9.0'
+ 
+ 
+ def py2exe_datafiles():
+@@ -131,9 +131,9 @@
+     author_email=author_email,
+     classifiers=filter(None, classifiers.split('\n')),
+     license=license,
+-    scripts=['openerp-server', 'openerp-gevent', 'odoo.py'],
++    scripts=['openerp-server-9.0', 'openerp-gevent-9.0', 'odoo-9.0.py'],
+     packages=find_packages(),
+-    package_dir={'%s' % lib_name: 'openerp'},
++    package_dir={'%s' % lib_name: 'odoo-9.0'},
+     include_package_data=True,
+     install_requires=[
+         'babel >= 1.0',
+

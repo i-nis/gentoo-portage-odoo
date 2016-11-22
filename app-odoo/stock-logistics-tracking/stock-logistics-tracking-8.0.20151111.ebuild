@@ -16,8 +16,8 @@ IUSE=""
 LICENSE="AGPL-3"
 SLOT="0"
 KEYWORDS="amd64 x86"
-DEPEND="app-office/odoo
-	app-odoo/stock-logistics-barcode"
+DEPEND="app-office/odoo:${SLOT}
+	app-odoo/stock-logistics-barcode:${SLOT}"
 RDEPEND="${DEPEND}"
 
 OPENERP_USER="odoo"

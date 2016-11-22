@@ -16,10 +16,9 @@ IUSE=""
 LICENSE="AGPL-3"
 SLOT="0"
 KEYWORDS="amd64 x86"
-DEPEND="
-	app-office/odoo
-	app-odoo/aeroo_reports
-	app-odoo/margin-analysis
+DEPEND="app-office/odoo:${SLOT}
+	app-odoo/aeroo_reports:${SLOT}
+	app-odoo/margin-analysis:${SLOT}
 	dev-tcltk/expect
 	dev-python/lxml
 	dev-python/simplejson

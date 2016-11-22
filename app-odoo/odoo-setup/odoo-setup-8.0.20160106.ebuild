@@ -16,8 +16,8 @@ IUSE=""
 LICENSE="AGPL-3"
 SLOT="0"
 KEYWORDS="amd64 x86"
-DEPEND="app-office/odoo
-	app-odoo/l10n_ar
+DEPEND="app-office/odoo:${SLOT}
+	app-odoo/l10n_ar:${SLOT}
 	>=app-odoo/odoo-addons-8.0.20151111
 	dev-tcltk/expect
 	dev-python/lxml"

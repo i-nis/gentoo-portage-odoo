@@ -16,10 +16,10 @@ IUSE=""
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="amd64 x86"
-DEPEND="app-office/odoo
-	app-odoo/l10n_ar
-	app-odoo/sale-workflow
-	app-odoo/margin-analysis
+DEPEND="app-office/odoo:${SLOT}
+	app-odoo/l10n_ar:${SLOT}
+	app-odoo/sale-workflow:${SLOT}
+	app-odoo/margin-analysis:${SLOT}
 	dev-tcltk/expect
 	dev-python/lxml
 	media-gfx/wkhtmltox

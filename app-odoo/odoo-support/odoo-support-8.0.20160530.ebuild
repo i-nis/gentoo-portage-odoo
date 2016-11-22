@@ -16,13 +16,12 @@ IUSE=""
 LICENSE="AGPL-3"
 SLOT="0"
 KEYWORDS="amd64 x86"
-DEPEND="
-	app-odoo/miscellaneous
-	app-office/odoo
-	app-odoo/odoo-infrastructure
-	app-odoo/odoo-web
-	app-odoo/server-tools
-	app-odoo/web-addons
+DEPEND="app-odoo/miscellaneous:${SLOT}
+	app-office/odoo:${SLOT}
+	app-odoo/odoo-infrastructure:${SLOT}
+	app-odoo/odoo-web:${SLOT}
+	app-odoo/server-tools:${SLOT}
+	app-odoo/web-addons:${SLOT}
 	dev-python/ERPpeek
 	dev-python/fabric
 	dev-tcltk/expect

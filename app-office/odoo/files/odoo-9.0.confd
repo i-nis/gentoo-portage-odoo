@@ -1,0 +1,3 @@
+USER="odoo"
+CONFIGFILE="/etc/odoo-9.0/odoo-9.0.cfg"
+PIDFILE="/run/odoo/odoo-9.0.pid"

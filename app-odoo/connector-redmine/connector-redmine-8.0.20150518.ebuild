@@ -15,7 +15,7 @@ IUSE=""
 LICENSE="AGPL-3"
 SLOT="0"
 KEYWORDS="amd64 x86"
-DEPEND="app-office/odoo"
+DEPEND="app-office/odoo:${SLOT}"
 RDEPEND="${DEPEND}"
 
 OPENERP_USER="odoo"

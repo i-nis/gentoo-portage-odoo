@@ -16,10 +16,10 @@ IUSE=""
 LICENSE="AGPL-3"
 SLOT="0"
 KEYWORDS="amd64 x86"
-DEPEND="app-office/odoo
-	app-odoo/product-attribute
-	app-odoo/stock-logistics-warehouse
-	app-odoo/webkit-tools
+DEPEND="app-office/odoo:${SLOT}
+	app-odoo/product-attribute:${SLOT}
+	app-odoo/stock-logistics-warehouse:${SLOT}
+	app-odoo/webkit-tools:${SLOT}
 	dev-tcltk/expect
 	dev-python/lxml
 	dev-python/simplejson

@@ -16,9 +16,9 @@ IUSE=""
 LICENSE="AGPL-3"
 SLOT="0"
 KEYWORDS="amd64 x86"
-DEPEND="app-office/odoo
-	app-odoo/account-financial-tools
-	app-odoo/bank-payment
+DEPEND="app-office/odoo:${SLOT}
+	app-odoo/account-financial-tools:${SLOT}
+	app-odoo/bank-payment:${SLOT}
 	dev-tcltk/expect
 	dev-python/lxml"
 RDEPEND="${DEPEND}"

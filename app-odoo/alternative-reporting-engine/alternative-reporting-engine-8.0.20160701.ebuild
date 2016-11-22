@@ -17,10 +17,10 @@ LICENSE="AGPL-3"
 SLOT="0"
 KEYWORDS="amd64 x86"
 DEPEND="
-	app-office/odoo
-	app-odoo/aeroo_reports
-	app-odoo/l10n_ar
-	app-odoo/stock
+	app-office/odoo:${SLOT}
+	app-odoo/aeroo_reports:${SLOT}
+	app-odoo/l10n_ar:${SLOT}
+	app-odoo/stock:${SLOT}
 	dev-tcltk/expect
 	dev-python/lxml
 	dev-python/simplejson

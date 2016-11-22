@@ -19,8 +19,7 @@ SLOT="0"
 KEYWORDS="x86 amd64"
 IUSE=""
 
-CDEPEND="app-office/odoo
-	dev-python/genshi[${PYTHON_USEDEP}]
+CDEPEND="dev-python/genshi[${PYTHON_USEDEP}]
 	dev-python/lxml"
 
 RDEPEND="${CDEPEND}"

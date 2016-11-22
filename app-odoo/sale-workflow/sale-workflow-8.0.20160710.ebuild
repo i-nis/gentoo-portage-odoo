@@ -16,13 +16,13 @@ IUSE=""
 LICENSE="AGPL-3"
 SLOT="0"
 KEYWORDS="amd64 x86"
-DEPEND="app-office/odoo
-	app-odoo/account-closing
-	app-odoo/bank-statement-reconcile
-	app-odoo/project
-	app-odoo/stock-logistics-transport
-	app-odoo/stock-logistics-workflow
-	app-odoo/server-tools
+DEPEND="app-office/odoo:${SLOT}
+	app-odoo/account-closing:${SLOT}
+	app-odoo/bank-statement-reconcile:${SLOT}
+	app-odoo/project:${SLOT}
+	app-odoo/stock-logistics-transport:${SLOT}
+	app-odoo/stock-logistics-workflow:${SLOT}
+	app-odoo/server-tools:${SLOT}
 	dev-tcltk/expect
 	dev-python/lxml
 	dev-python/simplejson

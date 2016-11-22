@@ -16,10 +16,10 @@ IUSE=""
 LICENSE="AGPL-3"
 SLOT="0"
 KEYWORDS="amd64 x86"
-DEPEND="app-office/odoo
-	app-odoo/sale-workflow
-	app-odoo/server-tools
-	app-odoo/stock-logistics-workflow"
+DEPEND="app-office/odoo:${SLOT}
+	app-odoo/sale-workflow:${SLOT}
+	app-odoo/server-tools:${SLOT}
+	app-odoo/stock-logistics-workflow:${SLOT}"
 RDEPEND="${DEPEND}"
 
 OPENERP_USER="odoo"

@@ -17,7 +17,7 @@ LICENSE="AGPL-3"
 SLOT="0"
 KEYWORDS="amd64 x86"
 DEPEND=">=app-odoo/odoo-addons-8.0.20151111
-	app-office/odoo
+	app-office/odoo:${SLOT}
 	dev-python/ERPpeek
 	dev-python/fabric"
 RDEPEND="${DEPEND}"

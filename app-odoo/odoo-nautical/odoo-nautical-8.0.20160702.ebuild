@@ -16,15 +16,15 @@ IUSE=""
 LICENSE="AGPL-3"
 SLOT="0"
 KEYWORDS="amd64 x86"
-DEPEND="app-office/odoo
-	app-odoo/account-financial-utils
-	app-odoo/aeroo_reports
-	app-odoo/l10n_ar
-	app-odoo/partner
-	app-odoo/server-tools
-	app-odoo/odoo-addons
-	app-odoo/odoo-help
-	app-odoo/odoo-web
+DEPEND="app-office/odoo:${SLOT}
+	app-odoo/account-financial-utils:${SLOT}
+	app-odoo/aeroo_reports:${SLOT}
+	app-odoo/l10n_ar:${SLOT}
+	app-odoo/partner:${SLOT}
+	app-odoo/server-tools:${SLOT}
+	app-odoo/odoo-addons:${SLOT}
+	app-odoo/odoo-help:${SLOT}
+	app-odoo/odoo-web:${SLOT}
 	dev-tcltk/expect
 	dev-python/lxml
 	dev-python/simplejson

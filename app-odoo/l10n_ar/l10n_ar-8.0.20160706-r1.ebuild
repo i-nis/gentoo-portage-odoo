@@ -16,9 +16,9 @@ IUSE=""
 LICENSE="AGPL-3"
 SLOT="0"
 KEYWORDS="amd64 x86"
-DEPEND="app-office/odoo
-	app-odoo/aeroo_reports
-	app-odoo/account-financial-tools
+DEPEND="app-office/odoo:${SLOT}
+	app-odoo/aeroo_reports:${SLOT}
+	app-odoo/account-financial-tools:${SLOT}
 	dev-python/geopy
 	dev-python/beautifulsoup:python-2
 	dev-python/cryptography
@@ -61,4 +61,3 @@ pkg_postinst() {
 	chown -R "${ODOO_USER}:${ODOO_GROUP}" "/var/lib/odoo/.local"
 	chown -R "${ODOO_USER}:${ODOO_GROUP}" "${PYAFIPWS_CACHE_PATH}"
 }
-

@@ -18,8 +18,7 @@ IUSE=""
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="amd64 x86"
-DEPEND="app-office/odoo
-	dev-python/daemonize
+DEPEND="dev-python/daemonize
 	dev-python/jsonrpc2
 	app-office/libreoffice[-python_single_target_python2_7,python_single_target_python3_4]
 	net-misc/libreoffice"

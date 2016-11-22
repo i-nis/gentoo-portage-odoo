@@ -1,0 +1,11 @@
+# Copyright 1999-2016 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: Exp $
+
+/var/log/odoo-9.0/*.log {
+ daily
+ rotate 7
+ create 660 odoo odoo
+ missingok
+ copytruncate
+}
