@@ -11,11 +11,12 @@ inherit eutils distutils-r1 versionator user
 
 DESCRIPTION="Open Source ERP & CRM"
 HOMEPAGE="http://www.odoo.com/"
-SLOT="$(get_version_component_range 1-2)"
+SUBSLOT="$(get_version_component_range 1-2)"
 MY_PV="$(get_version_component_range 3-4)"
-SRC_URI="http://nightly.odoo.com/${SLOT}/nightly/src/${PN}_${SLOT}c.${MY_PV}.tar.gz"
+SLOT="0/${SUBSLOT}"
+SRC_URI="http://nightly.odoo.com/${SUBSLOT}/nightly/src/${PN}_${SUBSLOT}c.${MY_PV}.tar.gz"
 LICENSE="LGPL-3"
-KEYWORDS="-x86 -amd64"
+KEYWORDS="~x86 ~amd64"
 IUSE="+postgres ldap ssl"
 
 CDEPEND="!app-office/openerp
@@ -80,17 +81,7 @@ ODOO_GROUP="odoo"
 
 src_unpack() {
 	unpack ${A}
-	mv "${WORKDIR}/${PN}-${SLOT}c-${MY_PV}" "${WORKDIR}/${P}" || die "Install failed!"
-	mv "${WORKDIR}/${P}"/openerp "${WORKDIR}/${P}/${PN}-${SLOT}" || die "Install failed!"
-	mv "${WORKDIR}/${P}"/odoo.py "${WORKDIR}/${P}/${PN}-${SLOT}.py" || die "Install failed!"
-	mv "${WORKDIR}/${P}"/openerp-gevent "${WORKDIR}/${P}"/openerp-gevent-"${SLOT}" || die "Install failed!"
-	mv "${WORKDIR}/${P}"/openerp-server "${WORKDIR}/${P}"/openerp-server-"${SLOT}" || die "Install failed!"
-}
-
-src_prepare() {
-	epatch "${FILESDIR}/${PN}-${SLOT}-setup.patch"
-	epatch "${FILESDIR}/${PN}-${SLOT}-MANIFEST.in.patch"
-	eapply_user
+	mv "${WORKDIR}/${PN}-${SUBSLOT}c-${MY_PV}" "${WORKDIR}/${P}" || die "Install failed!"
 }
 
 python_install_all() {
@@ -98,15 +89,15 @@ python_install_all() {
 
 	dodir "/var/lib/${PN}"
 
-	newinitd "${FILESDIR}/${PN}-${SLOT}" "${PN}-${SLOT}"
-	newconfd "${FILESDIR}/${PN}-${SLOT}.confd" "${PN}-${SLOT}"
-	keepdir "/var/log/${PN}-${SLOT}"
+	newinitd "${FILESDIR}/${PN}" "${PN}"
+	newconfd "${FILESDIR}/${PN}.confd" "${PN}"
+	keepdir "/var/log/${PN}"
 
 	insinto /etc/logrotate.d
-	newins "${FILESDIR}/${PN}-${SLOT}.logrotate" "${PN}-${SLOT}" || die
-	dodir "/etc/${PN}-${SLOT}"
-	insinto "/etc/${PN}-${SLOT}"
-	newins "${FILESDIR}/${PN}-${SLOT}.cfg" "${PN}-${SLOT}.cfg" || die
+	newins "${FILESDIR}/${PN}.logrotate" "${PN}" || die
+	dodir "/etc/${PN}"
+	insinto "/etc/${PN}"
+	newins "${FILESDIR}/${PN}.cfg" "${PN}.cfg" || die
 
 	dodoc PKG-INFO README.md
 }
@@ -115,11 +106,11 @@ pkg_preinst() {
 	enewgroup "${ODOO_GROUP}"
 	enewuser "${ODOO_USER}" -1 -1 /var/lib/"${PN}" "${ODOO_GROUP}"
 
-	use postgres || sed -i '6,8d' "${D}/etc/init.d/${PN}-${SLOT}" || die "sed failed"
+	use postgres || sed -i '6,8d' "${D}/etc/init.d/${PN}" || die "sed failed"
 }
 
 pkg_postinst() {
-	chown "${ODOO_USER}:${ODOO_GROUP}" "/var/log/${PN}-${SLOT}"
+	chown "${ODOO_USER}:${ODOO_GROUP}" "/var/log/${PN}"
 	chown -R "${ODOO_USER}:${ODOO_GROUP}" "/var/lib/${PN}"
 	chown -R "${ODOO_USER}:${ODOO_GROUP}" "$(python_get_sitedir)/openerp/addons/"
 
