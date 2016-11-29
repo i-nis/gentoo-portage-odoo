@@ -9,13 +9,12 @@ DISTUTILS_SINGLE_IMPL=1
 
 inherit eutils distutils-r1 versionator user
 
-ODOO_PV="$(get_version_component_range 1-2)"
-
 DESCRIPTION="Open Source ERP & CRM"
 HOMEPAGE="http://www.odoo.com/"
-SRC_URI="http://nightly.odoo.com/${ODOO_PV}/nightly/src/${PN}_${PV}.tar.gz"
+SUBSLOT="$(get_version_component_range 1-2)"
+SRC_URI="http://nightly.odoo.com/${SUBSLOT}/nightly/src/${PN}_${PV}.tar.gz"
 LICENSE="AGPL-3"
-SLOT="0"
+SLOT="0/${SUBSLOT}"
 KEYWORDS="x86 amd64"
 IUSE="+postgres ldap ssl"
 

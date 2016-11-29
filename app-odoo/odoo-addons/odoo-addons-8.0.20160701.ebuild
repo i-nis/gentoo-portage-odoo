@@ -2,14 +2,17 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
-EAPI=5
+EAPI="6"
+
+inherit eutils versionator
 
 DESCRIPTION="Odoo addons meta package"
 HOMEPAGE="https://github.com/ingeniovirtual"
 SRC_URI=""
+SUBSLOT="$(get_version_component_range 1-2)"
 IUSE=""
 LICENSE="metapackage"
-SLOT="0"
+SLOT="0/${SUBSLOT}"
 KEYWORDS="amd64 x86"
 RDEPEND="app-office/odoo:${SLOT}
 	!!<=app-odoo/odoo-addons-8.0.20151111

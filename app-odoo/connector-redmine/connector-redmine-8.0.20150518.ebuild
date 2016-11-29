@@ -2,18 +2,20 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
-EAPI=5
+EAPI="6"
 
-inherit eutils git-2 user
+inherit eutils git-r3 versionator user
 
 DESCRIPTION="Connector for Redmine."
 HOMEPAGE="https://github.com/OCA/connector-redmine"
 SRC_URI=""
+SUBSLOT="$(get_version_component_range 1-2)"
 EGIT_REPO_URI="https://github.com/OCA/connector-redmine.git"
 EGIT_COMMIT="e672861cf6e6d14f7e4997de18e6ff00cb52988d"
+EGIT_BRANCH="${SUBSLOT}"
 IUSE=""
 LICENSE="AGPL-3"
-SLOT="0"
+SLOT="0/${SUBSLOT}"
 KEYWORDS="amd64 x86"
 DEPEND="app-office/odoo:${SLOT}"
 RDEPEND="${DEPEND}"
@@ -21,12 +23,8 @@ RDEPEND="${DEPEND}"
 OPENERP_USER="odoo"
 OPENERP_GROUP="odoo"
 
-src_unpack() {
-	git-2_src_unpack
-}
-
 src_install() {
-	ADDONS_PATH="/var/lib/odoo/.local/share/Odoo/addons/8.0"
+	ADDONS_PATH="/var/lib/odoo/.local/share/Odoo/addons/${SUBSLOT}"
 	dodir "${ADDONS_PATH}"
 
 	for module in $(find "${S}"/* -maxdepth 0 -type d); do

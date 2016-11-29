@@ -2,19 +2,20 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
-EAPI=5
+EAPI="6"
 
-inherit eutils git-2 user
+inherit eutils git-r3 versionator user
 
 DESCRIPTION="Odoo Sales, Workflow and Organization."
 HOMEPAGE="https://github.com/OCA/sale-workflow"
 SRC_URI=""
+SUBSLOT="$(get_version_component_range 1-2)"
 EGIT_REPO_URI="https://github.com/OCA/sale-workflow.git"
 EGIT_COMMIT="d9fa4f5acacfea66530e6da58210c3708c5cdfbe"
-EGIT_MASTER="8.0"
+EGIT_BRANCH="${SUBSLOT}"
 IUSE=""
 LICENSE="AGPL-3"
-SLOT="0"
+SLOT="0/${SUBSLOT}"
 KEYWORDS="amd64 x86"
 DEPEND="app-office/odoo:${SLOT}
 	app-odoo/account-closing:${SLOT}
@@ -33,12 +34,8 @@ RDEPEND="${DEPEND}"
 OPENERP_USER="odoo"
 OPENERP_GROUP="odoo"
 
-src_unpack() {
-	git-2_src_unpack
-}
-
 src_install() {
-	ADDONS_PATH="/var/lib/odoo/.local/share/Odoo/addons/8.0"
+	ADDONS_PATH="/var/lib/odoo/.local/share/Odoo/addons/${SUBSLOT}"
 	dodir "${ADDONS_PATH}"
 	rm -rf "${S}"/setup
 	rm -rf "${S}"/sale_pricelist_discount

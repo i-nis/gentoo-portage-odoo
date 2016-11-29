@@ -2,19 +2,20 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
-EAPI=5
+EAPI="6"
 
-inherit eutils git-2 user
+inherit eutils git-r3 versionator user
 
 DESCRIPTION="Odoo Argentinian localization from Ingenieria AdHoc."
 HOMEPAGE="https://github.com/ingadhoc/odoo-argentina"
 SRC_URI=""
+SUBSLOT="$(get_version_component_range 1-2)"
 EGIT_REPO_URI="https://github.com/ingadhoc/odoo-argentina.git"
 EGIT_COMMIT="bf5d2f257ce57c0485cf1d24eb3ef59f85140315"
-EGIT_MASTER="8.0"
+EGIT_BRANCH="${SUBSLOT}"
 IUSE=""
 LICENSE="AGPL-3"
-SLOT="0"
+SLOT="0/${SUBSLOT}"
 KEYWORDS="amd64 x86"
 DEPEND="app-office/odoo:${SLOT}
 	app-odoo/aeroo_reports:${SLOT}
@@ -30,18 +31,15 @@ RDEPEND="${DEPEND}"
 ODOO_USER="odoo"
 ODOO_GROUP="odoo"
 
-src_unpack() {
-	git-2_src_unpack
-}
-
 src_prepare() {
 	epatch "${FILESDIR}/${PN}-geocoders.patch"
 	epatch "${FILESDIR}/${PN}-invoice.patch"
 	epatch "${FILESDIR}/${PN}-account_chart_monotrib.patch"
+	eapply_user
 }
 
 src_install() {
-	ADDONS_PATH="/var/lib/odoo/.local/share/Odoo/addons/8.0"
+	ADDONS_PATH="/var/lib/odoo/.local/share/Odoo/addons/${SUBSLOT}"
 	dodir "${ADDONS_PATH}"
 
 	PYAFIPWS_CACHE_PATH="/var/lib/odoo/.cache/pyafipws"

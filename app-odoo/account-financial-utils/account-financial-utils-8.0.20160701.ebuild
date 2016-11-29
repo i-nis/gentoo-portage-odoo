@@ -2,22 +2,22 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
-EAPI=5
+EAPI="6"
 
-inherit eutils git-2 user
+inherit eutils git-r3 versionator user
 
 DESCRIPTION="Odoo Accountant Financial Tools and Utils."
 HOMEPAGE="https://github.com/ingadhoc/account-financial-tools"
 SRC_URI=""
+SUBSLOT="$(get_version_component_range 1-2)"
 EGIT_REPO_URI="https://github.com/ingadhoc/account-financial-tools.git"
 EGIT_COMMIT="d6e349af02b1ed4de0445ee0123460eb2faac73a"
-EGIT_MASTER="8.0"
+EGIT_BRANCH="${SUBSLOT}"
 IUSE=""
 LICENSE="AGPL-3"
-SLOT="0"
+SLOT="0/${SUBSLOT}"
 KEYWORDS="amd64 x86"
-DEPEND="
-	app-office/odoo:${SLOT}
+DEPEND="app-office/odoo:${SLOT}
 	app-odoo/aeroo_reports:${SLOT}
 	app-odoo/account-payment:${SLOT}
 	app-odoo/partner
@@ -36,12 +36,8 @@ DEPEND="
 ODOO_USER="odoo"
 ODOO_GROUP="odoo"
 
-src_unpack() {
-	git-2_src_unpack
-}
-
 src_install() {
-	ADDONS_PATH="/var/lib/odoo/.local/share/Odoo/addons/8.0"
+	ADDONS_PATH="/var/lib/odoo/.local/share/Odoo/addons/${SUBSLOT}"
 	dodir "${ADDONS_PATH}"
 
 	for module in $(find "${S}"/* -maxdepth 0 -type d); do

@@ -2,19 +2,20 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
-EAPI=5
+EAPI="6"
 
-inherit eutils git-2 user
+inherit eutils git-r3 versionator user
 
 DESCRIPTION="Aeroo Reports - reporting engine for Odoo."
 HOMEPAGE="http://www.alistek.com/wiki/index.php/Main_Page"
 SRC_URI=""
+SUBSLOT="$(get_version_component_range 1-2)"
 EGIT_REPO_URI="https://github.com/ingadhoc/aeroo_reports.git"
 EGIT_COMMIT="0e4515f08327f5887f4ed3edd0911f4c4a8c75fe"
-EGIT_MASTER="8.0"
+EGIT_BRANCH="${SUBSLOT}"
 IUSE=""
 LICENSE="AGPL-3"
-SLOT="0"
+SLOT="0/${SUBSLOT}"
 KEYWORDS="amd64 x86"
 DEPEND="app-office/odoo:${SLOT}
 	dev-python/aeroolib
@@ -26,12 +27,8 @@ RDEPEND="${DEPEND}"
 OPENERP_USER="odoo"
 OPENERP_GROUP="odoo"
 
-src_unpack() {
-	git-2_src_unpack
-}
-
 src_install() {
-	ADDONS_PATH="/var/lib/odoo/.local/share/Odoo/addons/8.0"
+	ADDONS_PATH="/var/lib/odoo/.local/share/Odoo/addons/${SUBSLOT}"
 	dodir "${ADDONS_PATH}"
 
 	for module in $(find "${S}"/* -maxdepth 0 -type d); do
