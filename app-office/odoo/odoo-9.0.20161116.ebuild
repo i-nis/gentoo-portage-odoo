@@ -89,7 +89,7 @@ python_install_all() {
 
 	dodir "/var/lib/${PN}"
 
-	newinitd "${FILESDIR}/${PN}" "${PN}"
+	newinitd "${FILESDIR}/${PN}-${SUBSLOT}" "${PN}"
 	newconfd "${FILESDIR}/${PN}.confd" "${PN}"
 	keepdir "/var/log/${PN}"
 
@@ -97,7 +97,7 @@ python_install_all() {
 	newins "${FILESDIR}/${PN}.logrotate" "${PN}" || die
 	dodir "/etc/${PN}"
 	insinto "/etc/${PN}"
-	newins "${FILESDIR}/${PN}.cfg" "${PN}.cfg" || die
+	newins "${FILESDIR}/${PN}-${SUBSLOT}.cfg" "${PN}.cfg" || die
 
 	dodoc PKG-INFO README.md
 }
