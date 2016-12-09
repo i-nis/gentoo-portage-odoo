@@ -6,20 +6,19 @@ EAPI="6"
 
 inherit eutils git-r3 versionator user
 
-DESCRIPTION="Odoo Accountant Financial Tools and Utils ."
-HOMEPAGE="https://github.com/OCA/account-financial-tools"
+DESCRIPTION="Odoo Product Attribute."
+HOMEPAGE="https://github.com/OCA/product-attribute"
 SRC_URI=""
 SUBSLOT="$(get_version_component_range 1-2)"
-EGIT_REPO_URI="https://github.com/OCA/account-financial-tools.git"
-EGIT_COMMIT="60b9df0ddfe6b3d9231018475c2800de684a2368"
+EGIT_REPO_URI="https://github.com/OCA/product-attribute.git"
+EGIT_COMMIT="7850d04ca4256e6f899c6c3fc8defdc364a20efd"
 EGIT_BRANCH="${SUBSLOT}"
 IUSE=""
 LICENSE="AGPL-3"
 SLOT="0/${SUBSLOT}"
 KEYWORDS="~amd64 ~x86"
 DEPEND="app-office/odoo:${SLOT}
-	app-odoo/reporting-engine:${SLOT}
-	app-odoo/connector:${SLOT}"
+	app-odoo/server-tools:${SLOT}"
 RDEPEND="${DEPEND}"
 
 OPENERP_USER="odoo"

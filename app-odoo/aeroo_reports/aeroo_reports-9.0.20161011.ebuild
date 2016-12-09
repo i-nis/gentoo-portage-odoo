@@ -6,20 +6,22 @@ EAPI="6"
 
 inherit eutils git-r3 versionator user
 
-DESCRIPTION="Odoo Accountant Financial Tools and Utils ."
-HOMEPAGE="https://github.com/OCA/account-financial-tools"
+DESCRIPTION="Aeroo Reports - reporting engine for Odoo."
+HOMEPAGE="http://www.alistek.com/wiki/index.php/Main_Page"
 SRC_URI=""
 SUBSLOT="$(get_version_component_range 1-2)"
-EGIT_REPO_URI="https://github.com/OCA/account-financial-tools.git"
-EGIT_COMMIT="60b9df0ddfe6b3d9231018475c2800de684a2368"
+EGIT_REPO_URI="https://github.com/ingadhoc/aeroo_reports.git"
+EGIT_COMMIT="c8db149bc6b55817a70581e983f53aaa5fb2a013"
 EGIT_BRANCH="${SUBSLOT}"
 IUSE=""
 LICENSE="AGPL-3"
 SLOT="0/${SUBSLOT}"
 KEYWORDS="~amd64 ~x86"
 DEPEND="app-office/odoo:${SLOT}
-	app-odoo/reporting-engine:${SLOT}
-	app-odoo/connector:${SLOT}"
+	dev-python/aeroolib
+	dev-python/pycups
+	dev-python/pycairo
+	net-misc/aeroo-docs"
 RDEPEND="${DEPEND}"
 
 OPENERP_USER="odoo"
@@ -28,7 +30,6 @@ OPENERP_GROUP="odoo"
 src_install() {
 	ADDONS_PATH="/var/lib/odoo/.local/share/Odoo/addons/${SUBSLOT}"
 	dodir "${ADDONS_PATH}"
-	rm -rf "${S}"/setup
 
 	for module in $(find "${S}"/* -maxdepth 0 -type d); do
 		cp -R "${module}" "${D}/${ADDONS_PATH}" || die "Install failed!"

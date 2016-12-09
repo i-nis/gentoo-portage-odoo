@@ -6,29 +6,32 @@ EAPI="6"
 
 inherit eutils git-r3 versionator user
 
-DESCRIPTION="Odoo Accountant Financial Tools and Utils ."
-HOMEPAGE="https://github.com/OCA/account-financial-tools"
+DESCRIPTION="Odoo Accounting payment related modules."
+HOMEPAGE="https://github.com/ingadhoc/account-payment"
 SRC_URI=""
 SUBSLOT="$(get_version_component_range 1-2)"
-EGIT_REPO_URI="https://github.com/OCA/account-financial-tools.git"
-EGIT_COMMIT="60b9df0ddfe6b3d9231018475c2800de684a2368"
+EGIT_REPO_URI="https://github.com/ingadhoc/account-payment.git"
+EGIT_COMMIT="0264b77c54d2901ec040b8b4e5aa50f23b4180a0"
 EGIT_BRANCH="${SUBSLOT}"
 IUSE=""
 LICENSE="AGPL-3"
 SLOT="0/${SUBSLOT}"
 KEYWORDS="~amd64 ~x86"
 DEPEND="app-office/odoo:${SLOT}
-	app-odoo/reporting-engine:${SLOT}
-	app-odoo/connector:${SLOT}"
-RDEPEND="${DEPEND}"
+	app-odoo/account-financial-tools:${SLOT}
+	dev-tcltk/expect
+	dev-python/lxml
+	dev-python/simplejson
+	dev-python/pyserial
+	dev-python/pyyaml
+	dev-python/pycups"
 
-OPENERP_USER="odoo"
-OPENERP_GROUP="odoo"
+ODOO_USER="odoo"
+ODOO_GROUP="odoo"
 
 src_install() {
 	ADDONS_PATH="/var/lib/odoo/.local/share/Odoo/addons/${SUBSLOT}"
 	dodir "${ADDONS_PATH}"
-	rm -rf "${S}"/setup
 
 	for module in $(find "${S}"/* -maxdepth 0 -type d); do
 		cp -R "${module}" "${D}/${ADDONS_PATH}" || die "Install failed!"
