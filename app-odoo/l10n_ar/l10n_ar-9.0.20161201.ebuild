@@ -11,12 +11,12 @@ HOMEPAGE="https://github.com/ingadhoc/odoo-argentina"
 SRC_URI=""
 SUBSLOT="$(get_version_component_range 1-2)"
 EGIT_REPO_URI="https://github.com/ingadhoc/odoo-argentina.git"
-EGIT_COMMIT="0607eb38e7390fba5967993d792a3ebefa678e5f"
+EGIT_COMMIT="213834f75e2d306b336683f20c689f1eeb7bc089"
 EGIT_BRANCH="${SUBSLOT}"
 IUSE=""
 LICENSE="AGPL-3"
 SLOT="0/${SUBSLOT}"
-KEYWORDS="-amd64 -x86"
+KEYWORDS="~amd64 ~x86"
 DEPEND="app-office/odoo:${SLOT}
 	app-odoo/aeroo_reports:${SLOT}
 	app-odoo/account-financial-tools:${SLOT}

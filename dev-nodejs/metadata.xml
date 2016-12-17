@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE catmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<catmetadata>
+	<longdescription lang="en">
+		The dev-nodejs category contains libraries, utilities or
+		bindings written for NodeJS. 
+	</longdescription>
+	<longdescription lang="es">
+		La categoría dev-python contiene librerias y utilidades referentes al
+		lenguaje de programación NodeJS.
+	</longdescription>
+</catmetadata>
+
