@@ -21,6 +21,7 @@ IUSE="+postgres ldap ssl"
 
 CDEPEND="!app-office/openerp
 	postgres? ( dev-db/postgresql:* )
+	dev-nodejs/less
 	dev-python/Babel[${PYTHON_USEDEP}]
 	dev-python/jinja[${PYTHON_USEDEP}]
 	dev-python/mako[${PYTHON_USEDEP}]
