@@ -16,7 +16,7 @@ MY_PV="$(get_version_component_range 3-4)"
 SLOT="0/${SUBSLOT}"
 SRC_URI="http://nightly.odoo.com/${SUBSLOT}/nightly/src/${PN}_${SUBSLOT}c.${MY_PV}.tar.gz"
 LICENSE="LGPL-3"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="x86 amd64"
 IUSE="+postgres ldap ssl"
 
 CDEPEND="!app-office/openerp
