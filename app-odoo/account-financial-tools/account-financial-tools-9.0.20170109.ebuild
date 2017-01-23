@@ -16,11 +16,12 @@ EGIT_BRANCH="${SUBSLOT}"
 IUSE=""
 LICENSE="AGPL-3"
 SLOT="0/${SUBSLOT}"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 DEPEND="app-office/odoo:${SLOT}
 	app-odoo/connector:${SLOT}
 	app-odoo/reporting-engine:${SLOT}
-	app-odoo/server-tools:${SLOT}"
+	app-odoo/server-tools:${SLOT}
+	app-odoo/miscellaneous:${SLOT}"
 RDEPEND="${DEPEND}"
 
 OPENERP_USER="odoo"
