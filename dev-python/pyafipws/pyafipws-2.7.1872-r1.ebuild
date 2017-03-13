@@ -25,7 +25,7 @@ DEPEND="
 	dev-python/fpdf
 	dev-python/m2crypto
 	dev-python/pillow
-	=dev-python/pysimplesoap-1.08.8
+	=dev-python/PySimpleSOAP-1.08.9
 	virtual/cron"
 
 src_unpack() {
