@@ -19,7 +19,8 @@ SLOT="0/${SUBSLOT}"
 KEYWORDS="amd64 x86"
 DEPEND="app-office/odoo:${SLOT}
 	dev-tcltk/expect
-	dev-python/lxml"
+	dev-python/lxml
+	dev-python/setuptools-odoo"
 RDEPEND="${DEPEND}"
 
 OPENERP_USER="odoo"
@@ -28,15 +29,13 @@ OPENERP_GROUP="odoo"
 src_install() {
 	ADDONS_PATH="/var/lib/odoo/.local/share/Odoo/addons/${SUBSLOT}"
 	dodir "${ADDONS_PATH}"
-	rm -rf "${S}"/setup
+	rm -f "${S}"/setup/README
+	rm -f "${S}"/setup/.setuptools-odoo-make-default-ignore
 
 	for module in $(find "${S}"/* -maxdepth 0 -type d); do
 		cp -R "${module}" "${D}/${ADDONS_PATH}" || die "Install failed!"
 	done
 
 	dodoc README.md
-}
-
-pkg_postinst() {
-	chown -R "${ODOO_USER}:${ODOO_GROUP}" "/var/lib/odoo/.local"
+	fowners -R "${ODOO_USER}:${ODOO_GROUP}" "${ADDONS_PATH}" || die "Chown failed ${ADDONS_PATH}"
 }
