@@ -1,4 +1,4 @@
-# Copyright 1999-2016 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
@@ -11,12 +11,12 @@ HOMEPAGE="http://www.alistek.com/wiki/index.php/Main_Page"
 SRC_URI=""
 SUBSLOT="$(get_version_component_range 1-2)"
 EGIT_REPO_URI="https://github.com/ingadhoc/aeroo_reports.git"
-EGIT_COMMIT="df724664fd67d2e7c0b695cc1f865f1ae39d3f4d"
+EGIT_COMMIT="ac5e17bcfe542688dc7cf0d79c7e070cc156d69a"
 EGIT_BRANCH="${SUBSLOT}"
 IUSE=""
 LICENSE="AGPL-3"
 SLOT="0/${SUBSLOT}"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 DEPEND="app-office/odoo:${SLOT}
 	dev-python/aeroolib
 	dev-python/pycups
