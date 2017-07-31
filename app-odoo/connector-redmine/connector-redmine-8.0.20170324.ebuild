@@ -1,4 +1,4 @@
-# Copyright 1999-2016 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
@@ -11,14 +11,15 @@ HOMEPAGE="https://github.com/OCA/connector-redmine"
 SRC_URI=""
 SUBSLOT="$(get_version_component_range 1-2)"
 EGIT_REPO_URI="https://github.com/OCA/connector-redmine.git"
-EGIT_COMMIT="a073d3201185700aa208cb29a5584ef4e309a18f"
+EGIT_COMMIT="e2c7eee240a820c148a84ca879987022cb954b2d"
 EGIT_BRANCH="${SUBSLOT}"
 IUSE=""
 LICENSE="AGPL-3"
 SLOT="0/${SUBSLOT}"
 KEYWORDS="~amd64 ~x86"
 DEPEND="app-office/odoo:${SLOT}
-	app-odoo/connector:${SLOT}"
+	app-odoo/connector:${SLOT}
+	dev-python/python-redmine"
 RDEPEND="${DEPEND}"
 
 OPENERP_USER="odoo"
