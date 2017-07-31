@@ -9,7 +9,7 @@ inherit eutils
 DESCRIPTION="Convert html to pdf (and various image formats) using webkit"
 HOMEPAGE="http://wkhtmltopdf.org/ https://github.com/wkhtmltopdf/wkhtmltopdf/"
 SRC_URI="https://github.com/wkhtmltopdf/wkhtmltopdf/archive/${PV}.tar.gz -> ${P}.tar.gz
-	https://github.com/wkhtmltopdf/qt/archive/wk_4.8.6.zip -> qt-wk_4.8.6.zip"
+	https://github.com/wkhtmltopdf/qt/archive/wk_4.8.7.zip -> qt-wk_4.8.7.zip"
 
 LICENSE="GPL-3"
 SLOT="0"
@@ -28,7 +28,7 @@ S="${WORKDIR}/wkhtmltopdf-${PV}"
 
 src_unpack() {
 	unpack ${A}
-	mv "${WORKDIR}/"qt-wk_4.8.6/* "${S}"/qt || die
+	mv "${WORKDIR}/"qt-wk_4.8.7/* "${S}"/qt || die
 }
 
 src_compile() {
