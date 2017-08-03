@@ -1,4 +1,7 @@
 # gentoo-portage-odoo
+
+[![Repoman Status](https://travis-ci.org/ingeniovirtual/gentoo-portage-odoo.svg?branch=master)](https://travis-ci.org/ingeniovirtual/gentoo-portage-odoo)
+
 Overlay del portage de Gentoo Linux para ebuilds relacionados con Odoo.
 
 Este proyecto es un esfuerzo para crear una rama para el portage de Gentoo Linux que contemple el desarrollo de la plataforma ERP & CRM basada en Odoo.
