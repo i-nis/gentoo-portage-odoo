@@ -1,6 +1,5 @@
-# Copyright 1999-2016 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -8,7 +7,7 @@ PYTHON_COMPAT=( python2_7 )
 inherit distutils-r1
 
 DESCRIPTION="Tools for writing awesome Fabric files"
-HOMEPAGE="Tools for writing awesome Fabric files"
+HOMEPAGE="https://github.com/fabtools/fabtools"
 SRC_URI="mirror://pypi/f/${PN}/${P}.tar.gz"
 
 LICENSE="BSD"

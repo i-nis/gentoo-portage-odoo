@@ -1,6 +1,5 @@
-# Copyright 1999-2016 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 EAPI=6
 PYTHON_COMPAT=( python2_7 )
@@ -8,7 +7,7 @@ PYTHON_COMPAT=( python2_7 )
 inherit distutils-r1 versionator
 
 DESCRIPTION="A library to help package Odoo addons with setuptools."
-HOMEPAGE="http://github.com/acsone/setuptools-odoo"
+HOMEPAGE="https://github.com/acsone/setuptools-odoo"
 MY_PV=$(delete_version_separator '_')
 MY_P="${PN}-${MY_PV}"
 SRC_URI="mirror://pypi/s/${PN}/${MY_P}.tar.gz"
