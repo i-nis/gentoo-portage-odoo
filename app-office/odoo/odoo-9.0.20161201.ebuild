@@ -44,7 +44,7 @@ CDEPEND="!app-office/openerp
 	dev-python/psycogreen[${PYTHON_USEDEP}]
 	dev-python/psycopg:2[${PYTHON_USEDEP}]
 	dev-python/pyPdf[${PYTHON_USEDEP}]
-	media-gfx/pydot[${PYTHON_USEDEP}]
+	dev-python/pydot[${PYTHON_USEDEP}]
 	dev-python/pyparsing[${PYTHON_USEDEP}]
 	dev-python/pyserial[${PYTHON_USEDEP}]
 	dev-python/python-dateutil[${PYTHON_USEDEP}]
