@@ -3,8 +3,8 @@
 
 EAPI=5
 
-PYTHON_COMPAT=( python3_4 )
-EPYTHON="python3.4"
+PYTHON_COMPAT=( python3_5 )
+EPYTHON="python3.5"
 
 inherit eutils python-r1 git-2 user
 
@@ -19,7 +19,7 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 DEPEND="dev-python/daemonize
 	dev-python/jsonrpc2
-	app-office/libreoffice[-python_single_target_python2_7,python_single_target_python3_4]
+	app-office/libreoffice[-python_single_target_python2_7,python_single_target_python3_5]
 	net-misc/libreoffice"
 RDEPEND="${DEPEND}"
 

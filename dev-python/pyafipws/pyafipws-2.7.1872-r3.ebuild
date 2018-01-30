@@ -20,7 +20,7 @@ IUSE=""
 
 DEPEND="
 	dev-python/dbf
-	~dev-python/httplib2-0.9.2
+	dev-python/httplib2
 	dev-python/fpdf
 	dev-python/m2crypto
 	dev-python/pillow
