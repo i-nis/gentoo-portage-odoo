@@ -1,12 +1,13 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=5
+EAPI=6
 
 PYTHON_COMPAT=( python3_5 )
 EPYTHON="python3.5"
+PYTHON_SITEDIR="/usr/lib/python3.5/site-packages"
 
-inherit eutils python-r1 git-2 user
+inherit eutils python-r1 git-r3 user
 
 DESCRIPTION="A document conversion service."
 HOMEPAGE="https://github.com/aeroo/aeroo_docs"
@@ -27,11 +28,11 @@ ODOO_USER="odoo"
 ODOO_GROUP="odoo"
 
 src_unpack() {
-	git-2_src_unpack
+	git-r3_src_unpack
 }
 
 src_prepare() {
-	epatch "${FILESDIR}/${PN}_gentoo.patch"
+	eapply_user "${FILESDIR}/${PN}_gentoo.patch"
 }
 
 src_install() {
