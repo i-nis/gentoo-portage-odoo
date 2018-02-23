@@ -1,4 +1,4 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2018 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
@@ -17,10 +17,10 @@ EGIT_COMMIT="1eec8742e8f4dea827ffe1681514842c3baeda29"
 IUSE=""
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="-amd64 -x86"
 DEPEND="dev-python/daemonize
 	dev-python/jsonrpc2
-	app-office/libreoffice[-python_single_target_python2_7,python_single_target_python3_5]
+	app-office/libreoffice
 	net-misc/libreoffice"
 RDEPEND="${DEPEND}"
 

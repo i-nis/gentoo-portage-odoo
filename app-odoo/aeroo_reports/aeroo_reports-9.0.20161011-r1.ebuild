@@ -10,7 +10,7 @@ HOMEPAGE="http://www.alistek.com/wiki/index.php/Main_Page"
 SRC_URI=""
 SUBSLOT="$(get_version_component_range 1-2)"
 EGIT_REPO_URI="https://github.com/ingadhoc/aeroo_reports.git"
-EGIT_COMMIT="ac5e17bcfe542688dc7cf0d79c7e070cc156d69a"
+EGIT_COMMIT="293718d101fd232e0bd73b688c3f1d47516b6d18"
 EGIT_BRANCH="${SUBSLOT}"
 IUSE=""
 LICENSE="AGPL-3"
@@ -19,8 +19,7 @@ KEYWORDS="amd64 x86"
 DEPEND="app-office/odoo:${SLOT}
 	dev-python/aeroolib
 	dev-python/pycups
-	dev-python/pycairo
-	net-misc/aeroo-docs"
+	dev-python/pycairo"
 RDEPEND="${DEPEND}"
 
 OPENERP_USER="odoo"
