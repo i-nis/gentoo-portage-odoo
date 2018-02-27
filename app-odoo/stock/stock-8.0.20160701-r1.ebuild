@@ -1,16 +1,16 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2018 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI="6"
 
 inherit eutils git-r3 versionator user
 
-DESCRIPTION="Odoo Accountant Financial Tools and Utils."
-HOMEPAGE="https://github.com/ingadhoc/account-financial-tools"
+DESCRIPTION="Odoo Stock & Warehouse Management Addons."
+HOMEPAGE="https://github.com/ingadhoc/stock"
 SRC_URI=""
 SUBSLOT="$(get_version_component_range 1-2)"
-EGIT_REPO_URI="https://github.com/ingadhoc/account-financial-tools.git"
-EGIT_COMMIT="d6e349af02b1ed4de0445ee0123460eb2faac73a"
+EGIT_REPO_URI="https://github.com/ingadhoc/stock.git"
+EGIT_COMMIT="149a1898692a504a93a11abad1d552fe82974d45"
 EGIT_BRANCH="${SUBSLOT}"
 IUSE=""
 LICENSE="AGPL-3"
@@ -18,19 +18,13 @@ SLOT="0/${SUBSLOT}"
 KEYWORDS="amd64 x86"
 DEPEND="app-office/odoo:${SLOT}
 	app-odoo/aeroo_reports:${SLOT}
-	app-odoo/account-payment:${SLOT}
-	app-odoo/partner
+	app-odoo/web-addons:${SLOT}
 	dev-tcltk/expect
 	dev-python/lxml
 	dev-python/simplejson
 	dev-python/pyserial
-	dev-python/pyyaml
-	media-gfx/wkhtmltox
-	dev-lang/swig:0
-	dev-libs/libffi
-	dev-python/pyopenssl
-	dev-python/m2crypto
-	dev-python/httplib2"
+	dev-python/pyyaml"
+RDEPEND="${DEPEND}"
 
 ODOO_USER="odoo"
 ODOO_GROUP="odoo"

@@ -1,4 +1,4 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2018 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI="6"
@@ -11,14 +11,16 @@ inherit eutils distutils-r1 versionator user
 DESCRIPTION="Open Source ERP & CRM"
 HOMEPAGE="http://www.odoo.com/"
 SUBSLOT="$(get_version_component_range 1-2)"
-SRC_URI="http://nightly.odoo.com/${SUBSLOT}/nightly/src/${PN}_${PV}.tar.gz"
-LICENSE="AGPL-3"
+MY_PV="$(get_version_component_range 3-4)"
 SLOT="0/${SUBSLOT}"
+SRC_URI="http://nightly.odoo.com/${SUBSLOT}/nightly/src/${PN}_${SUBSLOT}c.${MY_PV}.tar.gz"
+LICENSE="LGPL-3"
 KEYWORDS="x86 amd64"
 IUSE="+postgres ldap ssl"
 
 CDEPEND="!app-office/openerp
 	postgres? ( dev-db/postgresql:* )
+	dev-nodejs/less
 	dev-python/Babel[${PYTHON_USEDEP}]
 	dev-python/jinja[${PYTHON_USEDEP}]
 	dev-python/mako[${PYTHON_USEDEP}]
@@ -53,6 +55,7 @@ CDEPEND="!app-office/openerp
 	dev-python/qrcode[${PYTHON_USEDEP}]
 	dev-python/reportlab[${PYTHON_USEDEP}]
 	dev-python/requests[${PYTHON_USEDEP}]
+	dev-python/simplejson[${PYTHON_USEDEP}]
 	dev-python/six[${PYTHON_USEDEP}]
 	dev-python/unittest2[${PYTHON_USEDEP}]
 	>=dev-python/vatnumber-1.2[${PYTHON_USEDEP}]
@@ -61,15 +64,13 @@ CDEPEND="!app-office/openerp
 	dev-python/xlwt[${PYTHON_USEDEP}]
 	dev-python/beautifulsoup:python-2[${PYTHON_USEDEP}]
 	dev-python/geopy[${PYTHON_USEDEP}]
-	dev-python/xlwt[${PYTHON_USEDEP}]
 	dev-python/python-stdnum[${PYTHON_USEDEP}]
 	dev-python/pywebdav
 	ssl? ( dev-python/pyopenssl[${PYTHON_USEDEP}] )
 	dev-python/zsi[${PYTHON_USEDEP}]
 	dev-python/matplotlib[${PYTHON_USEDEP}]
 	dev-python/m2crypto[${PYTHON_USEDEP}]
-	dev-python/suds[${PYTHON_USEDEP}]
-	media-gfx/wkhtmltox"
+	dev-python/suds[${PYTHON_USEDEP}]"
 
 RDEPEND="${CDEPEND}"
 DEPEND="${CDEPEND}"
@@ -79,8 +80,7 @@ ODOO_GROUP="odoo"
 
 src_unpack() {
 	unpack ${A}
-	MY_PV=$(replace_version_separator 2 '-')
-	mv "${WORKDIR}/${PN}-${MY_PV}" "${WORKDIR}/${P}" || die "Install failed!"
+	mv "${WORKDIR}/${PN}-${SUBSLOT}c-${MY_PV}" "${WORKDIR}/${P}" || die "Install failed!"
 }
 
 python_install_all() {
@@ -88,7 +88,7 @@ python_install_all() {
 
 	dodir "/var/lib/${PN}"
 
-	newinitd "${FILESDIR}/${PN}" "${PN}"
+	newinitd "${FILESDIR}/${PN}-${SUBSLOT}" "${PN}"
 	newconfd "${FILESDIR}/${PN}.confd" "${PN}"
 	keepdir "/var/log/${PN}"
 
@@ -96,7 +96,7 @@ python_install_all() {
 	newins "${FILESDIR}/${PN}.logrotate" "${PN}" || die
 	dodir "/etc/${PN}"
 	insinto "/etc/${PN}"
-	newins "${FILESDIR}/${PN}.cfg" "${PN}.cfg" || die
+	newins "${FILESDIR}/${PN}-${SUBSLOT}.cfg" "${PN}.cfg" || die
 
 	dodoc PKG-INFO README.md
 }
@@ -112,10 +112,6 @@ pkg_postinst() {
 	chown "${ODOO_USER}:${ODOO_GROUP}" "/var/log/${PN}"
 	chown -R "${ODOO_USER}:${ODOO_GROUP}" "/var/lib/${PN}"
 	chown -R "${ODOO_USER}:${ODOO_GROUP}" "$(python_get_sitedir)/openerp/addons/"
-
-	if [ -d /var/lib/${PN}/addons ]; then
-		rm -rf /var/lib/${PN}/addons || die
-	fi
 
 	elog "In order to setup the initial database, run:"
 	elog " emerge --config =${CATEGORY}/${PF}"

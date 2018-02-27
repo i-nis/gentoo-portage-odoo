@@ -1,16 +1,16 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2018 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI="6"
 
 inherit eutils git-r3 versionator user
 
-DESCRIPTION="Odoo Alternative Reporting Engine."
-HOMEPAGE="https://github.com/ingadhoc/reporting-engine"
+DESCRIPTION="Odoo Product related Addons."
+HOMEPAGE="https://github.com/ingadhoc/product"
 SRC_URI=""
 SUBSLOT="$(get_version_component_range 1-2)"
-EGIT_REPO_URI="https://github.com/ingadhoc/reporting-engine.git"
-EGIT_COMMIT="828b77213dd8c751d615bb9d48cbfd361a50ff4c"
+EGIT_REPO_URI="https://github.com/ingadhoc/product.git"
+EGIT_COMMIT="66eadb319aff71cf4c0ccdc0b5b09746cf1cd4d7"
 EGIT_BRANCH="${SUBSLOT}"
 IUSE=""
 LICENSE="AGPL-3"
@@ -18,19 +18,12 @@ SLOT="0/${SUBSLOT}"
 KEYWORDS="amd64 x86"
 DEPEND="app-office/odoo:${SLOT}
 	app-odoo/aeroo_reports:${SLOT}
-	app-odoo/l10n_ar:${SLOT}
-	app-odoo/stock:${SLOT}
 	dev-tcltk/expect
 	dev-python/lxml
 	dev-python/simplejson
 	dev-python/pyserial
-	dev-python/pyyaml
-	media-gfx/wkhtmltox
-	dev-lang/swig:0
-	dev-libs/libffi
-	dev-python/pyopenssl
-	dev-python/m2crypto
-	dev-python/httplib2"
+	dev-python/pyyaml"
+RDEPEND="${DEPEND}"
 
 ODOO_USER="odoo"
 ODOO_GROUP="odoo"

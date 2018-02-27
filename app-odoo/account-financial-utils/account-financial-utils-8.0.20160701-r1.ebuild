@@ -1,34 +1,30 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2018 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI="6"
 
 inherit eutils git-r3 versionator user
 
-DESCRIPTION="Odoo Sale related Addons."
-HOMEPAGE="https://github.com/ingadhoc/sale"
+DESCRIPTION="Odoo Accountant Financial Tools and Utils."
+HOMEPAGE="https://github.com/ingadhoc/account-financial-tools"
 SRC_URI=""
 SUBSLOT="$(get_version_component_range 1-2)"
-EGIT_REPO_URI="https://github.com/ingadhoc/sale.git"
-EGIT_COMMIT="5d089b41aa13685ec61a18315ec6cda0266d95e2"
+EGIT_REPO_URI="https://github.com/ingadhoc/account-financial-tools.git"
+EGIT_COMMIT="d6e349af02b1ed4de0445ee0123460eb2faac73a"
 EGIT_BRANCH="${SUBSLOT}"
 IUSE=""
 LICENSE="AGPL-3"
 SLOT="0/${SUBSLOT}"
 KEYWORDS="amd64 x86"
-DEPEND="
-	app-office/odoo:${SLOT}
-	app-odoo/sale-workflow:${SLOT}
-	app-odoo/account-financial-utils:${SLOT}
-	app-odoo/partner:${SLOT}
-	app-odoo/product:${SLOT}
-	app-odoo/account-invoice:${SLOT}
+DEPEND="app-office/odoo:${SLOT}
+	app-odoo/aeroo_reports:${SLOT}
+	app-odoo/account-payment:${SLOT}
+	app-odoo/partner
 	dev-tcltk/expect
 	dev-python/lxml
 	dev-python/simplejson
 	dev-python/pyserial
 	dev-python/pyyaml
-	media-gfx/wkhtmltox
 	dev-lang/swig:0
 	dev-libs/libffi
 	dev-python/pyopenssl

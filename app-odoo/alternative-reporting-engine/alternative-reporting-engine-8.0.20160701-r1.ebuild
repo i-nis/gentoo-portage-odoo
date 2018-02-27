@@ -1,4 +1,4 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2018 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI="6"
@@ -10,7 +10,7 @@ HOMEPAGE="https://github.com/ingadhoc/reporting-engine"
 SRC_URI=""
 SUBSLOT="$(get_version_component_range 1-2)"
 EGIT_REPO_URI="https://github.com/ingadhoc/reporting-engine.git"
-EGIT_COMMIT="e52520fca090a3f915623ffd8438f02ffa587746"
+EGIT_COMMIT="828b77213dd8c751d615bb9d48cbfd361a50ff4c"
 EGIT_BRANCH="${SUBSLOT}"
 IUSE=""
 LICENSE="AGPL-3"
@@ -25,7 +25,6 @@ DEPEND="app-office/odoo:${SLOT}
 	dev-python/simplejson
 	dev-python/pyserial
 	dev-python/pyyaml
-	media-gfx/wkhtmltox
 	dev-lang/swig:0
 	dev-libs/libffi
 	dev-python/pyopenssl

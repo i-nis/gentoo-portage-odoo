@@ -1,4 +1,4 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2018 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI="6"
@@ -23,8 +23,7 @@ DEPEND="app-office/odoo:${SLOT}
 	dev-python/lxml
 	dev-python/simplejson
 	dev-python/pyserial
-	dev-python/pyyaml
-	media-gfx/wkhtmltox"
+	dev-python/pyyaml"
 RDEPEND="${DEPEND}"
 
 ODOO_USER="odoo"

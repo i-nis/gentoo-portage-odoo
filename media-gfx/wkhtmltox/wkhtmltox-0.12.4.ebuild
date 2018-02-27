@@ -1,4 +1,4 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2018 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=5
@@ -12,7 +12,7 @@ SRC_URI="https://github.com/wkhtmltopdf/wkhtmltopdf/archive/${PV}.tar.gz -> ${P}
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="-amd64 -x86"
 IUSE="debug examples"
 
 RDEPEND="!media-gfx/wkhtmltopdf
@@ -55,3 +55,4 @@ src_install() {
 	dodoc AUTHORS CHANGELOG* README.md
 	use examples && dodoc -r examples
 }
+
