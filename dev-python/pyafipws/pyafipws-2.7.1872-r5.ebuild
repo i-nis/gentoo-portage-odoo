@@ -4,14 +4,13 @@
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
 
-inherit distutils-r1 git-2
+inherit distutils-r1 git-r3
 
 DESCRIPTION="Interfases, tools and apps for Argentina's gov't. webservices"
 HOMEPAGE="http://www.pyafipws.com.ar/pyafipws"
 SRC_URI=""
 EGIT_REPO_URI="https://github.com/reingart/pyafipws.git"
 EGIT_COMMIT="${PV}"
-EGIT_MASTER="master"
 
 LICENSE="GPL-3"
 SLOT="0"
@@ -26,10 +25,6 @@ DEPEND="
 	dev-python/pillow
 	=dev-python/PySimpleSOAP-1.08.9
 	virtual/cron"
-
-src_unpack() {
-	git-2_src_unpack
-}
 
 src_prepare() {
 	epatch "${FILESDIR}/${PN}-gentoo_ssl_negotiation.patch"
