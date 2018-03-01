@@ -55,4 +55,3 @@ src_install() {
 	dodoc AUTHORS CHANGELOG* README.md
 	use examples && dodoc -r examples
 }
-
