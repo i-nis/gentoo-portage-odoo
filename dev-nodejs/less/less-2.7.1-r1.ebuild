@@ -19,5 +19,5 @@ src_install() {
 	dobin bin/*
 
 	# Make less able to find its libs
-	dosym /usr/lib/node_modules/less/lib/less-node usr/lib/less-node
+	dosym usr/lib/node_modules/less/lib/less-node usr/lib/less-node
 }
