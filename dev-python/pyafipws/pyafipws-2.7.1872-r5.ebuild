@@ -19,11 +19,11 @@ IUSE=""
 
 DEPEND="
 	dev-python/dbf
-	=dev-python/httplib2-0.9.2
+	~dev-python/httplib2-0.9.2
 	dev-python/fpdf
 	dev-python/m2crypto
 	dev-python/pillow
-	=dev-python/PySimpleSOAP-1.08.9
+	~dev-python/PySimpleSOAP-1.08.9
 	virtual/cron"
 
 src_prepare() {

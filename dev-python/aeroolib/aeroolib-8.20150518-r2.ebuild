@@ -15,7 +15,7 @@ EGIT_REPO_URI="https://github.com/aeroo/aeroolib.git"
 EGIT_COMMIT="5c27b23459c309cdae834d9c4d330742dca3038f"
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="x86 amd64"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 CDEPEND="dev-python/genshi[${PYTHON_USEDEP}]

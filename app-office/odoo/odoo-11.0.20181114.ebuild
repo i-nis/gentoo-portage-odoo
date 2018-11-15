@@ -1,76 +1,70 @@
 # Copyright 1999-2018 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI="6"
+EAPI="7"
 
 PYTHON_COMPAT=( python2_7 )
 DISTUTILS_SINGLE_IMPL=1
 
-inherit eutils distutils-r1 versionator user
+inherit eutils distutils-r1 user
 
 DESCRIPTION="Open Source ERP & CRM"
 HOMEPAGE="http://www.odoo.com/"
-SUBSLOT="$(get_version_component_range 1-2)"
-MY_PV="$(get_version_component_range 3-4)"
+SUBSLOT="$(ver_cut 1-2)"
+MY_PV="$(ver_cut 3-4)"
 SLOT="0/${SUBSLOT}"
-SRC_URI="http://nightly.odoo.com/${SUBSLOT}/nightly/src/${PN}_${SUBSLOT}c.${MY_PV}.tar.gz"
+SRC_URI="http://nightly.odoo.com/${SUBSLOT}/nightly/src/${PN}_${SUBSLOT}.${MY_PV}.tar.gz"
 LICENSE="LGPL-3"
-KEYWORDS="amd64 x86"
-IUSE="+postgres ldap ssl"
+KEYWORDS="~amd64 ~x86"
+IUSE="ldap postgres ssl"
 
-CDEPEND="!app-office/openerp
-	postgres? ( dev-db/postgresql:* )
+CDEPEND="
+	ldap? ( dev-python/python-ldap[${PYTHON_USEDEP}] )
+    postgres? ( dev-db/postgresql:* )
+	ssl? ( dev-python/pyopenssl[${PYTHON_USEDEP}] )
 	dev-nodejs/less
 	dev-python/Babel[${PYTHON_USEDEP}]
-	dev-python/jinja[${PYTHON_USEDEP}]
-	dev-python/mako[${PYTHON_USEDEP}]
-	dev-python/markupsafe[${PYTHON_USEDEP}]
-	dev-python/pillow[jpeg,${PYTHON_USEDEP}]
-	dev-python/pychart[${PYTHON_USEDEP}]
-	dev-python/pyyaml[${PYTHON_USEDEP}]
-	dev-python/werkzeug[${PYTHON_USEDEP}]
-	dev-python/argparse[${PYTHON_USEDEP}]
 	dev-python/decorator[${PYTHON_USEDEP}]
 	dev-python/docutils[${PYTHON_USEDEP}]
+	dev-python/ebaysdk[${PYTHON_USEDEP}]
 	dev-python/feedparser[${PYTHON_USEDEP}]
-	>=dev-python/gdata-2.0.18[${PYTHON_USEDEP}]
 	>=dev-python/gevent-1.0.2[${PYTHON_USEDEP}]
-	>=dev-python/greenlet-0.4.7[${PYTHON_USEDEP}]
+	>=dev-python/greenlet-0.4.10[${PYTHON_USEDEP}]
+	dev-python/html2text[${PYTHON_USEDEP}]
 	dev-python/jcconv[${PYTHON_USEDEP}]
+	dev-python/jinja[${PYTHON_USEDEP}]
 	dev-python/lxml[${PYTHON_USEDEP}]
+	dev-python/mako[${PYTHON_USEDEP}]
+	dev-python/markupsafe[${PYTHON_USEDEP}]
 	dev-python/mock[${PYTHON_USEDEP}]
+	dev-python/ofxparse[${PYTHON_USEDEP}]
 	dev-python/passlib[${PYTHON_USEDEP}]
+	dev-python/pillow[jpeg,${PYTHON_USEDEP}]
 	dev-python/psutil[${PYTHON_USEDEP}]
 	dev-python/psycogreen[${PYTHON_USEDEP}]
 	dev-python/psycopg:2[${PYTHON_USEDEP}]
-	dev-python/pyPdf[${PYTHON_USEDEP}]
+	dev-python/pychart[${PYTHON_USEDEP}]
 	dev-python/pydot[${PYTHON_USEDEP}]
 	dev-python/pyparsing[${PYTHON_USEDEP}]
+	dev-python/PyPDF2[${PYTHON_USEDEP}]
 	dev-python/pyserial[${PYTHON_USEDEP}]
 	dev-python/python-dateutil[${PYTHON_USEDEP}]
-	ldap? ( dev-python/python-ldap[${PYTHON_USEDEP}] )
 	dev-python/python-openid[${PYTHON_USEDEP}]
 	dev-python/pytz[${PYTHON_USEDEP}]
 	dev-python/pyusb[${PYTHON_USEDEP}]
+	dev-python/pyyaml[${PYTHON_USEDEP}]
 	dev-python/qrcode[${PYTHON_USEDEP}]
 	dev-python/reportlab[${PYTHON_USEDEP}]
 	dev-python/requests[${PYTHON_USEDEP}]
-	dev-python/simplejson[${PYTHON_USEDEP}]
 	dev-python/six[${PYTHON_USEDEP}]
-	dev-python/unittest2[${PYTHON_USEDEP}]
+	dev-python/suds[${PYTHON_USEDEP}]
 	>=dev-python/vatnumber-1.2[${PYTHON_USEDEP}]
 	dev-python/vobject[${PYTHON_USEDEP}]
-	dev-python/wsgiref
+	dev-python/werkzeug[${PYTHON_USEDEP}]
+	dev-python/wsgiref[${PYTHON_USEDEP}]
+	dev-python/xlsxwriter[${PYTHON_USEDEP}]
 	dev-python/xlwt[${PYTHON_USEDEP}]
-	dev-python/beautifulsoup:python-2[${PYTHON_USEDEP}]
-	dev-python/geopy[${PYTHON_USEDEP}]
-	dev-python/python-stdnum[${PYTHON_USEDEP}]
-	dev-python/pywebdav
-	ssl? ( dev-python/pyopenssl[${PYTHON_USEDEP}] )
-	dev-python/zsi[${PYTHON_USEDEP}]
-	dev-python/matplotlib[${PYTHON_USEDEP}]
-	dev-python/m2crypto[${PYTHON_USEDEP}]
-	dev-python/suds[${PYTHON_USEDEP}]"
+	>=dev-python/xlrd-1.0.0[${PYTHON_USEDEP}]"
 
 RDEPEND="${CDEPEND}"
 DEPEND="${CDEPEND}"
@@ -80,7 +74,7 @@ ODOO_GROUP="odoo"
 
 src_unpack() {
 	unpack ${A}
-	mv "${WORKDIR}/${PN}-${SUBSLOT}c-${MY_PV}" "${WORKDIR}/${P}" || die "Install failed!"
+	mv "${WORKDIR}/${PN}-${SUBSLOT}.post${MY_PV}" "${WORKDIR}/${P}" || die "Install failed!"
 }
 
 python_install_all() {
@@ -111,7 +105,7 @@ pkg_preinst() {
 pkg_postinst() {
 	chown "${ODOO_USER}:${ODOO_GROUP}" "/var/log/${PN}"
 	chown -R "${ODOO_USER}:${ODOO_GROUP}" "/var/lib/${PN}"
-	chown -R "${ODOO_USER}:${ODOO_GROUP}" "$(python_get_sitedir)/openerp/addons/"
+	chown -R "${ODOO_USER}:${ODOO_GROUP}" "$(python_get_sitedir)/${PN}/addons/"
 
 	elog "In order to setup the initial database, run:"
 	elog " emerge --config =${CATEGORY}/${PF}"
