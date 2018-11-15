@@ -37,6 +37,7 @@ CDEPEND="
 	dev-python/mako[${PYTHON_USEDEP}]
 	dev-python/markupsafe[${PYTHON_USEDEP}]
 	dev-python/mock[${PYTHON_USEDEP}]
+	dev-python/num2words[${PYTHON_USEDEP}]
 	dev-python/ofxparse[${PYTHON_USEDEP}]
 	dev-python/passlib[${PYTHON_USEDEP}]
 	dev-python/pillow[jpeg,${PYTHON_USEDEP}]
