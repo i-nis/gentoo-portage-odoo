@@ -20,5 +20,5 @@ DEPEND="dev-python/lxml
 S=${WORKDIR}/${P}
 
 src_install() {
-    rm -rf "${S}"/test
+	rm -rf "${S}"/test
 }

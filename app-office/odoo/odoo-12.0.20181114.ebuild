@@ -20,7 +20,7 @@ IUSE="ldap postgres ssl"
 
 CDEPEND="
 	ldap? ( dev-python/python-ldap[${PYTHON_USEDEP}] )
-    postgres? ( dev-db/postgresql:* )
+	postgres? ( dev-db/postgresql:* )
 	ssl? ( dev-python/pyopenssl[${PYTHON_USEDEP}] )
 	dev-nodejs/less
 	dev-python/Babel[${PYTHON_USEDEP}]

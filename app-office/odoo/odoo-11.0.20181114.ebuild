@@ -20,7 +20,7 @@ IUSE="ldap postgres ssl"
 
 CDEPEND="
 	ldap? ( dev-python/python-ldap[${PYTHON_USEDEP}] )
-    postgres? ( dev-db/postgresql:* )
+	postgres? ( dev-db/postgresql:* )
 	ssl? ( dev-python/pyopenssl[${PYTHON_USEDEP}] )
 	dev-nodejs/less
 	dev-python/Babel[${PYTHON_USEDEP}]
@@ -40,6 +40,7 @@ CDEPEND="
 	dev-python/num2words[${PYTHON_USEDEP}]
 	dev-python/ofxparse[${PYTHON_USEDEP}]
 	dev-python/passlib[${PYTHON_USEDEP}]
+	dev-python/phonenumbers[${PYTHON_USEDEP}]
 	dev-python/pillow[jpeg,${PYTHON_USEDEP}]
 	dev-python/psutil[${PYTHON_USEDEP}]
 	dev-python/psycogreen[${PYTHON_USEDEP}]
