@@ -3,8 +3,7 @@
 
 EAPI="7"
 
-PYTHON_COMPAT=( python2_7 )
-DISTUTILS_SINGLE_IMPL=1
+PYTHON_COMPAT=( python2_7 python3_{4,5,6,7} pypy pypy3 )
 
 inherit eutils distutils-r1 user
 
@@ -19,54 +18,50 @@ KEYWORDS="~amd64 ~x86"
 IUSE="ldap postgres ssl"
 
 CDEPEND="
-	ldap? ( dev-python/python-ldap[${PYTHON_USEDEP}] )
+	ldap? ( dev-python/python-ldap )
 	postgres? ( dev-db/postgresql:* )
-	ssl? ( dev-python/pyopenssl[${PYTHON_USEDEP}] )
+	ssl? ( dev-python/pyopenssl )
 	dev-nodejs/less
-	dev-python/Babel[${PYTHON_USEDEP}]
-	dev-python/decorator[${PYTHON_USEDEP}]
-	dev-python/docutils[${PYTHON_USEDEP}]
-	dev-python/ebaysdk[${PYTHON_USEDEP}]
-	dev-python/feedparser[${PYTHON_USEDEP}]
-	>=dev-python/gevent-1.0.2[${PYTHON_USEDEP}]
-	>=dev-python/greenlet-0.4.10[${PYTHON_USEDEP}]
-	dev-python/html2text[${PYTHON_USEDEP}]
-	dev-python/jcconv[${PYTHON_USEDEP}]
-	dev-python/jinja[${PYTHON_USEDEP}]
-	dev-python/lxml[${PYTHON_USEDEP}]
-	dev-python/mako[${PYTHON_USEDEP}]
-	dev-python/markupsafe[${PYTHON_USEDEP}]
-	dev-python/mock[${PYTHON_USEDEP}]
-	dev-python/num2words[${PYTHON_USEDEP}]
-	dev-python/ofxparse[${PYTHON_USEDEP}]
-	dev-python/passlib[${PYTHON_USEDEP}]
-	dev-python/phonenumbers[${PYTHON_USEDEP}]
-	dev-python/pillow[jpeg,${PYTHON_USEDEP}]
-	dev-python/psutil[${PYTHON_USEDEP}]
-	dev-python/psycogreen[${PYTHON_USEDEP}]
-	dev-python/psycopg:2[${PYTHON_USEDEP}]
-	dev-python/pychart[${PYTHON_USEDEP}]
-	dev-python/pydot[${PYTHON_USEDEP}]
-	dev-python/pyparsing[${PYTHON_USEDEP}]
-	dev-python/PyPDF2[${PYTHON_USEDEP}]
-	dev-python/pyserial[${PYTHON_USEDEP}]
-	dev-python/python-dateutil[${PYTHON_USEDEP}]
-	dev-python/python-openid[${PYTHON_USEDEP}]
-	dev-python/pytz[${PYTHON_USEDEP}]
-	dev-python/pyusb[${PYTHON_USEDEP}]
-	dev-python/pyyaml[${PYTHON_USEDEP}]
-	dev-python/qrcode[${PYTHON_USEDEP}]
-	dev-python/reportlab[${PYTHON_USEDEP}]
-	dev-python/requests[${PYTHON_USEDEP}]
-	dev-python/six[${PYTHON_USEDEP}]
-	dev-python/suds[${PYTHON_USEDEP}]
-	>=dev-python/vatnumber-1.2[${PYTHON_USEDEP}]
-	dev-python/vobject[${PYTHON_USEDEP}]
-	dev-python/werkzeug[${PYTHON_USEDEP}]
-	dev-python/wsgiref[${PYTHON_USEDEP}]
-	dev-python/xlsxwriter[${PYTHON_USEDEP}]
-	dev-python/xlwt[${PYTHON_USEDEP}]
-	>=dev-python/xlrd-1.0.0[${PYTHON_USEDEP}]"
+	dev-python/Babel
+	dev-python/decorator
+	dev-python/docutils
+	dev-python/ebaysdk
+	dev-python/feedparser
+	>=dev-python/gevent-1.0.2
+	>=dev-python/greenlet-0.4.10
+	dev-python/html2text
+	dev-python/jinja
+	dev-python/lxml
+	dev-python/mako
+	dev-python/markupsafe
+	dev-python/mock
+	dev-python/num2words
+	dev-python/ofxparse
+	dev-python/passlib
+	dev-python/phonenumbers
+	dev-python/pillow[jpeg]
+	dev-python/psutil
+	dev-python/psycogreen
+	dev-python/psycopg:2
+	dev-python/pydot
+	dev-python/pyparsing
+	dev-python/PyPDF2
+	dev-python/pyserial
+	dev-python/python-dateutil
+	dev-python/pytz
+	dev-python/pyusb
+	dev-python/pyyaml
+	dev-python/qrcode
+	dev-python/reportlab
+	dev-python/requests
+	dev-python/six
+	dev-python/suds
+	>=dev-python/vatnumber-1.2
+	dev-python/vobject
+	dev-python/werkzeug
+	dev-python/xlsxwriter
+	dev-python/xlwt
+	>=dev-python/xlrd-1.0.0"
 
 RDEPEND="${CDEPEND}"
 DEPEND="${CDEPEND}"
@@ -107,7 +102,7 @@ pkg_preinst() {
 pkg_postinst() {
 	chown "${ODOO_USER}:${ODOO_GROUP}" "/var/log/${PN}"
 	chown -R "${ODOO_USER}:${ODOO_GROUP}" "/var/lib/${PN}"
-	chown -R "${ODOO_USER}:${ODOO_GROUP}" "$(python_get_sitedir)/${PN}/addons/"
+#	chown -R "${ODOO_USER}:${ODOO_GROUP}" "$(python_get_sitedir)/${PN}/addons/"
 
 	elog "In order to setup the initial database, run:"
 	elog " emerge --config =${CATEGORY}/${PF}"

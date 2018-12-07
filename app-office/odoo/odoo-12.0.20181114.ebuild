@@ -31,7 +31,6 @@ CDEPEND="
 	>=dev-python/gevent-1.0.2[${PYTHON_USEDEP}]
 	>=dev-python/greenlet-0.4.10[${PYTHON_USEDEP}]
 	dev-python/html2text[${PYTHON_USEDEP}]
-	dev-python/jcconv[${PYTHON_USEDEP}]
 	dev-python/jinja[${PYTHON_USEDEP}]
 	dev-python/lxml[${PYTHON_USEDEP}]
 	dev-python/mako[${PYTHON_USEDEP}]

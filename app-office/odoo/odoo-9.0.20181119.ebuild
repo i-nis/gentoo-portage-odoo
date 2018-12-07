@@ -36,7 +36,6 @@ CDEPEND="
 	>=dev-python/gdata-2.0.18[${PYTHON_USEDEP}]
 	>=dev-python/gevent-1.0.2[${PYTHON_USEDEP}]
 	>=dev-python/greenlet-0.4.7[${PYTHON_USEDEP}]
-	dev-python/jcconv[${PYTHON_USEDEP}]
 	dev-python/lxml[${PYTHON_USEDEP}]
 	dev-python/mock[${PYTHON_USEDEP}]
 	dev-python/passlib[${PYTHON_USEDEP}]
