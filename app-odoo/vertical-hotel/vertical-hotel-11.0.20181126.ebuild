@@ -30,6 +30,9 @@ src_install() {
 	dodir "${ADDONS_PATH}"
 	rm -f "${S}"/setup/README
 	rm -f "${S}"/setup/.setuptools-odoo-make-default-ignore
+	rm -f "${S}"/setup/_metapackage/setup.cfg
+	rm -f "${S}"/setup/_metapackage/VERSION.txt
+	rm -f "${S}"/setup/_metapackage/setup.py
 
 	for module in $(find "${S}"/* -maxdepth 0 -type d); do
 		cp -R "${module}" "${D}/${ADDONS_PATH}" || die "Install failed!"
