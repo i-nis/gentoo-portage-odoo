@@ -10,7 +10,7 @@ DESCRIPTION="Python Simple SOAP Library"
 HOMEPAGE="http://code.google.com/p/pysimplesoap"
 SRC_URI="mirror://pypi/P/${PN}/${P}.tar.gz"
 
-LICENSE="LGPL-3"
+LICENSE="LGPL-3+"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
