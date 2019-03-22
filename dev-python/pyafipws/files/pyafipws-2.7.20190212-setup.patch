@@ -1,0 +1,91 @@
+--- pyafipws/setup.py
++++ pyafipws/setup.py
+@@ -34,49 +34,41 @@
+ 
+     # modulos a compilar y empaquetar (comentar si no se desea incluir):
+ 
+-    #import pyafipws
+-    #import pyrece
++    import pyafipws
++    import pyrece
+     from . import wsaa
+     from . import wsfev1, rece1, rg3685
+-    #import wsfexv1, recex1
+-    #import wsbfev1, receb1
+-    #import wsmtx, recem
+-    #import wsct, recet
+-    #import ws_sr_padron
+-    #import pyfepdf
+-    #import pyemail
+-    #import pyi25
+-    #import wsctg
+-    #import wslpg
+-    #import wsltv
+-    #import wslum
+-    #import wslsp
+-    #import wsremcarne
+-    #import wscoc
+-    #import wscdc
+-    #import cot
+-    #import iibb
+-    #import trazamed
+-    #import trazaprodmed
+-    #import trazarenpre
+-    #import trazafito
+-    #import trazavet
+-    #import padron
+-    #import sired
++    import wsfexv1, recex1
++    import wsbfev1, receb1
++    import wsmtx, recem
++    import wsct, recet
++    import ws_sr_padron
++    import pyfepdf
++    import pyemail
++    import pyi25
++    import wsctg
++    import wslpg
++    import wsltv
++    import wslum
++    import wslsp
++    import wsremcarne
++    import wscoc
++    import wscdc
++    import cot
++    import iibb
++    import trazamed
++    import trazaprodmed
++    import trazarenpre
++    import trazafito
++    import trazavet
++    import padron
++    import sired
+ 
+     data_files = [
+         (".", ["licencia.txt", ]),
+         ("conf", ["conf/rece.ini", "conf/geotrust.crt", "conf/afip_ca_info.crt", ]),
+         ("cache", glob.glob("cache/*")),
+     ]
+-
+-    # herramientas opcionales a compilar y empaquetar:
+-    try:
+-        if 'pyfepdf' in globals() or 'pyrece' in globals():
+-            import designer
+-    except ImportError:
+-        # el script pyfpdf/tools/designer.py no esta disponible:
+-        print("IMPORTANTE: no se incluye el diseñador de plantillas PDF")
+ 
+     # parametros para setup:
+     kwargs = {}
+@@ -581,8 +573,8 @@
+     kwargs['package_dir'] = {'pyafipws': '.'}
+     kwargs['packages'] = ['pyafipws', ]
+     opts = {}
+-    data_files = [("pyafipws/plantillas", glob.glob("plantillas/*"))]
+-    data_files += [("conf", glob.glob("conf/*"))]
++    data_files = [("/usr/share/pyafipws/plantillas", glob.glob("plantillas/*"))]
++    data_files += [("/etc/pyafipws", glob.glob("conf/*"))]
+ 
+ 
+ long_desc = ("Interfases, herramientas y aplicativos para Servicios Web"
+

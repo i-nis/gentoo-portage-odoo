@@ -1,4 +1,4 @@
-# Copyright 1999-2018 Gentoo Foundation
+# Copyright 1999-2019 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI="7"
@@ -15,7 +15,7 @@ EGIT_BRANCH="${SUBSLOT}"
 IUSE=""
 LICENSE="AGPL-3"
 SLOT="0/${SUBSLOT}"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 DEPEND="app-office/odoo:${SLOT}
 	app-odoo/aeroo_reports:${SLOT}
 	app-odoo/account-financial-tools:${SLOT}
@@ -28,7 +28,7 @@ DEPEND="app-office/odoo:${SLOT}
 	dev-python/pyopenssl
 	dev-python/PySimpleSOAP
 	dev-python/suds
-	dev-python/pyafipws"
+	>=dev-python/pyafipws-2.7.20190212"
 RDEPEND="${DEPEND}"
 
 ODOO_USER="odoo"
