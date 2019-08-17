@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI="6"
-inherit npm
+inherit multilib npm
 
 DESCRIPTION="CSS pre-processor"
 LICENSE="Apache-2.0"
@@ -19,5 +19,5 @@ src_install() {
 	dobin bin/*
 
 	# Make less able to find its libs
-	dosym /usr/lib/node_modules/less/lib/less-node usr/lib/less-node
+	dosym "/usr/$(get_libdir)/node_modules/less/lib/less-node" "usr/lib/less-node"
 }

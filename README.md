@@ -1,6 +1,6 @@
 # gentoo-portage-odoo
 
-[![Repoman Status](https://travis-ci.org/ingeniovirtual/gentoo-portage-odoo.svg?branch=master)](https://travis-ci.org/ingeniovirtual/gentoo-portage-odoo)
+[![Repoman Status](https://travis-ci.org/ingeniovirtual/gentoo-portage-odoo.svg?branch=master)](https://travis-ci.org/ingeniovirtual/gentoo-portage-odoo) [![License](http://img.shields.io/:license-gpl-green.svg)](https://tldrlegal.com/license/gnu-general-public-license-v2)
 
 Overlay del portage de Gentoo Linux para ebuilds relacionados con Odoo.
 
