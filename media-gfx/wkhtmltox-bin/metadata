@@ -6,6 +6,6 @@
 		<name>Martin Andres Gomez Gimenez</name>
 	</maintainer>
 	<upstream>
-		<remote-id type="github">wkhtmltopdf/wkhtmltopdf</remote-id>
+		<remote-id type="github">wkhtmltopdf/wkhtmltopdf-bin</remote-id>
 	</upstream>
 </pkgmetadata>
