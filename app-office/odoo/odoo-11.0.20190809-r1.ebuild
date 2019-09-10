@@ -61,7 +61,8 @@ CDEPEND="
 	dev-python/werkzeug
 	dev-python/xlsxwriter
 	dev-python/xlwt
-	>=dev-python/xlrd-1.0.0"
+	>=dev-python/xlrd-1.0.0
+	media-gfx/wkhtmltox-bin"
 
 RDEPEND="${CDEPEND}"
 DEPEND="${CDEPEND}"
