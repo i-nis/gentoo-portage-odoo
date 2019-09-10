@@ -5,11 +5,12 @@ EAPI=7
 
 DESCRIPTION="Convert html to pdf (and various image formats) using webkit"
 HOMEPAGE="https://wkhtmltopdf.org/ https://github.com/wkhtmltopdf/wkhtmltopdf/"
-SRC_URI="https://github.com/wkhtmltopdf/wkhtmltopdf/releases/download/${PV}/wkhtmltox_${PV}-1.jessie_amd64.deb"
+SRC_URI="amd64? ( https://github.com/wkhtmltopdf/wkhtmltopdf/releases/download/${PV}/wkhtmltox_${PV}-1.jessie_amd64.deb )
+         x86? ( https://github.com/wkhtmltopdf/wkhtmltopdf/releases/download/${PV}/wkhtmltox_${PV}-1.jessie_i386.deb )"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="amd64 x86"
 
 QA_PRESTRIPPED="usr/local/bin/wkhtmltopdf usr/local/bin/wkhtmltoimage usr/local/lib/libwkhtmltox.so.0.12.5"
 
