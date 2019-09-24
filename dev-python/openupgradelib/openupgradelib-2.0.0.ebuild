@@ -1,8 +1,8 @@
-# Copyright 1999-2018 Gentoo Foundation
+# Copyright 1999-2019 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
-PYTHON_COMPAT=( python2_7 )
+PYTHON_COMPAT=( python2_7 python3_{4,5,6,7} pypy pypy3 )
 
 inherit distutils-r1
 
@@ -14,6 +14,11 @@ LICENSE="AGPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
-DEPEND="dev-python/wheel"
+DEPEND="
+    dev-python/wheel
+    dev-python/flake8
+    dev-python/lxml
+	dev-python/pep8-naming
+    dev-python/psycopg"
 
 RDEPEND="${DEPEND}"
