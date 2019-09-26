@@ -1,4 +1,4 @@
-# Copyright 1999-2019 Gentoo Foundation
+# Copyright 1999-2019 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
@@ -6,7 +6,7 @@ EAPI=7
 DESCRIPTION="Convert html to pdf (and various image formats) using webkit"
 HOMEPAGE="https://wkhtmltopdf.org/ https://github.com/wkhtmltopdf/wkhtmltopdf/"
 SRC_URI="amd64? ( https://github.com/wkhtmltopdf/wkhtmltopdf/releases/download/${PV}/wkhtmltox_${PV}-1.jessie_amd64.deb )
-         x86? ( https://github.com/wkhtmltopdf/wkhtmltopdf/releases/download/${PV}/wkhtmltox_${PV}-1.jessie_i386.deb )"
+		x86? ( https://github.com/wkhtmltopdf/wkhtmltopdf/releases/download/${PV}/wkhtmltox_${PV}-1.jessie_i386.deb )"
 
 LICENSE="GPL-3"
 SLOT="0"
