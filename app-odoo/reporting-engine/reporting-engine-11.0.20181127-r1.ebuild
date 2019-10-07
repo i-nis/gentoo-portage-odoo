@@ -17,7 +17,14 @@ LICENSE="AGPL-3"
 SLOT="0/${SUBSLOT}"
 KEYWORDS="amd64 x86"
 DEPEND="app-office/odoo:${SLOT}
+	app-odoo/account-financial-tools:${SLOT}
+	app-odoo/account-payment:${SLOT}
+	app-odoo/aeroo_reports:${SLOT}
+	app-odoo/argentina-sale:${SLOT}
+	app-odoo/odoo-support:${SLOT}
+	app-odoo/report-print-send:${SLOT}
 	app-odoo/server-tools:${SLOT}
+	app-odoo/stock:${SLOT}
 	dev-python/fdfgen
 	dev-python/xlwt
 	dev-python/xlsxwriter"
