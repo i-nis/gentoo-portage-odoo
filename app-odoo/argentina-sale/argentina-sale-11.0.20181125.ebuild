@@ -15,9 +15,8 @@ EGIT_BRANCH="${SUBSLOT}"
 IUSE=""
 LICENSE="AGPL-3"
 SLOT="0/${SUBSLOT}"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 DEPEND="app-office/odoo:${SLOT}
-	app-odoo/l10n_ar:${SLOT}
 	app-odoo/stock:${SLOT}
 	app-odoo/stock-logistics-workflow:${SLOT}"
 RDEPEND="${DEPEND}"
