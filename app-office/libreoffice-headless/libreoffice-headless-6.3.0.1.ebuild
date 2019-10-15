@@ -125,7 +125,7 @@ _check_reqs() {
 	if is-flagq "-g*" && ! is-flagq "-g*0" ; then
 		CHECKREQS_DISK_BUILD="12G"
 	else
-		CHECKREQS_DISK_BUILD="2G"
+		CHECKREQS_DISK_BUILD="3G"
 	fi
 	check-reqs_$1
 }
@@ -190,6 +190,7 @@ src_configure() {
 		--enable-python=system
 		--enable-randr
 		--enable-release-build
+		--enable-split-opt-features
 		--disable-breakpad
 		--disable-bundle-mariadb
 		--disable-ccache
