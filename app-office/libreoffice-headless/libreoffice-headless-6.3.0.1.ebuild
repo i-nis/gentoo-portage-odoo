@@ -39,15 +39,16 @@ SLOT="0"
 [[ ${MY_PV} == *9999* ]] || \
 KEYWORDS="~amd64 ~x86"
 
-BDEPEND="
+DEPEND="${PYTHON_DEPS}
+	!app-office/libreoffice
+	!app-office/libreoffice-bin
+	!app-office/libreoffice-bin-debug
+	!app-office/openoffice
 	dev-util/intltool
 	sys-devel/bison
 	sys-devel/flex
 	sys-devel/gettext
 	virtual/pkgconfig
-"
-
-COMMON_DEPEND="${PYTHON_DEPS}
 	app-arch/unzip
 	app-arch/zip
 	app-crypt/gpgme[cxx]
@@ -84,6 +85,13 @@ COMMON_DEPEND="${PYTHON_DEPS}
 	dev-libs/nss
 	>=dev-libs/redland-1.0.16
 	>=dev-libs/xmlsec-1.2.28[nss]
+	 >=dev-libs/libatomic_ops-7.2d
+	dev-perl/Archive-Zip
+	>=dev-util/cppunit-1.14.0
+	>=dev-util/gperf-3.1
+	>=dev-util/mdds-1.4.1:1=
+	mariadb? ( dev-db/mariadb-connector-c )
+	!mariadb? ( dev-db/mysql-connector-c )
 	media-gfx/fontforge
 	media-gfx/graphite2
 	media-libs/fontconfig
@@ -100,25 +108,15 @@ COMMON_DEPEND="${PYTHON_DEPS}
 	sci-mathematics/lpsolve
 	net-libs/serf
 	sys-libs/zlib
-	mariadb? ( dev-db/mariadb-connector-c )
-	!mariadb? ( dev-db/mysql-connector-c )
-"
-
-DEPEND="${COMMON_DEPEND}
 	>=dev-libs/libatomic_ops-7.2d
 	dev-perl/Archive-Zip
 	>=dev-util/cppunit-1.14.0
 	>=dev-util/gperf-3.1
 	>=dev-util/mdds-1.4.1:1=
 	media-libs/glm
-	sys-devel/ucpp
-"
-RDEPEND="${COMMON_DEPEND}
-	!app-office/libreoffice
-	!app-office/libreoffice-bin
-	!app-office/libreoffice-bin-debug
-	!app-office/openoffice
-"
+	sys-devel/ucpp"
+
+RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${MY_PN}-${MY_PV}"
 
