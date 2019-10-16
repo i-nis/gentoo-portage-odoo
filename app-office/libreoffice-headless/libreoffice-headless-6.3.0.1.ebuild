@@ -125,7 +125,7 @@ _check_reqs() {
 	if is-flagq "-g*" && ! is-flagq "-g*0" ; then
 		CHECKREQS_DISK_BUILD="8G"
 	else
-		CHECKREQS_DISK_BUILD="2.5G"
+		CHECKREQS_DISK_BUILD="2500M"
 	fi
 	check-reqs_$1
 }
