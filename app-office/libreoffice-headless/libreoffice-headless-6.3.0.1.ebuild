@@ -125,9 +125,9 @@ S="${WORKDIR}/${MY_PN}-${MY_PV}"
 _check_reqs() {
 	CHECKREQS_MEMORY="512M"
 	if is-flagq "-g*" && ! is-flagq "-g*0" ; then
-		CHECKREQS_DISK_BUILD="12G"
+		CHECKREQS_DISK_BUILD="8G"
 	else
-		CHECKREQS_DISK_BUILD="3G"
+		CHECKREQS_DISK_BUILD="2.5G"
 	fi
 	check-reqs_$1
 }
