@@ -30,7 +30,7 @@ done
 unset i
 unset DEV_URI
 
-IUSE=""
+IUSE="mariadb"
 
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
@@ -100,6 +100,8 @@ COMMON_DEPEND="${PYTHON_DEPS}
 	sci-mathematics/lpsolve
 	net-libs/serf
 	sys-libs/zlib
+	mariadb? ( dev-db/mariadb-connector-c )
+	!mariadb? ( dev-db/mysql-connector-c )
 "
 
 DEPEND="${COMMON_DEPEND}

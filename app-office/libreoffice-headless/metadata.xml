@@ -10,4 +10,7 @@ This ebuild allows you to compile it yourself. Unfortunately this
 compilation can take up to a day depending on the speed of your 
 computer. It will however make a snappier LibreOffice than the binary 
 version</longdescription>
+  <use>
+    <flag name="mariadb">Prefer mariadb connector over mysql connector</flag>
+  </use>
 </pkgmetadata>
