@@ -50,7 +50,7 @@ CDEPEND="
 	dev-python/python-dateutil
 	dev-python/pytz
 	dev-python/pyusb
-	dev-python/pyyaml
+	=dev-python/pyyaml-3.13
 	dev-python/qrcode
 	dev-python/reportlab
 	dev-python/requests

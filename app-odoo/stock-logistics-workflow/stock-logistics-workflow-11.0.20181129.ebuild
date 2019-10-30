@@ -21,8 +21,7 @@ DEPEND="app-office/odoo:${SLOT}
 	dev-tcltk/expect
 	dev-python/lxml
 	dev-python/simplejson
-	dev-python/pyserial
-	dev-python/pyyaml"
+	dev-python/pyserial"
 RDEPEND="${DEPEND}"
 
 OPENERP_USER="odoo"

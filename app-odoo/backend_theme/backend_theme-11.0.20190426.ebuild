@@ -20,8 +20,7 @@ DEPEND="app-office/odoo:${SLOT}
 	dev-tcltk/expect
 	dev-python/lxml
 	dev-python/simplejson
-	dev-python/pyserial
-	dev-python/pyyaml"
+	dev-python/pyserial"
 RDEPEND="${DEPEND}"
 
 ODOO_USER="odoo"
