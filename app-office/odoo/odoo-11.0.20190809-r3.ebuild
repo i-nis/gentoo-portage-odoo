@@ -24,7 +24,7 @@ CDEPEND="
 	dev-nodejs/less
 	dev-python/Babel
 	dev-python/decorator
-	dev-python/docutils
+	=dev-python/docutils-0.12
 	dev-python/ebaysdk
 	dev-python/feedparser
 	>=dev-python/gevent-1.0.2
