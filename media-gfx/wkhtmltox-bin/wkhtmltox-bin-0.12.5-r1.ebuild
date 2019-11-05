@@ -3,6 +3,8 @@
 
 EAPI=7
 
+inherit unpacker
+
 DESCRIPTION="Convert html to pdf (and various image formats) using webkit"
 HOMEPAGE="https://wkhtmltopdf.org/ https://github.com/wkhtmltopdf/wkhtmltopdf/"
 SRC_URI="amd64? ( https://github.com/wkhtmltopdf/wkhtmltopdf/releases/download/${PV}/wkhtmltox_${PV}-1.jessie_amd64.deb )
@@ -23,7 +25,7 @@ RDEPEND="
 	media-libs/freetype
 	x11-libs/libXext
 	x11-libs/libX11
-	dev-libs/openssl
+	dev-libs/openssl-compat:1.0.0
 	sys-libs/zlib
 	dev-libs/expat
 	x11-libs/libxcb
@@ -36,7 +38,7 @@ RDEPEND="
 S="${WORKDIR}"
 
 src_unpack(){
-	unpack ${A}
+	unpack "${A}"
 	tar xf data.tar.xz
 }
 
