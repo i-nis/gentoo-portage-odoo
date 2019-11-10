@@ -18,7 +18,7 @@ QA_PRESTRIPPED="usr/local/bin/wkhtmltopdf usr/local/bin/wkhtmltoimage usr/local/
 
 RDEPEND="
 	!media-gfx/wkhtmltopdf
-	media-libs/libpng:1.2
+	media-libs/libpng-compat:1.2
 	media-libs/libjpeg-turbo
 	x11-libs/libXrender
 	media-libs/fontconfig
