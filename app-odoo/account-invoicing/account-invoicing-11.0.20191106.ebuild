@@ -3,28 +3,32 @@
 
 EAPI="7"
 
-inherit eutils git-r3 user
+inherit eutils user
 
-DESCRIPTION="Odoo Accountant Financial Tools and Utils ."
-HOMEPAGE="https://github.com/ingadhoc/account-financial-tools"
-SRC_URI=""
+DESCRIPTION="Odoo Invoicing Extension Addons."
+HOMEPAGE="https://github.com/OCA/account-invoicing"
 SUBSLOT="$(ver_cut 1-2)"
-EGIT_REPO_URI="https://github.com/ingadhoc/account-financial-tools.git"
-EGIT_COMMIT="5e2faa2227fa0bd7c7b6c18554130df1274fe2a5"
+EGIT_COMMIT="525dc81c55bd1dd962002e7c11a9056523f85c62"
 EGIT_BRANCH="${SUBSLOT}"
+SRC_URI="${HOMEPAGE}/archive/${EGIT_COMMIT}.zip -> ${P}.zip"
 IUSE=""
 LICENSE="AGPL-3"
 SLOT="0/${SUBSLOT}"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 DEPEND="app-office/odoo:${SLOT}
-	app-odoo/aeroo_reports:${SLOT}
-	app-odoo/account-payment:${SLOT}
-	app-odoo/miscellaneous:${SLOT}
-	app-odoo/web-addons:${SLOT}"
+		app-odoo/product-attribute:${SLOT}
+		app-odoo/purchase-workflow:${SLOT}
+		app-odoo/queue:${SLOT}
+		app-odoo/server-tools:${SLOT}"
 RDEPEND="${DEPEND}"
 
-OPENERP_USER="odoo"
-OPENERP_GROUP="odoo"
+ODOO_USER="odoo"
+ODOO_GROUP="odoo"
+
+src_unpack() {
+    unpack ${A}
+    mv "${WORKDIR}/${PN}-${EGIT_COMMIT}" "${WORKDIR}/${P}" || die "Install failed!"
+}
 
 src_install() {
 	ADDONS_PATH="/var/lib/odoo/.local/share/Odoo/addons/${SUBSLOT}"
