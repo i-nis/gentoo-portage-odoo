@@ -3,20 +3,20 @@
 
 EAPI="7"
 
-PYTHON_COMPAT=( python2_7 python3_{4,5,6,7} pypy pypy3 )
+PYTHON_COMPAT=( python3_{4,5,6,7} pypy pypy3 )
 
-inherit eutils git-r3 distutils-r1 user
+inherit eutils distutils-r1 user
 
 DESCRIPTION="Aeroo Reports library (Aeroo RL)."
 HOMEPAGE="http://www.alistek.com/wiki/index.php/Main_Page"
-SRC_URI=""
 SUBSLOT="$(ver_cut 1-2)"
-EGIT_REPO_URI="https://github.com/adhoc-dev/aeroolib.git"
-EGIT_COMMIT="063168d330b94543d0391d3c4797ce0828949dd8"
+EGIT_REPO_URI="https://github.com/adhoc-dev/aeroolib"
+EGIT_COMMIT="eb3f232f250ce6da978c41e47fdb95b43b0dad8d"
 EGIT_BRANCH="master-fix-ods"
+SRC_URI="${EGIT_REPO_URI}/archive/${EGIT_COMMIT}.zip -> ${P}.zip"
 LICENSE="GPL-3"
 SLOT="0/${SUBSLOT}"
-KEYWORDS="-amd64 -x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 CDEPEND="dev-python/genshi
@@ -24,6 +24,11 @@ CDEPEND="dev-python/genshi
 
 RDEPEND="${CDEPEND}"
 DEPEND="${CDEPEND}"
+
+src_unpack() {
+    unpack ${A}
+    mv "${WORKDIR}/aeroolib-${EGIT_COMMIT}" "${WORKDIR}/${P}" || die "Install failed!"
+}
 
 python_install_all() {
 	distutils-r1_python_install_all
