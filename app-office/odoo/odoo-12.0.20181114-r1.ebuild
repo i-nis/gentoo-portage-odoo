@@ -3,8 +3,7 @@
 
 EAPI="7"
 
-PYTHON_COMPAT=( python2_7 )
-DISTUTILS_SINGLE_IMPL=1
+PYTHON_COMPAT=( python3_{4,5,6,7} pypy pypy3 )
 
 inherit eutils distutils-r1 user
 
