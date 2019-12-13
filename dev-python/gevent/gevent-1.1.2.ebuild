@@ -23,7 +23,7 @@ IUSE="doc examples"
 RDEPEND="
 	>=dev-libs/libev-4.23
 	>=net-dns/c-ares-1.12
-	>=dev-python/greenlet-0.4.14
+	>=dev-python/greenlet-0.4.10
 	virtual/python-greenlet[${PYTHON_USEDEP}]"
 DEPEND="${RDEPEND}
 	dev-python/setuptools[${PYTHON_USEDEP}]
