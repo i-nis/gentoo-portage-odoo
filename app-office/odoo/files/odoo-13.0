@@ -1,7 +1,7 @@
 #!/sbin/openrc-run
 
 # Additional options that are passed to the daemon.
-DAEMON_OPTS="-c ${CONFIGFILE} ${ODOO_OPTIONS}"
+DAEMON_OPTS="-c ${CONFIGFILE}"
 
 depend() {
 	after postgresql

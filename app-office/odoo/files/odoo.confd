@@ -1,3 +1,18 @@
 USER="odoo"
 CONFIGFILE="/etc/odoo/odoo.cfg"
 PIDFILE="/run/odoo/odoo.pid"
+
+# Options: see '/usr/bin/odoo --help'.
+
+# Specify the database name.
+#OPTIONS="--database=DB_NAME"
+
+# Install one or more modules (comma-separated list, use "all" for all modules),
+# requires --database.
+#OPTIONS="--init=base"
+
+# Update one or more modules (comma-separated list, use "all" for all modules).
+# Optionally requires --database.
+#OPTIONS="${OPTIONS} --update=all"
+
+ODOO_OPTIONS="${OPTIONS}"
