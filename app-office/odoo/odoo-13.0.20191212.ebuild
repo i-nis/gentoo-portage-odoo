@@ -3,7 +3,7 @@
 
 EAPI="7"
 
-PYTHON_COMPAT=( python3_{4,5,6,7} pypy pypy3 )
+PYTHON_COMPAT=( python3_{5,6,7,8} pypy pypy3 )
 
 inherit eutils distutils-r1 user
 
@@ -14,7 +14,7 @@ MY_PV="$(ver_cut 3-4)"
 SLOT="0/${SUBSLOT}"
 SRC_URI="http://nightly.odoo.com/${SUBSLOT}/nightly/src/${PN}_${SUBSLOT}.${MY_PV}.tar.gz"
 LICENSE="LGPL-3"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="ldap postgres ssl"
 
 CDEPEND="
