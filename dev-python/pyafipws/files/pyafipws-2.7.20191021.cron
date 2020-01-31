@@ -7,8 +7,8 @@
 #
 
 
-PYTHONPATH="/usr/lib/python2.7/site-packages/pyafipws"
-CACHEPATH="${PYTHONPATH}/cache"
+PYTHONPATH="/var/lib/odoo/.cache/pyafipws"
+CACHEPATH="/var/lib/odoo/.cache/pyafipws"
 
 cd "${CACHEPATH}"
 python2 "${PYTHONPATH}/padron.py" --descargar --procesar &>/dev/null
