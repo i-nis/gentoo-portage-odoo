@@ -19,7 +19,6 @@ DEPEND="app-office/odoo:${SLOT}
 	app-odoo/account-payment:${SLOT}
 	app-odoo/multi-company:${SLOT}
 	app-odoo/partner:${SLOT}
-	app-odoo/patches:${SLOT}
 	app-odoo/product:${SLOT}
 	app-odoo/sale-workflow:${SLOT}
 	app-odoo/stock:${SLOT}"
