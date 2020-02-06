@@ -19,10 +19,10 @@ DEPEND="!!dev-python/PySimpleSOAP"
 RDEPEND="${DEPEND}"
 
 src_unpack() {
-    unpack ${A}
-    mv "${WORKDIR}/${PN}-${EGIT_COMMIT}" "${WORKDIR}/${P}" || die "Install failed!"
+	unpack ${A}
+	mv "${WORKDIR}/${PN}-${EGIT_COMMIT}" "${WORKDIR}/${P}" || die "Install failed!"
 }
 
 python_install_all() {
-    distutils-r1_python_install_all
+	distutils-r1_python_install_all
 }

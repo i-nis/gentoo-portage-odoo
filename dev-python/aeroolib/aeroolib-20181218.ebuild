@@ -26,8 +26,8 @@ RDEPEND="${CDEPEND}"
 DEPEND="${CDEPEND}"
 
 src_unpack() {
-    unpack ${A}
-    mv "${WORKDIR}/aeroolib-${EGIT_COMMIT}" "${WORKDIR}/${P}" || die "Install failed!"
+	unpack ${A}
+	mv "${WORKDIR}/aeroolib-${EGIT_COMMIT}" "${WORKDIR}/${P}" || die "Install failed!"
 }
 
 python_install_all() {

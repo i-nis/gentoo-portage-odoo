@@ -33,8 +33,8 @@ ODOO_GROUP="odoo"
 
 
 src_unpack() {
-    unpack ${A}
-    mv "${WORKDIR}/${PN}-${EGIT_COMMIT}" "${WORKDIR}/${P}" || die "Install failed!"
+	unpack ${A}
+	mv "${WORKDIR}/${PN}-${EGIT_COMMIT}" "${WORKDIR}/${P}" || die "Install failed!"
 }
 
 src_prepare() {
