@@ -3,7 +3,7 @@
 
 EAPI="6"
 
-inherit eutils git-r3 versionator user
+inherit eutils git-r3 versionator
 
 DESCRIPTION="Restricts the same user to login simultaneously in Odoo."
 HOMEPAGE="https://github.com/NevproBusinessSolutions/restrict-multiple-signin-for-same-user"

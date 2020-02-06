@@ -3,7 +3,7 @@
 
 EAPI="7"
 
-inherit eutils user
+inherit eutils
 
 DESCRIPTION="Odoo Sales, Workflow and Organization."
 HOMEPAGE="https://github.com/OCA/sale-workflow"

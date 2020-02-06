@@ -3,7 +3,7 @@
 
 EAPI="7"
 
-inherit eutils git-r3 user
+inherit eutils git-r3
 
 DESCRIPTION="Odoo Accounting payment related modules."
 HOMEPAGE="https://github.com/ingadhoc/account-payment"

@@ -5,7 +5,7 @@ EAPI=7
 
 PYTHON_COMPAT=( python3_{4,5,6,7} pypy3 )
 
-inherit eutils python-single-r1 user
+inherit eutils python-single-r1
 
 DESCRIPTION="A document conversion service."
 HOMEPAGE="https://github.com/aeroo/aeroo_docs"

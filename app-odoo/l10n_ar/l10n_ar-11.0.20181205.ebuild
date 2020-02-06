@@ -3,7 +3,7 @@
 
 EAPI="7"
 
-inherit eutils git-r3 user
+inherit eutils git-r3
 
 DESCRIPTION="Odoo Argentinian localization from Ingenieria AdHoc."
 HOMEPAGE="https://github.com/ingadhoc/odoo-argentina"

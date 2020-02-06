@@ -3,7 +3,7 @@
 
 EAPI="6"
 
-inherit eutils git-r3 versionator user
+inherit eutils git-r3 versionator
 
 DESCRIPTION="Financial reports for Odoo http://community.odoo.com."
 HOMEPAGE="https://github.com/OCA/account-financial-reporting"

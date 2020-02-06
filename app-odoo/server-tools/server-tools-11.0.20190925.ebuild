@@ -3,7 +3,7 @@
 
 EAPI="7"
 
-inherit eutils user
+inherit eutils
 
 DESCRIPTION="Tools for Odoo Administrators to improve some technical features on Odoo."
 HOMEPAGE="https://github.com/OCA/server-tools"

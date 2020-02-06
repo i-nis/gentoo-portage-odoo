@@ -3,7 +3,7 @@
 
 EAPI="7"
 
-inherit eutils git-r3 user
+inherit eutils git-r3
 
 DESCRIPTION="Odoo Stock & Warehouse Management Addons."
 HOMEPAGE="https://github.com/ingadhoc/stock"

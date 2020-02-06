@@ -3,7 +3,7 @@
 
 EAPI="7"
 
-inherit eutils git-r3 user
+inherit eutils git-r3
 
 DESCRIPTION="odoo Support Management Modules."
 HOMEPAGE="https://github.com/ingadhoc/odoo-support"

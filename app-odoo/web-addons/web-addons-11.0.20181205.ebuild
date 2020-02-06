@@ -3,7 +3,7 @@
 
 EAPI="7"
 
-inherit eutils git-r3 user
+inherit eutils git-r3
 
 DESCRIPTION="Odoo web client UI related addons."
 HOMEPAGE="https://github.com/OCA/web"

@@ -3,7 +3,7 @@
 
 EAPI="7"
 
-inherit eutils git-r3 user
+inherit eutils git-r3
 
 DESCRIPTION="odoo backend theme."
 HOMEPAGE="https://github.com/Openworx/backend_theme"

@@ -3,7 +3,7 @@
 
 EAPI="7"
 
-inherit eutils user
+inherit eutils
 
 DESCRIPTION="Odoo Warehouse Management Addons."
 HOMEPAGE="https://github.com/OCA/queue"

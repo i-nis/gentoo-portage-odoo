@@ -3,7 +3,7 @@
 
 EAPI="7"
 
-inherit eutils git-r3 user
+inherit eutils git-r3
 
 DESCRIPTION="Server side features for usability and user experience related for Odoo."
 HOMEPAGE="https://github.com/oca/server-ux"

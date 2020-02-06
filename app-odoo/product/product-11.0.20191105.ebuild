@@ -3,7 +3,7 @@
 
 EAPI="7"
 
-inherit eutils user
+inherit eutils
 
 DESCRIPTION="Odoo Product related Addons."
 HOMEPAGE="https://github.com/ingadhoc/product"

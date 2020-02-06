@@ -3,7 +3,7 @@
 
 EAPI="6"
 
-inherit eutils git-r3 versionator user
+inherit eutils git-r3 versionator
 
 DESCRIPTION="Odoo purchase addons."
 HOMEPAGE="https://github.com/ingadhoc/purchase"

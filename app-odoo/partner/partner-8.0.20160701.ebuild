@@ -3,7 +3,7 @@
 
 EAPI="6"
 
-inherit eutils git-r3 versionator user
+inherit eutils git-r3 versionator
 
 DESCRIPTION="Odoo Partner and Contact related addons."
 HOMEPAGE="https://github.com/ingadhoc/partner"

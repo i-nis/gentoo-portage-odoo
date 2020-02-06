@@ -3,7 +3,7 @@
 
 EAPI="6"
 
-inherit eutils git-r3 versionator user
+inherit eutils git-r3 versionator
 
 DESCRIPTION="Community extensions of Odoo's knowledge and document management."
 HOMEPAGE="https://github.com/OCA/knowledge"

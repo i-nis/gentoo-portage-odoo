@@ -3,7 +3,7 @@
 
 EAPI="7"
 
-inherit eutils git-r3 user
+inherit eutils git-r3
 
 DESCRIPTION="Odoo Purchases, Workflow and Organization."
 HOMEPAGE="https://github.com/OCA/purchase-workflow"

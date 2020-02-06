@@ -3,7 +3,7 @@
 
 EAPI="6"
 
-inherit eutils git-r3 versionator user
+inherit eutils git-r3 versionator
 
 DESCRIPTION="Odoo Electronic Payment."
 HOMEPAGE="https://github.com/OCA/bank-payment"

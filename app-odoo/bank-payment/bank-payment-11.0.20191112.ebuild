@@ -3,7 +3,7 @@
 
 EAPI="7"
 
-inherit eutils user
+inherit eutils
 
 DESCRIPTION="Odoo Electronic Payment."
 HOMEPAGE="https://github.com/OCA/bank-payment"

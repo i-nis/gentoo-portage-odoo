@@ -3,7 +3,7 @@
 
 EAPI="7"
 
-inherit eutils user
+inherit eutils
 
 DESCRIPTION="Odoo multi-company related addons."
 HOMEPAGE="https://github.com/ingadhoc/multi-company"

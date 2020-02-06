@@ -118,6 +118,11 @@ DEPEND="${PYTHON_DEPS}
 
 RDEPEND="${DEPEND}"
 
+PATCHES=(
+	"${FILESDIR}/${PN}-system-pyuno.patch"
+	"${FILESDIR}/${PN}-nomancompress.patch"
+)
+
 S="${WORKDIR}/${MY_PN}-${MY_PV}"
 
 _check_reqs() {

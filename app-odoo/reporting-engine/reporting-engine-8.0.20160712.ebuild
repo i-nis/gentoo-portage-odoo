@@ -3,7 +3,7 @@
 
 EAPI="6"
 
-inherit eutils git-r3 versionator user
+inherit eutils git-r3 versionator
 
 DESCRIPTION="Odoo Alternative Reporting Engine."
 HOMEPAGE="https://github.com/OCA/reporting-engine"

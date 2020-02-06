@@ -3,7 +3,7 @@
 
 EAPI="6"
 
-inherit eutils git-r3 versionator user
+inherit eutils git-r3 versionator
 
 DESCRIPTION="Odoo Project Management and Services Company Addons."
 HOMEPAGE="https://github.com/ingadhoc/project"

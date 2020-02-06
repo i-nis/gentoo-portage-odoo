@@ -3,7 +3,7 @@
 
 EAPI="6"
 
-inherit eutils git-r3 versionator user
+inherit eutils git-r3 versionator
 
 DESCRIPTION="Account invoicing modules for Odoo."
 HOMEPAGE="https://github.com/OCA/account-invoicing"

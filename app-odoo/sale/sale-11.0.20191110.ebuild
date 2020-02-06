@@ -3,7 +3,7 @@
 
 EAPI="7"
 
-inherit eutils user
+inherit eutils
 
 DESCRIPTION="Odoo Sale related Addons."
 HOMEPAGE="https://github.com/ingadhoc/sale"

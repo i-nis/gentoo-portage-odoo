@@ -3,7 +3,7 @@
 
 EAPI="7"
 
-inherit eutils user
+inherit eutils
 
 DESCRIPTION="Odoo Accountant closing tools."
 HOMEPAGE="https://github.com/OCA/account-closing"

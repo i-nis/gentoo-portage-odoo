@@ -3,7 +3,7 @@
 
 EAPI="7"
 
-inherit eutils user
+inherit eutils
 
 DESCRIPTION="Odoo Invoicing Extension Addons."
 HOMEPAGE="https://github.com/OCA/account-invoicing"

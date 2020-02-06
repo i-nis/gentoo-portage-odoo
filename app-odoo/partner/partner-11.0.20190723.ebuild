@@ -3,7 +3,7 @@
 
 EAPI="7"
 
-inherit eutils user
+inherit eutils
 
 DESCRIPTION="Odoo Partner and Contact related addons."
 HOMEPAGE="https://github.com/ingadhoc/partner"

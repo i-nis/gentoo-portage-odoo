@@ -3,7 +3,7 @@
 
 EAPI="7"
 
-inherit eutils git-r3 user
+inherit eutils git-r3
 
 DESCRIPTION="Odoo Printing Services and Printer related addons."
 HOMEPAGE="https://github.com/OCA/report-print-send"

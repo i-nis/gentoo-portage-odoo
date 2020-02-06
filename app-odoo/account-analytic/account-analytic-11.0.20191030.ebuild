@@ -3,7 +3,7 @@
 
 EAPI="7"
 
-inherit eutils user
+inherit eutils
 
 DESCRIPTION="Odoo Account Analytic Related Addons."
 HOMEPAGE="https://github.com/OCA/account-analytic"
@@ -23,8 +23,8 @@ ODOO_USER="odoo"
 ODOO_GROUP="odoo"
 
 src_unpack() {
-    unpack ${A}
-    mv "${WORKDIR}/${PN}-${EGIT_COMMIT}" "${WORKDIR}/${P}" || die "Install failed!"
+	unpack ${A}
+	mv "${WORKDIR}/${PN}-${EGIT_COMMIT}" "${WORKDIR}/${P}" || die "Install failed!"
 }
 
 src_install() {
