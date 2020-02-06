@@ -3,7 +3,7 @@
 
 EAPI="7"
 
-inherit eutils user
+inherit eutils
 
 DESCRIPTION="Aeroo Reports - reporting engine for Odoo."
 HOMEPAGE="http://www.alistek.com/wiki/index.php/Main_Page"
@@ -15,7 +15,7 @@ SRC_URI="${EGIT_REPO_URI}/archive/${EGIT_COMMIT}.zip -> ${P}.zip"
 IUSE=""
 LICENSE="AGPL-3"
 SLOT="0/${SUBSLOT}"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 DEPEND="app-office/odoo:${SLOT}
 	>=dev-python/aeroolib-20181218
 	dev-python/currency2text
