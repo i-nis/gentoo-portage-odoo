@@ -6,7 +6,7 @@ EAPI="6"
 PYTHON_COMPAT=( python2_7 )
 DISTUTILS_SINGLE_IMPL=1
 
-inherit eutils distutils-r1 versionator user
+inherit eutils distutils-r1 versionator
 
 DESCRIPTION="Open Source ERP & CRM"
 HOMEPAGE="http://www.odoo.com/"
@@ -18,6 +18,8 @@ KEYWORDS="amd64 x86"
 IUSE="+postgres ldap ssl"
 
 CDEPEND="!app-office/openerp
+	acct-group/odoo
+	acct-user/odoo
 	postgres? ( dev-db/postgresql:* )
 	dev-python/Babel[${PYTHON_USEDEP}]
 	dev-python/jinja[${PYTHON_USEDEP}]
@@ -97,13 +99,6 @@ python_install_all() {
 	newins "${FILESDIR}/${PN}.cfg" "${PN}.cfg" || die
 
 	dodoc PKG-INFO README.md
-}
-
-pkg_preinst() {
-	enewgroup "${ODOO_GROUP}"
-	enewuser "${ODOO_USER}" -1 -1 /var/lib/"${PN}" "${ODOO_GROUP}"
-
-	use postgres || sed -i '6,8d' "${D}/etc/init.d/${PN}" || die "sed failed"
 }
 
 pkg_postinst() {

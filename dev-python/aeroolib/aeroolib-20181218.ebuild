@@ -5,7 +5,7 @@ EAPI="7"
 
 PYTHON_COMPAT=( python3_{4,5,6,7} pypy pypy3 )
 
-inherit eutils distutils-r1 user
+inherit eutils distutils-r1
 
 DESCRIPTION="Aeroo Reports library (Aeroo RL)."
 HOMEPAGE="http://www.alistek.com/wiki/index.php/Main_Page"

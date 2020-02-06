@@ -6,7 +6,7 @@ EAPI="6"
 PYTHON_COMPAT=( python2_7 )
 DISTUTILS_SINGLE_IMPL=1
 
-inherit eutils git-r3 distutils-r1 user
+inherit eutils git-r3 distutils-r1
 
 DESCRIPTION="Aeroo Reports library (Aeroo RL)."
 HOMEPAGE="http://www.alistek.com/wiki/index.php/Main_Page"

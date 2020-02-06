@@ -5,7 +5,7 @@ EAPI="7"
 
 PYTHON_COMPAT=( python3_{4,5,6,7} pypy pypy3 )
 
-inherit eutils distutils-r1 user
+inherit eutils distutils-r1
 
 DESCRIPTION="Open Source ERP & CRM"
 HOMEPAGE="http://www.odoo.com/"
@@ -92,13 +92,6 @@ python_install_all() {
 	newins "${FILESDIR}/${PN}-${SUBSLOT}.cfg" "${PN}.cfg" || die
 
 	dodoc PKG-INFO README.md
-}
-
-pkg_preinst() {
-	enewgroup "${ODOO_GROUP}"
-	enewuser "${ODOO_USER}" -1 -1 /var/lib/"${PN}" "${ODOO_GROUP}"
-
-	use postgres || sed -i '6,8d' "${D}/etc/init.d/${PN}" || die "sed failed"
 }
 
 pkg_postinst() {

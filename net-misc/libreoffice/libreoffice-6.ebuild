@@ -3,7 +3,7 @@
 
 EAPI=7
 
-inherit eutils user
+inherit eutils
 
 DESCRIPTION="LibreOffice headless service."
 HOMEPAGE="https://proyectos.ingeniovirtual.com.ar"
@@ -12,17 +12,13 @@ IUSE=""
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-DEPEND="|| ( app-office/libreoffice app-office/libreoffice-bin app-office/libreoffice-headless )"
+DEPEND="
+	acct-group/libreoffice
+	acct-user/libreoffice
+	|| ( app-office/libreoffice app-office/libreoffice-bin app-office/libreoffice-headless )
+	"
 RDEPEND="${DEPEND}"
 S="${WORKDIR}"
-
-pkg_setup() {
-	# Add libreoffice user and group.
-	einfo "Checking for ${PN} group..."
-	enewgroup "${PN}"
-	einfo "Checking for ${PN} user..."
-	enewuser "${PN}" -1 /bin/bash /var/lib/"${PN}" "${PN}"
-}
 
 src_install() {
 	keepdir /var/lib/"${PN}"
