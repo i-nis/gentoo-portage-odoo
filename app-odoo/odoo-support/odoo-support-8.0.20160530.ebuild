@@ -23,7 +23,7 @@ DEPEND="app-odoo/miscellaneous:${SLOT}
 	app-odoo/server-tools:${SLOT}
 	app-odoo/web-addons:${SLOT}
 	dev-python/ERPpeek
-	dev-python/fabric:0
+	dev-python/fabric
 	dev-tcltk/expect
 	dev-python/lxml
 	dev-python/simplejson

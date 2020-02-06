@@ -19,7 +19,7 @@ KEYWORDS="amd64 x86"
 DEPEND="app-office/odoo:${SLOT}
 	app-odoo/odoo-web:${SLOT}
 	dev-python/ERPpeek
-	dev-python/fabric:0
+	dev-python/fabric
 	dev-python/fabtools
 	dev-tcltk/expect
 	dev-python/lxml
