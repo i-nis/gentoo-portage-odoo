@@ -3,9 +3,9 @@
 
 EAPI="7"
 
-PYTHON_COMPAT=( python3_{5,6,7,8} pypy pypy3 )
+PYTHON_COMPAT=( python3_{6,7,8} pypy pypy3 )
 
-inherit eutils distutils-r1 user
+inherit eutils distutils-r1
 
 DESCRIPTION="Open Source ERP & CRM"
 HOMEPAGE="http://www.odoo.com/"
@@ -18,49 +18,52 @@ KEYWORDS="amd64 x86"
 IUSE="ldap postgres ssl"
 
 CDEPEND="
+	acct-group/odoo
+	acct-user/odoo
 	ldap? ( dev-python/python-ldap )
 	postgres? ( dev-db/postgresql:* )
 	ssl? ( dev-python/pyopenssl )
 	dev-nodejs/less
-	=dev-python/Babel-2.3.4
-	=dev-python/chardet-3.0.4
-	=dev-python/decorator-4.0.10
+	dev-python/Babel
+	dev-python/decorator
 	=dev-python/docutils-0.12
-	=dev-python/ebaysdk-2.1.5
-	=dev-python/feedparser-5.2.1
-	=dev-python/gevent-1.1.2
-	=dev-python/greenlet-0.4.10
-	=dev-python/html2text-2016.9.19
-	=dev-python/jinja-2.10.1
-	=dev-python/libsass-0.12.3
+	dev-python/ebaysdk
+	dev-python/feedparser
+	>=dev-python/gevent-1.0.2
+	>=dev-python/greenlet-0.4.10
+	dev-python/html2text
+	dev-python/jinja
 	dev-python/lxml
-	=dev-python/mako-1.0.4
-	=dev-python/markupsafe-0.23
-	=dev-python/mock-2.0.0
-	=dev-python/num2words-0.5.6
-	=dev-python/ofxparse-0.16
-	=dev-python/passlib-1.6.5
-	=dev-python/pillow-5.4.1[jpeg]
-	~dev-python/polib-1.1.0
-	=dev-python/psutil-4.3.1
+	dev-python/mako
+	dev-python/markupsafe
+	dev-python/mock
+	dev-python/num2words
+	dev-python/ofxparse
+	dev-python/passlib
+	dev-python/phonenumbers
+	dev-python/pillow[jpeg]
+	dev-python/psutil
+	dev-python/psycogreen
 	dev-python/psycopg:2
-	=dev-python/pydot-1.2.3
+	dev-python/pydot
 	dev-python/pyparsing
-	=dev-python/PyPDF2-1.26.0
-	=dev-python/pyserial-3.1.1
+	dev-python/PyPDF2
+	dev-python/pyserial
 	dev-python/python-dateutil
 	dev-python/pytz
-	=dev-python/pyusb-1.0.0
-	=dev-python/qrcode-5.3
-	~dev-python/reportlab-3.3.0
+	dev-python/pyusb
+	=dev-python/pyyaml-3.13
+	dev-python/qrcode
+	dev-python/reportlab
 	dev-python/requests
-	=dev-python/zeep-3.1.0
-	=dev-python/vatnumber-1.2
-	=dev-python/vobject-0.9.3
-	=dev-python/werkzeug-0.14.1
-	=dev-python/xlsxwriter-0.9.3
-	=dev-python/xlwt-1.3.0
-	=dev-python/xlrd-1.0.0
+	dev-python/six
+	dev-python/suds
+	>=dev-python/vatnumber-1.2
+	dev-python/vobject
+	dev-python/werkzeug
+	dev-python/xlsxwriter
+	dev-python/xlwt
+	>=dev-python/xlrd-1.0.0
 	media-gfx/wkhtmltox-bin"
 
 RDEPEND="${CDEPEND}"
@@ -92,17 +95,9 @@ python_install_all() {
 	dodoc PKG-INFO README.md
 }
 
-pkg_preinst() {
-	enewgroup "${ODOO_GROUP}"
-	enewuser "${ODOO_USER}" -1 -1 /var/lib/"${PN}" "${ODOO_GROUP}"
-
-	use postgres || sed -i '6,8d' "${D}/etc/init.d/${PN}" || die "sed failed"
-}
-
 pkg_postinst() {
 	chown "${ODOO_USER}:${ODOO_GROUP}" "/var/log/${PN}"
 	chown -R "${ODOO_USER}:${ODOO_GROUP}" "/var/lib/${PN}"
-#	chown -R "${ODOO_USER}:${ODOO_GROUP}" "$(python_get_sitedir)/${PN}/addons/"
 
 	elog "In order to setup the initial database, run:"
 	elog " emerge --config =${CATEGORY}/${PF}"
