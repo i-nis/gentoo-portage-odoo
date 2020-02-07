@@ -31,7 +31,6 @@ DEPEND="
 ODOO_USER="odoo"
 ODOO_GROUP="odoo"
 
-
 src_unpack() {
 	unpack ${A}
 	mv "${WORKDIR}/${PN}-${EGIT_COMMIT}" "${WORKDIR}/${P}" || die "Install failed!"
