@@ -26,7 +26,7 @@ CDEPEND="
 	dev-nodejs/less
 	dev-python/Babel
 	dev-python/decorator
-	=dev-python/docutils-0.12
+	~dev-python/docutils-0.12
 	dev-python/ebaysdk
 	dev-python/feedparser
 	>=dev-python/gevent-1.0.2
@@ -52,7 +52,7 @@ CDEPEND="
 	dev-python/python-dateutil
 	dev-python/pytz
 	dev-python/pyusb
-	=dev-python/pyyaml-3.13
+	~dev-python/pyyaml-3.13
 	dev-python/qrcode
 	dev-python/reportlab
 	dev-python/requests
