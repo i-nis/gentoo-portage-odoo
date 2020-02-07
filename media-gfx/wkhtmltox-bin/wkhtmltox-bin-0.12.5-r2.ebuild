@@ -38,7 +38,7 @@ RDEPEND="
 S="${WORKDIR}"
 
 src_unpack(){
-	unpack "${A}"
+	unpack ${A}
 	tar xf data.tar.xz
 }
 
