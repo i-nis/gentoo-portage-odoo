@@ -24,45 +24,45 @@ CDEPEND="
 	postgres? ( dev-db/postgresql:* )
 	ssl? ( dev-python/pyopenssl )
 	dev-nodejs/less
-	=dev-python/Babel-2.3.4
-	=dev-python/chardet-3.0.4
-	=dev-python/decorator-4.0.10
-	=dev-python/docutils-0.12
-	=dev-python/ebaysdk-2.1.5
-	=dev-python/feedparser-5.2.1
-	=dev-python/gevent-1.1.2
-	=dev-python/greenlet-0.4.10
-	=dev-python/html2text-2016.9.19
-	=dev-python/jinja-2.10.1
-	=dev-python/libsass-0.12.3
+	~dev-python/Babel-2.3.4
+	~dev-python/chardet-3.0.4
+	~dev-python/decorator-4.0.10
+	~dev-python/docutils-0.12
+	~dev-python/ebaysdk-2.1.5
+	~dev-python/feedparser-5.2.1
+	~dev-python/gevent-1.1.2
+	~dev-python/greenlet-0.4.10
+	~dev-python/html2text-2016.9.19
+	~dev-python/jinja-2.10.1
+	~dev-python/libsass-0.12.3
 	dev-python/lxml
-	=dev-python/mako-1.0.4
-	=dev-python/markupsafe-0.23
-	=dev-python/mock-2.0.0
-	=dev-python/num2words-0.5.6
-	=dev-python/ofxparse-0.16
-	=dev-python/passlib-1.6.5
-	=dev-python/pillow-5.4.1[jpeg]
+	~dev-python/mako-1.0.4
+	~dev-python/markupsafe-0.23
+	~dev-python/mock-2.0.0
+	~dev-python/num2words-0.5.6
+	~dev-python/ofxparse-0.16
+	~dev-python/passlib-1.6.5
+	dev-python/pillow[jpeg]
 	~dev-python/polib-1.1.0
-	=dev-python/psutil-4.3.1
+	~dev-python/psutil-4.3.1
 	dev-python/psycopg:2
-	=dev-python/pydot-1.2.3
+	dev-python/pydot
 	dev-python/pyparsing
-	=dev-python/PyPDF2-1.26.0
-	=dev-python/pyserial-3.1.1
+	~dev-python/PyPDF2-1.26.0
+	~dev-python/pyserial-3.1.1
 	dev-python/python-dateutil
 	dev-python/pytz
-	=dev-python/pyusb-1.0.0
-	=dev-python/qrcode-5.3
-	~dev-python/reportlab-3.3.0
+	~dev-python/pyusb-1.0.0
+	~dev-python/qrcode-5.3
+	dev-python/reportlab
 	dev-python/requests
-	=dev-python/zeep-3.1.0
-	=dev-python/vatnumber-1.2
-	=dev-python/vobject-0.9.3
-	=dev-python/werkzeug-0.14.1
-	=dev-python/xlsxwriter-0.9.3
-	=dev-python/xlwt-1.3.0
-	=dev-python/xlrd-1.0.0
+	~dev-python/zeep-3.1.0
+	~dev-python/vatnumber-1.2
+	~dev-python/vobject-0.9.3
+	~dev-python/werkzeug-0.14.1
+	~dev-python/xlsxwriter-0.9.3
+	~dev-python/xlwt-1.3.0
+	~dev-python/xlrd-1.0.0
 	media-gfx/wkhtmltox-bin"
 
 RDEPEND="${CDEPEND}"
