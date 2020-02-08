@@ -1,4 +1,4 @@
-# Copyright 1999-2018 Gentoo Foundation
+# Copyright 1999-2020 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI="6"
@@ -15,7 +15,7 @@ EGIT_REPO_URI="https://github.com/aeroo/aeroolib.git"
 EGIT_COMMIT="5c27b23459c309cdae834d9c4d330742dca3038f"
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="-amd64 -x86"
 IUSE=""
 
 CDEPEND="dev-python/genshi[${PYTHON_USEDEP}]

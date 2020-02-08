@@ -1,4 +1,4 @@
-# Copyright 1999-2019 Gentoo Authors
+# Copyright 1999-2020 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI="7"
@@ -19,8 +19,7 @@ KEYWORDS="amd64 x86"
 DEPEND="app-office/odoo:${SLOT}
 	dev-tcltk/expect
 	dev-python/bokeh
-	dev-python/lxml
-	dev-python/setuptools-odoo"
+	dev-python/lxml"
 RDEPEND="${DEPEND}"
 
 OPENERP_USER="odoo"

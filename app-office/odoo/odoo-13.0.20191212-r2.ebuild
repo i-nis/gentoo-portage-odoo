@@ -1,4 +1,4 @@
-# Copyright 1999-2018 Gentoo Foundation
+# Copyright 1999-2020 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI="7"
@@ -49,7 +49,7 @@ CDEPEND="
 	dev-python/pydot
 	dev-python/pyparsing
 	~dev-python/PyPDF2-1.26.0
-	~dev-python/pyserial-3.1.1
+	>=dev-python/pyserial-3.1.1
 	dev-python/python-dateutil
 	dev-python/pytz
 	~dev-python/pyusb-1.0.0
