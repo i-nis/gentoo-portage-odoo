@@ -10,6 +10,6 @@ DESCRIPTION="A user for Odoo."
 ACCT_USER_GROUPS=( "${PN}" )
 ACCT_USER_ID="-1"
 ACCT_USER_HOME=/var/lib/odoo
-ACCT_USER_SHELL=/sbin/nologin
+ACCT_USER_SHELL=-1
 
 acct-user_add_deps
