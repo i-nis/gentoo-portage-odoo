@@ -24,46 +24,46 @@ CDEPEND="
 	postgres? ( dev-db/postgresql:* )
 	ssl? ( dev-python/pyopenssl )
 	dev-nodejs/less
-	dev-python/Babel
-	dev-python/decorator
+	~dev-python/Babel-2.3.4
+	~dev-python/decorator-4.0.10
 	~dev-python/docutils-0.12
-	dev-python/ebaysdk
-	dev-python/feedparser
-	>=dev-python/gevent-1.0.2
-	>=dev-python/greenlet-0.4.10
-	dev-python/html2text
-	dev-python/jinja
-	dev-python/lxml
-	dev-python/mako
-	dev-python/markupsafe
-	dev-python/mock
-	dev-python/num2words
-	dev-python/ofxparse
-	dev-python/passlib
+	~dev-python/ebaysdk-2.1.5
+	~dev-python/feedparser-5.2.1
+	~dev-python/gevent-1.3.4
+	~dev-python/greenlet-0.4.13
+	~dev-python/html2text-2016.9.19
+	~dev-python/jinja-2.10.1
+	~dev-python/lxml-4.2.3
+	~dev-python/mako-1.0.4
+	~dev-python/markupsafe-0.23
+	~dev-python/mock-2.0.0
+	~dev-python/num2words-0.5.6
+	~dev-python/ofxparse-0.16
+	~dev-python/passlib-1.6.5
 	dev-python/phonenumbers
-	dev-python/pillow[jpeg]
-	dev-python/psutil
+	~dev-python/pillow-6.1.0[jpeg]
+	~dev-python/psutil-4.3.1
 	dev-python/psycogreen
 	dev-python/psycopg:2
-	dev-python/pydot
-	dev-python/pyparsing
-	dev-python/PyPDF2
-	dev-python/pyserial
-	dev-python/python-dateutil
+	~dev-python/pydot-1.2.3
+	~dev-python/pyparsing-2.1.10
+	~dev-python/PyPDF2-1.26.0
+	~dev-python/pyserial-3.1.1
+	~dev-python/python-dateutil-2.5.3
 	dev-python/pytz
-	dev-python/pyusb
+	~dev-python/pyusb-1.0.0
 	~dev-python/pyyaml-3.13
-	dev-python/qrcode
-	dev-python/reportlab
-	dev-python/requests
+	~dev-python/qrcode-5.3
+	~dev-python/reportlab-3.3.0
+	~dev-python/requests-2.20.0
 	dev-python/six
-	dev-python/suds
-	>=dev-python/vatnumber-1.2
-	dev-python/vobject
-	dev-python/werkzeug
-	dev-python/xlsxwriter
-	dev-python/xlwt
-	>=dev-python/xlrd-1.0.0
+	~dev-python/suds-0.6
+	~dev-python/vatnumber-1.2
+	~dev-python/vobject-0.9.3
+	~dev-python/werkzeug-0.11.15
+	~dev-python/xlsxwriter-0.9.3
+	~dev-python/xlwt-1.3.0
+	~dev-python/xlrd-1.0.0
 	media-gfx/wkhtmltox-bin"
 
 RDEPEND="${CDEPEND}"

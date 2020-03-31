@@ -3,7 +3,7 @@
 
 EAPI="7"
 
-PYTHON_COMPAT=( python3_{4,5,6,7} pypy pypy3 )
+PYTHON_COMPAT=( python3_{4,5,6,7} )
 
 inherit eutils distutils-r1
 
@@ -17,7 +17,7 @@ LICENSE="LGPL-3"
 KEYWORDS="-amd64 -x86"
 IUSE="ldap postgres ssl"
 
-CDEPEND="
+DEPEND="
 	ldap? ( dev-python/python-ldap[${PYTHON_USEDEP}] )
 	postgres? ( dev-db/postgresql:* )
 	ssl? ( dev-python/pyopenssl[${PYTHON_USEDEP}] )
@@ -64,9 +64,6 @@ CDEPEND="
 	dev-python/xlsxwriter[${PYTHON_USEDEP}]
 	dev-python/xlwt[${PYTHON_USEDEP}]
 	>=dev-python/xlrd-1.0.0[${PYTHON_USEDEP}]"
-
-RDEPEND="${CDEPEND}"
-DEPEND="${CDEPEND}"
 
 ODOO_USER="odoo"
 ODOO_GROUP="odoo"
