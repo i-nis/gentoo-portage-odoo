@@ -15,7 +15,7 @@ KEYWORDS="~amd64 ~x86"
 DEPEND="
 	acct-group/libreoffice
 	acct-user/libreoffice
-	|| ( app-office/libreoffice app-office/libreoffice-bin app-office/libreoffice-headless )
+	|| ( app-office/libreoffice app-office/libreoffice-bin )
 	"
 RDEPEND="${DEPEND}"
 S="${WORKDIR}"
