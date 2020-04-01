@@ -32,10 +32,6 @@ BDEPEND="${RDEPEND}
 	)
 "
 
-PATCHES=(
-	"${FILESDIR}/0001-zoneinfo-Get-timezone-data-from-system-tzdata-r1.patch"
-)
-
 distutils_enable_tests pytest
 
 python_prepare_all() {

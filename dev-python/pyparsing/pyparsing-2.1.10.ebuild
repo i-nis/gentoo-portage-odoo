@@ -11,22 +11,13 @@ MY_P=${P/-/_}
 DESCRIPTION="Easy-to-use Python module for text parsing"
 HOMEPAGE="https://github.com/pyparsing/pyparsing https://pypi.org/project/pyparsing/"
 SRC_URI="https://github.com/${PN}/${PN}/archive/${MY_P}.tar.gz"
-# pypi releases and generated github tarballs lack tests
-#SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="amd64 x86"
-IUSE="examples"
+IUSE=""
 
 distutils_enable_tests setup.py
 
-S=${WORKDIR}/${PN}-${MY_P}
+S=${WORKDIR}/${PN}-${MY_P}/src
 
-python_install_all() {
-	if use examples; then
-		docompress -x /usr/share/doc/${PF}/examples
-		dodoc -r examples
-	fi
-	distutils-r1_python_install_all
-}
