@@ -35,3 +35,36 @@ sync-type = git
 sync-uri = https://github.com/i-nis/gentoo-portage-odoo.git
 auto-sync = yes
 </pre>
+
+
+### Selección del perfil del Portage
+
+El perfil de Portage especifica los parámetros USE y los valores predeterminados para los paquetes necesarios a instalar que son dependencias de Odoo.
+
+Para enumerar los perfiles incluidos, utilice:
+
+<pre>
+eselect profile list
+</pre>
+
+Como resultado se mostrará un listado similar al siguiente:
+
+<pre>
+  [35]  odoo:default/linux/amd64/17.1/hardened/odoo-11 (stable)
+  [36]  odoo:default/linux/amd64/17.1/hardened/odoo-12 (stable)
+  [37]  odoo:default/linux/amd64/17.1/hardened/odoo-13 (stable)
+</pre>
+
+
+Si desea instalar Odoo 11 en plataformas basadas en la arquitectura amd64 ejecute:
+
+<pre>
+eselect profile set odoo:default/linux/amd64/17.1/hardened/odoo-11
+</pre>
+
+
+Para plataformas basadas en la arquitectura x86:
+
+<pre>
+eselect profile set odoo:default/linux/x86/17.0/hardened/odoo-11
+</pre>
