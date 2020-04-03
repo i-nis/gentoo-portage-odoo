@@ -21,7 +21,7 @@ IUSE="examples"
 
 distutils_enable_tests setup.py
 
-S=${WORKDIR}/${PN}-${MY_P}
+S=${WORKDIR}/${PN}-${MY_P}/src
 
 python_install_all() {
 	if use examples; then
