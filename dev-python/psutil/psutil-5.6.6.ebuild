@@ -14,29 +14,8 @@ LICENSE="BSD"
 SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE="test"
-RESTRICT="!test? ( test )"
 
-DEPEND="
-	dev-python/setuptools[${PYTHON_USEDEP}]
-	test? (
-		$(python_gen_cond_dep '
-			dev-python/mock[${PYTHON_USEDEP}]
-			dev-python/ipaddress[${PYTHON_USEDEP}]
-		' -2)
-	)
-"
-
-python_test() {
-	if [[ ${EPYTHON} == pypy* ]]; then
-		ewarn "Not running tests on ${EPYTHON} since they are broken"
-		return 0
-	fi
-
-	# since we are running in an environment a bit similar to CI,
-	# let's skip the tests that are disable for CI
-	TRAVIS=1 APPVEYOR=1 "${EPYTHON}" psutil/tests/__main__.py ||
-		die "tests failed with ${EPYTHON}"
-}
+DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"
 
 python_compile() {
 	# force -j1 to avoid .o linking race conditions
