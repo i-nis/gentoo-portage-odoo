@@ -20,4 +20,3 @@ IUSE=""
 distutils_enable_tests setup.py
 
 S=${WORKDIR}/${PN}-${MY_P}/src
-
