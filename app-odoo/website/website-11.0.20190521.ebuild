@@ -18,7 +18,8 @@ SLOT="0/${SUBSLOT}"
 KEYWORDS="~amd64 ~x86"
 DEPEND="app-office/odoo:${SLOT}
 	dev-tcltk/expect
-	dev-python/lxml"
+	dev-python/lxml
+	dev-python/mercadopago"
 RDEPEND="${DEPEND}"
 
 ODOO_USER="odoo"
