@@ -3,7 +3,7 @@
 
 <pkgmetadata>
 <maintainer type="person">
-	<email>mggimenez@ingeniovirtual.com.ar</email>
+	<email>mggimenez@nis.com.ar</email>
 	<description>Primary maintainer</description>
 </maintainer>
 <longdescription>This library allows you to generate ZPL II labels.</longdescription>

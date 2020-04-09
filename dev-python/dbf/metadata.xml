@@ -3,7 +3,7 @@
 
 <pkgmetadata>
 <maintainer type="person">
-	<email>mggimenez@ingeniovirtual.com.ar</email>
+	<email>mggimenez@nis.com.ar</email>
 	<description>Primary maintainer</description>
 </maintainer>
 <longdescription>Pure python package for reading/writing dBase, FoxPro, and Visual FoxPro .dbf files.</longdescription>

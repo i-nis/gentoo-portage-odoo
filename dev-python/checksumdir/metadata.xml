@@ -3,7 +3,7 @@
 
 <pkgmetadata>
 <maintainer type="person">
-	<email>mggimenez@ingeniovirtual.com.ar</email>
+	<email>mggimenez@nis.com.ar</email>
 	<description>Primary maintainer</description>
 </maintainer>
 <longdescription>Compute a single hash of the file contents of a directory.</longdescription>

@@ -3,7 +3,7 @@
 
 <pkgmetadata>
 <maintainer type="person">
-	<email>mggimenez@ingeniovirtual.com.ar</email>
+	<email>mggimenez@nis.com.ar</email>
 	<description>Primary maintainer</description>
 </maintainer>
 <longdescription>A library with support functions to be called from Odoo migration scripts.</longdescription>

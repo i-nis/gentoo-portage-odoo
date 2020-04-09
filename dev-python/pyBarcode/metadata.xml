@@ -3,7 +3,7 @@
 
 <pkgmetadata>
 <maintainer type="person">
-	<email>mggimenez@ingeniovirtual.com.ar</email>
+	<email>mggimenez@nis.com.ar</email>
 	<description>Primary maintainer</description>
 </maintainer>
 <longdescription>A tiny script to issue and renew TLS certs from Let's Encrypt.</longdescription>
