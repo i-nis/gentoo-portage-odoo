@@ -21,6 +21,7 @@ DEPEND="app-office/odoo:${SLOT}
 	app-odoo/account-payment:${SLOT}
 	app-odoo/argentina-reporting:${SLOT}
 	app-odoo/partner-contact:${SLOT}
+	app-odoo/product:${SLOT}
 	dev-python/httplib2
 	dev-python/m2crypto
 	dev-python/openupgradelib
