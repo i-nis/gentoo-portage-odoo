@@ -16,7 +16,7 @@ SRC_URI="mirror://pypi/${P:0:1}/${PN}/${P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="amd64 x86"
-IUSE="example"
+IUSE=""
 
 RDEPEND="
 	dev-python/jinja[${PYTHON_USEDEP}]
@@ -43,15 +43,6 @@ python_compile() {
 	esetup.py build --build-js
 }
 
-python_test() {
-	cd "${BUILD_DIR}"/lib || die
-	py.test -m 'not (js or examples or integration)' -vv || die
-}
-
 python_install_all() {
-	if use examples; then
-		insinto "/usr/share/doc/${PF}/examples/"
-		doins examples/*
-	fi
 	distutils-r1_python_install_all
 }

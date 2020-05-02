@@ -17,10 +17,7 @@ LICENSE="LGPL-3"
 SLOT="0/${SUBSLOT}"
 KEYWORDS="amd64 x86"
 DEPEND="app-office/odoo:${SLOT}
-	dev-tcltk/expect
-	dev-python/lxml
-	dev-python/simplejson
-	dev-python/pyserial"
+	app-odoo/web-addons:${SLOT}"
 RDEPEND="${DEPEND}"
 
 ODOO_USER="odoo"
