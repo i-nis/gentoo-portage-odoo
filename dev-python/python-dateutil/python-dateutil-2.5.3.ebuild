@@ -26,24 +26,18 @@ RDEPEND="
 BDEPEND="${RDEPEND}
 	dev-python/setuptools[${PYTHON_USEDEP}]
 	dev-python/setuptools_scm[${PYTHON_USEDEP}]
-	test? (
-		dev-python/freezegun[${PYTHON_USEDEP}]
-		dev-python/hypothesis[${PYTHON_USEDEP}]
-	)
 "
 
-distutils_enable_tests pytest
+#python_prepare_all() {
+#	# don't install zoneinfo tarball
+#	sed -i '/package_data=/d' setup.py || die
+#
+#	distutils-r1_python_prepare_all
+#}
 
-python_prepare_all() {
-	# don't install zoneinfo tarball
-	sed -i '/package_data=/d' setup.py || die
-
-	distutils-r1_python_prepare_all
-}
-
-python_prepare() {
-	if [[ ${EPYTHON} == python3.7 ]]; then
-		# these tests are flakey on 3.7
-		rm dateutil/test/property/test_{parser,isoparse}_prop.py || die
-	fi
-}
+#python_prepare() {
+#	if [[ ${EPYTHON} == python3.7 ]]; then
+#		# these tests are flakey on 3.7
+#		rm dateutil/test/property/test_{parser,isoparse}_prop.py || die
+#	fi
+#}
