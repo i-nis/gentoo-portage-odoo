@@ -5,24 +5,19 @@ EAPI="7"
 
 inherit eutils
 
-DESCRIPTION="Odoo Stock & Warehouse Management Addons."
-HOMEPAGE="https://github.com/ingadhoc/stock"
+DESCRIPTION="Server side features for usability and user experience related for Odoo."
+HOMEPAGE="https://github.com/oca/server-ux"
 SUBSLOT="$(ver_cut 1-2)"
-EGIT_COMMIT="eaa0dc209626b97e2aaaf87b15bcaf3d77ae3030"
+EGIT_COMMIT="3916940d82f998571a59a2bc01bb759f246c3f0c"
 EGIT_BRANCH="${SUBSLOT}"
 SRC_URI="${HOMEPAGE}/archive/${EGIT_COMMIT}.zip -> ${P}.zip"
 IUSE=""
 LICENSE="AGPL-3"
 SLOT="0/${SUBSLOT}"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 DEPEND="app-office/odoo:${SLOT}
-	app-odoo/aeroo_reports:${SLOT}
-	app-odoo/miscellaneous:${SLOT}
-	app-odoo/web-addons:${SLOT}
-	dev-tcltk/expect
-	dev-python/lxml
-	dev-python/simplejson
-	dev-python/pyserial"
+	dev-python/pyzbar
+	dev-python/pdf2image"
 RDEPEND="${DEPEND}"
 
 ODOO_USER="odoo"
@@ -36,15 +31,12 @@ src_unpack() {
 src_install() {
 	ADDONS_PATH="/var/lib/odoo/.local/share/Odoo/addons/${SUBSLOT}"
 	dodir "${ADDONS_PATH}"
-	rm -rf "${S}/stock_inventory_preparation_filter"
+	rm -rf "${S}"/setup/
 
 	for module in $(find "${S}"/* -maxdepth 0 -type d); do
 		cp -R "${module}" "${D}/${ADDONS_PATH}" || die "Install failed!"
 	done
 
 	dodoc README.md
-}
-
-pkg_postinst() {
-	chown -R "${ODOO_USER}:${ODOO_GROUP}" "/var/lib/odoo/.local"
+	fowners -R "${ODOO_USER}:${ODOO_GROUP}" "${ADDONS_PATH}" || die "Chown failed ${ADDONS_PATH}"
 }

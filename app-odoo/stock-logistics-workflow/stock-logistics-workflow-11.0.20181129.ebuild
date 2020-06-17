@@ -3,15 +3,14 @@
 
 EAPI="7"
 
-inherit eutils git-r3
+inherit eutils
 
 DESCRIPTION="Odoo Stock, Workflow and Organization."
 HOMEPAGE="https://github.com/OCA/stock-logistics-workflow"
-SRC_URI=""
 SUBSLOT="$(ver_cut 1-2)"
-EGIT_REPO_URI="https://github.com/OCA/stock-logistics-workflow.git"
 EGIT_COMMIT="c72adeb633b746cc2888345abfa04595f99b40a4"
 EGIT_BRANCH="${SUBSLOT}"
+SRC_URI="${HOMEPAGE}/archive/${EGIT_COMMIT}.zip -> ${P}.zip"
 IUSE=""
 LICENSE="AGPL-3"
 SLOT="0/${SUBSLOT}"
@@ -24,8 +23,13 @@ DEPEND="app-office/odoo:${SLOT}
 	dev-python/pyserial"
 RDEPEND="${DEPEND}"
 
-OPENERP_USER="odoo"
-OPENERP_GROUP="odoo"
+ODOO_USER="odoo"
+ODOO_GROUP="odoo"
+
+src_unpack() {
+    unpack ${A}
+    mv "${WORKDIR}/${PN}-${EGIT_COMMIT}" "${WORKDIR}/${P}" || die "Install failed!"
+}
 
 src_install() {
 	ADDONS_PATH="/var/lib/odoo/.local/share/Odoo/addons/${SUBSLOT}"

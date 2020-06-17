@@ -3,15 +3,14 @@
 
 EAPI="7"
 
-inherit eutils git-r3
+inherit eutils
 
 DESCRIPTION="Odoo web client UI related addons."
 HOMEPAGE="https://github.com/OCA/web"
-SRC_URI=""
 SUBSLOT="$(ver_cut 1-2)"
-EGIT_REPO_URI="https://github.com/OCA/web.git"
 EGIT_COMMIT="e48e370cd0cee5a2714e79f6ff7d614d885dee3a"
 EGIT_BRANCH="${SUBSLOT}"
+SRC_URI="${HOMEPAGE}/archive/${EGIT_COMMIT}.zip -> ${P}.zip"
 IUSE=""
 LICENSE="AGPL-3"
 SLOT="0/${SUBSLOT}"
@@ -20,8 +19,13 @@ DEPEND="app-office/odoo:${SLOT}
 	dev-python/bokeh"
 RDEPEND="${DEPEND}"
 
-OPENERP_USER="odoo"
-OPENERP_GROUP="odoo"
+ODOO_USER="odoo"
+ODOO_GROUP="odoo"
+
+src_unpack() {
+    unpack ${A}
+    mv "${WORKDIR}/web-${EGIT_COMMIT}" "${WORKDIR}/${P}" || die "Install failed!"
+}
 
 src_install() {
 	ADDONS_PATH="/var/lib/odoo/.local/share/Odoo/addons/${SUBSLOT}"

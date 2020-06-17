@@ -5,24 +5,20 @@ EAPI="7"
 
 inherit eutils
 
-DESCRIPTION="Odoo Stock & Warehouse Management Addons."
-HOMEPAGE="https://github.com/ingadhoc/stock"
+DESCRIPTION="Odoo web client UI related addons."
+HOMEPAGE="https://github.com/OCA/web"
 SUBSLOT="$(ver_cut 1-2)"
-EGIT_COMMIT="eaa0dc209626b97e2aaaf87b15bcaf3d77ae3030"
+EGIT_COMMIT="d52ac1d8cfc9b3538844eff830dc0d99df8b2b05"
 EGIT_BRANCH="${SUBSLOT}"
 SRC_URI="${HOMEPAGE}/archive/${EGIT_COMMIT}.zip -> ${P}.zip"
 IUSE=""
 LICENSE="AGPL-3"
 SLOT="0/${SUBSLOT}"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 DEPEND="app-office/odoo:${SLOT}
-	app-odoo/aeroo_reports:${SLOT}
-	app-odoo/miscellaneous:${SLOT}
-	app-odoo/web-addons:${SLOT}
-	dev-tcltk/expect
-	dev-python/lxml
-	dev-python/simplejson
-	dev-python/pyserial"
+	dev-python/bokeh
+	dev-python/matplotlib
+	=dev-python/mpld3-0.3"
 RDEPEND="${DEPEND}"
 
 ODOO_USER="odoo"
@@ -30,13 +26,13 @@ ODOO_GROUP="odoo"
 
 src_unpack() {
     unpack ${A}
-    mv "${WORKDIR}/${PN}-${EGIT_COMMIT}" "${WORKDIR}/${P}" || die "Install failed!"
+    mv "${WORKDIR}/web-${EGIT_COMMIT}" "${WORKDIR}/${P}" || die "Install failed!"
 }
 
 src_install() {
 	ADDONS_PATH="/var/lib/odoo/.local/share/Odoo/addons/${SUBSLOT}"
 	dodir "${ADDONS_PATH}"
-	rm -rf "${S}/stock_inventory_preparation_filter"
+	rm -rf "${S}"/setup
 
 	for module in $(find "${S}"/* -maxdepth 0 -type d); do
 		cp -R "${module}" "${D}/${ADDONS_PATH}" || die "Install failed!"

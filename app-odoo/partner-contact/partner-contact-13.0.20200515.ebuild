@@ -3,26 +3,19 @@
 
 EAPI="7"
 
-inherit eutils
+inherit eutils git-r3
 
-DESCRIPTION="Odoo Stock & Warehouse Management Addons."
-HOMEPAGE="https://github.com/ingadhoc/stock"
+DESCRIPTION="Odoo Partner and Contact related addons."
+HOMEPAGE="https://github.com/OCA/partner-contact"
 SUBSLOT="$(ver_cut 1-2)"
-EGIT_COMMIT="eaa0dc209626b97e2aaaf87b15bcaf3d77ae3030"
+EGIT_COMMIT="2ad1f856717241a52cffc58cc0b6bf111dde6a2c"
 EGIT_BRANCH="${SUBSLOT}"
 SRC_URI="${HOMEPAGE}/archive/${EGIT_COMMIT}.zip -> ${P}.zip"
 IUSE=""
 LICENSE="AGPL-3"
 SLOT="0/${SUBSLOT}"
-KEYWORDS="amd64 x86"
-DEPEND="app-office/odoo:${SLOT}
-	app-odoo/aeroo_reports:${SLOT}
-	app-odoo/miscellaneous:${SLOT}
-	app-odoo/web-addons:${SLOT}
-	dev-tcltk/expect
-	dev-python/lxml
-	dev-python/simplejson
-	dev-python/pyserial"
+KEYWORDS="~amd64 ~x86"
+DEPEND="app-office/odoo:${SLOT}"
 RDEPEND="${DEPEND}"
 
 ODOO_USER="odoo"
@@ -36,7 +29,7 @@ src_unpack() {
 src_install() {
 	ADDONS_PATH="/var/lib/odoo/.local/share/Odoo/addons/${SUBSLOT}"
 	dodir "${ADDONS_PATH}"
-	rm -rf "${S}/stock_inventory_preparation_filter"
+	rm -rf "${S}"/setup
 
 	for module in $(find "${S}"/* -maxdepth 0 -type d); do
 		cp -R "${module}" "${D}/${ADDONS_PATH}" || die "Install failed!"

@@ -5,38 +5,32 @@ EAPI="7"
 
 inherit eutils
 
-DESCRIPTION="Odoo Stock & Warehouse Management Addons."
-HOMEPAGE="https://github.com/ingadhoc/stock"
+DESCRIPTION="Addons concerning odoo's social ERP features and messaging in general."
+HOMEPAGE="https://github.com/OCA/social"
 SUBSLOT="$(ver_cut 1-2)"
-EGIT_COMMIT="eaa0dc209626b97e2aaaf87b15bcaf3d77ae3030"
+EGIT_COMMIT="433cb9e5b96e2c63d880d39982924a4299ef1170"
 EGIT_BRANCH="${SUBSLOT}"
 SRC_URI="${HOMEPAGE}/archive/${EGIT_COMMIT}.zip -> ${P}.zip"
 IUSE=""
 LICENSE="AGPL-3"
 SLOT="0/${SUBSLOT}"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 DEPEND="app-office/odoo:${SLOT}
-	app-odoo/aeroo_reports:${SLOT}
-	app-odoo/miscellaneous:${SLOT}
-	app-odoo/web-addons:${SLOT}
-	dev-tcltk/expect
-	dev-python/lxml
-	dev-python/simplejson
-	dev-python/pyserial"
+	dev-python/premailer"
 RDEPEND="${DEPEND}"
 
 ODOO_USER="odoo"
 ODOO_GROUP="odoo"
 
 src_unpack() {
-    unpack ${A}
-    mv "${WORKDIR}/${PN}-${EGIT_COMMIT}" "${WORKDIR}/${P}" || die "Install failed!"
+	unpack ${A}
+	mv "${WORKDIR}/${PN}-${EGIT_COMMIT}" "${WORKDIR}/${P}" || die "Install failed!"
 }
 
 src_install() {
 	ADDONS_PATH="/var/lib/odoo/.local/share/Odoo/addons/${SUBSLOT}"
 	dodir "${ADDONS_PATH}"
-	rm -rf "${S}/stock_inventory_preparation_filter"
+	rm -rf "${S}"/setup
 
 	for module in $(find "${S}"/* -maxdepth 0 -type d); do
 		cp -R "${module}" "${D}/${ADDONS_PATH}" || die "Install failed!"
@@ -46,5 +40,5 @@ src_install() {
 }
 
 pkg_postinst() {
-	chown -R "${ODOO_USER}:${ODOO_GROUP}" "/var/lib/odoo/.local"
+	chown -R "${ODOO_USER}:${ODOO_GROUP}" "${ADDONS_PATH}"
 }

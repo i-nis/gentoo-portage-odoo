@@ -8,21 +8,19 @@ inherit eutils
 DESCRIPTION="Odoo Stock & Warehouse Management Addons."
 HOMEPAGE="https://github.com/ingadhoc/stock"
 SUBSLOT="$(ver_cut 1-2)"
-EGIT_COMMIT="eaa0dc209626b97e2aaaf87b15bcaf3d77ae3030"
+EGIT_COMMIT="93abd2ab569fe72fb762b94d85986d54e7a6ea50"
 EGIT_BRANCH="${SUBSLOT}"
 SRC_URI="${HOMEPAGE}/archive/${EGIT_COMMIT}.zip -> ${P}.zip"
 IUSE=""
 LICENSE="AGPL-3"
 SLOT="0/${SUBSLOT}"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 DEPEND="app-office/odoo:${SLOT}
 	app-odoo/aeroo_reports:${SLOT}
 	app-odoo/miscellaneous:${SLOT}
-	app-odoo/web-addons:${SLOT}
-	dev-tcltk/expect
-	dev-python/lxml
-	dev-python/simplejson
-	dev-python/pyserial"
+	app-odoo/stock-logistics-warehouse:${SLOT}
+	app-odoo/stock-logistics-workflow:${SLOT}
+	app-odoo/web-addons:${SLOT}"
 RDEPEND="${DEPEND}"
 
 ODOO_USER="odoo"
