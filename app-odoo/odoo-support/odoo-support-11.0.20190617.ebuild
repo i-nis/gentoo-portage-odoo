@@ -3,15 +3,14 @@
 
 EAPI="7"
 
-inherit eutils git-r3
+inherit eutils
 
 DESCRIPTION="odoo Support Management Modules."
 HOMEPAGE="https://github.com/ingadhoc/odoo-support"
-SRC_URI=""
 SUBSLOT="$(ver_cut 1-2)"
-EGIT_REPO_URI="https://github.com/ingadhoc/odoo-support.git"
 EGIT_COMMIT="528011d01246cddb386fa10cc654d48eaa747709"
 EGIT_BRANCH="${SUBSLOT}"
+SRC_URI="${HOMEPAGE}/archive/${EGIT_COMMIT}.zip -> ${P}.zip"
 IUSE=""
 LICENSE="AGPL-3"
 SLOT="0/${SUBSLOT}"
@@ -25,6 +24,11 @@ RDEPEND="${DEPEND}"
 
 OPENERP_USER="odoo"
 OPENERP_GROUP="odoo"
+
+src_unpack() {
+    unpack ${A}
+    mv "${WORKDIR}/${PN}-${EGIT_COMMIT}" "${WORKDIR}/${P}" || die "Install failed!"
+}
 
 src_install() {
 	ADDONS_PATH="/var/lib/odoo/.local/share/Odoo/addons/${SUBSLOT}"
