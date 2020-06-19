@@ -8,7 +8,7 @@ inherit eutils
 DESCRIPTION="Odoo Alternative Reporting Engine."
 HOMEPAGE="https://github.com/ingadhoc/reporting-engine"
 SUBSLOT="$(ver_cut 1-2)"
-EGIT_COMMIT="505f26e5f223c3be7671469c9c7ea0b0a519bf0a"
+EGIT_COMMIT="59bda364a9be2b5a047fe3b80909eb172c376eb4"
 EGIT_BRANCH="${SUBSLOT}"
 SRC_URI="${HOMEPAGE}/archive/${EGIT_COMMIT}.zip -> ${P}.zip"
 IUSE=""
@@ -20,13 +20,8 @@ DEPEND="app-office/odoo:${SLOT}
 	app-odoo/account-payment:${SLOT}
 	app-odoo/aeroo_reports:${SLOT}
 	app-odoo/argentina-sale:${SLOT}
-	app-odoo/odoo-support:${SLOT}
 	app-odoo/report-print-send:${SLOT}
-	app-odoo/server-tools:${SLOT}
-	app-odoo/stock:${SLOT}
-	dev-python/fdfgen
-	dev-python/xlwt
-	dev-python/xlsxwriter"
+	dev-python/pycups"
 RDEPEND="${DEPEND}"
 
 ODOO_USER="odoo"
