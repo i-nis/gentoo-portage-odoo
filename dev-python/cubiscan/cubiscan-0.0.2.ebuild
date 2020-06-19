@@ -17,7 +17,3 @@ KEYWORDS="amd64 x86"
 DEPEND=""
 
 S=${WORKDIR}/${P}
-
-src_install() {
-	rm -rf "${S}"/test
-}

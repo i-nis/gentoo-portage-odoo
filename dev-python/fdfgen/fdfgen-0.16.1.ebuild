@@ -18,7 +18,3 @@ DEPEND="dev-python/lxml
 	dev-python/unittest2"
 
 S=${WORKDIR}/${P}
-
-src_install() {
-	rm -rf "${S}"/test
-}
