@@ -8,17 +8,24 @@ inherit eutils
 DESCRIPTION="Odoo website builder addons."
 HOMEPAGE="https://github.com/ingadhoc/website"
 SUBSLOT="$(ver_cut 1-2)"
-EGIT_COMMIT="58bd0a8fc1618bf53c8628d8721aa91a9a9654ad"
+EGIT_COMMIT="a9082ffed6199e9814f1c047339ff96987628fc8"
 EGIT_BRANCH="${SUBSLOT}"
 SRC_URI="https://github.com/ingadhoc/${PN}/archive/${EGIT_COMMIT}.zip -> ${P}.zip"
 IUSE=""
 LICENSE="AGPL-3"
 SLOT="0/${SUBSLOT}"
-KEYWORDS="amd64 x86"
+KEYWORDS="-amd64 -x86"
 DEPEND="app-office/odoo:${SLOT}
-	dev-tcltk/expect
-	dev-python/lxml
-	dev-python/mercadopago"
+	app-odoo/argentina-sale:${SLOT}
+	app-odoo/l10n_ar:${SLOT}
+	app-odoo/product:${SLOT}
+	app-odoo/product-pack:${SLOT}
+	app-odoo/sale-workflow:${SLOT}
+	app-odoo/server-tools:${SLOT}
+	dev-python/html2text
+	dev-python/mercadopago
+	dev-python/requests
+	dev-python/suds"
 RDEPEND="${DEPEND}"
 
 ODOO_USER="odoo"
