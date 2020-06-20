@@ -8,16 +8,15 @@ inherit eutils
 DESCRIPTION="Odoo Purchases, Workflow and Organization."
 HOMEPAGE="https://github.com/OCA/purchase-workflow"
 SUBSLOT="$(ver_cut 1-2)"
-EGIT_COMMIT="69deb30adc7a94cfac5cf71900c6a7c32dd49bce"
+EGIT_COMMIT="4976a4f82a02d645a60b3ec270401435fb6e6546"
 EGIT_BRANCH="${SUBSLOT}"
 SRC_URI="${HOMEPAGE}/archive/${EGIT_COMMIT}.zip -> ${P}.zip"
 IUSE=""
 LICENSE="AGPL-3"
 SLOT="0/${SUBSLOT}"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 DEPEND="app-office/odoo:${SLOT}
 	app-odoo/product-attribute:${SLOT}
-	app-odoo/server-tools:${SLOT}
 	app-odoo/server-ux:${SLOT}"
 RDEPEND="${DEPEND}"
 
