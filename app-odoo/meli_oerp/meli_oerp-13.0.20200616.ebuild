@@ -23,7 +23,10 @@ RDEPEND="${DEPEND}"
 ODOO_USER="odoo"
 ODOO_GROUP="odoo"
 
-PATCHES=( "${FILESDIR}/meli_oerp_config.py.patch" )
+PATCHES=(
+	"${FILESDIR}/${PN}-config.py.patch"
+	"${FILESDIR}/${PN}-orders.py.patch"
+)
 
 src_unpack() {
 	unpack ${A}
