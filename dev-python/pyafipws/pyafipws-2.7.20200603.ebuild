@@ -8,7 +8,7 @@ inherit distutils-r1
 
 DESCRIPTION="Interfases, tools and apps for Argentina's gov't. webservices"
 HOMEPAGE="http://www.pyafipws.com.ar/pyafipws"
-EGIT_COMMIT="0f3c5d61172e7ee7b8aec054d7a4d5c648ff9dc8"
+EGIT_COMMIT="0e1dd352d6dc866f40dc77310e21256e10f64a1b"
 EGIT_BRANCH="py3k"
 SRC_URI="https://github.com/reingart/${PN}/archive/${EGIT_COMMIT}.zip -> ${P}.zip"
 
@@ -19,6 +19,7 @@ IUSE=""
 
 DEPEND="
 	app-office/odoo
+	dev-python/certifi
 	dev-python/dbf
 	dev-python/httplib2
 	dev-python/fpdf
