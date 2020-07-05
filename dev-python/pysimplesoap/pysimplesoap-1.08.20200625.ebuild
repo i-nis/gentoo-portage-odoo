@@ -8,7 +8,7 @@ inherit distutils-r1
 
 DESCRIPTION="Python Simple SOAP Library."
 HOMEPAGE="https://github.com/pysimplesoap/pysimplesoap"
-EGIT_COMMIT="a330d9c4af1b007fe1436f979ff0b9f66613136e"
+EGIT_COMMIT="c50869f3b1cd14949b5c1fd1cf55598f4c1466c6"
 EGIT_BRANCH="stable_py3k"
 SRC_URI="https://github.com/${PN}/${PN}/archive/${EGIT_COMMIT}.zip -> ${P}.zip"
 IUSE=""
