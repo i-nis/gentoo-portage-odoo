@@ -19,12 +19,12 @@ LICENSE="BSD"
 SLOT="0"
 KEYWORDS="amd64 x86"
 
-RDEPEND="dev-python/simplejson[${PYTHON_USEDEP}]"
+RDEPEND="dev-python/simplejson"
 DEPEND="
-	dev-python/setuptools[${PYTHON_USEDEP}]
+	dev-python/setuptools
 	test? (
-		dev-python/requests[${PYTHON_USEDEP}]
-		dev-python/pytest-xprocess[${PYTHON_USEDEP}]
+		dev-python/requests
+		dev-python/pytest-xprocess
 	)"
 
 distutils_enable_tests pytest

@@ -20,7 +20,7 @@ KEYWORDS="amd64 x86"
 IUSE="examples"
 
 RDEPEND="
-	dev-python/markupsafe[${PYTHON_USEDEP}]
+	dev-python/markupsafe
 	!dev-python/jinja:compat"
 
 distutils_enable_sphinx docs \

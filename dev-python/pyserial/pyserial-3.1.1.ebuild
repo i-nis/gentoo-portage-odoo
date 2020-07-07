@@ -16,7 +16,7 @@ KEYWORDS="amd64 x86"
 IUSE="examples"
 
 BDEPEND="
-	dev-python/setuptools[${PYTHON_USEDEP}]
+	dev-python/setuptools
 "
 
 DOCS=( CHANGES.rst README.rst )

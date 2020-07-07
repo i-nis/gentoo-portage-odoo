@@ -20,9 +20,9 @@ RESTRICT="!test? ( test )"
 # optional deps:
 # - pillow and lxml for svg backend, set as hard deps
 RDEPEND="
-	dev-python/six[${PYTHON_USEDEP}]
-	dev-python/lxml[${PYTHON_USEDEP}]
-	dev-python/pillow[${PYTHON_USEDEP}]"
+	dev-python/six
+	dev-python/lxml
+	dev-python/pillow"
 DEPEND="
 	dev-python/setuptools[${PYTHON_USEDEP}]
 	test? ( ${RDEPEND}

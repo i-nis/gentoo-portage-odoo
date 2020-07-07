@@ -3,7 +3,7 @@
 
 EAPI=7
 
-PYTHON_COMPAT=( pypy{,3} python{2_7,3_{5,7,8,9}} )
+PYTHON_COMPAT=( pypy3 python3_{7,8,9} )
 PYTHON_REQ_USE="threads(+)"
 
 inherit distutils-r1
@@ -18,11 +18,11 @@ KEYWORDS="amd64 x86"
 IUSE="test"
 RESTRICT="!test? ( test )"
 
-RDEPEND="dev-python/pytz[${PYTHON_USEDEP}]
-	dev-python/setuptools[${PYTHON_USEDEP}]"
+RDEPEND="dev-python/pytz
+	dev-python/setuptools"
 DEPEND="${DEPEND}
-	test? ( dev-python/freezegun[${PYTHON_USEDEP}]
-		dev-python/pytest[${PYTHON_USEDEP}] )"
+	test? ( dev-python/freezegun
+		dev-python/pytest )"
 
 distutils_enable_sphinx docs
 

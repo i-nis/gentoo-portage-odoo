@@ -17,7 +17,7 @@ IUSE="test vies"
 
 RDEPEND="vies? ( dev-python/suds )"
 DEPEND="${RDEPEND}
-	dev-python/setuptools[${PYTHON_USEDEP}]
+	dev-python/setuptools
 	test? ( dev-python/suds )"
 
 S=${WORKDIR}/${P}

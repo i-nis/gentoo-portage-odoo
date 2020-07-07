@@ -19,24 +19,24 @@ KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND="
-	dev-python/jinja[${PYTHON_USEDEP}]
-	dev-python/numpy[${PYTHON_USEDEP}]
-	dev-python/python-dateutil[${PYTHON_USEDEP}]
-	dev-python/pyyaml[${PYTHON_USEDEP}]
-	dev-python/requests[${PYTHON_USEDEP}]
-	dev-python/six[${PYTHON_USEDEP}]
-	>=www-servers/tornado-4.3[${PYTHON_USEDEP}]
+	dev-python/jinja
+	dev-python/numpy
+	dev-python/python-dateutil
+	dev-python/pyyaml
+	dev-python/requests
+	dev-python/six
+	>=www-servers/tornado-4.3
 "
 DEPEND="
-	dev-python/jinja[${PYTHON_USEDEP}]
-	dev-python/numpy[${PYTHON_USEDEP}]
-	dev-python/python-dateutil[${PYTHON_USEDEP}]
-	dev-python/pyyaml[${PYTHON_USEDEP}]
-	dev-python/packaging[${PYTHON_USEDEP}]
-	dev-python/setuptools[${PYTHON_USEDEP}]
-	dev-python/six[${PYTHON_USEDEP}]
+	dev-python/jinja
+	dev-python/numpy
+	dev-python/python-dateutil
+	dev-python/pyyaml
+	dev-python/packaging
+	dev-python/setuptools
+	dev-python/six
 	>=net-libs/nodejs-4.1
-	>=www-servers/tornado-4.3[${PYTHON_USEDEP}]
+	>=www-servers/tornado-4.3
 "
 
 python_compile() {

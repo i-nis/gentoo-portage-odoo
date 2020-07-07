@@ -16,7 +16,7 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE="test"
 
-RDEPEND="dev-python/contextlib2[${PYTHON_USEDEP}]"
+RDEPEND="dev-python/contextlib2"
 DEPEND="${RDEPEND}
-	dev-python/setuptools[${PYTHON_USEDEP}]
-	test? ( dev-python/pytest[${PYTHON_USEDEP}] )"
+	dev-python/setuptools
+	test? ( dev-python/pytest )"

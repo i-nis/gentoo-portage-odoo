@@ -15,11 +15,11 @@ KEYWORDS="amd64 x86"
 SLOT="0"
 IUSE="+bcrypt doc +scrypt +totp"
 
-RDEPEND="bcrypt? ( dev-python/bcrypt[${PYTHON_USEDEP}] )
-	totp? ( dev-python/cryptography[${PYTHON_USEDEP}] )
-	scrypt? ( dev-python/scrypt[${PYTHON_USEDEP}] )"
+RDEPEND="bcrypt? ( dev-python/bcrypt )
+	totp? ( dev-python/cryptography )
+	scrypt? ( dev-python/scrypt )"
 DEPEND="${RDEPEND}
-	dev-python/setuptools[${PYTHON_USEDEP}]"
+	dev-python/setuptools"
 
 distutils_enable_tests nose
 

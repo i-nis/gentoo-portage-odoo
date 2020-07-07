@@ -47,6 +47,9 @@
 >=app-odoo/account-payment-12.0.0
 >=app-odoo/aeroo_reports-12.0.0
 >=app-odoo/alternative-reporting-engine-12.0.0
+>=app-odoo/argentina-reporting-12.0.0
+>=app-odoo/argentina-sale-12.0.0
+>=app-odoo/backend_theme-12.0.0
 >=app-odoo/bank-payment-12.0.0
 >=app-odoo/bank-statement-reconcile-12.0.0
 >=app-odoo/connector-12.0.0
@@ -56,6 +59,7 @@
 >=app-odoo/l10n_ar-12.0.0
 >=app-odoo/manufacture-12.0.0
 >=app-odoo/margin-analysis-12.0.0
+>=app-odoo/meli_oerp-12.0.0
 >=app-odoo/miscellaneous-12.0.0
 >=app-odoo/multi-company-12.0.0
 >=app-odoo/odoo-addons-12.0.0
@@ -75,11 +79,16 @@
 >=app-odoo/project-12.0.0
 >=app-odoo/purchase-12.0.0
 >=app-odoo/purchase-workflow-12.0.0
+>=app-odoo/queue-12.0.0
+>=app-odoo/report-print-send-12.0.0
 >=app-odoo/reporting-engine-12.0.0
 >=app-odoo/sale-12.0.0
 >=app-odoo/sale-workflow-12.0.0
+>=app-odoo/server-brand-12.0.0
 >=app-odoo/server-tools-12.0.0
+>=app-odoo/server-ux-12.0.0
 >=app-odoo/single_login-12.0.0
+>=app-odoo/social-12.0.0
 >=app-odoo/stock-12.0.0
 >=app-odoo/stock-logistics-barcode-12.0.0
 >=app-odoo/stock-logistics-tracking-12.0.0
@@ -90,3 +99,4 @@
 >=app-odoo/surveyor-12.0.0
 >=app-odoo/web-addons-12.0.0
 >=app-odoo/webkit-tools-12.0.0
+>=app-odoo/website-12.0.0

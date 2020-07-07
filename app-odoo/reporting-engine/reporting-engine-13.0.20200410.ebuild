@@ -14,7 +14,7 @@ SRC_URI="${HOMEPAGE}/archive/${EGIT_COMMIT}.zip -> ${P}.zip"
 IUSE=""
 LICENSE="AGPL-3"
 SLOT="0/${SUBSLOT}"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 DEPEND="app-office/odoo:${SLOT}
 	app-odoo/account-financial-tools:${SLOT}
 	app-odoo/account-payment:${SLOT}
@@ -28,8 +28,8 @@ ODOO_USER="odoo"
 ODOO_GROUP="odoo"
 
 src_unpack() {
-    unpack ${A}
-    mv "${WORKDIR}/${PN}-${EGIT_COMMIT}" "${WORKDIR}/${P}" || die "Install failed!"
+	unpack ${A}
+	mv "${WORKDIR}/${PN}-${EGIT_COMMIT}" "${WORKDIR}/${P}" || die "Install failed!"
 }
 
 src_install() {

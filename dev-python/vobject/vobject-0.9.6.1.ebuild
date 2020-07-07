@@ -18,8 +18,8 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE=""
 
-BDEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"
-RDEPEND=">=dev-python/python-dateutil-2.4.0[${PYTHON_USEDEP}]"
+BDEPEND="dev-python/setuptools"
+RDEPEND=">=dev-python/python-dateutil-2.4.0"
 DEPEND="${RDEPEND}"
 
 DOCS=( ACKNOWLEDGEMENTS.txt README.md )

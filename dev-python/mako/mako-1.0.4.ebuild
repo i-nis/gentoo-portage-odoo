@@ -20,14 +20,14 @@ KEYWORDS="amd64 x86"
 IUSE="doc test"
 RESTRICT="!test? ( test )"
 
-RDEPEND=">=dev-python/markupsafe-0.23[${PYTHON_USEDEP}]"
+RDEPEND=">=dev-python/markupsafe-0.23"
 
 DEPEND="
-	dev-python/setuptools[${PYTHON_USEDEP}]
+	dev-python/setuptools
 	test? (
 		${RDEPEND}
-		$(python_gen_cond_dep 'dev-python/mock[${PYTHON_USEDEP}]' pypy python2_7)
-		dev-python/pytest[${PYTHON_USEDEP}]
+		dev-python/mock
+		dev-python/pytest
 	)
 "
 

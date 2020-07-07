@@ -15,12 +15,12 @@ KEYWORDS="amd64 x86"
 SLOT="0"
 IUSE="+bcrypt doc +scrypt test +totp"
 
-RDEPEND="bcrypt? ( dev-python/bcrypt[${PYTHON_USEDEP}] )
-	totp? ( dev-python/cryptography[${PYTHON_USEDEP}] )
-	scrypt? ( dev-python/scrypt[${PYTHON_USEDEP}] )"
+RDEPEND="bcrypt? ( dev-python/bcrypt )
+	totp? ( dev-python/cryptography )
+	scrypt? ( dev-python/scrypt )"
 DEPEND="${RDEPEND}
-	dev-python/setuptools[${PYTHON_USEDEP}]
-	test? ( dev-python/nose[${PYTHON_USEDEP}] )"
+	dev-python/setuptools
+	test? ( dev-python/nose )"
 
 PATCHES=(
 	"${FILESDIR}/passlib-1.7.1-tests.patch"

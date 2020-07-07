@@ -15,11 +15,11 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE="test"
 
-RDEPEND="<dev-python/requests-3.0.0[${PYTHON_USEDEP}]"
+RDEPEND="<dev-python/requests-3.0.0"
 DEPEND="${RDEPEND}
 	test? (
-		dev-python/betamax[${PYTHON_USEDEP}]
-		dev-python/mock[${PYTHON_USEDEP}]
+		dev-python/betamax
+		dev-python/mock
 	)"
 
 DOCS=( AUTHORS.rst HISTORY.rst README.rst )

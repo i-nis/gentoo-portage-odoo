@@ -24,10 +24,10 @@ RDEPEND="
 	>=dev-libs/libev-4.23
 	>=net-dns/c-ares-1.12
 	>=dev-python/greenlet-0.4.14
-	virtual/python-greenlet[${PYTHON_USEDEP}]"
+	virtual/python-greenlet"
 DEPEND="${RDEPEND}
-	dev-python/setuptools[${PYTHON_USEDEP}]
-	doc? ( dev-python/sphinx[${PYTHON_USEDEP}] )"
+	dev-python/setuptools
+	doc? ( dev-python/sphinx )"
 
 # Tests take long and fail terribly a few times.
 # It also seems that they require network access.

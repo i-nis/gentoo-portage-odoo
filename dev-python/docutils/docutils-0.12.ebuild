@@ -3,7 +3,7 @@
 
 EAPI=7
 
-PYTHON_COMPAT=( python{2_7,3_{7,8,9}} pypy3 )
+PYTHON_COMPAT=( python3_{7,8,9} pypy3 )
 
 inherit distutils-r1
 
@@ -16,7 +16,7 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE=""
 
-DEPEND="dev-python/pygments[${PYTHON_USEDEP}]"
+DEPEND="dev-python/pygments"
 RDEPEND="${DEPEND}"
 
 python_compile_all() {

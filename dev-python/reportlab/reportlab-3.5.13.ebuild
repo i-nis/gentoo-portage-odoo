@@ -18,12 +18,12 @@ KEYWORDS="amd64 x86"
 IUSE="doc examples"
 
 RDEPEND="
-	dev-python/pillow[tiff,truetype,jpeg(+),${PYTHON_USEDEP}]
+	dev-python/pillow[tiff,truetype,jpeg(+)]
 	media-libs/libart_lgpl
 	sys-libs/zlib
 "
 DEPEND="${RDEPEND}
-	dev-python/setuptools[${PYTHON_USEDEP}]
+	dev-python/setuptools
 	app-arch/unzip
 "
 

@@ -16,10 +16,10 @@ LICENSE="BSD"
 SLOT="0"
 KEYWORDS="amd64 x86"
 
-RDEPEND="dev-python/pytz[${PYTHON_USEDEP}]
-	dev-python/setuptools[${PYTHON_USEDEP}]"
+RDEPEND="dev-python/pytz
+	dev-python/setuptools"
 DEPEND="${DEPEND}
-	test? ( dev-python/freezegun[${PYTHON_USEDEP}] )"
+	test? ( dev-python/freezegun )"
 
 distutils_enable_sphinx docs
 distutils_enable_tests pytest

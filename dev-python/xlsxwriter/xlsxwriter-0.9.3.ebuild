@@ -25,9 +25,9 @@ RESTRICT="!test? ( test )"
 
 RDEPEND=""
 DEPEND="${RDEPEND}
-	dev-python/setuptools[${PYTHON_USEDEP}]
+	dev-python/setuptools
 	test? ( app-arch/unzip
-			dev-python/pytest[${PYTHON_USEDEP}] )"
+			dev-python/pytest )"
 
 S="${WORKDIR}"/${MY_P}
 

@@ -18,20 +18,20 @@ IUSE="test"
 RESTRICT="!test? ( test )"
 
 CDEPEND="
-	>=dev-python/pbr-1.3[${PYTHON_USEDEP}]
+	>=dev-python/pbr-1.3
 	$(python_gen_cond_dep '
-		dev-python/funcsigs[${PYTHON_USEDEP}]
+		dev-python/funcsigs
 	' -2)"
 DEPEND="
-	>=dev-python/setuptools-17.1[${PYTHON_USEDEP}]
+	>=dev-python/setuptools-17.1
 	test? (
 		${CDEPEND}
-		dev-python/nose[${PYTHON_USEDEP}]
-		>=dev-python/unittest2-1.1.0[${PYTHON_USEDEP}]
+		dev-python/nose
+		>=dev-python/unittest2-1.1.0
 	)"
 RDEPEND="
 	${CDEPEND}
-	>=dev-python/six-1.9[${PYTHON_USEDEP}]
+	>=dev-python/six-1.9
 "
 
 python_test() {

@@ -24,7 +24,7 @@ REQUIRED_USE="test? ( jpeg tiff )"
 RESTRICT="!test? ( test )"
 
 RDEPEND="
-	dev-python/olefile[${PYTHON_USEDEP}]
+	dev-python/olefile
 	imagequant? ( media-gfx/libimagequant:0 )
 	jpeg? ( virtual/jpeg:0 )
 	jpeg2k? ( media-libs/openjpeg:2= )
@@ -34,9 +34,9 @@ RDEPEND="
 	webp? ( media-libs/libwebp:0= )
 	zlib? ( sys-libs/zlib:0= )"
 DEPEND="${RDEPEND}
-	dev-python/setuptools[${PYTHON_USEDEP}]
+	dev-python/setuptools
 	test? (
-		dev-python/pytest[${PYTHON_USEDEP}]
+		dev-python/pytest
 		media-gfx/imagemagick[png]
 	)
 "

@@ -18,21 +18,21 @@ KEYWORDS="amd64 x86"
 IUSE="socks5 +ssl"
 
 RDEPEND="
-	>=dev-python/certifi-2017.4.17[${PYTHON_USEDEP}]
-	>=dev-python/chardet-3.0.2[${PYTHON_USEDEP}]
-	<dev-python/chardet-3.1.0[${PYTHON_USEDEP}]
-	>=dev-python/idna-2.5[${PYTHON_USEDEP}]
-	<dev-python/idna-2.9[${PYTHON_USEDEP}]
-	<dev-python/urllib3-1.25[${PYTHON_USEDEP}]
-	socks5? ( >=dev-python/PySocks-1.5.6[${PYTHON_USEDEP}] )
+	>=dev-python/certifi-2017.4.17
+	>=dev-python/chardet-3.0.2
+	<dev-python/chardet-3.1.0
+	>=dev-python/idna-2.5
+	<dev-python/idna-2.9
+	<dev-python/urllib3-1.25
+	socks5? ( >=dev-python/PySocks-1.5.6 )
 	ssl? (
-		>=dev-python/cryptography-1.3.4[${PYTHON_USEDEP}]
-		>=dev-python/pyopenssl-0.14[$(python_gen_usedep 'python*' pypy)]
+		>=dev-python/cryptography-1.3.4
+		>=dev-python/pyopenssl-0.14[$(python_gen_usedep 'python*' pypy3)]
 	)
 "
 
 DEPEND="${RDEPEND}
-	dev-python/setuptools[${PYTHON_USEDEP}]
+	dev-python/setuptools
 "
 
 # tests connect to various remote sites

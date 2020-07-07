@@ -17,10 +17,10 @@ IUSE="test"
 RESTRICT="!test? ( test )"
 
 # pkg_resources is used for entry points
-RDEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"
+RDEPEND="dev-python/setuptools"
 DEPEND="
-	dev-python/setuptools[${PYTHON_USEDEP}]
-	test? ( dev-python/pytest[${PYTHON_USEDEP}] )
+	dev-python/setuptools
+	test? ( dev-python/pytest )
 "
 
 DOCS=( AUTHORS.rst ChangeLog.rst README.md )

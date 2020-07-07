@@ -17,7 +17,7 @@ KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND="
-	>=dev-python/pyparsing-2.1.4[${PYTHON_USEDEP}]
+	>=dev-python/pyparsing-2.1.4
 	media-gfx/graphviz"
 DEPEND="${RDEPEND}
-	dev-python/setuptools[${PYTHON_USEDEP}]"
+	dev-python/setuptools"

@@ -24,9 +24,9 @@ RDEPEND="
 DEPEND="${RDEPEND}"
 BDEPEND="
 	virtual/pkgconfig
-	dev-python/cython[${PYTHON_USEDEP}]
-	dev-python/setuptools[${PYTHON_USEDEP}]
-	test? ( dev-python/cssselect[${PYTHON_USEDEP}] )
+	dev-python/cython
+	dev-python/setuptools
+	test? ( dev-python/cssselect )
 	"
 
 DISTUTILS_IN_SOURCE_BUILD=1

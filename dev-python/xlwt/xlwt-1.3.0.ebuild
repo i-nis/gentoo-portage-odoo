@@ -18,12 +18,12 @@ IUSE="doc examples test"
 RESTRICT="!test? ( test )"
 
 DEPEND="
-	dev-python/setuptools[${PYTHON_USEDEP}]
+	dev-python/setuptools
 	doc? (
-		>=dev-python/sphinx-1.3.1[${PYTHON_USEDEP}]
-		dev-python/pkginfo[${PYTHON_USEDEP}]
+		>=dev-python/sphinx-1.3.1
+		dev-python/pkginfo
 	)
-	test? ( dev-python/nose[${PYTHON_USEDEP}] )"
+	test? ( dev-python/nose )"
 
 # Prevent d'loading in the doc build
 PATCHES=( "${FILESDIR}/${PN}-1.3.0-no-intersphinx.patch" )

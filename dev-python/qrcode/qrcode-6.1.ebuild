@@ -14,14 +14,14 @@ SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="amd64 arm arm64 x86"
 
 # optional deps:
 # - pillow and lxml for svg backend, set as hard deps
 RDEPEND="
-	dev-python/six[${PYTHON_USEDEP}]
-	dev-python/lxml[${PYTHON_USEDEP}]
-	dev-python/pillow[${PYTHON_USEDEP}]"
+	dev-python/six
+	dev-python/lxml
+	dev-python/pillow"
 
 distutils_enable_tests unittest
 

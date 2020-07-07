@@ -10,8 +10,7 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE="doc"
 
-DEPEND="net-libs/nodejs"
-RDEPEND="${DEPEND}"
+DEPEND=">=net-libs/nodejs-12.16.1"
 NPM_DOCS="LICENSE CNAME CONTRIBUTING.md"
 
 src_install() {

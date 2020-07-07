@@ -17,9 +17,9 @@ IUSE="test"
 RESTRICT="!test? ( test )"
 
 DEPEND="
-	dev-python/setuptools[${PYTHON_USEDEP}]
+	dev-python/setuptools
 	test? (
-		dev-python/mock[${PYTHON_USEDEP}]
+		dev-python/mock
 	)
 "
 

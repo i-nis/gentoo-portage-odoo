@@ -16,9 +16,9 @@ LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="amd64 x86"
 
-RDEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"
+RDEPEND="dev-python/setuptools"
 DEPEND="${RDEPEND}
-	test? ( dev-python/hypothesis[${PYTHON_USEDEP}] )
+	test? ( dev-python/hypothesis )
 "
 
 PATCHES=(

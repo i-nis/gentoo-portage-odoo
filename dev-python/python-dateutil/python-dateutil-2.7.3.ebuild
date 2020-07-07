@@ -20,15 +20,15 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 
 RDEPEND="
-	>=dev-python/six-1.5[${PYTHON_USEDEP}]
+	>=dev-python/six-1.5
 	sys-libs/timezone-data
 "
 BDEPEND="${RDEPEND}
-	dev-python/setuptools[${PYTHON_USEDEP}]
-	dev-python/setuptools_scm[${PYTHON_USEDEP}]
+	dev-python/setuptools
+	dev-python/setuptools_scm
 	test? (
-		dev-python/freezegun[${PYTHON_USEDEP}]
-		dev-python/hypothesis[${PYTHON_USEDEP}]
+		dev-python/freezegun
+		dev-python/hypothesis
 	)
 "
 

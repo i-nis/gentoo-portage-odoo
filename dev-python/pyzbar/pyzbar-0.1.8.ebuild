@@ -3,7 +3,7 @@
 
 EAPI=7
 
-PYTHON_COMPAT=( python3_{6,7,8} )
+PYTHON_COMPAT=( python3_{7,8,9} )
 
 inherit distutils-r1
 
@@ -16,13 +16,13 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 
 RDEPEND="
-	dev-python/pillow[${PYTHON_USEDEP}]
+	dev-python/pillow
 	media-gfx/zbar
 "
 
 BDEPEND="
 	test? (
-		dev-python/numpy[${PYTHON_USEDEP}]
+		dev-python/numpy
 	)
 "
 

@@ -15,14 +15,11 @@ S="${WORKDIR}/${PN}-jurko-${PV}"
 LICENSE="LGPL-3"
 SLOT="0"
 KEYWORDS="amd64 x86"
-IUSE="doc test"
+IUSE="test"
 RESTRICT="!test? ( test )"
 
-REQUIRED_USE="doc? ( $(python_gen_useflags) )"
-
-DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
-	doc? ( dev-python/epydoc[$(python_gen_usedep)] )
-	test? ( dev-python/pytest[${PYTHON_USEDEP}] )"
+DEPEND="dev-python/setuptools
+	test? ( dev-python/pytest )"
 RDEPEND=""
 
 DOCS=( README.rst notes/{argument_parsing.rst,readme.txt,traversing_client_data.rst} )

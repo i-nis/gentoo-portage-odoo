@@ -18,11 +18,11 @@ IUSE="test"
 RESTRICT="!test? ( test )"
 
 RDEPEND="
-	>=dev-python/pyparsing-2.1.4[${PYTHON_USEDEP}]
+	>=dev-python/pyparsing-2.1.4
 	media-gfx/graphviz"
 DEPEND="${RDEPEND}
-	dev-python/setuptools[${PYTHON_USEDEP}]
-	test? ( dev-python/chardet[${PYTHON_USEDEP}] )"
+	dev-python/setuptools
+	test? ( dev-python/chardet )"
 
 PATCHES=(
 	"${FILESDIR}"/${P}-unittest.patch

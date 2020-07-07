@@ -14,19 +14,17 @@ SRC_URI="https://github.com/ingadhoc/${PN}/archive/${EGIT_COMMIT}.zip -> ${P}.zi
 IUSE=""
 LICENSE="AGPL-3"
 SLOT="0/${SUBSLOT}"
-KEYWORDS="-amd64 -x86"
+KEYWORDS="~amd64 ~x86"
 DEPEND="app-office/odoo:${SLOT}
 	app-odoo/argentina-sale:${SLOT}
 	app-odoo/l10n_ar:${SLOT}
 	app-odoo/product:${SLOT}
-	app-odoo/product-pack:${SLOT}
 	app-odoo/sale-workflow:${SLOT}
 	app-odoo/server-tools:${SLOT}
 	dev-python/html2text
 	dev-python/mercadopago
 	dev-python/requests
 	dev-python/suds"
-RDEPEND="${DEPEND}"
 
 ODOO_USER="odoo"
 ODOO_GROUP="odoo"

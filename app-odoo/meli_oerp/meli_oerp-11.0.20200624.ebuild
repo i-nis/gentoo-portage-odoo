@@ -26,7 +26,7 @@ ODOO_GROUP="odoo"
 PATCHES=(
 	"${FILESDIR}/${PN}-config.py.patch"
 	"${FILESDIR}/${PN}-orders.py.patch"
- )
+)
 
 src_unpack() {
 	unpack ${A}
