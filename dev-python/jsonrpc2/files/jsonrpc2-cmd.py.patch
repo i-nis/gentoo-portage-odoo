@@ -1,0 +1,11 @@
+--- a/jsonrpc2/cmd.py	2020-07-10 00:08:10.329583000 -0300
++++ b/jsonrpc2/cmd.py	2020-07-10 00:10:35.597583000 -0300
+@@ -12,7 +12,7 @@
+         __import__(m)
+         mod = sys.modules[m]
+         app.rpc.add_module(mod)
+-    print 'runserver %s:%d' % (host, port)
++    print('runserver %s:%d' % (host, port))
+     httpd = make_server(host, port, app)
+     httpd.serve_forever()
+ 

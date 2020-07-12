@@ -1,0 +1,33 @@
+#!/sbin/openrc-run
+#
+# (C) 2004 - 2020 NIS
+# Martin Andres Gomez Gimenez <mggimenez@nis.com.ar>
+# Distributed under the terms of the GNU General Public License v3
+#
+
+
+
+COMMAND="/usr/bin/soffice"
+COMMAND_ARGS="${LIBREOFFICE_ARGS}"
+
+depend() {
+	 use net
+}
+
+start() {
+	checkpath -q -d -m 0755 -o ${USER} /run/libreoffice
+	ebegin "Starting LibreOffice headless service."
+	start-stop-daemon --start --quiet --pidfile "${PIDFILE}" --exec ${COMMAND} \
+		--make-pidfile --user "${USER}" --background -- ${COMMAND_ARGS} \
+		--accept="socket,host=${HOST},port=${PORT},tcpNoDelay=1;urp;StarOffice.Service"
+    eend $?
+}
+
+stop() {
+	ebegin "Stopping LibreOffice headless service."
+	start-stop-daemon --stop --quiet --pidfile "${PIDFILE}" --signal 9
+	killall -9 soffice.bin
+	rm -f "${PIDFILE}"
+	eend $?
+}
+

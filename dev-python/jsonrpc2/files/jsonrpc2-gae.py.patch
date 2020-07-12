@@ -1,0 +1,11 @@
+--- a/jsonrpc2/gae.py	2020-07-10 00:00:29.317583000 -0300
++++ b/jsonrpc2/gae.py	2020-07-10 00:02:33.517583000 -0300
+@@ -46,7 +46,7 @@
+             body = environ['wsgi.input'].read(-1)
+             data = json.loads(body)
+             resdata = rpc(data) 
+-        except ValueError, e:
++        except (ValueError, e):
+             resdata = {'jsonrpc':'2.0',
+                        'id':None,
+                        'error':{'code':PARSE_ERROR,
