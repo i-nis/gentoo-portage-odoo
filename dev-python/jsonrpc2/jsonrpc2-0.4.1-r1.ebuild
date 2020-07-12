@@ -17,7 +17,6 @@ KEYWORDS="amd64 x86"
 DEPEND="dev-python/six"
 
 PATCHES=(
-    "${FILESDIR}/${PN}-cmd.py.patch"
-    "${FILESDIR}/${PN}-gae.py.patch"
+	"${FILESDIR}/${PN}-cmd.py.patch"
+	"${FILESDIR}/${PN}-gae.py.patch"
 )
-

@@ -16,7 +16,7 @@ SRC_URI="${EGIT_REPO_URI}/archive/${EGIT_COMMIT}.zip -> ${P}.zip"
 IUSE=""
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 DEPEND="dev-python/daemonize
 	dev-python/jsonrpc2
 	net-misc/libreoffice"
@@ -24,7 +24,6 @@ RDEPEND="${DEPEND}"
 
 PATCHES=(
 	"${FILESDIR}/${PN}_gentoo.patch"
-	"${FILESDIR}/DocumentConverter.py_gentoo.patch"
 )
 
 ODOO_USER="odoo"

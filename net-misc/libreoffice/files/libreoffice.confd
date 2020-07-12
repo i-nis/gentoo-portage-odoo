@@ -1,7 +1,7 @@
 # /etc/conf.d/libreoffice - config file for /etc/init.d/libreoffice
 #
-# (C) 2012 - 2019 Ingenio Virtual
-# Martin Andres Gomez Gimenez <mggimenez@ingeniovirtual.com.ar>
+# (C) 2012 - 2020 NIS
+# Martin Andres Gomez Gimenez <mggimenez@nis.com.ar>
 # Distributed under the terms of the GNU General Public License v3
 #
 
