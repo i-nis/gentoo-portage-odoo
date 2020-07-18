@@ -32,15 +32,18 @@ DEPEND="
 ODOO_USER="odoo"
 ODOO_GROUP="odoo"
 
+PATCHES=(
+	"${FILESDIR}/${P}-padron.py.patch"
+	"${FILESDIR}/${P}-setup.patch"
+	"${FILESDIR}/${P}-utils.py.patch"
+	"${FILESDIR}/${P}-ws_sr_padron.py.patch"
+	"${FILESDIR}/${P}-wsaa.py.patch"
+)
+
 src_unpack() {
 	unpack ${A}
 	mv "${WORKDIR}/${PN}-${EGIT_COMMIT}" "${WORKDIR}/${P}" || die "Install failed!"
-}
-
-src_prepare() {
 	rm -f "${S}/licencia.txt" || die
-	eapply "${FILESDIR}/${P}-setup.patch"
-	eapply_user
 }
 
 python_install_all() {
@@ -51,6 +54,10 @@ python_install_all() {
 	keepdir "${PYAFIPWS_CACHE_PATH}"
 	dodir "${PYAFIPWS_PATH}"
 	dosym "${PYAFIPWS_CACHE_PATH}" "${PYAFIPWS_PATH}"/cache || die
+	dosym "/etc/${PN}" "${PYAFIPWS_PATH}"/conf
+	exeinto /etc/cron.daily
+	newexe "${FILESDIR}/${PN}.cron" "${PN}" || die
+	sed -i "s|SET_PYTHONPATH|${PYAFIPWS_PATH}|" "${D}/etc/cron.daily/${PN}" || die
 }
 
 pkg_postinst() {

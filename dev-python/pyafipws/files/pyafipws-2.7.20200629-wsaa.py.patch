@@ -1,0 +1,26 @@
+--- a/wsaa.py	2020-06-29 13:30:30.000000000 -0300
++++ b/wsaa.py	2020-07-13 23:57:10.044618000 -0300
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python
++#!/usr/bin/python3
+ # -*- coding: utf-8 -*-
+ # This program is free software; you can redistribute it and/or modify
+ # it under the terms of the GNU General Public License as published by the
+@@ -31,7 +31,7 @@
+ import warnings
+ import unicodedata
+ from pysimplesoap.client import SimpleXMLElement
+-from .utils import inicializar_y_capturar_excepciones, BaseWS, get_install_dir, \
++from pyafipws.utils import inicializar_y_capturar_excepciones, BaseWS, get_install_dir, \
+     exception_info, safe_console, date
+ try:
+     from M2Crypto import BIO, Rand, SMIME, SSL
+@@ -433,7 +433,7 @@
+         # consultar el padrón online de AFIP si no se especificó razón social:
+         empresa = len(args) > 3 and args[3] or ""
+         if not empresa:
+-            from .padron import PadronAFIP
++            from pyafipws.padron import PadronAFIP
+             padron = PadronAFIP()
+             ok = padron.Consultar(cuit)
+             if ok and padron.denominacion:

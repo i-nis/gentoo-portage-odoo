@@ -1,14 +1,25 @@
 #!/bin/bash
 # Descarga y procesa el padrón desde AFIP.
 #
-# Copyright (C) 2012 - 2016 Ingenio Virtual
-# Martin Andres Gomez Gimenez <mggimenez@ingeniovirtual.com.ar>
+# Copyright (C) 2004 - 2020 NIS
+# Martin Andres Gomez Gimenez <mggimenez@nis.com.ar>
 # Distributed under the terms of the GNU General Public License v3
 #
 
+# Comentar la siguiente línea para actualizar diariamente.
+exit 1
 
-PYTHONPATH="/usr/lib/python2.7/site-packages/pyafipws"
+
+PYTHONPATH="SET_PYTHONPATH"
 CACHEPATH="${PYTHONPATH}/cache"
 
 cd "${CACHEPATH}"
-python2 "${PYTHONPATH}/padron.py" --descargar --procesar &>/dev/null
+rm -f padron.txt
+python3 "${PYTHONPATH}/padron.py" --descargar &>/dev/null
+
+# Cambia codificación a UTF-8
+mv padron.txt padron_orig.txt
+iconv -f ISO-8859-15 -t UTF8 padron_orig.txt > padron.txt
+rm padron_orig.txt
+
+python3 "${PYTHONPATH}/padron.py" --borrar --procesar &>/dev/null

@@ -1,0 +1,17 @@
+--- a/utils.py	2020-06-29 13:30:30.000000000 -0300
++++ b/utils.py	2020-07-17 17:59:00.751544000 -0300
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python
++#!/usr/bin/python3
+ # -*- coding: utf8 -*-
+ #
+ # This program is free software; you can redistribute it and/or modify
+@@ -581,8 +581,6 @@
+                     valor = "%s-%s-%s" % (valor[0:4], valor[4:6], valor[6:8])
+                 else:
+                     valor = None
+-            else:
+-                valor = valor.decode("ascii", "ignore")
+             if not valor and clave in dic and len(linea) <= comienzo:
+                 pass    # ignorar - compatibilidad hacia atrás (cambios tamaño)
+             else:
