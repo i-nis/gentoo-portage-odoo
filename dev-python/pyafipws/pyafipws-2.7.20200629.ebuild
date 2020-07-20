@@ -54,7 +54,6 @@ python_install_all() {
 	keepdir "${PYAFIPWS_CACHE_PATH}"
 	dodir "${PYAFIPWS_PATH}"
 	dosym "${PYAFIPWS_CACHE_PATH}" "${PYAFIPWS_PATH}"/cache || die
-	dosym "/etc/${PN}" "${PYAFIPWS_PATH}"/conf
 	exeinto /etc/cron.daily
 	newexe "${FILESDIR}/${PN}.cron" "${PN}" || die
 	sed -i "s|SET_PYTHONPATH|${PYAFIPWS_PATH}|" "${D}/etc/cron.daily/${PN}" || die
