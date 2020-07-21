@@ -60,6 +60,7 @@
 >=app-odoo/hr-14.0.0
 >=app-odoo/knowledge-14.0.0
 >=app-odoo/l10n_ar-14.0.0
+>=app-odoo/l10n_ar-14.0.0
 >=app-odoo/manufacture-14.0.0
 >=app-odoo/margin-analysis-14.0.0
 >=app-odoo/meli_oerp-14.0.0

@@ -8,18 +8,19 @@ inherit eutils
 DESCRIPTION="Odoo Argentinian localization from Ingenieria AdHoc."
 HOMEPAGE="https://github.com/ingadhoc/odoo-argentina"
 SUBSLOT="$(ver_cut 1-2)"
-EGIT_COMMIT="198c594ef2607c31e3f4c269f702ea2ce4f93555"
+EGIT_COMMIT="17a679386849495a3a4313a046213a56883b5002"
 EGIT_BRANCH="${SUBSLOT}"
 SRC_URI="https://github.com/ingadhoc/odoo-argentina/archive/${EGIT_COMMIT}.zip -> ${P}.zip"
 IUSE=""
 LICENSE="AGPL-3"
 SLOT="0/${SUBSLOT}"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 DEPEND="app-office/odoo:${SLOT}
 	app-odoo/aeroo_reports:${SLOT}
 	app-odoo/account-financial-tools:${SLOT}
 	app-odoo/account-payment:${SLOT}
 	app-odoo/argentina-reporting:${SLOT}
+	app-odoo/l10n_ar_ce:${SLOT}
 	app-odoo/partner-contact:${SLOT}
 	app-odoo/product:${SLOT}
 	dev-python/httplib2
@@ -27,6 +28,7 @@ DEPEND="app-office/odoo:${SLOT}
 	dev-python/openupgradelib
 	dev-python/pyopenssl
 	dev-python/pysimplesoap
+	dev-python/python-stdnum
 	dev-python/suds
 	>=dev-python/pyafipws-2.7.20191021"
 RDEPEND="${DEPEND}"
