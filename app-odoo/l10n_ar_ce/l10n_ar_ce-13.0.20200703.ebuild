@@ -16,7 +16,6 @@ LICENSE="AGPL-3"
 SLOT="0/${SUBSLOT}"
 KEYWORDS="amd64 x86"
 DEPEND="app-office/odoo:${SLOT}
-	app-odoo/l10n_ar:${SLOT}
 	dev-python/httplib2
 	dev-python/m2crypto
 	dev-python/openupgradelib
