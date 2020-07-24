@@ -14,7 +14,7 @@ SRC_URI="https://github.com/ingadhoc/${PN}/archive/${EGIT_COMMIT}.zip -> ${P}.zi
 IUSE=""
 LICENSE="AGPL-3"
 SLOT="0/${SUBSLOT}"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 DEPEND="app-office/odoo:${SLOT}
 	app-odoo/argentina-sale:${SLOT}
 	app-odoo/l10n_ar:${SLOT}
