@@ -8,7 +8,7 @@ inherit eutils
 DESCRIPTION="Odoo Accounting payment related modules."
 HOMEPAGE="https://github.com/ingadhoc/account-payment"
 SUBSLOT="$(ver_cut 1-2)"
-EGIT_COMMIT="b2f38cffd76f6ee3f0222abef000c805d483505d"
+EGIT_COMMIT="030f803b727e8632b10f8eebc1197b1fe75d666b"
 EGIT_BRANCH="${SUBSLOT}"
 SRC_URI="${HOMEPAGE}/archive/${EGIT_COMMIT}.zip -> ${P}.zip"
 IUSE=""
