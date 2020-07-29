@@ -27,7 +27,6 @@
 >dev-python/python-dateutil-2.7.3
 >dev-python/pyusb-1.0.2
 >dev-python/qrcode-6.1
->dev-python/reportlab-3.5.13
 >dev-python/requests-2.21.0
 >dev-python/requests-toolbelt-0.9.1
 >dev-python/zeep-3.2.0
