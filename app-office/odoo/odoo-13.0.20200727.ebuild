@@ -54,7 +54,7 @@ CDEPEND="
 	dev-python/pytz
 	~dev-python/pyusb-1.0.2
 	~dev-python/qrcode-6.1
-	~dev-python/reportlab-3.5.13
+	dev-python/reportlab
 	~dev-python/requests-2.21.0
 	~dev-python/zeep-3.2.0
 	~dev-python/vatnumber-1.2
