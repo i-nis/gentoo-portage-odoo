@@ -8,7 +8,7 @@ inherit eutils
 DESCRIPTION="Odoo Accountant Financial Tools and Utils ."
 HOMEPAGE="https://github.com/ingadhoc/account-financial-tools"
 SUBSLOT="$(ver_cut 1-2)"
-EGIT_COMMIT="46e4f92bd67fcefa27bb7d217b66a7570ac7dc9c"
+EGIT_COMMIT="ed2698afb852e87e2eafb5ed1a9ff45bb5328a4b"
 EGIT_BRANCH="${SUBSLOT}"
 SRC_URI="${HOMEPAGE}/archive/${EGIT_COMMIT}.zip -> ${P}.zip"
 IUSE=""

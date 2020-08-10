@@ -8,7 +8,7 @@ inherit eutils
 DESCRIPTION="Odoo Product related Addons."
 HOMEPAGE="https://github.com/ingadhoc/product"
 SUBSLOT="$(ver_cut 1-2)"
-EGIT_COMMIT="0ce3bdf38e42cfb189a88b2b80532bc56307bb60"
+EGIT_COMMIT="fb4eeae9dab540a5bdf438a1e01dcac706507017"
 EGIT_BRANCH="${SUBSLOT}"
 SRC_URI="${HOMEPAGE}/archive/${EGIT_COMMIT}.zip -> ${P}.zip"
 IUSE=""
