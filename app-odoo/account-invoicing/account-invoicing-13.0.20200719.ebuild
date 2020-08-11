@@ -8,7 +8,7 @@ inherit eutils
 DESCRIPTION="Odoo Invoicing Extension Addons."
 HOMEPAGE="https://github.com/OCA/account-invoicing"
 SUBSLOT="$(ver_cut 1-2)"
-EGIT_COMMIT="d0bc0c3d410d843e3cf1e8a3294f128caea2c468"
+EGIT_COMMIT="81ce2bb77f84d08fbf5e63a4f5f63034bfc0bdcd"
 EGIT_BRANCH="${SUBSLOT}"
 SRC_URI="${HOMEPAGE}/archive/${EGIT_COMMIT}.zip -> ${P}.zip"
 IUSE=""
