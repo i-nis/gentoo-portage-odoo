@@ -8,7 +8,7 @@ inherit eutils
 DESCRIPTION="Odoo Argentina Sale Modules."
 HOMEPAGE="https://github.com/ingadhoc/argentina-sale"
 SUBSLOT="$(ver_cut 1-2)"
-EGIT_COMMIT="5bbf9320d83dff10e453c3d21c5f5d678b7c3068"
+EGIT_COMMIT="53274a6134178c5c947d01b0b2fb5c516c21bbbf"
 EGIT_BRANCH="${SUBSLOT}"
 SRC_URI="${HOMEPAGE}/archive/${EGIT_COMMIT}.zip -> ${P}.zip"
 IUSE=""
