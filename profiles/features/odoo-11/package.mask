@@ -44,6 +44,7 @@
 >=app-odoo/account-financial-utils-12.0.0
 >=app-odoo/account-invoice-12.0.0
 >=app-odoo/account-invoicing-12.0.0
+>=app-odoo/account-invoicing-adhoc-12.0.0
 >=app-odoo/account-payment-12.0.0
 >=app-odoo/aeroo_reports-12.0.0
 >=app-odoo/alternative-reporting-engine-12.0.0

@@ -5,7 +5,7 @@ EAPI="7"
 
 inherit eutils
 
-DESCRIPTION="Odoo Invoicing Extension Addons from Ingeniería AdHoc."
+DESCRIPTION="Odoo Invoicing Extension Addons from Ingenieria AdHoc."
 HOMEPAGE="https://github.com/ingadhoc/account-invoicing"
 SUBSLOT="$(ver_cut 1-2)"
 EGIT_COMMIT="d305bcd674487e94ba9c7591252f6fdb681a2879"
