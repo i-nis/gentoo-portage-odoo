@@ -12,11 +12,13 @@
 >dev-python/libsass-0.17.0
 >dev-python/lxml-4.3.2
 >dev-python/mako-1.0.7
+>dev-python/matplotlib-3.2.2
 >dev-python/markupsafe-1.1.0
 >dev-python/mock-2.0.0
 >dev-python/num2words-0.5.6
 >dev-python/ofxparse-0.19
 >dev-python/passlib-1.7.1
+>dev-python/pillow-6.1.0
 >dev-python/polib-1.1.0
 >dev-python/psutil-5.6.6
 >dev-python/pydot-1.4.1

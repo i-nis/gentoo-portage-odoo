@@ -42,7 +42,7 @@ CDEPEND="
 	~dev-python/num2words-0.5.6
 	~dev-python/ofxparse-0.19
 	~dev-python/passlib-1.7.1
-	dev-python/pillow[jpeg]
+	~dev-python/pillow-6.1.0[jpeg]
 	~dev-python/polib-1.1.0
 	~dev-python/psutil-5.6.6
 	dev-python/psycopg:2
