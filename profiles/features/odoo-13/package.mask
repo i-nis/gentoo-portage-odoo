@@ -106,3 +106,4 @@
 >=app-odoo/web-addons-14.0.0
 >=app-odoo/webkit-tools-14.0.0
 >=app-odoo/website-14.0.0
+>=app-odoo/website-oca-14.0.0
