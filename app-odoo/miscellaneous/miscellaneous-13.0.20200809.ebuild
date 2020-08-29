@@ -8,7 +8,7 @@ inherit eutils
 DESCRIPTION="Odoo miscellaneous modules."
 HOMEPAGE="https://github.com/ingadhoc/miscellaneous"
 SUBSLOT="$(ver_cut 1-2)"
-EGIT_COMMIT="4351609c4601d41f2865a6659257bb3590b30e1d"
+EGIT_COMMIT="481ce99d5b2ef447ef0a215e10629e3f6dce1e0b"
 EGIT_BRANCH="${SUBSLOT}"
 SRC_URI="${HOMEPAGE}/archive/${EGIT_COMMIT}.zip -> ${P}.zip"
 IUSE=""
