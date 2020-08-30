@@ -1,0 +1,17 @@
+--- a/l10n_ar_sale/views/sale_report_templates.xml
++++ b/l10n_ar_sale/views/sale_report_templates.xml
+@@ -26,11 +26,11 @@
+             <t t-set="document_letter" t-value="'X'"/>
+             <t t-set="document_legend" t-value="'Doc. no válido como factura'"/>
+             <t t-if="not (env.context.get('proforma', False) or is_pro_forma)">
+-                <t t-set="report_name" t-if="doc.state not in ['draft','sent']" t-value="'Order'"/>
+-                <t t-set="report_name" t-if="doc.state in ['draft','sent']" t-value="'Quotation'"/>
++                <t t-set="report_name" t-if="doc.state not in ['draft','sent']" t-value="'Orden'"/>
++                <t t-set="report_name" t-if="doc.state in ['draft','sent']" t-value="'Presupuesto'"/>
+             </t>
+             <t t-if="env.context.get('proforma', False) or is_pro_forma">
+-                <t t-set="report_name" t-value="'Pro-Forma Invoice'"/>
++                <t t-set="report_name" t-value="'Factura Pro-Forma'"/>
+             </t>
+             <t t-set="header_address" t-value="doc.sale_checkbook_id.report_partner_id or doc.company_id.partner_id"/>
+ 

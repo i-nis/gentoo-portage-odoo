@@ -8,7 +8,7 @@ inherit eutils
 DESCRIPTION="Odoo Argentinian localization from Ingenieria AdHoc."
 HOMEPAGE="https://github.com/ingadhoc/odoo-argentina"
 SUBSLOT="$(ver_cut 1-2)"
-EGIT_COMMIT="95874eef3fc12b813e2ff9d91ef5f97a56a85b32"
+EGIT_COMMIT="04ac36cd765a785ae01ac2fde5de0d768d13fe92"
 EGIT_BRANCH="${SUBSLOT}"
 SRC_URI="https://github.com/ingadhoc/odoo-argentina/archive/${EGIT_COMMIT}.zip -> ${P}.zip"
 IUSE=""
