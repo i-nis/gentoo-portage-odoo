@@ -1,0 +1,97 @@
+--- a/odoo/addons/l10n_ar/views/report_invoice.xml
++++ b/odoo/addons/l10n_ar/views/report_invoice.xml
+@@ -3,12 +3,14 @@
+ 
+     <!-- this header can be used on any Argentinean report, to be useful some variables should be passed -->
+     <template id="custom_header">
++      <br />
+         <div>
+             <div class="row" t-if="not pre_printed_report">
+                 <div name="left-upper-side" class="col-5">
+-                    <img t-if="o.company_id.logo" t-att-src="image_data_uri(o.company_id.logo)" style="max-height: 45px;" alt="Logo"/>
++                    <img t-if="o.company_id.logo" t-att-src="image_data_uri(o.company_id.logo)" style="max-height: 100px;" alt="Logo"/>
+                 </div>
+                 <div name="center-upper" class="col-2 text-center" t-att-style="'color: %s;' % o.company_id.primary_color">
++                  <br />
+                     <span style="display: inline-block; text-align: center; line-height: 8px;">
+                         <h1 style="line-height: 25px;">
+                             <strong><span t-esc="document_letter"/></strong>
+@@ -18,7 +20,8 @@
+                 </div>
+                 <div name="right-upper-side" class="col-5 text-right">
+ 
+-                    <!-- (6) Titulo de Documento -->
++                    <!-- (9) Titulo de Documento -->
++                    <br />
+                     <h4 t-att-style="'color: %s;' % o.company_id.primary_color"><strong>
+                         <span t-esc="report_name"/>
+                     </strong></h4>
+@@ -30,44 +33,46 @@
+                     <t t-if="not pre_printed_report">
+                         <!-- (1) Nombre de Fantasia -->
+                         <!-- (2) Apellido y Nombre o Razon Social -->
+-                        <span t-field="o.company_id.partner_id.name"/>
++                        <h5><span t-field="o.company_id.partner_id.name"/></h5>
+ 
+                         <!-- (3) Domicilio Comercial (Domicilio Fiscal is the same) -->
+-                        <br/>
+-                        <div></div>
++                        <div/>
+                         <!-- we dont use the address widget as it adds a new line on the phone and we want to reduce at maximum lines qty -->
+-                        <t t-esc="' - '.join([item for item in [
+-                            ', '.join([item for item in [header_address.street, header_address.street2] if item]),
+-                            header_address.city,
+-                            header_address.state_id and header_address.state_id.name,
+-                            header_address.zip,
+-                            header_address.country_id and header_address.country_id.name] if item])"/><span t-if="header_address.phone"> - </span><span t-if="header_address.phone" style="white-space: nowrap;" t-esc="'Tel: ' + header_address.phone"/>
++                        <span t-att-style="'color: %s;' % o.company_id.primary_color">Domicilio comercial: </span><span t-field="header_address.street" />
++                        <br />
++                        <span t-field="header_address.city" /> - (<span t-field="header_address.zip" />) - <span t-field="header_address.state_id and header_address.state_id.name" /> - <span t-field="header_address.country_id and header_address.country_id.name" />
++                        <br />
++                        <span t-att-style="'color: %s;' % o.company_id.primary_color">Teléfono: </span><span t-field="header_address.phone"/>
++                        <br/>
++                        <span t-att-style="'color: %s;' % o.company_id.primary_color">Correo electrónico: </span><span t-field="header_address.email"/>
+                         <br/>
+-                        <span t-att-style="'color: %s;' % o.company_id.primary_color" t-esc="' - '.join([item for item in [(header_address.website or '').replace('https://', '').replace('http://', ''), header_address.email] if item])"/>
++                        <span t-att-style="'color: %s;' % o.company_id.primary_color">Sitio web: </span><span t-field="header_address.website"/>
+                     </t>
+                 </div>
+                 <div class="col-6 text-right" style="padding-left: 0px;">
+ 
+                     <t t-if="not pre_printed_report">
+-                        <!-- (7) Numero punto venta - (8) numero de documento -->
+-                        <span t-att-style="'color: %s;' % o.company_id.secondary_color">Nro: </span><span t-esc="report_number"/>
+-                        <br/>
++                        <!-- (10) Numero punto venta - (8) numero de documento -->
++                        <h5><span t-att-style="'color: %s;' % o.company_id.secondary_color">Nro: </span><strong><span t-esc="report_number"/></strong></h5>
+                     </t>
+-
+-                    <!-- (9) Fecha -->
+-                    <span t-att-style="'color: %s;' % o.company_id.secondary_color">Date: </span><span t-esc="report_date" t-options='{"widget": "date"}'/>
++                    <!-- (11) Fecha -->
++                    <span t-att-style="'color: %s;' % o.company_id.secondary_color">Date: </span><strong><span t-esc="report_date" t-options="{&quot;widget&quot;: &quot;date&quot;}"/></strong>
+ 
+                     <t t-if="not pre_printed_report">
+                         <!-- (5) Condicion de IVA / Responsabilidad -->
+-                        <!-- (10) CUIT -->
++                        <!-- (6) CUIT -->
+                         <br/>
+-                        <span t-field="o.company_id.l10n_ar_afip_responsibility_type_id"/><span t-att-style="'color: %s;' % o.company_id.secondary_color"> - CUIT: </span><span t-field="o.company_id.partner_id.l10n_ar_formatted_vat"/>
++                        <br/>
++                        <span t-att-style="'color: %s;' % o.company_id.secondary_color">IVA: </span><span t-field="o.company_id.l10n_ar_afip_responsibility_type_id"/>
++                        <br/>
++                        <span t-att-style="'color: %s;' % o.company_id.secondary_color">CUIT: </span><span t-field="o.company_id.partner_id.l10n_ar_formatted_vat"/>
+ 
+-                        <!-- (11) IIBB: -->
+-                        <!-- (12) Inicio de actividades -->
+-                        <br/><span t-att-style="'color: %s;' % o.company_id.secondary_color">IIBB: </span><span t-esc="o.company_id.l10n_ar_gross_income_type == 'exempt' and 'Exento' or o.company_id.l10n_ar_gross_income_number"/><span t-att-style="'color: %s;' % o.company_id.secondary_color"> - Activities Start: </span><span t-field="o.company_id.l10n_ar_afip_start_date"/>
++                        <!-- (7) IIBB: -->
++                        <!-- (8) Inicio de actividades -->
++                        <span t-att-style="'color: %s;' % o.company_id.secondary_color"> - IIBB: </span><span t-esc="o.company_id.l10n_ar_gross_income_type == 'exempt' and 'Exento' or o.company_id.l10n_ar_gross_income_number"/>
++                        <br/>
++                        <span t-att-style="'color: %s;' % o.company_id.secondary_color">Inicio actividades: </span><span t-field="o.company_id.l10n_ar_afip_start_date"/>
+                     </t>
+-
+                 </div>
+             </div>
+         </div>

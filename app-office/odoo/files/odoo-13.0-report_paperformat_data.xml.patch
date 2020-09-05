@@ -1,0 +1,27 @@
+--- a/odoo/addons/base/data/report_paperformat_data.xml
++++ b/odoo/addons/base/data/report_paperformat_data.xml
+@@ -8,12 +8,12 @@
+             <field name="page_height">0</field>
+             <field name="page_width">0</field>
+             <field name="orientation">Portrait</field>
+-            <field name="margin_top">40</field>
+-            <field name="margin_bottom">28</field>
+-            <field name="margin_left">7</field>
+-            <field name="margin_right">7</field>
++            <field name="margin_top">80</field>
++            <field name="margin_bottom">20</field>
++            <field name="margin_left">25</field>
++            <field name="margin_right">10</field>
+             <field name="header_line" eval="False" />
+-            <field name="header_spacing">35</field>
++            <field name="header_spacing">70</field>
+             <field name="dpi">90</field>
+         </record>
+ 
+@@ -49,4 +49,4 @@
+             <field name="dpi">90</field>
+         </record>
+     </data>
+-</odoo>
+\ No hay ningún carácter de nueva línea al final del fichero
++</odoo>

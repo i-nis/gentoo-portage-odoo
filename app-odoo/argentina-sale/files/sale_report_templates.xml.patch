@@ -1,5 +1,5 @@
---- a/l10n_ar_sale/views/sale_report_templates.xml
-+++ b/l10n_ar_sale/views/sale_report_templates.xml
+--- a/l10n_ar_sale/views/sale_report_templates.xml	2020-08-10 21:08:59.063584058 -0300
++++ b/l10n_ar_sale/views/sale_report_templates.xml	2020-08-30 17:44:02.661398000 -0300
 @@ -26,11 +26,11 @@
              <t t-set="document_letter" t-value="'X'"/>
              <t t-set="document_legend" t-value="'Doc. no válido como factura'"/>
@@ -15,3 +15,12 @@
              </t>
              <t t-set="header_address" t-value="doc.sale_checkbook_id.report_partner_id or doc.company_id.partner_id"/>
  
+@@ -107,7 +107,7 @@
+                     <!-- IDENTIFICACION (ADQUIRIENTE-LOCATARIO-PRESTARIO) -->
+ 
+                     <!-- (14) Apellido uy Nombre: Denominicacion o Razon Soclial -->
+-                    <strong>Customer: </strong><span t-field="doc.partner_id.commercial_partner_id.name"/>
++                    <strong>Customer: </strong><b><span t-field="doc.partner_id.commercial_partner_id.name"/></b>
+ 
+                     <!-- (15) Domicilio Comercial -->
+                     <br/>

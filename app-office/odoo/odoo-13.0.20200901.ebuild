@@ -67,6 +67,10 @@ CDEPEND="
 
 RDEPEND="${CDEPEND}"
 DEPEND="${CDEPEND}"
+PATCHES=(
+	"${FILESDIR}/${PN}-${SUBSLOT}-report_invoice.xml.patch"
+	"${FILESDIR}/${PN}-${SUBSLOT}-report_paperformat_data.xml.patch"
+)
 
 ODOO_USER="odoo"
 ODOO_GROUP="odoo"
@@ -97,7 +101,6 @@ python_install_all() {
 pkg_postinst() {
 	chown "${ODOO_USER}:${ODOO_GROUP}" "/var/log/${PN}"
 	chown -R "${ODOO_USER}:${ODOO_GROUP}" "/var/lib/${PN}"
-#	chown -R "${ODOO_USER}:${ODOO_GROUP}" "$(python_get_sitedir)/${PN}/addons/"
 
 	elog "In order to setup the initial database, run:"
 	elog " emerge --config =${CATEGORY}/${PF}"
