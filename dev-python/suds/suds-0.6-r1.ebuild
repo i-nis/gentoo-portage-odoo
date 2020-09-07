@@ -15,7 +15,7 @@ S="${WORKDIR}/${PN}-jurko-${PV}"
 LICENSE="LGPL-3"
 SLOT="0"
 KEYWORDS="amd64 x86"
-IUSE="test"
+IUSE="test doc"
 RESTRICT="!test? ( test )"
 
 DEPEND="dev-python/setuptools
