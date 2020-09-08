@@ -8,7 +8,7 @@ inherit eutils
 DESCRIPTION="Odoo web client UI related addons."
 HOMEPAGE="https://github.com/OCA/web"
 SUBSLOT="$(ver_cut 1-2)"
-EGIT_COMMIT="d52ac1d8cfc9b3538844eff830dc0d99df8b2b05"
+EGIT_COMMIT="8ed14f949f94c9c444c260eeb5280f2482626f09"
 EGIT_BRANCH="${SUBSLOT}"
 SRC_URI="${HOMEPAGE}/archive/${EGIT_COMMIT}.zip -> ${P}.zip"
 IUSE=""
