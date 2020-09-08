@@ -8,7 +8,7 @@ inherit eutils
 DESCRIPTION="Odoo Warehouse Management Addons."
 HOMEPAGE="https://github.com/OCA/stock-logistics-warehouse"
 SUBSLOT="$(ver_cut 1-2)"
-EGIT_COMMIT="a6d061d236231c280e6acecd6921b68bd0b8679e"
+EGIT_COMMIT="d0ee6ef3b80ac669328423daf3bc497836be2189"
 EGIT_BRANCH="${SUBSLOT}"
 SRC_URI="${HOMEPAGE}/archive/${EGIT_COMMIT}.zip -> ${P}.zip"
 IUSE=""
