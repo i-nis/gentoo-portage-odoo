@@ -8,7 +8,7 @@ inherit eutils
 DESCRIPTION="Addons concerning odoo's social ERP features and messaging in general."
 HOMEPAGE="https://github.com/OCA/social"
 SUBSLOT="$(ver_cut 1-2)"
-EGIT_COMMIT="433cb9e5b96e2c63d880d39982924a4299ef1170"
+EGIT_COMMIT="56e0a293476eabd6dface74d4e28e77c8afe00fb"
 EGIT_BRANCH="${SUBSLOT}"
 SRC_URI="${HOMEPAGE}/archive/${EGIT_COMMIT}.zip -> ${P}.zip"
 IUSE=""

@@ -8,7 +8,7 @@ inherit eutils
 DESCRIPTION="Odoo Purchases, Workflow and Organization."
 HOMEPAGE="https://github.com/OCA/purchase-workflow"
 SUBSLOT="$(ver_cut 1-2)"
-EGIT_COMMIT="4976a4f82a02d645a60b3ec270401435fb6e6546"
+EGIT_COMMIT="9b35931fac1013a3e0668d7f98ffdc226eb25bee"
 EGIT_BRANCH="${SUBSLOT}"
 SRC_URI="${HOMEPAGE}/archive/${EGIT_COMMIT}.zip -> ${P}.zip"
 IUSE=""
