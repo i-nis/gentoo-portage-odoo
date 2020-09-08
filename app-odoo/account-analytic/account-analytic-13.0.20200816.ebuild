@@ -8,7 +8,7 @@ inherit eutils
 DESCRIPTION="Odoo Account Analytic Related Addons."
 HOMEPAGE="https://github.com/OCA/account-analytic"
 SUBSLOT="$(ver_cut 1-2)"
-EGIT_COMMIT="a21add0c4a5bc994b4d6d2eba9c3fb86ea367f53"
+EGIT_COMMIT="dca6440c8085d5d93b0c263a10e8f93756759fe3"
 EGIT_BRANCH="${SUBSLOT}"
 SRC_URI="${HOMEPAGE}/archive/${EGIT_COMMIT}.zip -> ${P}.zip"
 IUSE=""
