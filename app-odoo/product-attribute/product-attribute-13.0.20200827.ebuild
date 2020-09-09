@@ -8,7 +8,7 @@ inherit eutils
 DESCRIPTION="Odoo Product Attribute."
 HOMEPAGE="https://github.com/OCA/product-attribute"
 SUBSLOT="$(ver_cut 1-2)"
-EGIT_COMMIT="5c529685c34281c5b09162cb1b4e7733201fa133"
+EGIT_COMMIT="6ed866af3399239bdc32d2a517d9f8996d9561e9"
 EGIT_BRANCH="${SUBSLOT}"
 SRC_URI="${HOMEPAGE}/archive/${EGIT_COMMIT}.zip -> ${P}.zip"
 IUSE=""
