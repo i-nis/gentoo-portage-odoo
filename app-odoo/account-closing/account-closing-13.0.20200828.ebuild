@@ -8,7 +8,7 @@ inherit eutils
 DESCRIPTION="Odoo Accountant closing tools."
 HOMEPAGE="https://github.com/OCA/account-closing"
 SUBSLOT="$(ver_cut 1-2)"
-EGIT_COMMIT="1f0e5cb7e61658280ae2be047f9c84cef41a903b"
+EGIT_COMMIT="e2b5afb7aefc85780762dd6f7632670ec866b968"
 EGIT_BRANCH="${SUBSLOT}"
 SRC_URI="${HOMEPAGE}/archive/${EGIT_COMMIT}.zip -> ${P}.zip"
 IUSE=""
