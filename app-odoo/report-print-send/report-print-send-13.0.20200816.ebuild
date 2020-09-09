@@ -8,7 +8,7 @@ inherit eutils
 DESCRIPTION="Odoo Printing Services and Printer related addons."
 HOMEPAGE="https://github.com/OCA/report-print-send"
 SUBSLOT="$(ver_cut 1-2)"
-EGIT_COMMIT="5ab61d43ea860c7a53c3ed8f274c8248296377b1"
+EGIT_COMMIT="ab879c3b45c79719249c1ef1b9fffea41cf01f3e"
 EGIT_BRANCH="${SUBSLOT}"
 SRC_URI="${HOMEPAGE}/archive/${EGIT_COMMIT}.zip -> ${P}.zip"
 IUSE=""
