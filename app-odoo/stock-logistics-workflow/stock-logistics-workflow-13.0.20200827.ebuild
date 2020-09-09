@@ -8,7 +8,7 @@ inherit eutils
 DESCRIPTION="Odoo Stock, Workflow and Organization."
 HOMEPAGE="https://github.com/OCA/stock-logistics-workflow"
 SUBSLOT="$(ver_cut 1-2)"
-EGIT_COMMIT="b0d9dfbcb144aa6b8997e1b172f916f2eccaa2d8"
+EGIT_COMMIT="0bce5c67d9d437f5fd5942dbede3d67d1b96efa1"
 EGIT_BRANCH="${SUBSLOT}"
 SRC_URI="${HOMEPAGE}/archive/${EGIT_COMMIT}.zip -> ${P}.zip"
 IUSE=""
