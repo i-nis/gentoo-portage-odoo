@@ -8,7 +8,7 @@ inherit eutils
 DESCRIPTION="Remove odoo.com Bindings."
 HOMEPAGE="https://github.com/OCA/server-brand"
 SUBSLOT="$(ver_cut 1-2)"
-EGIT_COMMIT="32a82fad7f43dbd74426ed9b37a7ba4cd696a0cc"
+EGIT_COMMIT="90d1ac3ae7dc968eeecc1f84be41e7014fcb4c29"
 EGIT_BRANCH="${SUBSLOT}"
 SRC_URI="${HOMEPAGE}/archive/${EGIT_COMMIT}.zip -> ${P}.zip"
 IUSE=""
