@@ -8,7 +8,7 @@ inherit eutils
 DESCRIPTION="Tools for Odoo Administrators to improve some technical features on Odoo."
 HOMEPAGE="https://github.com/OCA/server-tools"
 SUBSLOT="$(ver_cut 1-2)"
-EGIT_COMMIT="a84cc6504d1c37d6ab34965adb547deb7f280f9b"
+EGIT_COMMIT="83250dde74698c55fd1be14407204b9cf9bc5b13"
 EGIT_BRANCH="${SUBSLOT}"
 SRC_URI="${HOMEPAGE}/archive/${EGIT_COMMIT}.zip -> ${P}.zip"
 IUSE=""
