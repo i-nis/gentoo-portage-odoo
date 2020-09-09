@@ -8,7 +8,7 @@ inherit eutils git-r3
 DESCRIPTION="Odoo Partner and Contact related addons."
 HOMEPAGE="https://github.com/OCA/partner-contact"
 SUBSLOT="$(ver_cut 1-2)"
-EGIT_COMMIT="2ad1f856717241a52cffc58cc0b6bf111dde6a2c"
+EGIT_COMMIT="e68bc6ee94523725ff6f7523ca1e4440a5ed7822"
 EGIT_BRANCH="${SUBSLOT}"
 SRC_URI="${HOMEPAGE}/archive/${EGIT_COMMIT}.zip -> ${P}.zip"
 IUSE=""
