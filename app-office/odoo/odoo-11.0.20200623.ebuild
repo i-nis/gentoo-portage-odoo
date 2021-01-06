@@ -41,7 +41,7 @@ CDEPEND="
 	~dev-python/ofxparse-0.16
 	~dev-python/passlib-1.6.5
 	dev-python/phonenumbers
-	~dev-python/pillow-6.1.0[jpeg]
+	dev-python/pillow[jpeg]
 	~dev-python/psutil-4.3.1
 	dev-python/psycogreen
 	dev-python/psycopg:2

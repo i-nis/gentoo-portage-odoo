@@ -16,7 +16,6 @@
 >dev-python/num2words-0.5.6
 >dev-python/ofxparse-0.16
 >dev-python/passlib-1.6.5
->dev-python/pillow-6.1.0
 >dev-python/psutil-4.3.1
 >dev-python/pydot-1.2.3
 >dev-python/pyparsing-2.1.10
