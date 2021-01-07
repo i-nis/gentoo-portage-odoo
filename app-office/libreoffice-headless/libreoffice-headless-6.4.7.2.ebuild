@@ -1,4 +1,4 @@
-# Copyright 1999-2020 Gentoo Authors
+# Copyright 1999-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
@@ -7,7 +7,7 @@ BASE_PACKAGENAME="bin"
 BASE_AMD64_URI="https://tamiko.kyomu.43-1.org/distfiles/amd64-${BASE_PACKAGENAME}-"
 BASE_X86_URI="https://tamiko.kyomu.43-1.org/distfiles/x86-${BASE_PACKAGENAME}-"
 
-PYTHON_COMPAT=( python3_7 )
+PYTHON_COMPAT=( python3_8 )
 PYTHON_REQ_USE="xml"
 
 inherit python-single-r1 prefix toolchain-funcs xdg-utils
@@ -27,18 +27,18 @@ SLOT="0"
 KEYWORDS="-* amd64 x86"
 
 BIN_COMMON_DEPEND="
-	app-text/hunspell:0/1.7
-	=app-text/libexttextcat-3.4*
-	=app-text/libmwaw-0.3*
-	dev-libs/boost:0/1.72.0
-	dev-libs/icu:0/67.1
-	=dev-libs/liborcus-0.15*
-	>=media-gfx/graphite2-1.3.10
-	media-libs/harfbuzz:0/0.9.18[icu]
-	media-libs/libpng:0/16
-	>=sys-devel/gcc-9.3.0
-	>=sys-libs/glibc-2.30
-	virtual/jpeg-compat:62
+    app-text/hunspell:0/1.7
+    =app-text/libexttextcat-3.4*
+    =app-text/libmwaw-0.3*
+    dev-libs/boost:0/1.74.0
+    dev-libs/icu:0/68.2
+    dev-libs/liborcus:0/0.15
+    >=media-gfx/graphite2-1.3.10
+    media-libs/harfbuzz:0/0.9.18[icu]
+    media-libs/libpng:0/16
+    >=sys-devel/gcc-9.3.0
+    >=sys-libs/glibc-2.32
+    virtual/jpeg-compat:62
 "
 
 # PLEASE place any restrictions that are specific to the binary builds
@@ -79,7 +79,7 @@ COMMON_DEPEND="
 	dev-libs/icu:=
 	dev-libs/libassuan
 	dev-libs/libgpg-error
-	>=dev-libs/liborcus-0.15.0
+	dev-libs/liborcus:0/0.15
 	dev-libs/librevenge
 	dev-libs/libxml2
 	dev-libs/libxslt
