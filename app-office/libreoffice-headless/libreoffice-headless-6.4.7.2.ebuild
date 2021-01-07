@@ -27,18 +27,18 @@ SLOT="0"
 KEYWORDS="-* amd64 x86"
 
 BIN_COMMON_DEPEND="
-    app-text/hunspell:0/1.7
-    =app-text/libexttextcat-3.4*
-    =app-text/libmwaw-0.3*
-    dev-libs/boost:0/1.74.0
-    dev-libs/icu:0/68.2
-    dev-libs/liborcus:0/0.15
-    >=media-gfx/graphite2-1.3.10
-    media-libs/harfbuzz:0/0.9.18[icu]
-    media-libs/libpng:0/16
-    >=sys-devel/gcc-9.3.0
-    >=sys-libs/glibc-2.32
-    virtual/jpeg-compat:62
+	app-text/hunspell:0/1.7
+	=app-text/libexttextcat-3.4*
+	=app-text/libmwaw-0.3*
+	dev-libs/boost:0/1.74.0
+	dev-libs/icu:0/68.2
+	dev-libs/liborcus:0/0.15
+	>=media-gfx/graphite2-1.3.10
+	media-libs/harfbuzz:0/0.9.18[icu]
+	media-libs/libpng:0/16
+	>=sys-devel/gcc-9.3.0
+	>=sys-libs/glibc-2.32
+	virtual/jpeg-compat:62
 "
 
 # PLEASE place any restrictions that are specific to the binary builds
