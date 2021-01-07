@@ -10,7 +10,6 @@
 >dev-python/jinja-2.10.1
 >dev-python/lxml-4.2.3
 >dev-python/mako-1.0.4
->dev-python/matplotlib-3.2.2
 >dev-python/markupsafe-0.23
 >dev-python/mock-2.0.0
 >dev-python/num2words-0.5.6
