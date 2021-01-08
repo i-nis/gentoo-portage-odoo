@@ -31,7 +31,7 @@ BIN_COMMON_DEPEND="
 	=app-text/libexttextcat-3.4*
 	=app-text/libmwaw-0.3*
 	dev-libs/boost:0/1.74.0
-	dev-libs/icu:0/68.2
+	dev-libs/icu:0/67.1
 	dev-libs/liborcus:0/0.15
 	>=media-gfx/graphite2-1.3.10
 	media-libs/harfbuzz:0/0.9.18[icu]

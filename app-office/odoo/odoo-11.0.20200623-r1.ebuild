@@ -1,4 +1,4 @@
-# Copyright 1999-2020 Gentoo Authors
+# Copyright 1999-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI="7"
@@ -24,53 +24,50 @@ CDEPEND="
 	postgres? ( dev-db/postgresql:* )
 	ssl? ( dev-python/pyopenssl )
 	dev-nodejs/less
-	~dev-python/Babel-2.6.0
-	~dev-python/chardet-3.0.4
-	~dev-python/decorator-4.3.0
-	~dev-python/docutils-0.14
+	~dev-python/Babel-2.3.4
+	~dev-python/decorator-4.0.10
+	~dev-python/docutils-0.12
 	~dev-python/ebaysdk-2.1.5
 	~dev-python/feedparser-5.2.1
-	~dev-python/gevent-1.3.7
-	~dev-python/greenlet-0.4.15
-	~dev-python/html2text-2018.1.9
+	~dev-python/gevent-1.3.4
+	~dev-python/greenlet-0.4.13
+	~dev-python/html2text-2016.9.19
 	~dev-python/jinja-2.10.1
-	~dev-python/libsass-0.17.0
-	~dev-python/lxml-4.3.2
-	~dev-python/mako-1.0.7
-	~dev-python/markupsafe-1.1.0
+	~dev-python/lxml-4.2.3
+	~dev-python/mako-1.0.4
+	~dev-python/markupsafe-0.23
 	~dev-python/mock-2.0.0
 	~dev-python/num2words-0.5.6
-	~dev-python/ofxparse-0.19
-	~dev-python/passlib-1.7.1
+	~dev-python/ofxparse-0.16
+	~dev-python/passlib-1.6.5
+	dev-python/phonenumbers
 	dev-python/pillow[jpeg]
-	~dev-python/polib-1.1.0
-	~dev-python/psutil-5.6.6
+	~dev-python/psutil-4.3.1
+	dev-python/psycogreen
 	dev-python/psycopg:2
-	~dev-python/pydot-1.4.1
-	~dev-python/pyparsing-2.2.0
+	~dev-python/pydot-1.2.3
+	~dev-python/pyparsing-2.1.10
 	~dev-python/PyPDF2-1.26.0
-	~dev-python/pyserial-3.4
-	~dev-python/python-dateutil-2.7.3
+	~dev-python/pyserial-3.1.1
+	~dev-python/python-dateutil-2.5.3
 	dev-python/pytz
-	~dev-python/pyusb-1.0.2
-	~dev-python/qrcode-6.1
-	dev-python/reportlab
-	~dev-python/requests-2.21.0
-	~dev-python/zeep-3.2.0
+	~dev-python/pyusb-1.0.0
+	~dev-python/pyyaml-3.13
+	~dev-python/qrcode-5.3
+	~dev-python/reportlab-3.3.0
+	dev-python/requests
+	dev-python/six
+	~dev-python/suds-0.6
 	~dev-python/vatnumber-1.2
-	~dev-python/vobject-0.9.6.1
-	~dev-python/werkzeug-0.14.1
-	~dev-python/xlsxwriter-1.1.2
+	~dev-python/vobject-0.9.3
+	~dev-python/werkzeug-0.11.15
+	~dev-python/xlsxwriter-0.9.3
 	~dev-python/xlwt-1.3.0
-	~dev-python/xlrd-1.1.0
+	~dev-python/xlrd-1.0.0
 	media-gfx/wkhtmltox-bin"
 
 RDEPEND="${CDEPEND}"
 DEPEND="${CDEPEND}"
-PATCHES=(
-	"${FILESDIR}/${PN}-${SUBSLOT}-report_invoice.xml.patch"
-	"${FILESDIR}/${PN}-${SUBSLOT}-report_paperformat_data.xml.patch"
-)
 
 ODOO_USER="odoo"
 ODOO_GROUP="odoo"
