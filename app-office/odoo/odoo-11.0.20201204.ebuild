@@ -29,8 +29,8 @@ CDEPEND="
 	~dev-python/docutils-0.12
 	~dev-python/ebaysdk-2.1.5
 	~dev-python/feedparser-5.2.1
-	~dev-python/gevent-1.3.4
-	~dev-python/greenlet-0.4.13
+	~dev-python/gevent-1.5.0
+	~dev-python/greenlet-0.4.14
 	~dev-python/html2text-2016.9.19
 	~dev-python/jinja-2.10.1
 	~dev-python/lxml-4.2.3
