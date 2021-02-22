@@ -4,8 +4,8 @@
 EAPI=7
 
 BASE_PACKAGENAME="bin"
-BASE_AMD64_URI="https://tamiko.kyomu.43-1.org/distfiles/amd64-${BASE_PACKAGENAME}-"
-BASE_X86_URI="https://tamiko.kyomu.43-1.org/distfiles/x86-${BASE_PACKAGENAME}-"
+BASE_AMD64_URI="https://tamiko.43-1.org/distfiles/amd64-${BASE_PACKAGENAME}-"
+BASE_X86_URI="https://tamiko.43-1.org/distfiles/x86-${BASE_PACKAGENAME}-"
 
 PYTHON_COMPAT=( python3_8 )
 PYTHON_REQ_USE="xml"
@@ -14,8 +14,8 @@ inherit python-single-r1 prefix toolchain-funcs xdg-utils
 
 DESCRIPTION="A full office productivity suite. Binary package without X"
 HOMEPAGE="https://www.libreoffice.org"
-SRC_URI_AMD64="${BASE_AMD64_URI}libreoffice-${PVR}.tar.xz"
-SRC_URI_X86="${BASE_X86_URI}libreoffice-${PVR}.tar.xz"
+SRC_URI_AMD64="${BASE_AMD64_URI}libreoffice-${PV}.tar.xz"
+SRC_URI_X86="${BASE_X86_URI}libreoffice-${PV}.tar.xz"
 SRC_URI="
 	amd64? ( ${SRC_URI_AMD64} )
 	x86? ( ${SRC_URI_X86} )
@@ -31,7 +31,7 @@ BIN_COMMON_DEPEND="
 	=app-text/libexttextcat-3.4*
 	=app-text/libmwaw-0.3*
 	dev-libs/boost:0/1.74.0
-	dev-libs/icu:0/67.1
+	dev-libs/icu:0/68.2
 	dev-libs/liborcus:0/0.15
 	>=media-gfx/graphite2-1.3.10
 	media-libs/harfbuzz:0/0.9.18[icu]
