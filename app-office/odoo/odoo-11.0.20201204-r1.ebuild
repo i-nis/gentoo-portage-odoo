@@ -52,9 +52,9 @@ CDEPEND="
 	~dev-python/python-dateutil-2.5.3
 	dev-python/pytz
 	~dev-python/pyusb-1.0.0
-	~dev-python/pyyaml-3.13
+	dev-python/pyyaml
 	~dev-python/qrcode-5.3
-	~dev-python/reportlab-3.3.0
+	dev-python/reportlab
 	dev-python/requests
 	dev-python/six
 	~dev-python/suds-0.6
