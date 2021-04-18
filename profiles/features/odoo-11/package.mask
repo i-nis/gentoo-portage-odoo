@@ -4,7 +4,6 @@
 >dev-python/decorator-4.0.10
 >dev-python/docutils-0.12
 >dev-python/ebaysdk-2.1.5
->dev-python/feedparser-5.2.1
 >dev-python/gevent-1.5.0
 >dev-python/greenlet-0.4.14
 >dev-python/html2text-2016.9.19
@@ -23,7 +22,6 @@
 >dev-python/pyserial-3.1.1
 >dev-python/python-dateutil-2.5.3
 >dev-python/pyusb-1.0.0
->dev-python/qrcode-5.3
 >dev-python/suds-0.6-r1
 >dev-python/vatnumber-1.2
 >dev-python/vobject-0.9.3

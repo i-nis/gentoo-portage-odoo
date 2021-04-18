@@ -9,7 +9,7 @@ DESCRIPTION="Aeroo Reports - reporting engine for Odoo."
 HOMEPAGE="http://www.alistek.com/wiki/index.php/Main_Page"
 SUBSLOT="$(ver_cut 1-2)"
 EGIT_REPO_URI="https://github.com/ingadhoc/aeroo_reports"
-EGIT_COMMIT="f3a3f4b37d7ff8a68ea811b7c4ba7af0e9bc3bd0"
+EGIT_COMMIT="de86dba77f3cdf096d418ed525bacb66cca5d025"
 EGIT_BRANCH="${SUBSLOT}"
 SRC_URI="${EGIT_REPO_URI}/archive/${EGIT_COMMIT}.zip -> ${P}.zip"
 IUSE=""
@@ -19,7 +19,7 @@ KEYWORDS="amd64 x86"
 DEPEND="app-office/odoo:${SLOT}
 	>=dev-python/aeroolib-20181218
 	dev-python/currency2text
-	~dev-python/genshi-0.7"
+	dev-python/genshi"
 RDEPEND="${DEPEND}"
 
 OPENERP_USER="odoo"
