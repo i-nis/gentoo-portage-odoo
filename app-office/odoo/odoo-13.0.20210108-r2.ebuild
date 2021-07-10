@@ -24,45 +24,45 @@ CDEPEND="
 	postgres? ( dev-db/postgresql:* )
 	ssl? ( dev-python/pyopenssl )
 	dev-nodejs/less
-	~dev-python/Babel-2.6.0
+	dev-python/Babel
 	~dev-python/chardet-3.0.4
 	~dev-python/decorator-4.3.0
 	~dev-python/docutils-0.14
-	~dev-python/ebaysdk-2.1.5
+	dev-python/ebaysdk
 	dev-python/feedparser
 	~dev-python/gevent-1.5.0
 	~dev-python/greenlet-0.4.15
-	~dev-python/html2text-2018.1.9
-	~dev-python/jinja-2.10.1
+	dev-python/html2text
+	dev-python/jinja
 	~dev-python/libsass-0.17.0
-	~dev-python/lxml-4.3.2
-	~dev-python/mako-1.0.7
-	~dev-python/markupsafe-1.1.0
-	~dev-python/mock-2.0.0
-	~dev-python/num2words-0.5.6
+	dev-python/lxml
+	dev-python/mako
+	dev-python/markupsafe
+	dev-python/mock
+	dev-python/num2words
 	~dev-python/ofxparse-0.19
-	~dev-python/passlib-1.7.1
+	dev-python/passlib
 	dev-python/pillow[jpeg]
 	~dev-python/polib-1.1.0
-	~dev-python/psutil-5.6.6
+	dev-python/psutil
 	dev-python/psycopg:2
-	~dev-python/pydot-1.4.1
-	~dev-python/pyparsing-2.2.0
+	dev-python/pydot
+	dev-python/pyparsing
 	~dev-python/PyPDF2-1.26.0
-	~dev-python/pyserial-3.4
-	~dev-python/python-dateutil-2.7.3
+	dev-python/pyserial
+	dev-python/python-dateutil
 	dev-python/pytz
-	~dev-python/pyusb-1.0.2
+	dev-python/pyusb
 	~dev-python/qrcode-6.1
 	dev-python/reportlab
 	dev-python/requests
 	dev-python/zeep
 	~dev-python/vatnumber-1.2
 	~dev-python/vobject-0.9.6.1
-	~dev-python/werkzeug-0.14.1
-	~dev-python/xlsxwriter-1.1.2
-	~dev-python/xlwt-1.3.0
-	~dev-python/xlrd-1.1.0
+	dev-python/werkzeug
+	dev-python/xlsxwriter
+	dev-python/xlwt
+	dev-python/xlrd
 	media-gfx/wkhtmltox-bin"
 
 RDEPEND="${CDEPEND}"
