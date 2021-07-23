@@ -11,7 +11,7 @@ DESCRIPTION="The currency2text library converts currency to text in various lang
 HOMEPAGE="https://github.com/aeroo/currency2text"
 SRC_URI=""
 EGIT_REPO_URI="https://github.com/aeroo/currency2text.git"
-EGIT_COMMIT="c643482a921bb16e449b8da6bcd311d62d451c96"
+EGIT_COMMIT="3ed09f17e1d63621fcb9d969b03eb8c7a8ad3b66"
 EGIT_BRANCH="master"
 
 LICENSE="GPL-3"

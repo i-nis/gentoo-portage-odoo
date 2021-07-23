@@ -1,13 +1,14 @@
 # Odoo dependencies
+>dev-lang/python-3.9.0
 >dev-python/chardet-3.0.4
 >dev-python/decorator-4.3.0
 >dev-python/docutils-0.14
 >dev-python/gevent-1.5.0
->dev-python/greenlet-0.4.15
 >dev-python/libsass-0.17.0
 >dev-python/ofxparse-0.19
 >dev-python/polib-1.1.0
 >dev-python/vatnumber-1.2
+>dev-python/werkzeug-0.14.1
 
 # Odoo packages
 >=app-office/odoo-14.0.0

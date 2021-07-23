@@ -3,7 +3,7 @@
 
 EAPI="7"
 
-PYTHON_COMPAT=( python3_{7,8,9} )
+PYTHON_COMPAT=( python3_{7,8} )
 
 inherit eutils distutils-r1
 
@@ -31,7 +31,7 @@ CDEPEND="
 	dev-python/ebaysdk
 	dev-python/feedparser
 	~dev-python/gevent-1.5.0
-	~dev-python/greenlet-0.4.15
+	dev-python/greenlet
 	dev-python/html2text
 	dev-python/jinja
 	~dev-python/libsass-0.17.0
@@ -67,10 +67,6 @@ CDEPEND="
 
 RDEPEND="${CDEPEND}"
 DEPEND="${CDEPEND}"
-PATCHES=(
-	"${FILESDIR}/${PN}-${SUBSLOT}-report_invoice.xml.patch"
-	"${FILESDIR}/${PN}-${SUBSLOT}-report_paperformat_data.xml.patch"
-)
 
 ODOO_USER="odoo"
 ODOO_GROUP="odoo"
