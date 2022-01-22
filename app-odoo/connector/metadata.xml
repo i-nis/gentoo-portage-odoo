@@ -6,8 +6,5 @@
 	<email>mggimenez@nis.com.ar</email>
 	<description>Primary maintainer</description>
 </maintainer>
-<longdescription>Python module to validate VAT numbers.</longdescription>
-<use>
-	<flag name="vies">Enable VIES</flag>
-</use>
+<longdescription>Connector for Odoo.</longdescription>
 </pkgmetadata>

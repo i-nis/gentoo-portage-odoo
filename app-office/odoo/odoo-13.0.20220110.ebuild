@@ -1,9 +1,9 @@
-# Copyright 1999-2021 Gentoo Authors
+# Copyright 2022 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI="7"
 
-PYTHON_COMPAT=( python3_{7,8} )
+PYTHON_COMPAT=( python3_{7,8,9} )
 
 inherit eutils distutils-r1
 
@@ -53,11 +53,10 @@ CDEPEND="
 	dev-python/python-dateutil
 	dev-python/pytz
 	dev-python/pyusb
-	~dev-python/qrcode-6.1
+	dev-python/qrcode
 	dev-python/reportlab
 	dev-python/requests
 	dev-python/zeep
-	~dev-python/vatnumber-1.2
 	~dev-python/vobject-0.9.6.1
 	dev-python/werkzeug
 	dev-python/xlsxwriter

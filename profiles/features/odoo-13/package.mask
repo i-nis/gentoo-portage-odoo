@@ -1,5 +1,5 @@
 # Odoo dependencies
->dev-lang/python-3.9.0
+>dev-lang/python-3.10.0
 >dev-python/chardet-3.0.4
 >dev-python/decorator-4.3.0
 >dev-python/docutils-0.14
