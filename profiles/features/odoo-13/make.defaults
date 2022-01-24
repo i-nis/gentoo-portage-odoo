@@ -1,4 +1,4 @@
 PYTHON_SINGLE_TARGET="-python3_8 python3_9 -python3_10"
-PYTHON_TARGETS="-python3_8 python3_9 -python3_10"
+PYTHON_TARGETS="python3_8 python3_9 -python3_10"
 USE="${USE} python_targets_python3_9"
 
