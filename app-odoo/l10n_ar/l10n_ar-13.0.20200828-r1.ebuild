@@ -29,7 +29,7 @@ DEPEND="app-office/odoo:${SLOT}
 	dev-python/pyopenssl
 	dev-python/pysimplesoap
 	dev-python/python-stdnum
-	dev-python/suds"
+	dev-python/suds-community"
 RDEPEND="${DEPEND}"
 
 ODOO_USER="odoo"

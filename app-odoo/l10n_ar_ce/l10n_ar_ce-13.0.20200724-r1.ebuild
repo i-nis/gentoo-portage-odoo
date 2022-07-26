@@ -22,7 +22,7 @@ DEPEND="app-office/odoo:${SLOT}
 	dev-python/pyopenssl
 	dev-python/pysimplesoap
 	dev-python/python-stdnum
-	dev-python/suds
+	dev-python/suds-community
 	>=dev-python/pyafipws-2.7.20191021"
 RDEPEND="${DEPEND}"
 
