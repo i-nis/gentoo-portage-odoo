@@ -25,7 +25,7 @@ RDEPEND="
 	dev-python/pyyaml
 	dev-python/requests
 	dev-python/six
-	>=www-servers/tornado-4.3
+	>=dev-python/tornado-4.3
 "
 DEPEND="
 	dev-python/jinja
@@ -36,7 +36,7 @@ DEPEND="
 	dev-python/setuptools
 	dev-python/six
 	net-libs/nodejs
-	>=www-servers/tornado-4.3
+	>=dev-python/tornado-4.3
 "
 
 python_compile() {
