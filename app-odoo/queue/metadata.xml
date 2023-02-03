@@ -3,9 +3,12 @@
 
 <pkgmetadata>
 <maintainer type="person">
-    <email>mggimenez@nis.com.ar</email>
-    <description>Primary maintainer</description>
+	<email>mggimenez@nis.com.ar</email>
+	<description>Primary maintainer</description>
 </maintainer>
-<longdescription>Asynchronous Job Queue.</longdescription>
+<longdescription>Asynchronous Job Queue OCA module for Odoo business management software.</longdescription>
+<upstream>
+	<remote-id type="github">OCA/queue</remote-id>
+</upstream>
 </pkgmetadata>
 

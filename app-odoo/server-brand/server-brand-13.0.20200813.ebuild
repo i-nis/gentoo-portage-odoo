@@ -3,14 +3,12 @@
 
 EAPI="7"
 
-inherit eutils
-
 DESCRIPTION="Remove odoo.com Bindings."
 HOMEPAGE="https://github.com/OCA/server-brand"
 SUBSLOT="$(ver_cut 1-2)"
 EGIT_COMMIT="90d1ac3ae7dc968eeecc1f84be41e7014fcb4c29"
 EGIT_BRANCH="${SUBSLOT}"
-SRC_URI="${HOMEPAGE}/archive/${EGIT_COMMIT}.zip -> ${P}.zip"
+SRC_URI="https://github.com/OCA/server-brand/archive/${EGIT_COMMIT}.tar.gz -> ${P}.tar.gz"
 IUSE=""
 LICENSE="AGPL-3"
 SLOT="0/${SUBSLOT}"

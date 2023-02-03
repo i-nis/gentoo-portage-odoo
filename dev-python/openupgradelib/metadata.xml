@@ -6,5 +6,8 @@
 	<email>mggimenez@nis.com.ar</email>
 	<description>Primary maintainer</description>
 </maintainer>
-<longdescription>A library with support functions to be called from Odoo migration scripts.</longdescription>
+<longdescription>OpenUpgrade Library supports functions to be called from Odoo migration scripts.</longdescription>
+<upstream>
+	<remote-id type="pypi">openupgradelib</remote-id>
+</upstream>
 </pkgmetadata>

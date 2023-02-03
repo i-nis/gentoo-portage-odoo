@@ -7,4 +7,8 @@
 	<description>Primary maintainer</description>
 </maintainer>
 <longdescription>A wrapper around the pdftoppm and pdftocairo command line tools to convert PDF to a PIL Image list.</longdescription>
+<upstream>
+	<remote-id type="github">Belval/pdf2image</remote-id>
+	<remote-id type="pypi">pdf2image</remote-id>
+</upstream>
 </pkgmetadata>

@@ -3,14 +3,12 @@
 
 EAPI="7"
 
-inherit eutils
-
 DESCRIPTION="Tools for Odoo Administrators to improve some technical features on Odoo."
 HOMEPAGE="https://github.com/OCA/server-tools"
 SUBSLOT="$(ver_cut 1-2)"
 EGIT_COMMIT="83250dde74698c55fd1be14407204b9cf9bc5b13"
 EGIT_BRANCH="${SUBSLOT}"
-SRC_URI="${HOMEPAGE}/archive/${EGIT_COMMIT}.zip -> ${P}.zip"
+SRC_URI="https://github.com/OCA/server-tools/archive/${EGIT_COMMIT}.tar.gz -> ${P}.tar.gz"
 IUSE=""
 LICENSE="AGPL-3"
 SLOT="0/${SUBSLOT}"

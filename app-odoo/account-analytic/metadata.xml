@@ -3,9 +3,12 @@
 
 <pkgmetadata>
 <maintainer type="person">
-    <email>mggimenez@nis.com.ar</email>
-    <description>Primary maintainer</description>
+	<email>mggimenez@nis.com.ar</email>
+	<description>Primary maintainer</description>
 </maintainer>
-<longdescription>Odoo Account Analytic Related Addons.</longdescription>
+<longdescription>Account Analytic Related Addons module for Odoo.</longdescription>
+<upstream>
+	<remote-id type="github">OCA/account-analytic</remote-id>
+</upstream>
 </pkgmetadata>
 

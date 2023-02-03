@@ -3,14 +3,12 @@
 
 EAPI="7"
 
-inherit eutils
-
 DESCRIPTION="Odoo Stock, Workflow and Organization."
 HOMEPAGE="https://github.com/OCA/stock-logistics-workflow"
 SUBSLOT="$(ver_cut 1-2)"
 EGIT_COMMIT="0bce5c67d9d437f5fd5942dbede3d67d1b96efa1"
 EGIT_BRANCH="${SUBSLOT}"
-SRC_URI="${HOMEPAGE}/archive/${EGIT_COMMIT}.zip -> ${P}.zip"
+SRC_URI="https://github.com/OCA/stock-logistics-workflow/archive/${EGIT_COMMIT}.tar.gz -> ${P}.tar.gz"
 IUSE=""
 LICENSE="AGPL-3"
 SLOT="0/${SUBSLOT}"

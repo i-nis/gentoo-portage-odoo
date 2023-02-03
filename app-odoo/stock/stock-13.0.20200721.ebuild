@@ -3,14 +3,12 @@
 
 EAPI="7"
 
-inherit eutils
-
 DESCRIPTION="Odoo Stock & Warehouse Management Addons."
 HOMEPAGE="https://github.com/ingadhoc/stock"
 SUBSLOT="$(ver_cut 1-2)"
 EGIT_COMMIT="a372128657091a54459c7e6663ae9d0bfef0283d"
 EGIT_BRANCH="${SUBSLOT}"
-SRC_URI="${HOMEPAGE}/archive/${EGIT_COMMIT}.zip -> ${P}.zip"
+SRC_URI="https://github.com/ingadhoc/stock/archive/${EGIT_COMMIT}.tar.gz -> ${P}.tar.gz"
 IUSE=""
 LICENSE="AGPL-3"
 SLOT="0/${SUBSLOT}"

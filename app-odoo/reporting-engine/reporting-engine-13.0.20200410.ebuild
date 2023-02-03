@@ -3,14 +3,12 @@
 
 EAPI="7"
 
-inherit eutils
-
 DESCRIPTION="Odoo Alternative Reporting Engine."
 HOMEPAGE="https://github.com/ingadhoc/reporting-engine"
 SUBSLOT="$(ver_cut 1-2)"
 EGIT_COMMIT="59bda364a9be2b5a047fe3b80909eb172c376eb4"
 EGIT_BRANCH="${SUBSLOT}"
-SRC_URI="${HOMEPAGE}/archive/${EGIT_COMMIT}.zip -> ${P}.zip"
+SRC_URI="https://github.com/ingadhoc/reporting-engine/archive/${EGIT_COMMIT}.tar.gz -> ${P}.tar.gz"
 IUSE=""
 LICENSE="AGPL-3"
 SLOT="0/${SUBSLOT}"

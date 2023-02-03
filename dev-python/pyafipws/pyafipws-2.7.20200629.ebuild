@@ -1,8 +1,9 @@
 # Copyright 2022 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
-PYTHON_COMPAT=( python3_{7,8,9} )
+EAPI="8"
+DISTUTILS_USE_PEP517=setuptools
+PYTHON_COMPAT=( python3_{8..11} )
 
 inherit distutils-r1
 
@@ -10,7 +11,7 @@ DESCRIPTION="Interfases, tools and apps for Argentina's gov't. webservices"
 HOMEPAGE="http://www.pyafipws.com.ar/pyafipws"
 EGIT_COMMIT="0e1dd352d6dc866f40dc77310e21256e10f64a1b"
 EGIT_BRANCH="py3k"
-SRC_URI="https://github.com/reingart/${PN}/archive/${EGIT_COMMIT}.zip -> ${P}.zip"
+SRC_URI="https://github.com/reingart/${PN}/archive/${EGIT_COMMIT}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"

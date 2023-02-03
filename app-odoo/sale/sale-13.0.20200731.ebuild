@@ -3,14 +3,12 @@
 
 EAPI="7"
 
-inherit eutils
-
 DESCRIPTION="Odoo Sale related Addons."
 HOMEPAGE="https://github.com/ingadhoc/sale"
 SUBSLOT="$(ver_cut 1-2)"
 EGIT_COMMIT="5285e85c0e80203e24330eb23dd73f2495b4680a"
 EGIT_BRANCH="${SUBSLOT}"
-SRC_URI="${HOMEPAGE}/archive/${EGIT_COMMIT}.zip -> ${P}.zip"
+SRC_URI="https://github.com/ingadhoc/sale/archive/${EGIT_COMMIT}.tar.gz -> ${P}.tar.gz"
 IUSE=""
 LICENSE="AGPL-3"
 SLOT="0/${SUBSLOT}"

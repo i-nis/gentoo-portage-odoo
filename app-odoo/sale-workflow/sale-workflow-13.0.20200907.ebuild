@@ -3,14 +3,12 @@
 
 EAPI="7"
 
-inherit eutils
-
 DESCRIPTION="Odoo Sales, Workflow and Organization."
 HOMEPAGE="https://github.com/OCA/sale-workflow"
 SUBSLOT="$(ver_cut 1-2)"
 EGIT_COMMIT="5c02714566f3ee195bb84d3a9765321dd4fb1a32"
 EGIT_BRANCH="${SUBSLOT}"
-SRC_URI="${HOMEPAGE}/archive/${EGIT_COMMIT}.zip -> ${P}.zip"
+SRC_URI="https://github.com/OCA/sale-workflow/archive/${EGIT_COMMIT}.tar.gz -> ${P}.tar.gz"
 IUSE=""
 LICENSE="AGPL-3"
 SLOT="0/${SUBSLOT}"

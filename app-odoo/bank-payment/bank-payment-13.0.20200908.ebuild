@@ -3,14 +3,12 @@
 
 EAPI="7"
 
-inherit eutils
-
 DESCRIPTION="Odoo Electronic Payment."
 HOMEPAGE="https://github.com/OCA/bank-payment"
 SUBSLOT="$(ver_cut 1-2)"
 EGIT_COMMIT="7c52fbe4e25f286ad5ac229a59e3fc6d769960ae"
 EGIT_BRANCH="${SUBSLOT}"
-SRC_URI="${HOMEPAGE}/archive/${EGIT_COMMIT}.zip -> ${P}.zip"
+SRC_URI="https://github.com/OCA/bank-payment/archive/${EGIT_COMMIT}.tar.gz -> ${P}.tar.gz"
 IUSE=""
 LICENSE="AGPL-3"
 SLOT="0/${SUBSLOT}"

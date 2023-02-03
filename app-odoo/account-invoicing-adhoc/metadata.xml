@@ -6,5 +6,8 @@
 	<email>mggimenez@nis.com.ar</email>
 	<description>Primary maintainer</description>
 </maintainer>
-<longdescription>Account invoicing modules for Odoo from Ingeniería AdHoc.</longdescription>
+<longdescription>Account invoicing modules that integrates billing functionality for Odoo from Ingeniería AdHoc.</longdescription>
+<upstream>
+	<remote-id type="github">ingadhoc/account-invoicing</remote-id>
+</upstream>
 </pkgmetadata>

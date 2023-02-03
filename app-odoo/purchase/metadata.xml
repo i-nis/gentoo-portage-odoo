@@ -6,5 +6,8 @@
 	<email>mggimenez@nis.com.ar</email>
 	<description>Primary maintainer</description>
 </maintainer>
-<longdescription>Odoo Purchases, Workflow and Organization.</longdescription>
+<longdescription>Purchases, Workflow and Organization modules for Odoo business management software.</longdescription>
+<upstream>
+	<remote-id type="github">ingadhoc/purchase</remote-id>
+</upstream>
 </pkgmetadata>

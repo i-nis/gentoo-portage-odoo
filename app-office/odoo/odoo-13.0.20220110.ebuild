@@ -1,18 +1,18 @@
 # Copyright 2022 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI="7"
+EAPI="8"
+DISTUTILS_USE_PEP517=setuptools
+PYTHON_COMPAT=( python3_{8..11} )
 
-PYTHON_COMPAT=( python3_{7,8,9} )
-
-inherit eutils distutils-r1
+inherit distutils-r1
 
 DESCRIPTION="Open Source ERP & CRM"
 HOMEPAGE="http://www.odoo.com/"
 SUBSLOT="$(ver_cut 1-2)"
 MY_PV="$(ver_cut 3-4)"
 SLOT="0/${SUBSLOT}"
-SRC_URI="http://nightly.odoo.com/${SUBSLOT}/nightly/src/${PN}_${SUBSLOT}.${MY_PV}.tar.gz"
+SRC_URI="http://nightly.odoo.com/${SUBSLOT}/nightly/src/${PN}_${SUBSLOT}.${MY_PV}.zip"
 LICENSE="LGPL-3"
 KEYWORDS="amd64 x86"
 IUSE="ldap postgres ssl"
@@ -27,14 +27,14 @@ CDEPEND="
 	dev-python/Babel
 	~dev-python/chardet-3.0.4
 	~dev-python/decorator-4.3.0
-	~dev-python/docutils-0.14
+	dev-python/docutils
 	dev-python/ebaysdk
 	dev-python/feedparser
 	~dev-python/gevent-1.5.0
 	dev-python/greenlet
 	dev-python/html2text
 	dev-python/jinja
-	~dev-python/libsass-0.17.0
+	dev-python/libsass-python
 	dev-python/lxml
 	dev-python/mako
 	dev-python/markupsafe
@@ -48,7 +48,7 @@ CDEPEND="
 	dev-python/psycopg:2
 	dev-python/pydot
 	dev-python/pyparsing
-	~dev-python/PyPDF2-1.26.0
+	dev-python/PyPDF2
 	dev-python/pyserial
 	dev-python/python-dateutil
 	dev-python/pytz
@@ -65,7 +65,8 @@ CDEPEND="
 	media-gfx/wkhtmltox-bin"
 
 RDEPEND="${CDEPEND}"
-DEPEND="${CDEPEND}"
+DEPEND="${CDEPEND}
+	app-arch/unzip"
 
 ODOO_USER="odoo"
 ODOO_GROUP="odoo"
@@ -86,8 +87,8 @@ python_install_all() {
 
 	insinto /etc/logrotate.d
 	newins "${FILESDIR}/${PN}.logrotate" "${PN}" || die
-	dodir "/etc/${PN}"
 	insinto "/etc/${PN}"
+	dodir "/etc/${PN}"
 	newins "${FILESDIR}/${PN}-${SUBSLOT}.cfg" "${PN}.cfg" || die
 
 	dodoc PKG-INFO README.md

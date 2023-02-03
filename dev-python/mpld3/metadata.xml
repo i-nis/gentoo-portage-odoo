@@ -6,5 +6,8 @@
 	<email>mggimenez@nis.com.ar</email>
 	<description>Primary maintainer</description>
 </maintainer>
-<longdescription>D3 Viewer for Matplotlib.</longdescription>
+<longdescription>This is an interactive D3js-based viewer which brings matplotlib graphics to the browser.</longdescription>
+<upstream>
+	<remote-id type="pypi">mpld3</remote-id>
+</upstream>
 </pkgmetadata>

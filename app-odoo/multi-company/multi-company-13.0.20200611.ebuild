@@ -3,14 +3,12 @@
 
 EAPI="7"
 
-inherit eutils
-
 DESCRIPTION="Odoo multi-company related addons."
 HOMEPAGE="https://github.com/ingadhoc/multi-company"
 SUBSLOT="$(ver_cut 1-2)"
 EGIT_COMMIT="8d94ce36d06e4bc5118fae7aff6887931bb60ad2"
 EGIT_BRANCH="${SUBSLOT}"
-SRC_URI="${HOMEPAGE}/archive/${EGIT_COMMIT}.zip -> ${P}.zip"
+SRC_URI="https://github.com/ingadhoc/multi-company/archive/${EGIT_COMMIT}.tar.gz -> ${P}.tar.gz"
 IUSE=""
 LICENSE="AGPL-3"
 SLOT="0/${SUBSLOT}"

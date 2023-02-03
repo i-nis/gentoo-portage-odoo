@@ -6,5 +6,9 @@
 	<email>mggimenez@nis.com.ar</email>
 	<description>Primary maintainer</description>
 </maintainer>
-<longdescription>Turns CSS blocks into style attributes.</longdescription>
+<longdescription>When you send HTML emails you can’t use style tags but instead you have to put inline style attributes on every element.</longdescription>
+<upstream>
+	<remote-id type="github">peterbe/premailer</remote-id>
+	<remote-id type="pypi">premailer</remote-id>
+</upstream>
 </pkgmetadata>

@@ -3,14 +3,12 @@
 
 EAPI="7"
 
-inherit eutils
-
 DESCRIPTION="Odoo Argentinian localization for functionalities that are in odoo enterprise."
 HOMEPAGE="https://github.com/ingadhoc/odoo-argentina-ce"
 SUBSLOT="$(ver_cut 1-2)"
 EGIT_COMMIT="120b7e19eac4a5532eb911d3972ea1ec70a6bd9d"
 EGIT_BRANCH="${SUBSLOT}"
-SRC_URI="${HOMEPAGE}/archive/${EGIT_COMMIT}.zip -> ${P}.zip"
+SRC_URI="https://github.com/ingadhoc/odoo-argentina-ce/archive/${EGIT_COMMIT}.tar.gz -> ${P}.tar.gz"
 IUSE=""
 LICENSE="AGPL-3"
 SLOT="0/${SUBSLOT}"

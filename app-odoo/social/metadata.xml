@@ -6,5 +6,8 @@
 	<email>mggimenez@nis.com.ar</email>
 	<description>Primary maintainer</description>
 </maintainer>
-<longdescription>Addons concerning odoo's social ERP features and messaging in general.</longdescription>
+<longdescription>Social ERP features and messaging in general modules for Odoo business management software.</longdescription>
+<upstream>
+	<remote-id type="github">OCA/social</remote-id>
+</upstream>
 </pkgmetadata>

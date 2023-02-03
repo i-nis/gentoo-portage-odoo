@@ -6,5 +6,5 @@
 	<email>mggimenez@nis.com.ar</email>
 	<description>Primary maintainer</description>
 </maintainer>
-<longdescription>The LESS CSS meta-language - compiler and Node module.</longdescription>
+<longdescription>Less (which stands for Leaner Style Sheets) is a backwards-compatible language extension for CSS.</longdescription>
 </pkgmetadata>

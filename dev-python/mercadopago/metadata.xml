@@ -6,5 +6,8 @@
 	<email>mggimenez@nis.com.ar</email>
 	<description>Primary maintainer</description>
 </maintainer>
-<longdescription>Mercadopago SDK module for Payments integration.</longdescription>
+<longdescription>Python library for Mercadopago SDK module for Payments integration.</longdescription>
+<upstream>
+	<remote-id type="pypi">mercadopago</remote-id>
+</upstream>
 </pkgmetadata>

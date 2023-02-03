@@ -6,5 +6,9 @@
 	<email>mggimenez@nis.com.ar</email>
 	<description>Primary maintainer</description>
 </maintainer>
-<longdescription>Library to talk to cubiscan machines.</longdescription>
+<longdescription>Provides an interface to cubiscan devices (https://cubiscan.com/). These devices are used to measure and weigh objects.</longdescription>
+<upstream>
+	<remote-id type="github">camptocamp/cubiscan</remote-id>
+	<remote-id type="pypi">cubiscan</remote-id>
+</upstream>
 </pkgmetadata>

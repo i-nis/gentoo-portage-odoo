@@ -3,14 +3,12 @@
 
 EAPI="7"
 
-inherit eutils git-r3
-
 DESCRIPTION="Odoo Partner and Contact related addons."
 HOMEPAGE="https://github.com/OCA/partner-contact"
 SUBSLOT="$(ver_cut 1-2)"
 EGIT_COMMIT="e68bc6ee94523725ff6f7523ca1e4440a5ed7822"
 EGIT_BRANCH="${SUBSLOT}"
-SRC_URI="${HOMEPAGE}/archive/${EGIT_COMMIT}.zip -> ${P}.zip"
+SRC_URI="https://github.com/OCA/partner-contact/archive/${EGIT_COMMIT}.tar.gz -> ${P}.tar.gz"
 IUSE=""
 LICENSE="AGPL-3"
 SLOT="0/${SUBSLOT}"

@@ -6,5 +6,8 @@
 	<email>mggimenez@nis.com.ar</email>
 	<description>Primary maintainer</description>
 </maintainer>
-<longdescription>Simple PDF generation for Python.</longdescription>
+<longdescription>PyFPDF is a library for PDF document generation under Python, ported from PHP.</longdescription>
+<upstream>
+	<remote-id type="pypi">fpdf</remote-id>
+</upstream>
 </pkgmetadata>

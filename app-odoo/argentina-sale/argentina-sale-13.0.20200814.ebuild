@@ -3,14 +3,12 @@
 
 EAPI="7"
 
-inherit eutils
-
 DESCRIPTION="Odoo Argentina Sale Modules."
 HOMEPAGE="https://github.com/ingadhoc/argentina-sale"
 SUBSLOT="$(ver_cut 1-2)"
 EGIT_COMMIT="c2448cacf65be95013301e072a2471ffb08089f0"
 EGIT_BRANCH="${SUBSLOT}"
-SRC_URI="${HOMEPAGE}/archive/${EGIT_COMMIT}.zip -> ${P}.zip"
+SRC_URI="https://github.com/ingadhoc/argentina-sale/archive/${EGIT_COMMIT}.tar.gz -> ${P}.tar.gz"
 IUSE=""
 LICENSE="AGPL-3"
 SLOT="0/${SUBSLOT}"

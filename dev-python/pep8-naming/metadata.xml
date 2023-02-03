@@ -6,5 +6,9 @@
 	<email>mggimenez@nis.com.ar</email>
 	<description>Primary maintainer</description>
 </maintainer>
-<longdescription>Check the PEP-8 naming conventions.</longdescription>
+<longdescription>This module provides a plugin for flake8, the Python code checker.</longdescription>
+<upstream>
+	<remote-id type="github">PyCQA/pep8-naming</remote-id>
+	<remote-id type="pypi">pep8-naming</remote-id>
+</upstream>
 </pkgmetadata>

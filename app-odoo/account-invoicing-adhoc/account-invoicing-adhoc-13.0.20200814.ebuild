@@ -3,15 +3,13 @@
 
 EAPI="7"
 
-inherit eutils
-
 DESCRIPTION="Odoo Invoicing Extension Addons from Ingenieria AdHoc."
 HOMEPAGE="https://github.com/ingadhoc/account-invoicing"
 SUBSLOT="$(ver_cut 1-2)"
 EGIT_COMMIT="330b8b1d35b3c836a5e3546dfe382929f3716a76"
 EGIT_BRANCH="${SUBSLOT}"
 MY_PN="account-invoicing"
-SRC_URI="${HOMEPAGE}/archive/${EGIT_COMMIT}.zip -> ${P}.zip"
+SRC_URI="https://github.com/ingadhoc/account-invoicing/archive/${EGIT_COMMIT}.tar.gz -> ${P}.tar.gz"
 IUSE=""
 LICENSE="AGPL-3"
 SLOT="0/${SUBSLOT}"

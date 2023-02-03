@@ -7,4 +7,7 @@
 	<description>Primary maintainer</description>
 </maintainer>
 <longdescription>Odoo Argentinian localization for functionalities that are in odoo enterprise.</longdescription>
+<upstream>
+	<remote-id type="github">ingadhoc/odoo-argentina-ce</remote-id>
+</upstream>
 </pkgmetadata>

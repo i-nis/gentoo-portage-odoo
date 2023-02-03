@@ -6,5 +6,8 @@
 	<email>mggimenez@ingeniovirtual.com.ar</email>
 	<description>Primary maintainer</description>
 </maintainer>
-<longdescription>Odoo Accountant closing tools.</longdescription>
+<longdescription>Accountant closing tools module for Odoo.</longdescription>
+<upstream>
+	<remote-id type="github">OCA/account-closing</remote-id>
+</upstream>
 </pkgmetadata>

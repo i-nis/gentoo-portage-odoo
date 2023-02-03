@@ -6,5 +6,8 @@
 	<email>mggimenez@nis.com.ar</email>
 	<description>Primary maintainer</description>
 </maintainer>
-<longdescription>Odoo Stock, Workflow and Organization.</longdescription>
+<longdescription>Stock, Workflow and Organization modules for Odoo business management software.</longdescription>
+<upstream>
+	<remote-id type="github">OCA/stock-logistics-workflow</remote-id>
+</upstream>
 </pkgmetadata>

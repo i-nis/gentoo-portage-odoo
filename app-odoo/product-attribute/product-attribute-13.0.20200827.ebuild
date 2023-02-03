@@ -3,14 +3,12 @@
 
 EAPI="7"
 
-inherit eutils
-
 DESCRIPTION="Odoo Product Attribute."
 HOMEPAGE="https://github.com/OCA/product-attribute"
 SUBSLOT="$(ver_cut 1-2)"
 EGIT_COMMIT="6ed866af3399239bdc32d2a517d9f8996d9561e9"
 EGIT_BRANCH="${SUBSLOT}"
-SRC_URI="${HOMEPAGE}/archive/${EGIT_COMMIT}.zip -> ${P}.zip"
+SRC_URI="https://github.com/OCA/product-attribute/archive/${EGIT_COMMIT}.tar.gz -> ${P}.tar.gz"
 IUSE=""
 LICENSE="AGPL-3"
 SLOT="0/${SUBSLOT}"

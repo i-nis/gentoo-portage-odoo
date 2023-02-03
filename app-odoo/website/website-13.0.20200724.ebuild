@@ -3,14 +3,12 @@
 
 EAPI=7
 
-inherit eutils
-
 DESCRIPTION="Odoo website builder addons."
 HOMEPAGE="https://github.com/ingadhoc/website"
 SUBSLOT="$(ver_cut 1-2)"
 EGIT_COMMIT="5852404dcd1276f2dc4eb7fe9f31a7d35e9b9a6f"
 EGIT_BRANCH="${SUBSLOT}"
-SRC_URI="https://github.com/ingadhoc/${PN}/archive/${EGIT_COMMIT}.zip -> ${P}.zip"
+SRC_URI="https://github.com/ingadhoc/${PN}/archive/${EGIT_COMMIT}.tar.gz -> ${P}.tar.gz"
 IUSE=""
 LICENSE="AGPL-3"
 SLOT="0/${SUBSLOT}"
@@ -24,7 +22,7 @@ DEPEND="app-office/odoo:${SLOT}
 	dev-python/html2text
 	dev-python/mercadopago
 	dev-python/requests
-	dev-python/suds"
+	dev-python/suds-community"
 
 ODOO_USER="odoo"
 ODOO_GROUP="odoo"

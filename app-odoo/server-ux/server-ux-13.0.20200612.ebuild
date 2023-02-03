@@ -3,14 +3,12 @@
 
 EAPI="7"
 
-inherit eutils
-
 DESCRIPTION="Server side features for usability and user experience related for Odoo."
 HOMEPAGE="https://github.com/oca/server-ux"
 SUBSLOT="$(ver_cut 1-2)"
 EGIT_COMMIT="3916940d82f998571a59a2bc01bb759f246c3f0c"
 EGIT_BRANCH="${SUBSLOT}"
-SRC_URI="${HOMEPAGE}/archive/${EGIT_COMMIT}.zip -> ${P}.zip"
+SRC_URI="https://github.com/oca/server-ux/archive/${EGIT_COMMIT}.tar.gz -> ${P}.tar.gz"
 IUSE=""
 LICENSE="AGPL-3"
 SLOT="0/${SUBSLOT}"

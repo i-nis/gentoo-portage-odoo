@@ -6,5 +6,8 @@
 	<email>mggimenez@nis.com.ar</email>
 	<description>Primary maintainer</description>
 </maintainer>
-<longdescription>Server side features for usability and user experience related for Odoo.</longdescription>
+<longdescription>Odoo related server side features for usability and user experience.</longdescription>
+<upstream>
+	<remote-id type="github">oca/server-ux</remote-id>
+</upstream>
 </pkgmetadata>

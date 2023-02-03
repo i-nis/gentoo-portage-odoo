@@ -3,14 +3,12 @@
 
 EAPI="7"
 
-inherit eutils
-
 DESCRIPTION="Odoo Accounting payment related modules."
 HOMEPAGE="https://github.com/ingadhoc/account-payment"
 SUBSLOT="$(ver_cut 1-2)"
 EGIT_COMMIT="030f803b727e8632b10f8eebc1197b1fe75d666b"
 EGIT_BRANCH="${SUBSLOT}"
-SRC_URI="${HOMEPAGE}/archive/${EGIT_COMMIT}.zip -> ${P}.zip"
+SRC_URI="https://github.com/ingadhoc/account-payment/archive/${EGIT_COMMIT}.tar.gz -> ${P}.tar.gz"
 IUSE=""
 LICENSE="AGPL-3"
 SLOT="0/${SUBSLOT}"

@@ -3,14 +3,12 @@
 
 EAPI="7"
 
-inherit eutils
-
 DESCRIPTION="odoo backend theme."
 HOMEPAGE="https://github.com/Openworx/backend_theme"
 SUBSLOT="$(ver_cut 1-2)"
 EGIT_COMMIT="592186f95eeea1e31d112ad9042982cef9684c2d"
 EGIT_BRANCH="${SUBSLOT}"
-SRC_URI="${HOMEPAGE}/archive/${EGIT_COMMIT}.zip -> ${P}.zip"
+SRC_URI="https://github.com/Openworx/backend_theme/archive/${EGIT_COMMIT}.tar.gz -> ${P}.tar.gz"
 IUSE=""
 LICENSE="LGPL-3"
 SLOT="0/${SUBSLOT}"

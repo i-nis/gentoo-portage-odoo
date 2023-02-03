@@ -6,5 +6,8 @@
 	<email>mggimenez@nis.com.ar</email>
 	<description>Primary maintainer</description>
 </maintainer>
-<longdescription>Odoo Accounting payment related modules.</longdescription>
+<longdescription>Accounting payment related modules for Odoo business management software.</longdescription>
+<upstream>
+	<remote-id type="github">ingadhoc/account-payment</remote-id>
+</upstream>
 </pkgmetadata>

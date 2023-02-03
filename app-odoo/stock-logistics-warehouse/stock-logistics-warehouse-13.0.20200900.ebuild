@@ -3,14 +3,12 @@
 
 EAPI="7"
 
-inherit eutils
-
 DESCRIPTION="Odoo Warehouse Management Addons."
 HOMEPAGE="https://github.com/OCA/stock-logistics-warehouse"
 SUBSLOT="$(ver_cut 1-2)"
 EGIT_COMMIT="d0ee6ef3b80ac669328423daf3bc497836be2189"
 EGIT_BRANCH="${SUBSLOT}"
-SRC_URI="${HOMEPAGE}/archive/${EGIT_COMMIT}.zip -> ${P}.zip"
+SRC_URI="https://github.com/OCA/stock-logistics-warehouse/archive/${EGIT_COMMIT}.tar.gz -> ${P}.tar.gz"
 IUSE=""
 LICENSE="AGPL-3"
 SLOT="0/${SUBSLOT}"

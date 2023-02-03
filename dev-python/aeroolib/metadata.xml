@@ -6,5 +6,8 @@
 	<email>mggimenez@nis.com.ar</email>
 	<description>Primary maintainer</description>
 </maintainer>
-<longdescription>Aeroo Reports library.</longdescription>
+<longdescription>Aeroo Reports library for Odoo business management software from ADHOC.</longdescription>
+<upstream>
+	<remote-id type="github">adhoc-dev/aeroolib</remote-id>
+</upstream>
 </pkgmetadata>

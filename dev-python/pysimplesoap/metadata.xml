@@ -6,5 +6,8 @@
 	<email>mggimenez@nis.com.ar</email>
 	<description>Primary maintainer</description>
 </maintainer>
-<longdescription>Python Simple SOAP Library.</longdescription>
+<longdescription>Python simple and lightweight SOAP library for client and server webservices interfaces, aimed to be as small and easy as possible, supporting most common functionality. Initially it was inspired by PHP Soap Extension.</longdescription>
+<upstream>
+	<remote-id type="github">pysimplesoap/pysimplesoap</remote-id>
+</upstream>
 </pkgmetadata>

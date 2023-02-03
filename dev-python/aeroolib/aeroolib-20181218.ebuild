@@ -1,11 +1,11 @@
 # Copyright 2022 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI="7"
+EAPI="8"
+DISTUTILS_USE_PEP517=setuptools
+PYTHON_COMPAT=( python3_{8..11} )
 
-PYTHON_COMPAT=( python3_{7,8,9} pypy pypy3 )
-
-inherit eutils distutils-r1
+inherit distutils-r1
 
 DESCRIPTION="Aeroo Reports library (Aeroo RL)."
 HOMEPAGE="http://www.alistek.com/wiki/index.php/Main_Page"
@@ -13,7 +13,7 @@ SUBSLOT="$(ver_cut 1-2)"
 EGIT_REPO_URI="https://github.com/adhoc-dev/aeroolib"
 EGIT_COMMIT="eb3f232f250ce6da978c41e47fdb95b43b0dad8d"
 EGIT_BRANCH="master-fix-ods"
-SRC_URI="${EGIT_REPO_URI}/archive/${EGIT_COMMIT}.zip -> ${P}.zip"
+SRC_URI="${EGIT_REPO_URI}/archive/${EGIT_COMMIT}.tar.gz -> ${P}.tar.gz"
 LICENSE="GPL-3"
 SLOT="0/${SUBSLOT}"
 KEYWORDS="amd64 x86"

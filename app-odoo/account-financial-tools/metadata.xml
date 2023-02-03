@@ -6,5 +6,8 @@
 	<email>mggimenez@nis.com.ar</email>
 	<description>Primary maintainer</description>
 </maintainer>
-<longdescription>Odoo Accountant Financial Tools and Utils.</longdescription>
+<longdescription>Accountant Financial Tools and Utils module for Odoo.</longdescription>
+<upstream>
+	<remote-id type="github">ingadhoc/account-financial-tools</remote-id>
+</upstream>
 </pkgmetadata>

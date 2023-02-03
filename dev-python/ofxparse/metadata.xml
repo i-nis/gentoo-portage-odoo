@@ -6,5 +6,8 @@
 	<email>mggimenez@nis.com.ar</email>
 	<description>Primary maintainer</description>
 </maintainer>
-<longdescription>Tools for working with the OFX (Open Financial Exchange) file format.</longdescription>
+<longdescription>ofxparse is a parser for Open Financial Exchange (.ofx) format files.</longdescription>
+<upstream>
+	<remote-id type="pypi">ofxparse</remote-id>
+</upstream>
 </pkgmetadata>

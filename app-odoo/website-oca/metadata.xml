@@ -6,5 +6,8 @@
 	<email>mggimenez@nis.com.ar</email>
 	<description>Primary maintainer</description>
 </maintainer>
-<longdescription>Odoo website builder addons.</longdescription>
+<longdescription>Website builder addons for Odoo business management software.</longdescription>
+<upstream>
+	<remote-id type="github">OCA/website</remote-id>
+</upstream>
 </pkgmetadata>

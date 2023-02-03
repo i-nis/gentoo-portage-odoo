@@ -6,5 +6,8 @@
 	<email>mggimenez@nis.com.ar</email>
 	<description>Primary maintainer</description>
 </maintainer>
-<longdescription>Odoo Product related Addons.</longdescription>
+<longdescription>Product related Addons for Odoo business management software.</longdescription>
+<upstream>
+	<remote-id type="github">ingadhoc/product</remote-id>
+</upstream>
 </pkgmetadata>

@@ -3,14 +3,12 @@
 
 EAPI="7"
 
-inherit eutils
-
 DESCRIPTION="Odoo Purchases, Workflow and Organization."
 HOMEPAGE="https://github.com/ingadhoc/purchase"
 SUBSLOT="$(ver_cut 1-2)"
 EGIT_COMMIT="7c44840a578d2a14ce1d962f26784c3bb1b387ce"
 EGIT_BRANCH="${SUBSLOT}"
-SRC_URI="${HOMEPAGE}/archive/${EGIT_COMMIT}.zip -> ${P}.zip"
+SRC_URI="https://github.com/ingadhoc/purchase/archive/${EGIT_COMMIT}.tar.gz -> ${P}.tar.gz"
 IUSE=""
 LICENSE="AGPL-3"
 SLOT="0/${SUBSLOT}"

@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI="6"
-inherit multilib npm
+inherit npm
 
 DESCRIPTION="CSS pre-processor"
 LICENSE="Apache-2.0"

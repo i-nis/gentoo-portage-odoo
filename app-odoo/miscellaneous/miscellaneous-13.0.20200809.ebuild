@@ -3,14 +3,12 @@
 
 EAPI="7"
 
-inherit eutils
-
 DESCRIPTION="Odoo miscellaneous modules."
 HOMEPAGE="https://github.com/ingadhoc/miscellaneous"
 SUBSLOT="$(ver_cut 1-2)"
 EGIT_COMMIT="481ce99d5b2ef447ef0a215e10629e3f6dce1e0b"
 EGIT_BRANCH="${SUBSLOT}"
-SRC_URI="${HOMEPAGE}/archive/${EGIT_COMMIT}.zip -> ${P}.zip"
+SRC_URI="https://github.com/ingadhoc/miscellaneous/archive/${EGIT_COMMIT}.tar.gz -> ${P}.tar.gz"
 IUSE=""
 LICENSE="AGPL-3"
 SLOT="0/${SUBSLOT}"

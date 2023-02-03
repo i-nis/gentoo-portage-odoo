@@ -1,23 +1,27 @@
 # Copyright 2022 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
+EAPI=8
 
 inherit unpacker
 
 DESCRIPTION="Convert html to pdf (and various image formats) using webkit"
 HOMEPAGE="https://wkhtmltopdf.org/ https://github.com/wkhtmltopdf/wkhtmltopdf/"
-SRC_URI="amd64? ( https://github.com/wkhtmltopdf/wkhtmltopdf/releases/download/${PV}/wkhtmltox_${PV}-1.jessie_amd64.deb )
-		x86? ( https://github.com/wkhtmltopdf/wkhtmltopdf/releases/download/${PV}/wkhtmltox_${PV}-1.jessie_i386.deb )"
+SRC_URI="
+	amd64? ( https://github.com/wkhtmltopdf/wkhtmltopdf/releases/download/${PV}/wkhtmltox_${PV}-1.jessie_amd64.deb )
+	x86? ( https://github.com/wkhtmltopdf/wkhtmltopdf/releases/download/${PV}/wkhtmltox_${PV}-1.jessie_i386.deb )
+"
 
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="amd64 x86"
 
-QA_PRESTRIPPED="usr/local/bin/wkhtmltopdf usr/local/bin/wkhtmltoimage usr/local/lib/libwkhtmltox.so.0.12.5"
+QA_PRESTRIPPED="usr/local/bin/wkhtmltopdf
+	usr/local/bin/wkhtmltoimage
+	usr/local/lib/libwkhtmltox.so.0.12.5
+"
 
 RDEPEND="
-	!media-gfx/wkhtmltopdf
 	media-libs/libpng-compat:1.2
 	media-libs/libjpeg-turbo
 	x11-libs/libXrender

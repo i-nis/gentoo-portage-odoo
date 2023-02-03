@@ -6,5 +6,9 @@
 	<email>mggimenez@nis.com.ar</email>
 	<description>Primary maintainer</description>
 </maintainer>
-<longdescription>Modules to convert numbers to words. Easily extensible.</longdescription>
+<longdescription>num2words is a library that converts numbers like 42 to words like forty-two.</longdescription>
+<upstream>
+	<remote-id type="github">savoirfairelinux/num2words</remote-id>
+	<remote-id type="pypi">num2words</remote-id>
+</upstream>
 </pkgmetadata>

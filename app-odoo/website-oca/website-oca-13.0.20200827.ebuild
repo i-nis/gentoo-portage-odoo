@@ -3,15 +3,13 @@
 
 EAPI=7
 
-inherit eutils
-
 DESCRIPTION="Odoo website builder addons."
 HOMEPAGE="https://github.com/OCA/website"
 MY_PN="website"
 SUBSLOT="$(ver_cut 1-2)"
 EGIT_COMMIT="cd097977313ba0f02a4f8a338d36803d48c9f0f4"
 EGIT_BRANCH="${SUBSLOT}"
-SRC_URI="https://github.com/OCA/${MY_PN}/archive/${EGIT_COMMIT}.zip -> ${P}.zip"
+SRC_URI="https://github.com/OCA/${MY_PN}/archive/${EGIT_COMMIT}.tar.gz -> ${P}.tar.gz"
 IUSE=""
 LICENSE="AGPL-3"
 SLOT="0/${SUBSLOT}"

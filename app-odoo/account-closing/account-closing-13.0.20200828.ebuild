@@ -3,14 +3,12 @@
 
 EAPI="7"
 
-inherit eutils
-
 DESCRIPTION="Odoo Accountant closing tools."
 HOMEPAGE="https://github.com/OCA/account-closing"
 SUBSLOT="$(ver_cut 1-2)"
 EGIT_COMMIT="e2b5afb7aefc85780762dd6f7632670ec866b968"
 EGIT_BRANCH="${SUBSLOT}"
-SRC_URI="${HOMEPAGE}/archive/${EGIT_COMMIT}.zip -> ${P}.zip"
+SRC_URI="https://github.com/OCA/account-closing/archive/${EGIT_COMMIT}.tar.gz -> ${P}.tar.gz"
 IUSE=""
 LICENSE="AGPL-3"
 SLOT="0/${SUBSLOT}"

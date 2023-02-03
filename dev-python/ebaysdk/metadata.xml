@@ -6,5 +6,9 @@
 	<email>mggimenez@nis.com.ar</email>
 	<description>Primary maintainer</description>
 </maintainer>
-<longdescription>eBay SDK for Python.</longdescription>
+<longdescription>This SDK is a programatic inteface into the eBay APIs that simplifies development and cuts development time by standerizing calls, response processing, error handling and debugging.</longdescription>
+<upstream>
+	<remote-id type="github">timotheus/ebaysdk-python</remote-id>
+	<remote-id type="pypi">ebaysdk</remote-id>
+</upstream>
 </pkgmetadata>

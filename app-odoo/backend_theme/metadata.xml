@@ -6,6 +6,9 @@
 	<email>mggimenez@nis.com.ar</email>
 	<description>Primary maintainer</description>
 </maintainer>
-<longdescription>odoo backend theme</longdescription>
+<longdescription>Backend theme for Odoo business management software.</longdescription>
+<upstream>
+	<remote-id type="github">Openworx/backend_theme</remote-id>
+</upstream>
 </pkgmetadata>
 

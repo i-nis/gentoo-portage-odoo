@@ -3,14 +3,12 @@
 
 EAPI="7"
 
-inherit eutils
-
 DESCRIPTION="Odoo Argentina Reporting modules."
 HOMEPAGE="https://github.com/ingadhoc/argentina-reporting"
 SUBSLOT="$(ver_cut 1-2)"
 EGIT_COMMIT="52529f8af7e820ab22ecf9f7964bf06982b56a78"
 EGIT_BRANCH="${SUBSLOT}"
-SRC_URI="${HOMEPAGE}/archive/${EGIT_COMMIT}.zip -> ${P}.zip"
+SRC_URI="https://github.com/ingadhoc/argentina-reporting/archive/${EGIT_COMMIT}.tar.gz -> ${P}.tar.gz"
 IUSE=""
 LICENSE="AGPL-3"
 SLOT="0/${SUBSLOT}"

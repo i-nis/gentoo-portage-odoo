@@ -18,7 +18,7 @@ esac
 
 inherit multilib
 
-# @ECLASS-VARIABLE: NPM_MODULE
+# @ECLASS_VARIABLE: NPM_MODULE
 # @DESCRIPTION:
 # Name of the resulting NodeJS/npm module.
 # The Default value for NPM_MODULE is ${PN}
@@ -28,20 +28,20 @@ if [[ -z $NPM_MODULE ]]; then
 	NPM_MODULE="${PN}"
 fi
 
-# @ECLASS-VARIABLE: NPM_FILES
+# @ECLASS_VARIABLE: NPM_FILES
 # @INTERNAL
 # @DESCRIPTION:
 # Files and directories that usually come in a standard NodeJS/npm module.
 NPM_FILES="index.js lib package.json ${NPM_MODULE}.js"
 
-# @ECLASS-VARIABLE: NPM_DOCS
+# @ECLASS_VARIABLE: NPM_DOCS
 # @DESCRIPTION:
 # Document files that come in a NodeJS/npm module, outside of the usual docs
 # list of README*, ChangeLog AUTHORS* etc. These are only installed if 'doc' is
 # in ${USE}
 # NPM_DOCS="README* LICENSE HISTORY*"
 
-# @ECLASS-VARIABLE: NPM_EXTRA_FILES
+# @ECLASS_VARIABLE: NPM_EXTRA_FILES
 # @DESCRIPTION:
 # If additional dist files are present in the NodeJS/npm module that are not
 # listed in NPM_FILES, then this is the place to put them in.
@@ -58,7 +58,7 @@ SRC_URI="http://registry.npmjs.org/${PN}/-/${P}.tgz"
 
 npm_src_unpack() {
     unpack "${A}"
-    mv "${WORKDIR}/package" ${S}
+    mv "${WORKDIR}/package" "${S}"
 }
 
 # @FUNCTION: npm-src_compile

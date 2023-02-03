@@ -6,6 +6,9 @@
 	<email>mggimenez@nis.com.ar</email>
 	<description>Primary maintainer</description>
 </maintainer>
-<longdescription>Interfases, tools and apps for Argentina's gov't. webservices.</longdescription>
+<longdescription>Tools, interfases and apps for AFIP and other Argentinian webservices to present affidavits among other procedures.</longdescription>
+<upstream>
+	<remote-id type="github">reingart/pyafipws</remote-id>
+</upstream>
 </pkgmetadata>
 

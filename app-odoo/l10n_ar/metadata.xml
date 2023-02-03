@@ -6,5 +6,8 @@
 	<email>mggimenez@nis.com.ar</email>
 	<description>Primary maintainer</description>
 </maintainer>
-<longdescription>Odoo Argentinian localization from Ingenieria AdHoc.</longdescription>
+<longdescription>Argentinian localization module for Odoo business management software from Ingenieria AdHoc.</longdescription>
+<upstream>
+	<remote-id type="github">ingadhoc/odoo-argentina</remote-id>
+</upstream>
 </pkgmetadata>

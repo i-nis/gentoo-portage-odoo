@@ -3,14 +3,12 @@
 
 EAPI="7"
 
-inherit eutils
-
 DESCRIPTION="Addons concerning odoo's social ERP features and messaging in general."
 HOMEPAGE="https://github.com/OCA/social"
 SUBSLOT="$(ver_cut 1-2)"
 EGIT_COMMIT="56e0a293476eabd6dface74d4e28e77c8afe00fb"
 EGIT_BRANCH="${SUBSLOT}"
-SRC_URI="${HOMEPAGE}/archive/${EGIT_COMMIT}.zip -> ${P}.zip"
+SRC_URI="https://github.com/OCA/social/archive/${EGIT_COMMIT}.tar.gz -> ${P}.tar.gz"
 IUSE=""
 LICENSE="AGPL-3"
 SLOT="0/${SUBSLOT}"
