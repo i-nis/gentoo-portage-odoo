@@ -25,7 +25,7 @@ CDEPEND="
 	ssl? ( dev-python/pyopenssl )
 	dev-nodejs/less
 	dev-python/Babel
-	~dev-python/chardet-3.0.4
+	dev-python/chardet
 	~dev-python/decorator-4.3.0
 	dev-python/docutils
 	dev-python/ebaysdk
