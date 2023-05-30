@@ -34,7 +34,7 @@ CDEPEND="
 	dev-python/greenlet
 	dev-python/html2text
 	dev-python/jinja
-	dev-python/libsass-python
+	dev-python/libsass
 	dev-python/lxml
 	dev-python/mako
 	dev-python/markupsafe
