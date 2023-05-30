@@ -6,4 +6,3 @@
 >dev-python/polib-1.1.0
 >dev-python/werkzeug-0.14.1
 
-# Odoo packages
