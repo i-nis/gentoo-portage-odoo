@@ -23,7 +23,7 @@ DEPEND="
 	dev-python/certifi
 	dev-python/dbf
 	dev-python/httplib2
-	dev-python/fpdf
+	dev-python/pyfpdf
 	dev-python/m2crypto
 	dev-python/pillow
 	dev-python/pysimplesoap
