@@ -11,7 +11,7 @@ DESCRIPTION="Statistical and interactive HTML plots for Python"
 HOMEPAGE="https://bokeh.pydata.org/en/latest/
 	https://github.com/bokeh/bokeh
 	https://pypi.org/project/bokeh/"
-SRC_URI="mirror://pypi/${P:0:1}/${PN}/${P}.tar.gz"
+SRC_URI="https://github.com/${PN}/${PN}/archive/refs/tags/0.12.6.zip -> ${P}.zip"
 
 LICENSE="BSD"
 SLOT="0"
