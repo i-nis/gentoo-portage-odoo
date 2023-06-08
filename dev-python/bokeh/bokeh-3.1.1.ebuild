@@ -1,9 +1,9 @@
-# Copyright 2022 Gentoo Authors
+# Copyright 2023 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI="8"
 DISTUTILS_USE_PEP517=setuptools
-PYTHON_COMPAT=( python3_{8..11} )
+PYTHON_COMPAT=( python3_{10..11} )
 
 inherit distutils-r1
 
@@ -11,7 +11,7 @@ DESCRIPTION="Statistical and interactive HTML plots for Python"
 HOMEPAGE="https://bokeh.pydata.org/en/latest/
 	https://github.com/bokeh/bokeh
 	https://pypi.org/project/bokeh/"
-SRC_URI="https://github.com/${PN}/${PN}/archive/refs/tags/0.12.6.zip -> ${P}.zip"
+SRC_URI="https://github.com/${PN}/${PN}/archive/refs/tags/${PV}.zip -> ${P}.zip"
 
 LICENSE="BSD"
 SLOT="0"
@@ -39,10 +39,3 @@ DEPEND="
 	>=dev-python/tornado-4.3
 "
 
-python_compile() {
-	esetup.py build --build-js
-}
-
-python_install_all() {
-	distutils-r1_python_install_all
-}
