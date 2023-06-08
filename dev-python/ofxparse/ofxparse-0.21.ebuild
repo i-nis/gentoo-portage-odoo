@@ -9,6 +9,7 @@ inherit distutils-r1
 
 DESCRIPTION="Tools for working with the OFX (Open Financial Exchange) file format-"
 HOMEPAGE="http://sites.google.com/site/ofxparse"
+SRC_URI="https://github.com/jseutter/${PN}/archive/refs/tags/${PV}.zip -> ${P}.zip"
 
 LICENSE="MIT"
 SLOT="0"

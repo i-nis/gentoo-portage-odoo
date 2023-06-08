@@ -40,7 +40,7 @@ CDEPEND="
 	dev-python/markupsafe
 	dev-python/mock
 	dev-python/num2words
-	~dev-python/ofxparse-0.19
+	dev-python/ofxparse
 	dev-python/passlib
 	dev-python/pillow[jpeg]
 	~dev-python/polib-1.1.0
