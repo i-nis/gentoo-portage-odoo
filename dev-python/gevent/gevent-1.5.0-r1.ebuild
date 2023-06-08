@@ -3,13 +3,14 @@
 
 EAPI="8"
 DISTUTILS_USE_PEP517=setuptools
-PYTHON_COMPAT=( python3_{8..11} )
+PYTHON_COMPAT=( python3_{10..11} )
 PYTHON_REQ_USE="ssl(+),threads(+)"
 
 inherit distutils-r1 flag-o-matic
 
 DESCRIPTION="Coroutine-based network library"
 HOMEPAGE="http://gevent.org/ https://pypi.org/project/gevent/"
+SRC_URI="https://github.com/${PN}/${PN}/archive/refs/tags/1.5.0.zip -> ${P}.zip"
 
 LICENSE="MIT"
 SLOT="0"
