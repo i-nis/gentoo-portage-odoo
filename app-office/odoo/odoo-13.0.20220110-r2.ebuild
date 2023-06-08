@@ -28,7 +28,7 @@ CDEPEND="
 	dev-python/chardet
 	~dev-python/decorator-4.3.0
 	dev-python/docutils
-	dev-python/ebaysdk
+	dev-python/ebaysdk-python
 	dev-python/feedparser
 	~dev-python/gevent-1.5.0
 	dev-python/greenlet

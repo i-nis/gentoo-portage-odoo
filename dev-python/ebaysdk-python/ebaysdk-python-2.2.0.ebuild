@@ -9,7 +9,7 @@ inherit distutils-r1
 
 DESCRIPTION="eBay SDK for Python"
 HOMEPAGE="https://github.com/timotheus/ebaysdk-python"
-SRC_URI="https://github.com/timotheus/ebaysdk-python/archive/refs/tags/v2.2.0.zip -> ${P}.zip"
+SRC_URI="https://github.com/timotheus/${PN}/archive/refs/tags/v2.2.0.zip -> ${P}.zip"
 
 LICENSE="CDDL"
 SLOT="0"
