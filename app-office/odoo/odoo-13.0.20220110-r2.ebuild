@@ -30,7 +30,7 @@ CDEPEND="
 	dev-python/docutils
 	dev-python/ebaysdk-python
 	dev-python/feedparser
-	~dev-python/gevent-1.5.0
+	dev-python/gevent
 	dev-python/greenlet
 	dev-python/html2text
 	dev-python/jinja
