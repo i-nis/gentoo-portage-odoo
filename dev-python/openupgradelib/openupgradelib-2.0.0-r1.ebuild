@@ -9,7 +9,6 @@ inherit distutils-r1
 
 DESCRIPTION="A library with support functions to be called from Odoo migration scripts."
 HOMEPAGE="https://openupgradelib.readthedocs.io/en/latest/readme.html"
-SRC_URI="mirror://pypi/o/${PN}/${P}.tar.gz"
 
 LICENSE="AGPL-3"
 SLOT="0"

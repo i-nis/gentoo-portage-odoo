@@ -1,4 +1,4 @@
-# Copyright 2022 Gentoo Authors
+# Copyright 2023 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI="8"
@@ -9,7 +9,6 @@ inherit distutils-r1
 
 DESCRIPTION="A library to manipulate gettext files (.po and .mo files)"
 HOMEPAGE="https://bitbucket.org/izi/polib/wiki/Home"
-SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"

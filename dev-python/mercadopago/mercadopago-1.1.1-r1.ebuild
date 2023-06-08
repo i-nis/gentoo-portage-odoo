@@ -1,4 +1,4 @@
-# Copyright 2022 Gentoo Authors
+# Copyright 2023 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI="8"
@@ -9,7 +9,6 @@ inherit distutils-r1
 
 DESCRIPTION="Mercadopago SDK module for Payments integration."
 HOMEPAGE="https://pypi.org/project/mercadopago/"
-SRC_URI="mirror://pypi/m/${PN}/${P}.tar.gz"
 
 LICENSE="freedist"
 SLOT="0"

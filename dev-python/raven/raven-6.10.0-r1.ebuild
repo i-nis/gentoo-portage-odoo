@@ -9,7 +9,6 @@ inherit distutils-r1
 
 DESCRIPTION="Raven is a client for Sentry"
 HOMEPAGE="https://github.com/getsentry/raven-python"
-SRC_URI="mirror://pypi/${P:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"

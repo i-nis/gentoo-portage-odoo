@@ -1,4 +1,4 @@
-# Copyright 2022 Gentoo Authors
+# Copyright 2023 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI="8"
@@ -9,7 +9,6 @@ inherit distutils-r1
 
 DESCRIPTION="PEP-8 Naming Conventions."
 HOMEPAGE="https://github.com/PyCQA/pep8-naming"
-SRC_URI="mirror://pypi/p/${PN}/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
