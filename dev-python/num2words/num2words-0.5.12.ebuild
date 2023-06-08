@@ -9,6 +9,7 @@ inherit distutils-r1
 
 DESCRIPTION="Modules to convert numbers to words. Easily extensible."
 HOMEPAGE="https://github.com/savoirfairelinux/num2words"
+SRC_URI="https://github.com/savoirfairelinux/${PN}/archive/refs/tags/v${PV}.zip -> ${P}.zip"
 
 LICENSE="LGPL-3"
 SLOT="0"
