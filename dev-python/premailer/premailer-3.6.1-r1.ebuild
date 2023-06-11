@@ -9,6 +9,7 @@ inherit distutils-r1
 
 DESCRIPTION="Turns CSS blocks into style attributes."
 HOMEPAGE="https://github.com/peterbe/premailer"
+SRC_URI="https://github.com/peterbe/${PN}/archive/be0594067d3ba8fd71f91ccb9dab99c8f59e43d6.zip -> ${P}.zip"
 
 LICENSE="GPL-3"
 SLOT="0"

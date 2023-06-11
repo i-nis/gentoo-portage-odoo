@@ -1,4 +1,4 @@
-# Copyright 2022 Gentoo Authors
+# Copyright 2023 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI="8"
@@ -9,6 +9,7 @@ inherit distutils-r1
 
 DESCRIPTION="Raven is a client for Sentry"
 HOMEPAGE="https://github.com/getsentry/raven-python"
+SRC_URI="https://github.com/getsentry/${PN}/archive/refs/tags/v0.6.1.zip -> ${P}.zip"
 
 LICENSE="BSD"
 SLOT="0"

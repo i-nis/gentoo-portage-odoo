@@ -1,4 +1,4 @@
-# Copyright 2022 Gentoo Authors
+# Copyright 2023 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI="8"
@@ -8,7 +8,8 @@ PYTHON_COMPAT=( python3_{8..11} )
 inherit distutils-r1
 
 DESCRIPTION="D3 Viewer for Matplotlib."
-HOMEPAGE="http://mpld3.github.com/"
+HOMEPAGE="https://github.com/mpld3"
+SRC_URI="https://github.com/${PN}/${PN}/archive/refs/tags/v0.3.zip -> ${P}.zip"
 
 LICENSE="BSD"
 SLOT="0"

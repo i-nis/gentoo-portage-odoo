@@ -1,4 +1,4 @@
-# Copyright 2022 Gentoo Authors
+# Copyright 2023 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI="7"
@@ -14,7 +14,7 @@ LICENSE="AGPL-3"
 SLOT="0/${SUBSLOT}"
 KEYWORDS="amd64 x86"
 DEPEND="app-office/odoo:${SLOT}
-	dev-python/raven"
+	dev-python/raven-python"
 RDEPEND="${DEPEND}"
 
 ODOO_USER="odoo"
