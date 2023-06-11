@@ -48,7 +48,7 @@ CDEPEND="
 	dev-python/psycopg:2
 	dev-python/pydot
 	dev-python/pyparsing
-	dev-python/PyPDF2
+	dev-python/pypdf
 	dev-python/pyserial
 	dev-python/python-dateutil
 	dev-python/pytz
