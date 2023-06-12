@@ -3,7 +3,7 @@
 
 EAPI="8"
 DISTUTILS_USE_PEP517=setuptools
-PYTHON_COMPAT=( python3_{8..11} )
+PYTHON_COMPAT=( python3_{10..11} )
 
 inherit distutils-r1
 
@@ -21,3 +21,4 @@ RDEPEND=""
 DEPEND="${RDEPEND}
 	dev-python/setuptools
 	test? ( dev-python/pytest )"
+
