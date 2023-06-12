@@ -26,7 +26,7 @@ CDEPEND="
 	dev-nodejs/less
 	dev-python/Babel
 	dev-python/chardet
-	~dev-python/decorator-4.3.0
+	dev-python/decorator
 	dev-python/docutils
 	dev-python/ebaysdk-python
 	dev-python/feedparser
@@ -43,12 +43,12 @@ CDEPEND="
 	dev-python/ofxparse
 	dev-python/passlib
 	dev-python/pillow[jpeg]
-	~dev-python/polib-1.1.0
+	dev-python/polib
 	dev-python/psutil
 	dev-python/psycopg:2
 	dev-python/pydot
 	dev-python/pyparsing
-	dev-python/pypdf
+	dev-python/PyPDF2
 	dev-python/pyserial
 	dev-python/python-dateutil
 	dev-python/pytz
