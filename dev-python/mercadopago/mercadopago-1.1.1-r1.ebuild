@@ -9,7 +9,7 @@ inherit distutils-r1
 
 DESCRIPTION="Mercadopago SDK module for Payments integration."
 HOMEPAGE="https://pypi.org/project/mercadopago/"
-SRC_URI="https://github.com/${PN}/sdk-python/archive/refs/tags/1.1.1.zip -> ${P}.zip"
+SRC_URI="https://github.com/${PN}/sdk-python/archive/refs/tags/${PV}.zip -> ${P}.zip"
 
 LICENSE="freedist"
 SLOT="0"

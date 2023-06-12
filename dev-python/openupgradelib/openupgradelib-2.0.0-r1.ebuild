@@ -9,7 +9,7 @@ inherit distutils-r1
 
 DESCRIPTION="A library with support functions to be called from Odoo migration scripts."
 HOMEPAGE="https://openupgradelib.readthedocs.io/en/latest/readme.html"
-SRC_URI="https://github.com/OCA/${PN}/archive/refs/tags/2.0.0.zip -> ${P}.zip"
+SRC_URI="https://github.com/OCA/${PN}/archive/refs/tags/${PV}.zip -> ${P}.zip"
 
 LICENSE="AGPL-3"
 SLOT="0"

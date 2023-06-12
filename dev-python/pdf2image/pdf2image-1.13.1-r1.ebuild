@@ -9,7 +9,7 @@ inherit distutils-r1
 
 DESCRIPTION="A wraps pdftoppm and pdftocairo to convert PDF to a PIL Image object."
 HOMEPAGE="https://github.com/Belval/pdf2image"
-SRC_URI="https://github.com/Belval/${PN}/archive/refs/tags/v1.13.1.zip -> ${P}.zip"
+SRC_URI="https://github.com/Belval/${PN}/archive/refs/tags/v${PV}.zip -> ${P}.zip"
 
 LICENSE="MIT"
 SLOT="0"

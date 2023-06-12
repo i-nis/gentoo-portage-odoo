@@ -9,7 +9,7 @@ inherit distutils-r1
 
 DESCRIPTION="A library to manipulate gettext files (.po and .mo files)"
 HOMEPAGE="https://github.com/izimobil/polib/"
-SRC_URI="https://github.com/izimobil/${PN}/archive/refs/tags/1.1.1.zip -> ${P}.zip"
+SRC_URI="https://github.com/izimobil/${PN}/archive/refs/tags/${PV}.zip -> ${P}.zip"
 
 LICENSE="MIT"
 SLOT="0"

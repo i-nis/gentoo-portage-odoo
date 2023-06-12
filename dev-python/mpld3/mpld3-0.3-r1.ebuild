@@ -9,7 +9,7 @@ inherit distutils-r1
 
 DESCRIPTION="D3 Viewer for Matplotlib."
 HOMEPAGE="https://github.com/mpld3"
-SRC_URI="https://github.com/${PN}/${PN}/archive/refs/tags/v0.3.zip -> ${P}.zip"
+SRC_URI="https://github.com/${PN}/${PN}/archive/refs/tags/v${PV}.zip -> ${P}.zip"
 
 LICENSE="BSD"
 SLOT="0"
