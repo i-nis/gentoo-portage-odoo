@@ -1,4 +1,5 @@
 # Odoo dependencies
 >=dev-lang/python-3.10.0
+>dev-python/PyPDF2-1.26.0
 >dev-python/werkzeug-0.14.1
 
